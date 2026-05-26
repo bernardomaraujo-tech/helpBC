@@ -1,0 +1,173 @@
+import { AlertTriangle, Bot, FileText, Paperclip, Send } from 'lucide-react';
+import { useMemo, useState } from 'react';
+import { Tabs } from '../components/Tabs';
+import { articles } from '../data/articles';
+import type { ChatMessage, Ticket } from '../types';
+import { buildAnswer, searchArticles } from '../utils/kbSearch';
+
+interface Props {
+  tickets: Ticket[];
+  onEscalate: (ticket: Ticket) => void;
+  onOpenArticle: (articleId: string) => void;
+}
+
+const initialMessages: ChatMessage[] = [
+  {
+    id: 'm1',
+    author: 'assistant',
+    text: 'Olá. Coloca a tua dúvida sobre Business Central. Vou procurar uma resposta na knowledge base aprovada.',
+    createdAt: 'Agora'
+  }
+];
+
+export function UserPortal({ tickets, onEscalate, onOpenArticle }: Props) {
+  const [tab, setTab] = useState('chat');
+  const [query, setQuery] = useState('');
+  const [messages, setMessages] = useState<ChatMessage[]>(initialMessages);
+  const [lastQuery, setLastQuery] = useState('');
+
+  const suggestedArticles = useMemo(
+    () => searchArticles(lastQuery || query, articles, { audience: 'user' }),
+    [lastQuery, query]
+  );
+
+  function submitQuestion() {
+    if (!query.trim()) return;
+
+    const results = searchArticles(query, articles, { audience: 'user' });
+    const response = results[0]
+      ? buildAnswer(results[0])
+      : 'Não encontrei um artigo suficientemente claro para responder com segurança. Podes enviar este pedido para um agente.';
+
+    setMessages((current) => [
+      ...current,
+      {
+        id: crypto.randomUUID(),
+        author: 'user',
+        text: query,
+        createdAt: new Date().toLocaleTimeString('pt-PT', { hour: '2-digit', minute: '2-digit' })
+      },
+      {
+        id: crypto.randomUUID(),
+        author: 'assistant',
+        text: response,
+        createdAt: new Date().toLocaleTimeString('pt-PT', { hour: '2-digit', minute: '2-digit' })
+      }
+    ]);
+
+    setLastQuery(query);
+    setQuery('');
+  }
+
+  function escalate() {
+    const ticket: Ticket = {
+      id: `TCK-${Math.floor(Math.random() * 900 + 100)}`,
+      subject: lastQuery || 'Pedido enviado pelo utilizador',
+      requester: 'Utilizador Demo',
+      area: suggestedArticles[0]?.category ?? 'Configuração',
+      status: 'Aberto',
+      priority: 'Média',
+      createdAt: new Date().toLocaleTimeString('pt-PT', { hour: '2-digit', minute: '2-digit' }),
+      message: lastQuery || 'Pedido enviado pelo utilizador através do chat.',
+      suggestedArticleId: suggestedArticles[0]?.id
+    };
+
+    onEscalate(ticket);
+    setTab('requests');
+  }
+
+  return (
+    <main className="page">
+      <section className="portal-title">
+        <div>
+          <span className="eyebrow">Portal Utilizador</span>
+          <h1>Como podemos ajudar?</h1>
+        </div>
+      </section>
+
+      <section className="app-card">
+        <Tabs
+          active={tab}
+          onChange={setTab}
+          tone="teal"
+          tabs={[
+            { key: 'chat', label: 'Chat' },
+            { key: 'requests', label: 'Os meus pedidos' }
+          ]}
+        />
+
+        {tab === 'chat' ? (
+          <div className="user-layout">
+            <div className="chat-card">
+              <div className="chat-stream">
+                {messages.map((message) => (
+                  <div key={message.id} className={`chat-row ${message.author}`}>
+                    {message.author === 'assistant' && (
+                      <span className="bot-avatar">
+                        <Bot size={18} />
+                      </span>
+                    )}
+                    <div className="chat-bubble">
+                      <p>{message.text}</p>
+                      <small>{message.createdAt}</small>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="chat-input">
+                <Paperclip size={18} />
+                <input
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
+                  onKeyDown={(event) => event.key === 'Enter' && submitQuestion()}
+                  placeholder="Escreve a tua dúvida..."
+                />
+                <button onClick={submitQuestion} aria-label="Enviar pergunta">
+                  <Send size={18} />
+                </button>
+              </div>
+            </div>
+
+            <aside className="side-card">
+              <h2>Artigos sugeridos</h2>
+              <div className="article-list">
+                {suggestedArticles.length > 0 ? (
+                  suggestedArticles.map((article) => (
+                    <button key={article.id} onClick={() => onOpenArticle(article.id)}>
+                      <FileText size={17} />
+                      <span>{article.title}</span>
+                    </button>
+                  ))
+                ) : (
+                  <p className="muted">Sem artigos sugeridos.</p>
+                )}
+              </div>
+
+              <div className="warning-box">
+                <AlertTriangle size={20} />
+                <strong>Sem artigo correspondente?</strong>
+                <p>Envia o pedido para agente para análise.</p>
+                <button onClick={escalate}>Enviar para agente</button>
+              </div>
+            </aside>
+          </div>
+        ) : (
+          <div className="requests-list">
+            {tickets.map((ticket) => (
+              <article key={ticket.id} className="ticket-card">
+                <div>
+                  <strong>{ticket.subject}</strong>
+                  <p>{ticket.message}</p>
+                </div>
+                <span className={`status status-${ticket.status.replace(' ', '-').toLowerCase()}`}>
+                  {ticket.status}
+                </span>
+              </article>
+            ))}
+          </div>
+        )}
+      </section>
+    </main>
+  );
+}
