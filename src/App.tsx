@@ -33,9 +33,15 @@ export default function App() {
     setView({ name: 'article', articleId, previous });
   }
 
+  function navigateToRole(role: Role) {
+    if (role === 'entry') setView({ name: 'entry' });
+    if (role === 'user') setView({ name: 'user' });
+    if (role === 'agent') setView({ name: 'agent' });
+  }
+
   function backFromArticle() {
     if (view.name === 'article') {
-      setView({ name: view.previous });
+      navigateToRole(view.previous);
     }
   }
 
@@ -54,9 +60,9 @@ export default function App() {
   return (
     <div className="app-shell">
       <BrandShapes />
-      <AppHeader role={currentRole} onNavigate={(role) => setView({ name: role })} />
+      <AppHeader role={currentRole} onNavigate={navigateToRole} />
 
-      {view.name === 'entry' && <EntryPage onSelectRole={(role) => setView({ name: role })} />}
+      {view.name === 'entry' && <EntryPage onSelectRole={navigateToRole} />}
       {view.name === 'user' && (
         <UserPortal tickets={tickets} onEscalate={addTicket} onOpenArticle={openArticle} />
       )}
