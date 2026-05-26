@@ -1,4 +1,8 @@
 {
+  "name": "helpbc",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -7,14 +11,14 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
-    "lucide-react": "latest",
+    "vite": "latest",
+    "typescript": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "typescript": "latest",
-    "vite": "latest"
+    "lucide-react": "latest"
   },
   "devDependencies": {
-    "@types/react": "^19.2.15",
-    "@types/react-dom": "^19.2.3"
+    "@types/react": "latest",
+    "@types/react-dom": "latest"
   }
 }
