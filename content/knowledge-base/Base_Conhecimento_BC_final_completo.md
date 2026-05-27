@@ -2582,13 +2582,13 @@ Este caso é semelhante a erros de aprovação por ausência de gestor comercial
 
 
 
-## TRA-BOM-001 — Expandir Kit Expositor numa Ordem de Transferência
+## TRA-BOM-001 — Expandir Kit
 **Categoria:** Transferências / Kits  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim
 
 **Problema**  
-É necessário expandir ou explodir um Kit Expositor dentro de uma Ordem de Transferência, para visualizar e movimentar os artigos que compõem o kit.
+É necessário expandir ou explodir um Kit dentro de uma Ordem de Transferência, para visualizar e movimentar os artigos que compõem o kit.
 
 **Diagnóstico**  
 A Ordem de Transferência contém uma linha com um kit, mas é necessário movimentar os componentes individuais.
