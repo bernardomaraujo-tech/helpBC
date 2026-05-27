@@ -1,32 +1,95 @@
 ## PRD-NEW-001 — Criar novo produto
-**Categoria:** Produtos
-**Disponível para Utilizador:** Sim
-**Disponível para Agente:** Sim
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
 
-**Problema**
-O utilizador precisa criar um novo produto mas não conhece os passos no Business Central.
+**Problema**  
+O utilizador precisa de criar um novo produto no Business Central, mas não conhece o processo completo de criação, preenchimento da ficha e envio para aprovação.
 
-**Diagnóstico**
-Utilizador não tem experiência com a criação de produtos e não iniciou o processo.
+**Diagnóstico**  
+O produto ainda não existe na lista de produtos e é necessário criar uma nova ficha, preencher os campos obrigatórios e submeter o produto para aprovação antes de este poder ser utilizado nos processos do Business Central.
 
-**Causa provável**
-Falta de conhecimento do processo de criação de produtos.
+**Causa provável**  
+Falta de conhecimento do processo de criação de produtos, nomeadamente:
+- onde criar a ficha;
+- que campos devem ser preenchidos;
+- como usar a opção "Aplicar Modelo";
+- como validar os campos obrigatórios;
+- como enviar o pedido de aprovação.
 
-**Solução**
-Criar um produto através da ficha de produto preenchendo todos os campos obrigatórios.
+**Solução**  
+Criar uma nova ficha de produto a partir da lista de "Produtos", preencher o número do produto e todos os campos obrigatórios indicados na área "eInfo Obrigatória", podendo utilizar a opção "Aplicar Modelo" para acelerar o preenchimento de alguns campos. Depois de validada a informação obrigatória, deve ser enviado o pedido de aprovação.
 
 **Como proceder**
-1. Ir a "Produtos".
-2. Clicar em "Novo" para abrir uma ficha de produto.
-3. Preencher o campo "Nº" (número do produto), à direita nas informações são indicados os campos obrigatórios listados em eInfo Obrigatória tanto para o pedido de aprovação como para o aprovador.
-4. Guardar a ficha.
 
-**Validação final**
-O produto aparece na lista de produtos e a ficha está acessível e editável.
+### 1. Aceder à lista de produtos
+1. No Business Central, utilizar a pesquisa ou o menu de navegação.
+2. Aceder à página "Produtos".
+3. Confirmar se o produto ainda não existe, pesquisando pelo número, descrição ou outra referência conhecida.
+4. Se o produto não existir, clicar em "Novo".
+
+### 2. Criar a nova ficha de produto
+1. Será aberta uma nova "Ficha de Produto".
+2. Começar por preencher o campo "Nº" com o número/código do produto.
+3. Confirmar se o número atribuído respeita a codificação interna definida para produtos.
+4. Guardar a ficha, se necessário, para garantir que o registo fica criado antes de continuar o preenchimento.
+
+### 3. Preencher os campos obrigatórios
+1. Na ficha do produto, consultar a lista lateral "eInfo Obrigatória".
+2. Verificar os campos assinalados como obrigatórios.
+3. Dar especial atenção aos campos com indicação:
+   - "Validado Em: Pedido de Aprovação"
+4. Estes campos devem estar preenchidos antes de enviar o pedido de aprovação.
+5. Preencher todos os campos obrigatórios apresentados na lista.
+
+### 4. Aplicar modelo, se aplicável
+1. Na ficha de produto, selecionar a opção "Aplicar Modelo".
+2. Escolher o modelo adequado ao tipo de produto que está a ser criado.
+3. Confirmar a aplicação do modelo.
+4. Rever os campos preenchidos automaticamente.
+5. Completar manualmente os campos que continuem em falta.
+
+**Nota:**  
+A opção "Aplicar Modelo" ajuda a preencher automaticamente alguns campos da ficha de produto, mas não substitui a validação manual dos campos obrigatórios.
+
+### 5. Rever a ficha antes de enviar para aprovação
+Antes de enviar o pedido de aprovação, confirmar:
+1. O campo "Nº" está preenchido.
+2. Os campos obrigatórios indicados na "eInfo Obrigatória" estão preenchidos.
+3. Os campos assinalados com "Validado Em: Pedido de Aprovação" estão completos.
+4. O modelo correto foi aplicado, quando aplicável.
+5. A descrição e restantes dados principais do produto estão corretos.
+6. Não existem campos obrigatórios em falta.
+
+### 6. Enviar pedido de aprovação
+1. Na ficha de produto, aceder ao separador/menu "Pedido".
+2. Selecionar "Enviar Pedido Aprovação".
+3. Confirmar o envio do pedido, se o sistema apresentar uma mensagem de confirmação.
+4. Após o envio, o produto ficará em processo de aprovação.
+
+### 7. Acompanhar o estado da aprovação
+1. Para verificar o estado, abrir novamente a ficha do produto.
+2. Consultar a informação de aprovação disponível na ficha.
+3. Em alternativa, aceder a "Produto" → "Aprovações".
+4. Também é possível pesquisar por "Solicitações para Aprovar" para consultar pedidos pendentes, quando aplicável.
+
+**Validação final**  
+O processo está correto quando:
+1. O produto aparece na lista de "Produtos".
+2. A ficha de produto está criada e acessível.
+3. Os campos obrigatórios da "eInfo Obrigatória" estão preenchidos.
+4. O pedido de aprovação foi enviado com sucesso.
+5. O produto fica em processo de aprovação ou aprovado, conforme o estado do workflow.
+6. Após aprovação, o produto pode ser utilizado nos documentos e processos aplicáveis.
 
 **Notas**
-Pode usar "Aplicar Modelo" para acelerar o preenchimento dos campos obrigatórios.
-
+- Confirmar sempre se o produto já existe antes de criar uma nova ficha, para evitar duplicação.
+- A opção "Aplicar Modelo" deve ser usada sempre que exista um modelo adequado ao tipo de produto.
+- O facto de aplicar um modelo não garante que todos os campos obrigatórios fiquem preenchidos.
+- A lista "eInfo Obrigatória" deve ser sempre validada antes do envio do pedido de aprovação.
+- O pedido de aprovação só deve ser enviado depois de todos os campos obrigatórios estarem completos.
+- Se existirem campos obrigatórios em falta, o sistema poderá impedir o envio do pedido de aprovação.
+- Apenas o utilizador que enviou o pedido e/ou os aprovadores conseguem acompanhar determinados detalhes do estado da aprovação.
 
 ## PRD-STA-001 — Verificar estado de criação de produtos
 **Categoria:** Produtos
