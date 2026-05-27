@@ -2685,3 +2685,1869 @@ O documento de arrumação é criado corretamente e o produto deixa de desaparec
 
 **Notas**
 Validar sempre a posição correta antes de marcar como Fixo e Padrão, para evitar impacto em processos de armazém futuros.
+
+## FAQ-073 — Como crio um novo produto no Business Central?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O utilizador pretende criar um produto novo mas não conhece o processo completo nem quais os campos obrigatórios.
+
+**Diagnóstico**
+Não existe ficha para o produto e o utilizador nunca fez este processo.
+
+**Causa provável**
+Desconhecimento da funcionalidade de criação de produtos, da lista de campos obrigatórios e do envio para aprovação.
+
+**Solução**
+Criar uma nova ficha na lista "Produtos", preencher todos os campos obrigatórios, usar um modelo se existir e enviar o pedido de aprovação.
+
+**Como proceder**
+1. Aceder à lista de Produtos através da pesquisa ou menu.
+2. Selecionar Novo para abrir uma Ficha de Produto em branco.
+3. Preencher o campo Nº com o código interno e validar a codificação.
+4. Na área eInfo Obrigatória, preencher todos os campos assinalados, incluindo os validados em "Pedido de Aprovação".
+5. Se existir um modelo apropriado, clicar em Aplicar Modelo, escolher o modelo e confirmar; rever os dados preenchidos automaticamente.
+6. Verificar que todos os campos obrigatórios estão completos e que a informação é coerente.
+7. Navegar até ao separador Pedido e selecionar Enviar Pedido Aprovação; confirmar o envio.
+8. Acompanhar o estado do pedido na ficha do produto ou em Solicitações para Aprovar.
+
+**Validação final**
+O produto aparece na lista de produtos, a ficha está preenchida e o pedido de aprovação encontra se em curso ou concluído captura de imagem.
+
+**Notas**
+- Confirme sempre se o produto já existe antes de o criar para evitar duplicação.
+- A aplicação de modelos acelera o preenchimento mas não dispensa a verificação manual dos campos obrigatórios.
+- Acompanhe o estado da aprovação para saber quando o produto fica disponível.
+
+## FAQ-074 — Que campos obrigatórios devo preencher numa nova Ficha de Produto?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Ao abrir uma nova ficha de produto, o utilizador não sabe quais os campos que deve obrigatoriamente preencher.
+
+**Diagnóstico**
+Existe uma área lateral intitulada eInfo Obrigatória que indica os campos necessários, mas o utilizador desconhece a sua utilização.
+
+**Causa provável**
+Falta de formação na leitura dos campos obrigatórios e na distinção entre campos validados na aprovação ou na ficha.
+
+**Solução**
+Consultar a área eInfo Obrigatória da ficha para identificar os campos obrigatórios e preencher todos eles antes de enviar o pedido de aprovação.
+
+**Como proceder**
+1. Criar ou abrir a ficha do produto.
+2. Na barra lateral direita, identificar a secção eInfo Obrigatória.
+3. Preencher todos os campos listados; normalmente incluem: Tipo, Descrição, Unidade Medida Base, Categoria, Grupo Regist. Produto, Grupo Regist. VAT Produto e parâmetros de planeamento.
+4. Distinguir os campos marcados com Validado Em: Pedido de Aprovação (estes devem ser preenchidos antes do envio) e os restantes.
+5. Caso utilize um modelo, verificar se algum campo obrigatório ficou em falta e completar manualmente.
+6. Rever a ficha para garantir que não restam campos obrigatórios por preencher.
+
+**Validação final**
+Todos os campos assinalados na eInfo Obrigatória estão completos, permitindo o envio do pedido de aprovação captura de imagem.
+
+**Notas**
+- Os campos obrigatórios podem variar consoante o tipo de produto e o modelo aplicado.
+- Utilize a função de filtro na lista de produtos para identificar produtos com campos em falta.
+
+## FAQ-075 — Para que serve a opção “Aplicar Modelo” na criação de um produto?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O utilizador vê a opção Aplicar Modelo mas não sabe quando a deve utilizar nem o seu efeito.
+
+**Diagnóstico**
+A aplicação de modelos permite pré preencher campos com dados padrão para determinados tipos de produtos.
+
+**Causa provável**
+Desconhecimento das vantagens dos modelos existentes e do impacto no preenchimento da ficha.
+
+**Solução**
+Usar Aplicar Modelo para carregar um conjunto de valores predefinidos quando o produto se enquadra num tipo existente; isto reduz erros e acelera o processo.
+
+**Como proceder**
+1. Durante a criação da ficha de produto, clicar em Aplicar Modelo.
+2. Selecionar o modelo que melhor corresponde ao tipo de produto (por exemplo, medicamento, dispositivo médico, consumível, etc.).
+3. Confirmar a aplicação; os campos relacionados com planeamento, contabilidade e logística serão preenchidos com valores padrão.
+4. Rever todos os campos que foram preenchidos automaticamente e corrigir/ajustar valores quando necessário.
+5. Preencher manualmente os campos obrigatórios que não foram abrangidos pelo modelo.
+
+**Validação final**
+Os campos da ficha exibem os valores do modelo e o utilizador ajustou eventuais diferenças antes do pedido de aprovação.
+
+**Notas**
+- O modelo é um atalho para preencher campos estruturais; não substitui a validação manual dos dados.
+- Caso não exista um modelo adequado, é preferível deixar a opção em branco e preencher tudo manualmente.
+
+## FAQ-076 — Como envio um novo produto para aprovação?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O produto foi criado mas ainda não está ativo porque falta enviar o pedido de aprovação.
+
+**Diagnóstico**
+O utilizador não encontra a funcionalidade de pedido de aprovação na ficha do produto.
+
+**Causa provável**
+Falta de conhecimento sobre workflows de aprovação no Business Central.
+
+**Solução**
+Utilizar o menu Pedido da ficha para submeter o produto para aprovação.
+
+**Como proceder**
+1. Abrir a ficha do produto criado.
+2. Verificar que todos os campos obrigatórios estão preenchidos.
+3. Aceder ao separador ou menu Pedido.
+4. Selecionar Enviar Pedido Aprovação.
+5. Confirmar a submissão caso seja apresentada uma mensagem de confirmação.
+6. O sistema altera o estado de workflow para "Em Progresso" e envia uma notificação aos aprovadores.
+
+**Validação final**
+O pedido surge na lista de solicitações para aprovar e o produto fica bloqueado até à aprovação. captura de imagem
+
+**Notas**
+- Se surgirem erros de campos em falta, completar esses campos antes de reenviar.
+- Apenas os utilizadores com permissões adequadas podem enviar pedidos de aprovação.
+
+## FAQ-077 — Onde posso consultar o estado de aprovação de um produto?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Depois de enviar o pedido, o utilizador quer acompanhar se o produto já foi aprovado.
+
+**Diagnóstico**
+O estado da aprovação não é apresentado de forma clara na lista de produtos.
+
+**Causa provável**
+Desconhecimento das páginas de consulta de solicitações e aprovações.
+
+**Solução**
+Verificar o estado na ficha do produto ou através da página Solicitações para Aprovar.
+
+**Como proceder**
+1. Abrir a ficha do produto em causa.
+2. No topo da ficha, procurar a área de Aprovações que indica se o pedido foi enviado e qual o seu estado.
+3. Em alternativa, usar a pesquisa do Business Central para procurar Solicitações para Aprovar.
+4. Na lista, aplicar um filtro pelo Tipo Documento = Produto ou pelo número do produto.
+5. A coluna Estado indica se o pedido está pendente, aprovado ou rejeitado, e a coluna Aprovador identifica quem é responsável.
+
+**Validação final**
+O estado de aprovação e o aprovador são visíveis e atualizados em tempo real.
+
+**Notas**
+- Pode receber notificações de aprovação por email caso o workflow esteja configurado para tal.
+- Utilize filtros na lista de produtos com estado de workflow "Em Progresso" para visualizar rapidamente os produtos pendentes de aprovação.
+
+## FAQ-078 — Como vejo quem são os responsáveis pela aprovação de um produto?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O utilizador precisa de saber a quem deve contactar sobre a aprovação de um produto.
+
+**Diagnóstico**
+A informação de aprovadores nem sempre está visível na ficha.
+
+**Causa provável**
+O utilizador desconhece como consultar a cadeia de aprovação.
+
+**Solução**
+Consultar a página de Solicitações para Aprovar ou a ficha de workflow para identificar o aprovador.
+
+**Como proceder**
+1. A partir da ficha do produto, aceder a Pedido → Fluxo de Trabalho (ou workflow) para visualizar a configuração do workflow associado.
+2. Na lista de etapas do workflow, identificar o grupo ou utilizador responsável pela aprovação do produto.
+3. Para ver o pedido específico, abrir a página Solicitações para Aprovar, filtrar pelo produto e verificar a coluna Aprovador.
+4. Se necessário, contactar o aprovador por email ou via Teams com referência ao número do produto e ao pedido.
+
+**Validação final**
+O utilizador conhece o(s) aprovador(es) atribuídos ao pedido de aprovação do produto.
+
+**Notas**
+- Os aprovadores podem ser definidos por grupo ou por função.
+- Em workflows complexos, podem existir múltiplos aprovadores sequenciais; acompanhe as diferentes etapas.
+
+## FAQ-079 — Como filtro produtos que ainda estão em criação ou aprovação?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O utilizador deseja listar apenas os produtos cujo workflow está em progresso (em criação ou aprovação).
+
+**Diagnóstico**
+Sem aplicar o filtro adequado, a lista apresenta todos os produtos ativos e finalizados.
+
+**Causa provável**
+Desconhecimento do campo Workflowstatus e dos seus valores.
+
+**Solução**
+Aplicar um filtro no campo Workflowstatus da lista de produtos com o valor Em Progresso.
+
+**Como proceder**
+1. Abrir a lista de Produtos.
+2. No cabeçalho, clicar em Filtrar e procurar o campo Workflowstatus.
+3. Definir o valor para Em Progresso; isso irá mostrar apenas os produtos em criação ou aprovação.
+4. Se desejar ver produtos aprovados ou rejeitados, altere o filtro para o valor correspondente.
+
+**Validação final**
+A lista exibe exclusivamente produtos cujo estado de workflow é "Em Progresso", facilitando o acompanhamento das criações em curso newtab.
+
+**Notas**
+- Pode guardar o filtro como uma vista personalizada para uso futuro.
+- Utilize filtros adicionais (por exemplo, Data de Criação) para refinar a pesquisa.
+
+## FAQ-080 — Como aprovo ou rejeito um novo produto?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Um produto pendente precisa de ser aprovado ou rejeitado por um utilizador com permissões de aprovador.
+
+**Diagnóstico**
+O pedido encontra se na lista de solicitações pendentes e aguarda decisão.
+
+**Causa provável**
+O workflow exige que um aprovador analise a ficha antes de a tornar ativa.
+
+**Solução**
+Abrir o pedido pendente, rever os dados do produto e escolher Aprovar ou Rejeitar.
+
+**Como proceder**
+1. Aceder a Solicitações para Aprovar no menu ou via pesquisa.
+2. Filtrar por Tipo Documento = Produto e localizar o pedido pendente.
+3. Selecionar a linha pretendida e clicar em Abrir Registo para consultar a ficha do produto.
+4. Rever os campos obrigatórios, dados técnicos e comerciais.
+5. Se estiver tudo correto, voltar à lista de solicitações e escolher Aprovar; caso existam erros ou lacunas, escolher Rejeitar e adicionar um comentário explicativo.
+6. O sistema notifica o requisitante sobre a decisão.
+
+**Validação final**
+O pedido desaparece da lista de pendentes e o produto passa para o estado de aprovado ou rejeitado.
+
+**Notas**
+- Apenas aprovadores designados podem realizar esta operação.
+- Ao rejeitar, indique sempre o motivo para que o autor possa corrigir a ficha e reenviar.
+
+## FAQ-081 — Como abro o registo de um produto pendente de aprovação?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Um utilizador precisa de consultar os detalhes de um produto que ainda não está aprovado.
+
+**Diagnóstico**
+O pedido de aprovação está pendente, mas a ficha pode ser aberta para revisão.
+
+**Causa provável**
+Necessidade de corrigir ou consultar informação antes da aprovação.
+
+**Solução**
+Aceder à lista de solicitações e utilizar a opção Abrir Registo para visualizar a ficha.
+
+**Como proceder**
+1. Navegar até Solicitações para Aprovar.
+2. Localizar o pedido de aprovação do produto em questão.
+3. Na linha do pedido, clicar em Abrir Registo; a ficha do produto será aberta em modo de consulta.
+4. Verificar ou editar os campos consoante as permissões (alguns campos podem estar bloqueados se já houver pedido enviado).
+5. Fechar a ficha ou proceder a correções e reenviar o pedido se necessário.
+
+**Validação final**
+O utilizador consegue aceder à ficha para análise e correção antes da decisão final.
+
+**Notas**
+- A opção Abrir Registo é útil para avaliar rapidamente o conteúdo do pedido sem navegar pela lista de produtos.
+- Utilize esta funcionalidade para corrigir erros e evitar rejeições desnecessárias.
+
+## FAQ-082 — Como adiciono comentários a uma aprovação de produto?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+É necessário comunicar observações ou correções ao aprovador no âmbito de um pedido de produto.
+
+**Diagnóstico**
+A área de aprovações permite adicionar comentários, mas o utilizador não sabe onde fazê lo.
+
+**Causa provável**
+Desconhecimento da funcionalidade de comentários nas solicitações de aprovação.
+
+**Solução**
+Usar o campo de comentário na solicitação para registar notas e instruções.
+
+**Como proceder**
+1. Aceder à página Solicitações para Aprovar e localizar o pedido.
+2. Selecionar a linha e escolher Comentários ou Adicionar Comentário (dependendo da versão).
+3. Escrever o comentário indicando as justificações, observações ou instruções para o aprovador.
+4. Guardar o comentário; ele ficará associado ao pedido.
+5. O aprovador poderá ler o comentário antes de tomar a decisão.
+
+**Validação final**
+O comentário é visível na solicitação e pode ser lido pelo aprovador antes de aprovar ou rejeitar o produto.
+
+**Notas**
+- Utilize comentários de forma clara e objetiva; evite informação irrelevante.
+- Pode adicionar mais do que um comentário durante o processo de aprovação.
+
+## FAQ-083 — Como crio um produto a partir do Catálogo de Produtos?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Pretende-se criar um produto a partir de uma ficha existente no Catálogo de Produtos.
+
+**Diagnóstico**
+O utilizador não sabe como converter um item de catálogo num produto ativo.
+
+**Causa provável**
+Falta de conhecimento das opções de criação a partir do catálogo e de preenchimento de informações de fornecedor.
+
+**Solução**
+Selecionar a ficha de catálogo, preencher os campos necessários (como número de fornecedor) e utilizar a opção Criar Produto.
+
+**Como proceder**
+1. Aceder ao Catálogo de Produtos a partir da pesquisa.
+2. Selecionar a ficha do item de catálogo que pretende converter.
+3. Preencher o campo Nº Fornecedor (obrigatório) e outros campos relevantes, como descrição detalhada ou atributos.
+4. Clicar em Criar Produto; o sistema gera uma nova ficha de produto com estado Bloqueado.
+5. Abrir a ficha de produto criada e completar os campos obrigatórios em eInfo Obrigatória.
+6. Enviar o pedido de aprovação como num produto criado de raiz.
+
+**Validação final**
+O produto criado a partir do catálogo aparece na lista de produtos e o pedido de aprovação está em curso.
+
+**Notas**
+- O produto é criado inicialmente com estado Bloqueado; só após aprovação fica ativo.
+- Este processo é útil para itens padronizados que já existem no catálogo corporativo.
+
+## FAQ-084 — Que informação tenho de preencher na Ficha Produto Catálogo antes de criar o produto?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Ao criar a partir do catálogo, o utilizador não sabe quais os campos mínimos exigidos.
+
+**Diagnóstico**
+A ficha de catálogo apresenta menos campos do que a de produto, mas alguns são obrigatórios para criar o registo.
+
+**Causa provável**
+Desconhecimento dos dados obrigatórios na ficha do catálogo.
+
+**Solução**
+Preencher o campo Nº Fornecedor e quaisquer campos identificados como obrigatórios no catálogo antes de criar o produto.
+
+**Como proceder**
+1. Abrir a ficha do produto no Catálogo de Produtos.
+2. Procurar a secção Dados Obrigatórios (semelhante a eInfo Obrigatória).
+3. Preencher o Nº Fornecedor com o código do fornecedor que fornecerá o produto.
+4. Verificar campos como Tipo, Descrição, Categoria e assegurar que estão preenchidos.
+5. Após completar os campos, clicar em Criar Produto.
+
+**Validação final**
+O produto é criado sem erros e encontra se pronto para preenchimento dos restantes dados na ficha de produto.
+
+**Notas**
+- O campo Nº Fornecedor é essencial para estabelecer a relação de fornecimento inicial.
+- Caso o fornecedor não exista, crie primeiro o fornecedor antes de associá lo ao produto.
+
+## FAQ-085 — O que acontece ao produto quando é criado a partir do Catálogo de Produtos?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O utilizador pretende saber como o sistema trata o produto após a criação a partir do catálogo.
+
+**Diagnóstico**
+A ficha de produto é gerada automaticamente com algumas particularidades.
+
+**Causa provável**
+Necessidade de compreender o estado inicial e os passos seguintes após a criação.
+
+**Solução**
+Entender que o produto é criado em estado Bloqueado, exigindo configuração adicional e aprovação para ficar ativo.
+
+**Como proceder**
+1. Após selecionar Criar Produto, o Business Central copia os dados da ficha do catálogo para uma nova ficha de produto.
+2. O campo Status ou Bloqueado é definido como Sim para impedir o uso até que a configuração seja concluída.
+3. Abrir a nova ficha de produto e completar todos os campos obrigatórios (planeamento, contabilidade, logística).
+4. Verificar as relações com fornecedores e preços, pois apenas o Nº Fornecedor foi herdado.
+5. Enviar o pedido de aprovação; após aprovação, o campo Bloqueado é atualizado e o produto passa a ativo.
+
+**Validação final**
+O produto criado a partir do catálogo cumpre os mesmos requisitos de um produto criado de raiz e torna se utilizável após aprovação.
+
+**Notas**
+- O estado Bloqueado impede a utilização em documentos enquanto a ficha não estiver completa.
+- Use esta funcionalidade para acelerar a criação de produtos recorrentes.
+
+## FAQ-086 — Como adiciono atributos a uma Ficha de Produto?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O produto precisa de atributos adicionais (tamanho, cor, marca) para fins de filtragem e relatórios.
+
+**Diagnóstico**
+A ficha permite associar atributos definidos a nível global, mas o utilizador não sabe onde fazê lo.
+
+**Causa provável**
+Desconhecimento da funcionalidade de atributos e da página de associação.
+
+**Solução**
+Utilizar a funcionalidade Atributos na ficha de produto para atribuir valores aos atributos existentes.
+
+**Como proceder**
+1. Abrir a ficha do produto pretendido.
+2. Selecionar Produto → Atributos no menu.
+3. Na janela de atributos, clicar em + Novo e selecionar o atributo (por exemplo, Tamanho, Cor, Marca).
+4. Escolher ou introduzir o valor apropriado para esse atributo.
+5. Repetir para todos os atributos necessários.
+6. Guardar a ficha de atributos; os valores ficam associados ao produto e serão utilizados em filtros e relatórios.
+
+**Validação final**
+Os atributos e os seus valores aparecem listados na ficha e podem ser usados em filtros de oportunidades e propostas.
+
+**Notas**
+- Os atributos têm de estar previamente definidos a nível de empresa antes de serem atribuídos.
+- Podem ser utilizados para segmentar produtos em relatórios e listas.
+
+## FAQ-087 — Para que servem os atributos de produto?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O utilizador quer saber a utilidade de associar atributos a produtos.
+
+**Diagnóstico**
+A lista de produtos pode ser longa e diversa; os atributos permitem filtragem e análise mais detalhada.
+
+**Causa provável**
+Desconhecimento das vantagens dos atributos na gestão e pesquisa.
+
+**Solução**
+Explicar que os atributos facilitam a pesquisa, classificação e segmentação de produtos em listas, oportunidades e propostas.
+
+**Como proceder**
+1. Definir atributos a nível da empresa (Ex.: Tamanho, Cor, Marca, Grupo terapêutico).
+2. Atribuir valores apropriados a cada produto através da funcionalidade de atributos na ficha.
+3. Utilizar os atributos como filtros nas listas de produtos ou quando procura produtos para uma oportunidade ou proposta.
+4. Incluir atributos nos relatórios e análises para segmentar produtos por características.
+
+**Validação final**
+Os atributos estão definidos e são visíveis nas listagens, permitindo filtrar rapidamente produtos com características específicas.
+
+**Notas**
+- Os atributos também podem ser usados para gerar etiquetas ou documentos personalizados.
+- Mantenha a lista de atributos organizada e consistente para evitar redundâncias.
+
+## FAQ-088 — Onde posso consultar os atributos associados a um produto?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O utilizador deseja ver os atributos e valores de um produto específico.
+
+**Diagnóstico**
+Os atributos não aparecem diretamente na ficha principal e é necessário abrir uma janela específica.
+
+**Causa provável**
+Desconhecimento de onde visualizar os atributos já atribuídos.
+
+**Solução**
+Consultar a opção Atributos na ficha de produto.
+
+**Como proceder**
+1. Abrir a ficha do produto.
+2. No menu, selecionar Produto → Atributos.
+3. A janela de atributos apresenta a lista de todos os atributos associados e respetivos valores.
+4. Nesta janela, é possível editar ou remover valores se necessário.
+5. Fechar a janela após consulta ou edição.
+
+**Validação final**
+A lista de atributos e valores do produto é apresentada corretamente.
+
+**Notas**
+- Pode exportar a lista de atributos para Excel se necessitar de partilhar ou analisar externamente.
+- Apenas atributos previamente definidos podem ser adicionados ou editados.
+
+## FAQ-089 — Como filtro a lista de produtos por atributos?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Precisa de encontrar produtos com características específicas (por exemplo, cor vermelha, marca X).
+
+**Diagnóstico**
+Usar filtros tradicionais (número, descrição) não é suficiente; é necessário filtrar por atributos.
+
+**Causa provável**
+Não conhecimento da funcionalidade de filtro por atributos na lista de produtos.
+
+**Solução**
+Aplicar filtros de atributos através da janela de pesquisa de atributos.
+
+**Como proceder**
+1. Na lista de Produtos, abrir o menu Filtrar e escolher Atributos.
+2. Selecionar o atributo pretendido (por exemplo, Cor) e o valor (Vermelho).
+3. Confirmar; a lista mostrará apenas produtos que têm esse atributo com o valor selecionado.
+4. Se necessário, adicionar mais filtros de atributos para refinar ainda mais a pesquisa.
+5. Para remover o filtro, voltar à janela de atributos e limpar os valores.
+
+**Validação final**
+A lista exibe unicamente os produtos que correspondem aos atributos escolhidos newtab.
+
+**Notas**
+- Guardar filtros de atributos como vistas facilita pesquisas futuras.
+- Filtros combinados (atributos + campos tradicionais) proporcionam maior precisão.
+
+## FAQ-090 — Como limpo um filtro de atributos aplicado à lista de produtos?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Após aplicar um filtro de atributos, o utilizador quer voltar à lista completa de produtos.
+
+**Diagnóstico**
+O filtro permanece ativo e limita a visualização de produtos.
+
+**Causa provável**
+Falta de conhecimento sobre como remover filtros de atributos.
+
+**Solução**
+Reabrir a janela de atributos e limpar os valores aplicados.
+
+**Como proceder**
+1. Na lista de Produtos, clicar em Filtrar → Atributos.
+2. Para cada atributo com filtro ativo, selecionar Limpar Valor ou apagar manualmente.
+3. Confirmar; a lista volta a mostrar todos os produtos.
+4. Guardar a vista sem filtros se necessitar de aceder frequentemente à lista completa.
+
+**Validação final**
+A lista de produtos deixa de ter filtros e apresenta todos os registos.
+
+**Notas**
+- Pode alternar rapidamente entre vistas filtradas e não filtradas através de favoritos.
+- Limpar os filtros garante que novos produtos não são escondidos.
+
+## FAQ-091 — Que atributos de produto são usados em oportunidades e propostas?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O utilizador quer saber se os atributos influenciam oportunidades e propostas de venda.
+
+**Diagnóstico**
+Os atributos podem ser usados para filtrar e sugerir produtos durante a criação de propostas.
+
+**Causa provável**
+Desconhecimento da integração entre atributos e o módulo de oportunidades.
+
+**Solução**
+Explicar que os atributos utilizados nas fichas de produtos podem ser filtrados em oportunidades e propostas, ajudando a selecionar os produtos adequados.
+
+**Como proceder**
+1. Quando criar uma proposta de venda a partir de uma oportunidade, utilize a pesquisa de produtos para adicionar linhas.
+2. Na janela de seleção de produtos, aplicar filtros de atributos (como Tamanho ou Marca) para localizar rapidamente os produtos que correspondem aos requisitos do cliente.
+3. Adicionar os produtos filtrados à proposta; os atributos não são impressos por defeito, mas ajudam internamente.
+4. Caso necessário, referencie atributos no texto da proposta através de comentários.
+
+**Validação final**
+Os produtos selecionados na proposta correspondem às características solicitadas pelo cliente, graças ao uso de filtros de atributos.
+
+**Notas**
+- Os atributos são particularmente úteis em oportunidades complexas com muitos requisitos técnicos.
+- Garanta que todos os produtos têm atributos atualizados para que os filtros sejam eficazes.
+
+## FAQ-092 — Como importo o Dicionário ANF?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**
+É necessário atualizar a base de dados com o dicionário de substâncias ou medicamentos ANF.
+
+**Diagnóstico**
+A importação requer acesso a ficheiros externos e permissões de administrador.
+
+**Causa provável**
+Mudanças de regulamentação ou atualização de nomenclatura que exigem a importação de novos dados.
+
+**Solução**
+Executar a rotina de importação de ANF através da funcionalidade de importação de dados.
+
+**Como proceder**
+1. Obter o ficheiro atualizado do Dicionário ANF no formato suportado (normalmente Excel ou CSV).
+2. Aceder à funcionalidade de Importar Dicionário ANF via pesquisa.
+3. Selecionar Procurar e escolher o ficheiro a importar.
+4. Validar os campos de mapeamento entre o ficheiro e as tabelas internas.
+5. Iniciar a importação e aguardar a conclusão; o sistema atualiza as substâncias, grupos e outras informações nas fichas de produtos.
+6. Rever logs de importação para corrigir eventuais erros.
+
+**Validação final**
+As substâncias e grupos ANF são atualizados e disponíveis para utilização em produtos e relatórios.
+
+**Notas**
+- Esta operação deve ser executada por um administrador ou utilizador com permissões de importação.
+- Mantenha um backup antes de realizar importações massivas.
+
+## FAQ-093 — Onde são atualizados os dados importados do Dicionário ANF?
+**Categoria:** Produtos  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Após importar o Dicionário ANF, o utilizador pretende saber onde são refletidas as alterações.
+
+**Diagnóstico**
+Os dados importados alimentam tabelas de substâncias, grupos terapêuticos e indicações, que se refletem nas fichas de produto.
+
+**Causa provável**
+Necessidade de confirmar se as substâncias e classificações foram atualizadas corretamente.
+
+**Solução**
+Verificar as tabelas de substâncias e grupos ANF e confirmar os campos atualizados nas fichas de produto.
+
+**Como proceder**
+1. Após a importação, aceder às tabelas de Substâncias e Grupos Terapêuticos através da pesquisa.
+2. Confirmar que as novas entradas e alterações do dicionário estão visíveis.
+3. Abrir uma ficha de produto que utilize uma substância importada e verificar se os campos de classificação ANF estão atualizados.
+4. Nos relatórios ou listas, utilizar filtros de substância ou grupo para garantir que as novas designações são reconhecidas.
+
+**Validação final**
+Os campos de substância e grupo terapêutico nas fichas de produto refletem as informações atualizadas do Dicionário ANF.
+
+**Notas**
+- Caso algum dado não tenha sido importado, consulte o log de importação para identificar erros.
+- A atualização pode afetar relatórios regulatórios; confirme se estão a utilizar a informação correta.
+
+## FAQ-094 — Como importo dados de PVA, PIC, PMA, PVFD e PVAD?
+**Categoria:** Produtos / Preços  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**
+É necessário atualizar as tabelas de Preço de Venda ao Armazém (PVA), Preço Industriais de Compra (PIC), Preço Máximo de Aprovisionamento (PMA), Preço de Venda Farmácia Descontado (PVFD) e Preço de Venda ao Doente (PVAD).
+
+**Diagnóstico**
+Os preços e margens definidos nas tabelas externas mudam com frequência e têm impacto na definição do preço de venda.
+
+**Causa provável**
+Revisões regulatórias de preços ou alterações contratuais com fornecedores.
+
+**Solução**
+Usar a funcionalidade de importação de preços/margens disponível no módulo de produtos para atualizar as tabelas correspondentes.
+
+**Como proceder**
+1. Obter os ficheiros de atualização de PVA, PIC, PMA, PVFD e PVAD nos formatos fornecidos pelo regulador ou fornecedor (normalmente Excel/CSV).
+2. Aceder às páginas específicas de importação através da pesquisa (por exemplo, Importar PVA, Importar PIC).
+3. Selecionar Procurar e escolher o ficheiro de cada tipo de preço.
+4. Validar os campos de mapeamento; o sistema indica quais as colunas do ficheiro que correspondem aos campos internos.
+5. Iniciar a importação; o sistema atualiza os campos de preço e margens nas fichas de produto e nas tabelas de apoio.
+6. Repetir o processo para cada tipo de preço.
+7. Após a importação, rever um conjunto de produtos para confirmar que os preços foram atualizados.
+
+**Validação final**
+As tabelas de PVA, PIC, PMA, PVFD e PVAD estão atualizadas e os preços refletem as últimas alterações.
+
+**Notas**
+- As importações devem ser realizadas em ambiente de testes antes de passar a produção.
+- Guarde os ficheiros de importação como registo e em caso de auditoria.
+
+## FAQ-095 — Onde posso consultar a informação de PVA, PIC, PMA, PVFD e PVAD na ficha do produto?
+**Categoria:** Produtos / Preços  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O utilizador precisa de confirmar os preços e margens importados para um produto específico.
+
+**Diagnóstico**
+Os valores de PVA, PIC, PMA, PVFD e PVAD são armazenados em campos ou páginas de preços na ficha de produto.
+
+**Causa provável**
+Desconhecimento da localização destes dados na ficha de produto.
+
+**Solução**
+Abrir a ficha de produto e aceder às páginas de Preços ou Comercial para consultar os valores.
+
+**Como proceder**
+1. Abrir a ficha do produto desejado.
+2. Ir ao separador Comercial ou Preços (dependendo da configuração).
+3. Localizar campos como Preço PVA, Preço PIC, Preço PMA, PVFD e PVAD; estes campos mostram o valor mais recente importado.
+4. Se os campos não estiverem visíveis, clicar em Navegar → Preços para abrir a página detalhada de preços onde todas as tabelas estão listadas.
+5. Verificar datas de vigência e quantidades associadas a cada preço.
+
+**Validação final**
+Os valores de PVA, PIC, PMA, PVFD e PVAD apresentados correspondem aos dados importados e são coerentes com a tabela geral.
+
+**Notas**
+- Os preços podem estar sujeitos a arredondamentos e impostos; confirme se os valores se aplicam ao contexto correto.
+- Utilize relatórios de preços para comparar os diferentes valores entre produtos.
+
+## FAQ-096 — Como crio um novo cliente?
+**Categoria:** Clientes  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Um novo cliente tem de ser registado no sistema.
+
+**Diagnóstico**
+O utilizador não sabe qual o formulário ou modelo a utilizar.
+
+**Causa provável**
+Falta de experiência na criação de clientes no Business Central.
+
+**Solução**
+Criar a ficha de cliente através da lista de clientes, preencher os campos obrigatórios e submeter para aprovação.
+
+**Como proceder**
+1. A partir da pesquisa ou menu, aceder a Clientes.
+2. Selecionar Novo para abrir a ficha de cliente em branco.
+3. Se existir, escolher um Modelo de Cliente para pré preencher dados.
+4. Preencher os campos obrigatórios indicados na secção eInfo Obrigatória (Nome, Nº Identificação Fiscal, Grupo Registo Cliente, Grupo Registo VAT Cliente, etc.).
+5. Adicionar endereços de faturação e envio, contactos e outras informações relevantes.
+6. Guardar a ficha e verificar se todos os campos obrigatórios estão preenchidos.
+7. Submeter para aprovação através de Pedido → Enviar Pedido Aprovação.
+
+**Validação final**
+O cliente aparece na lista de clientes com o pedido de aprovação pendente ou aprovado newtab.
+
+**Notas**
+- Utilize modelos de cliente para acelerar a criação.
+- Verifique se o NIF e dados de faturação estão corretos para evitar rejeições.
+
+## FAQ-097 — Que campos obrigatórios devo preencher antes de pedir aprovação de um cliente?
+**Categoria:** Clientes  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O utilizador quer garantir que não faltam dados antes de enviar um cliente para aprovação.
+
+**Diagnóstico**
+A ficha tem uma área de informação obrigatória que lista os campos necessários.
+
+**Causa provável**
+Desconhecimento ou esquecimento de campos críticos (nome, morada, NIF, grupos de registo, etc.).
+
+**Solução**
+Consultar a secção eInfo Obrigatória e preencher todos os campos destacados antes de enviar para aprovação.
+
+**Como proceder**
+1. Na ficha de cliente, localizar a secção eInfo Obrigatória.
+2. Preencher o Nome, Endereço, Código Postal, Localidade e País.
+3. Preencher o Nº Identificação Fiscal (NIF) e confirmar a validade.
+4. Selecionar o Grupo Registo Cliente e Grupo Registo VAT Cliente adequados.
+5. Se aplicável, preencher limites de crédito, condições de pagamento e moedas.
+6. Verificar se algum campo está marcado como Validado em: Pedido de Aprovação e garantir que está preenchido.
+
+**Validação final**
+A ficha exibe todos os campos obrigatórios preenchidos, permitindo o envio do pedido de aprovação.
+
+**Notas**
+- Alguns campos (como limite de crédito) podem ser exigidos apenas em certos workflows; confirme com a sua organização.
+- Guardar periodicamente a ficha evita perda de informação.
+
+## FAQ-098 — Como envio um novo cliente para aprovação?
+**Categoria:** Clientes  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O cliente foi criado mas ainda está pendente porque não foi enviado para aprovação.
+
+**Diagnóstico**
+O utilizador não encontra a opção de envio de pedido na ficha.
+
+**Causa provável**
+Falta de familiaridade com a estrutura do menu Pedido.
+
+**Solução**
+Utilizar o menu Pedido na ficha de cliente para enviar o pedido de aprovação.
+
+**Como proceder**
+1. Abrir a ficha do cliente recém criado.
+2. Garantir que todos os campos obrigatórios estão preenchidos e guardados.
+3. Aceder ao menu Pedido no topo da ficha.
+4. Selecionar Enviar Pedido Aprovação.
+5. Confirmar a submissão; o sistema criará a solicitação e notificará o aprovador.
+
+**Validação final**
+O pedido de aprovação é criado e aparece na lista de solicitações para aprovar.
+
+**Notas**
+- Caso a opção não esteja visível, verifique se o workflow está ativo para clientes.
+- Depois de enviado, algumas alterações na ficha podem ficar bloqueadas.
+
+## FAQ-099 — Onde consulto o estado de aprovação de um cliente?
+**Categoria:** Clientes  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O utilizador precisa de saber se o cliente já foi aprovado ou continua pendente.
+
+**Diagnóstico**
+O estado da aprovação não aparece claramente na ficha principal.
+
+**Causa provável**
+Desconhecimento das páginas de acompanhamento de solicitações.
+
+**Solução**
+Consultar o estado na ficha de cliente ou na página Solicitações para Aprovar.
+
+**Como proceder**
+1. Na ficha de cliente, verificar a secção Aprovações ou Estado Workflow; esta secção indica se o pedido foi enviado, aprovado ou rejeitado.
+2. Usar a pesquisa para abrir Solicitações para Aprovar e aplicar um filtro por Tipo Documento = Cliente.
+3. Localizar a linha correspondente ao cliente e verificar o estado e o nome do aprovador.
+4. Se necessário, abrir o registo do cliente através da opção Abrir Registo para ver detalhes.
+
+**Validação final**
+O utilizador identifica com clareza o estado da aprovação e o responsável pela aprovação do cliente.
+
+**Notas**
+- Em workflows multietapa, podem existir vários níveis de aprovação; acompanhe cada etapa na página de solicitações.
+- Utilize notificações automáticas para ser informado quando o cliente for aprovado.
+
+## FAQ-100 — Como filtro clientes com workflow em progresso?
+**Categoria:** Clientes  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O utilizador pretende ver apenas os clientes que ainda estão em fase de aprovação.
+
+**Diagnóstico**
+A lista de clientes inclui clientes ativos, aprovados e pendentes, o que dificulta a gestão.
+
+**Causa provável**
+Desconhecimento do campo Workflowstatus na lista de clientes.
+
+**Solução**
+Aplicar um filtro no campo Workflowstatus com o valor Em Progresso.
+
+**Como proceder**
+1. Abrir a lista de Clientes.
+2. Clicar em Filtrar e escolher o campo Workflowstatus.
+3. Definir o valor para Em Progresso; isto mostrará apenas os clientes cujo pedido de aprovação está pendente.
+4. Guardar esta vista para consultas futuras se necessário.
+
+**Validação final**
+A lista apresenta unicamente os clientes em processo de aprovação, facilitando o acompanhamento.
+
+**Notas**
+- Pode combinar este filtro com outros (por exemplo, por vendedor) para análises mais específicas.
+- Limpar o filtro após a análise devolve a lista completa.
+
+## FAQ-101 — Como aprovo ou rejeito um novo cliente?
+**Categoria:** Clientes  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Um cliente pendente precisa de ser aprovado ou rejeitado por um utilizador com autoridade.
+
+**Diagnóstico**
+O pedido de aprovação está criado e aguarda decisão na lista de solicitações.
+
+**Causa provável**
+O processo de aprovação exige uma verificação manual das informações do cliente.
+
+**Solução**
+Aprovar ou rejeitar o pedido através da página Solicitações para Aprovar, após revisão da ficha.
+
+**Como proceder**
+1. Aceder a Solicitações para Aprovar e aplicar o filtro Tipo Documento = Cliente.
+2. Selecionar a linha relativa ao cliente pendente.
+3. Clicar em Abrir Registo para rever a ficha de cliente e confirmar os dados (NIF, morada, condições de pagamento).
+4. Voltar à lista de solicitações; se tudo estiver correto, clicar em Aprovar.
+5. Se existirem erros ou informação incompleta, escolher Rejeitar e adicionar um comentário com o motivo.
+6. O utilizador que criou o cliente será notificado da decisão.
+
+**Validação final**
+O pedido desaparece da lista de pendentes e o cliente passa a ativo ou rejeitado, consoante a decisão.
+
+**Notas**
+- Apenas utilizadores designados como aprovadores podem realizar esta operação.
+- Registar o motivo da rejeição ajuda o criador a corrigir e reenviar o pedido.
+
+## FAQ-102 — Como crio diferentes endereços de envio para um cliente?
+**Categoria:** Clientes  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Um cliente utiliza várias moradas de entrega e é necessário registar e gerir estas moradas.
+
+**Diagnóstico**
+A ficha de cliente principal apenas guarda uma morada de faturação; as moradas adicionais são geridas separadamente.
+
+**Causa provável**
+Desconhecimento da funcionalidade de Endereços Envio.
+
+**Solução**
+Criar e gerir as moradas de envio na secção de endereços do cliente.
+
+**Como proceder**
+1. Abrir a ficha do cliente.
+2. No menu superior, selecionar Cliente → Endereços Envio.
+3. Na janela de endereços, clicar em + Novo.
+4. Preencher os campos da morada de envio (Nome do Destinatário, Morada, Código Postal, Localidade, País, Contacto).
+5. Guardar a morada e repetir o processo para outras moradas.
+6. Opcionalmente, definir uma morada de envio predefinida através da seleção de Definir como predefinido.
+
+**Validação final**
+As moradas estão disponíveis para seleção nos documentos de venda e logística e podem ser alteradas consoante a encomenda.
+
+**Notas**
+- Pode eliminar ou editar moradas de envio a partir da mesma janela.
+- Certifique se de que a morada de envio corresponde ao local de entrega real para evitar devoluções.
+
+## FAQ-103 — Como crio um novo contacto a partir do Outlook?
+**Categoria:** Clientes / Contactos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Pretende adicionar um contacto ao Business Central diretamente a partir do Outlook.
+
+**Diagnóstico**
+O utilizador recebe um email de um potencial contacto e deseja registá lo sem sair do Outlook.
+
+**Causa provável**
+Desconhecimento da integração entre Outlook e Business Central através do suplemento.
+
+**Solução**
+Usar o add in do Business Central no Outlook para criar o contacto a partir do email recebido.
+
+**Como proceder**
+1. No Outlook, abrir o email do remetente que deseja adicionar como contacto.
+2. No painel direito ou superior, aceder ao suplemento do Business Central (ícone do logótipo).
+3. Selecionar Criar Contacto; o sistema apresenta um formulário pré preenchido com o nome e email do remetente.
+4. Rever e preencher dados adicionais, como telefone ou empresa.
+5. Confirmar a criação; o contacto fica imediatamente associado ao cliente correspondente ou como contacto independente.
+
+**Validação final**
+O novo contacto aparece na lista de contactos no Business Central e está relacionado com o cliente correto. newtab
+
+**Notas**
+- Esta funcionalidade requer que o add in do Business Central esteja configurado no Outlook.
+- Os contactos criados no Outlook podem ser editados posteriormente na ficha de cliente.
+
+## FAQ-104 — Como crio um contacto a partir da Ficha de Cliente?
+**Categoria:** Clientes / Contactos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+É necessário adicionar contactos diretamente na ficha do cliente.
+
+**Diagnóstico**
+A ficha do cliente não possui contactos ou precisa de mais contactos associados.
+
+**Causa provável**
+Desconhecimento de como aceder à área de contactos na ficha.
+
+**Solução**
+Usar a opção Contacto na ficha de cliente para criar novos contactos.
+
+**Como proceder**
+1. Abrir a ficha do cliente.
+2. No menu, selecionar Base → Contacto.
+3. Se não existir nenhum contacto associado, o sistema pergunta se deseja criar um; responder Sim.
+4. Preencher a ficha do novo contacto com nome, email, telefone e cargo.
+5. Guardar e fechar; o contacto fica associado ao cliente.
+6. Para adicionar contactos adicionais, repetir o processo.
+
+**Validação final**
+Os contactos estão listados na ficha do cliente e podem ser utilizados em oportunidades e documentos de venda.
+
+**Notas**
+- Os contactos criados podem ser editados ou eliminados posteriormente através da lista de contactos.
+- É possível definir um contacto predefinido para faturação ou envio.
+
+## FAQ-105 — Como edito ou elimino um contacto associado a um cliente?
+**Categoria:** Clientes / Contactos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Um contacto associado a um cliente precisa de ser atualizado ou removido.
+
+**Diagnóstico**
+Os contactos estão registados na ficha do cliente, mas não se sabe como editá los ou eliminá los.
+
+**Causa provável**
+Desconhecimento da opção de gerir contactos existentes.
+
+**Solução**
+Abrir a lista de contactos do cliente e utilizar as opções de editar ou eliminar.
+
+**Como proceder**
+1. Abrir a ficha do cliente.
+2. Selecionar Base → Contacto para ver a lista de contactos.
+3. Para editar, selecionar o contacto e clicar em Editar; alterar os campos necessários (nome, cargo, email, etc.) e guardar.
+4. Para eliminar, clicar nos três pontos (menu de contexto) à direita do contacto e escolher Eliminar; confirmar a eliminação.
+5. Atualizar a ficha do cliente para refletir as alterações.
+
+**Validação final**
+As alterações estão refletidas na lista de contactos e o contacto eliminado deixa de aparecer.
+
+**Notas**
+- A eliminação é permanente; garanta que o contacto não é usado noutros registos antes de o eliminar.
+- Os contactos editados mantêm o histórico de transações associadas ao cliente.
+
+## FAQ-106 — Como crio um novo fornecedor?
+**Categoria:** Fornecedores  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Um fornecedor novo necessita de ser registado no Business Central.
+
+**Diagnóstico**
+O utilizador não conhece o formulário e os campos a preencher.
+
+**Causa provável**
+Falta de experiência no módulo de fornecedores.
+
+**Solução**
+Criar a ficha de fornecedor a partir da lista de fornecedores, preencher os campos obrigatórios e enviar para aprovação.
+
+**Como proceder**
+1. A partir da pesquisa ou menu, aceder a Fornecedores.
+2. Clicar em Novo; a ficha de fornecedor abre com o número gerado automaticamente.
+3. Preencher a secção eInfo Obrigatória com Nome, Endereço, Código Postal, País, Grupo Registo Fornecedor e Grupo Registo VAT Fornecedor.
+4. Adicionar dados de contacto, condições de pagamento, moeda e valores mínimos de encomenda, se aplicável.
+5. Guardar a ficha e, se necessário, ir a Pedido → Enviar Pedido Aprovação para iniciar o workflow de aprovação.
+
+**Validação final**
+O fornecedor surge na lista de fornecedores com a informação completa e o pedido de aprovação enviado newtab.
+
+**Notas**
+- Utilize a numeração automática para uniformidade.
+- Confirme se o fornecedor já existe para evitar duplicados.
+
+## FAQ-107 — O número de fornecedor é manual ou automático?
+**Categoria:** Fornecedores  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O utilizador quer saber como é atribuído o número a um novo fornecedor.
+
+**Diagnóstico**
+A ficha de fornecedor gera o número automaticamente, mas pode ser configurada para manual.
+
+**Causa provável**
+Dúvida sobre a configuração de numeração no Business Central.
+
+**Solução**
+Por defeito, o número do fornecedor é atribuído automaticamente pela série de numeração definida. Em casos específicos, é possível atribuir manualmente.
+
+**Como proceder**
+1. Ao criar um fornecedor, o campo Nº é preenchido automaticamente com base na série de numeração configurada.
+2. Se a empresa permitir numeração manual, o campo Nº pode ser editado antes de guardar; contudo, esta opção deve ser evitada para manter consistência.
+3. Para alterar a configuração de numeração, aceder a Configuração → Configuração de Compras e verificar a série atribuída a fornecedores.
+
+**Validação final**
+O número do fornecedor é gerado corretamente ou introduzido manualmente conforme a política da empresa.
+
+**Notas**
+- A numeração automática previne duplicação e garante rastreabilidade.
+- Alterar a série de numeração requer permissões de administrador.
+
+## FAQ-108 — Que campos obrigatórios devo preencher numa nova Ficha de Fornecedor?
+**Categoria:** Fornecedores  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O utilizador precisa de saber quais os campos essenciais antes de enviar um fornecedor para aprovação.
+
+**Diagnóstico**
+A ficha de fornecedor contém uma secção de informação obrigatória que deve ser preenchida.
+
+**Causa provável**
+Falta de conhecimento dos campos críticos (nome, morada, grupos de registo, etc.).
+
+**Solução**
+Consultar a secção eInfo Obrigatória e preencher todos os campos indicados.
+
+**Como proceder**
+1. Ao criar a ficha de fornecedor, localizar a secção eInfo Obrigatória.
+2. Preencher o Nome (razão social), Endereço, Código Postal, Localidade e País.
+3. Inserir o Nº de Identificação Fiscal (NIF).
+4. Selecionar o Grupo Registo Fornecedor e Grupo Registo VAT Fornecedor corretos.
+5. Preencher o Método de Envio e a Condição de Pagamento quando aplicável.
+6. Se os campos de aprovação exigirem, introduzir também o valor mínimo de encomenda e moeda base.
+
+**Validação final**
+Todos os campos da secção obrigatória estão preenchidos, permitindo o envio do pedido de aprovação.
+
+**Notas**
+- Campos adicionais podem ser obrigatórios consoante o workflow configurado.
+- Revise as informações de banco e envio se forem necessárias para pagamentos e logística.
+
+## FAQ-109 — Como envio um fornecedor para aprovação?
+**Categoria:** Fornecedores  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Após criar o fornecedor, é necessário submetê lo ao workflow de aprovação.
+
+**Diagnóstico**
+O utilizador não sabe como iniciar o pedido de aprovação.
+
+**Causa provável**
+Desconhecimento da funcionalidade Enviar Pedido Aprovação.
+
+**Solução**
+Usar o menu Pedido na ficha do fornecedor para enviar o pedido de aprovação.
+
+**Como proceder**
+1. Abrir a ficha do fornecedor criado.
+2. Certificar se de que todos os campos obrigatórios estão preenchidos.
+3. Aceder ao menu Pedido.
+4. Selecionar Enviar Pedido Aprovação; confirmar a ação.
+5. O sistema cria uma solicitação e envia notificação ao aprovador designado.
+
+**Validação final**
+O pedido de aprovação aparece na lista de solicitações pendentes e o fornecedor fica com estado de workflow "Em Progresso".
+
+**Notas**
+- Verifique se o workflow de aprovação está configurado para fornecedores; caso contrário, a opção pode não estar disponível.
+- Após envio, algumas edições podem ficar bloqueadas até à decisão.
+
+## FAQ-110 — Onde verifico o estado de aprovação de um fornecedor?
+**Categoria:** Fornecedores  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Pretende saber se um fornecedor já foi aprovado ou se continua pendente.
+
+**Diagnóstico**
+O estado da aprovação não é visível de imediato na lista de fornecedores.
+
+**Causa provável**
+Desconhecimento das páginas de consulta de aprovação.
+
+**Solução**
+Consultar o estado na ficha de fornecedor ou na página Solicitações para Aprovar.
+
+**Como proceder**
+1. Abrir a ficha do fornecedor e procurar a secção Aprovações para ver o estado atual.
+2. Usar a pesquisa e aceder a Solicitações para Aprovar.
+3. Aplicar um filtro por Tipo Documento = Fornecedor e localizar o número do fornecedor.
+4. Verificar a coluna Estado (Pendente, Aprovado, Rejeitado) e Aprovador.
+5. Se necessário, abrir o registo para ver detalhes adicionais.
+
+**Validação final**
+O estado da aprovação é conhecido e pode ser acompanhado até à decisão final.
+
+**Notas**
+- Utilize notificações ou alertas para receber informação de novas aprovações.
+- Em workflows multilivelo, acompanhe cada etapa da aprovação separadamente.
+
+## FAQ-111 — Como filtro fornecedores com workflow em progresso?
+**Categoria:** Fornecedores  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Precisa de identificar rapidamente os fornecedores pendentes de aprovação.
+
+**Diagnóstico**
+A lista de fornecedores contém tanto registos aprovados como pendentes, dificultando a gestão.
+
+**Causa provável**
+Falta de conhecimento sobre filtros de workflow.
+
+**Solução**
+Aplicar um filtro no campo Workflowstatus com o valor Em Progresso na lista de fornecedores.
+
+**Como proceder**
+1. Aceder à lista de Fornecedores.
+2. Clicar em Filtrar e selecionar o campo Workflowstatus.
+3. Definir o valor Em Progresso para listar apenas fornecedores ainda em aprovação.
+4. Guardar a vista personalizada se necessário para consultas futuras.
+
+**Validação final**
+A lista apresenta apenas fornecedores cujo estado de workflow está em progresso newtab.
+
+**Notas**
+- Pode combinar este filtro com outros (por exemplo, por comprador) para análises específicas.
+- Limpar o filtro volta a apresentar todos os fornecedores.
+
+## FAQ-112 — Como aprovo ou rejeito um novo fornecedor?
+**Categoria:** Fornecedores  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Um fornecedor criado está pendente de aprovação e precisa de ser aprovado ou rejeitado.
+
+**Diagnóstico**
+O pedido de aprovação encontra se na lista de solicitações pendentes.
+
+**Causa provável**
+O workflow exige validação por parte de um aprovador designado.
+
+**Solução**
+Aceder à página de solicitações e tomar a decisão após rever a ficha.
+
+**Como proceder**
+1. Abrir Solicitações para Aprovar e aplicar o filtro por Tipo Documento = Fornecedor.
+2. Selecionar o pedido pendente.
+3. Clicar em Abrir Registo para analisar os dados do fornecedor (nome, NIF, condições de pagamento, produtos fornecidos).
+4. Se os dados estiverem corretos, voltar à lista e clicar em Aprovar; se houver informações incorretas ou em falta, clicar em Rejeitar e adicionar um comentário com as razões.
+5. O sistema informa o criador do fornecedor sobre a decisão.
+
+**Validação final**
+O fornecedor é aprovado e passa a ativo ou é rejeitado e removido do fluxo, conforme a decisão.
+
+**Notas**
+- Apenas os utilizadores com permissão de aprovador podem executar esta ação.
+- Indicar as razões da rejeição evita erros recorrentes na criação de fornecedores.
+
+## FAQ-113 — Como identifico fornecedores que requerem aprovação de Packaging ou Artworks?
+**Categoria:** Fornecedores  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Alguns fornecedores necessitam de aprovação específica para materiais de embalagem (Packaging) ou artes gráficas (Artworks).
+
+**Diagnóstico**
+Estas aprovações adicionais não fazem parte do workflow padrão de fornecedor e devem ser configuradas individualmente.
+
+**Causa provável**
+Fornecedores que fornecem produtos com embalagem personalizada ou documentação regulatória exigem verificações extra.
+
+**Solução**
+Configurar indicadores na ficha do fornecedor ou na ficha de produto que sinalizem a necessidade de aprovação de Packaging/Artworks.
+
+**Como proceder**
+1. Abrir a ficha do fornecedor.
+2. Localizar campos como Requer Aprovação Packaging ou Requer Aprovação Artworks (dependendo da customização).
+3. Definir estes campos como Sim quando o fornecedor fornecer produtos que necessitam de aprovação de materiais de embalagem ou de artes finais.
+4. Ao criar encomendas de compra ou produtos associados, o sistema irá solicitar aprovação adicional antes do envio para produção.
+
+**Validação final**
+Fornecedores identificados requerem aprovação extra, e o processo de aprovação é ativado automaticamente quando aplicável.
+
+**Notas**
+- Se os campos não existirem, consulte a equipa de sistemas para configurar esta funcionalidade.
+- Este procedimento reduz o risco de erros nos materiais de embalagem e cumprimento de normas.
+
+## FAQ-114 — Onde configuro a aprovação pré encomenda para fornecedores?
+**Categoria:** Fornecedores / Compras  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Deseja que certas encomendas de fornecedores sejam aprovadas antes de serem enviadas.
+
+**Diagnóstico**
+A aprovação pré encomenda é útil para controlar compras acima de um determinado valor ou tipo de material.
+
+**Causa provável**
+Necessidade de implementar controlos internos e garantir conformidade com políticas de compras.
+
+**Solução**
+Ativar o workflow de aprovação pré encomenda na ficha do fornecedor ou nas configurações de compras.
+
+**Como proceder**
+1. Aceder a Configuração Compras e Pagamentos ou Configuração Workflow via pesquisa.
+2. Criar ou editar um workflow de aprovação para encomendas de compra, definindo condições como valor mínimo ou fornecedor específico.
+3. Associar o workflow à tabela Encomendas de Compra e definir os aprovadores.
+4. Se pretender definir a aprovação por fornecedor, abrir a ficha do fornecedor e ativar o campo Requer Aprovação Pré Encomenda (quando disponível).
+5. Testar o fluxo criando uma encomenda acima do limiar definido para garantir que o pedido de aprovação é gerado.
+
+**Validação final**
+As encomendas de compra para fornecedores configurados ou valores acima do limiar são bloqueadas até serem aprovadas.
+
+**Notas**
+- Esta configuração requer permissões de administrador.
+- Ajuste os parâmetros do workflow conforme a política interna da empresa.
+
+## FAQ-115 — Como consulto as solicitações pendentes para aprovar?
+**Categoria:** Aprovações  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O utilizador deseja ver todos os pedidos de aprovação pendentes de decisão.
+
+**Diagnóstico**
+Existem pedidos de produto, cliente, fornecedor ou encomenda que aguardam aprovação.
+
+**Causa provável**
+Falta de conhecimento de onde centralizar as solicitações.
+
+**Solução**
+Usar a página Solicitações para Aprovar para ver e filtrar todos os pedidos pendentes.
+
+**Como proceder**
+1. Na pesquisa do Business Central, digitar Solicitações para Aprovar e abrir a página.
+2. A lista mostra todas as solicitações pendentes; utilizar filtros por Tipo Documento (Produto, Cliente, Fornecedor, Encomenda, etc.) ou Responsável.
+3. Analisar cada linha para ver o estado, data de envio e solicitante.
+4. Selecionar uma linha e utilizar as ações disponíveis (Aprovar, Rejeitar, Abrir Registo, Comentários).
+
+**Validação final**
+Todas as solicitações pendentes são visíveis e organizadas, permitindo ao aprovador gerir o seu trabalho.
+
+**Notas**
+- É possível adicionar colunas adicionais à vista para facilitar a análise (por exemplo, valor da encomenda).
+- Guarde vistas personalizadas para diferentes tipos de aprovações.
+
+## FAQ-116 — Que opções existem numa linha de aprovação pendente?
+**Categoria:** Aprovações  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Um aprovador quer saber que ações pode tomar numa solicitação pendente.
+
+**Diagnóstico**
+Cada linha de aprovação apresenta várias opções contextuais.
+
+**Causa provável**
+Necessidade de clarificar as ações antes de proceder.
+
+**Solução**
+Listar as opções disponíveis: Aprovar, Rejeitar, Abrir Registo e Comentários.
+
+**Como proceder**
+1. Abrir Solicitações para Aprovar e localizar a linha pendente.
+2. Observar as ações disponíveis na faixa de opções ou no menu contextual:
+o Aprovar: aceita o pedido e finaliza o processo.
+o Rejeitar: recusa o pedido; deve ser indicado um comentário com o motivo.
+o Abrir Registo: abre a ficha do documento (produto, cliente, fornecedor, encomenda) para revisão.
+o Adicionar Comentário: permite escrever observações sem aprovar ou rejeitar.
+3. Escolher a ação apropriada com base na análise.
+
+**Validação final**
+O aprovador conhece e utiliza as opções corretamente, conduzindo o pedido ao estado final desejado.
+
+**Notas**
+- Uma vez aprovada ou rejeitada, a solicitação desaparece da lista pendente.
+- Os comentários ficam registados para consulta futura.
+
+## FAQ-117 — Quando devo usar a opção “Abrir Registo” numa aprovação?
+**Categoria:** Aprovações  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O aprovador quer saber em que situações deve abrir o registo antes de aprovar ou rejeitar.
+
+**Diagnóstico**
+Nem sempre é necessário abrir o registo, mas em casos de dúvida é aconselhável.
+
+**Causa provável**
+Não entendimento da utilidade de rever o registo completo.
+
+**Solução**
+Usar Abrir Registo para verificar dados detalhados antes de tomar uma decisão.
+
+**Como proceder**
+1. Na lista de Solicitações para Aprovar, selecionar a linha do pedido.
+2. Clicar em Abrir Registo; a ficha correspondente abre permitindo visualizar todos os campos e detalhes.
+3. Rever informações como dados fiscais, preços, quantidades, datas ou anexos.
+4. Fechar a ficha; com base na informação consultada, decidir Aprovar ou Rejeitar no pedido.
+
+**Validação final**
+O aprovador tomou uma decisão informada após analisar o conteúdo completo do registo.
+
+**Notas**
+- Esta opção é recomendada quando há dúvidas sobre a completude ou exatidão da informação.
+- Evita aprovações erradas que poderiam comprometer processos futuros.
+
+## FAQ-118 — Como crio uma nova oportunidade?
+**Categoria:** Oportunidades  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Um novo concurso, ajuste direto ou proposta simples precisa ser registado no sistema.
+
+**Diagnóstico**
+O utilizador não iniciou ainda a criação de oportunidades.
+
+**Causa provável**
+Desconhecimento do menu de oportunidades.
+
+**Solução**
+Criar uma oportunidade na lista de oportunidades.
+
+**Como proceder**
+1. A partir da pesquisa, abrir Oportunidades.
+2. Clicar em Novo para criar uma nova oportunidade.
+3. Preencher o formulário em branco; o campo Nº pode ser gerado automaticamente.
+4. Guardar a ficha para prosseguir com o preenchimento de detalhes.
+
+**Validação final**
+A oportunidade fica registada e visível na lista de oportunidades newtab.
+
+**Notas**
+- O tipo de oportunidade (concurso, ajuste, proposta) pode ser indicado na ficha mais tarde.
+- É possível associar anexos, ligações e notas após a criação.
+
+## FAQ-119 — Que informação devo preencher na tab Geral de uma oportunidade?
+**Categoria:** Oportunidades  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+A ficha da oportunidade deve ser caracterizada com dados básicos antes de avançar.
+
+**Diagnóstico**
+O utilizador não conhece os campos exigidos na tab Geral.
+
+**Causa provável**
+Falta de formação na criação de oportunidades.
+
+**Solução**
+Preencher os campos principais: Número, Descrição, Contacto, Prioridade, Ciclo de Vendas e Vendedor.
+
+**Como proceder**
+1. Na ficha da oportunidade, ir à tab Geral.
+2. Preencher o campo Nº (usar numeração automática se disponível).
+3. Inserir uma Descrição breve do procedimento ou negócio.
+4. Selecionar o Nº Contacto associado (cliente ou potencial cliente).
+5. Definir a Prioridade (Alta, Normal, Baixa).
+6. Selecionar o Cód. Ciclo de Vendas que determina as etapas da oportunidade.
+7. Indicar o Cód. Vendedor responsável pelo acompanhamento.
+8. Guardar a ficha.
+
+**Validação final**
+A tab Geral fica completa e a oportunidade pode avançar para as próximas fases newtab.
+
+**Notas**
+- Estes campos são obrigatórios para que o workflow de oportunidade funcione corretamente.
+- Pode adicionar mais detalhes (origem, categoria) conforme a configuração.
+
+## FAQ-120 — Como identifico o contacto associado a uma oportunidade?
+**Categoria:** Oportunidades  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+É necessário associar a oportunidade a uma pessoa de contacto dentro do cliente.
+
+**Diagnóstico**
+A ficha de oportunidade não tem um contacto atribuído ou tem um contacto incorreto.
+
+**Causa provável**
+O utilizador não selecionou o campo Nº Contacto.
+
+**Solução**
+Selecionar o contacto correto a partir da lista de contactos do cliente.
+
+**Como proceder**
+1. Na ficha da oportunidade, ir ao campo Nº Contacto.
+2. Clicar na seta de pesquisa para abrir a lista de contactos do cliente (ou de todos os clientes).
+3. Selecionar o contacto adequado (nome, cargo) e confirmar.
+4. O campo é preenchido com o código do contacto e o nome aparece adjacente.
+
+**Validação final**
+O contacto associado reflete a pessoa certa para acompanhamento da oportunidade.
+
+**Notas**
+- Se o contacto não existir, crie-o previamente na ficha de cliente.
+- O contacto pode ser alterado a qualquer momento, antes de fechar a oportunidade.
+
+## FAQ-121 — Como defino a prioridade de uma oportunidade?
+**Categoria:** Oportunidades  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+É necessário classificar a urgência ou importância de uma oportunidade.
+
+**Diagnóstico**
+O campo Prioridade está vazio ou com o valor errado.
+
+**Causa provável**
+Desconhecimento da lista de prioridades e do seu impacto no ciclo de vendas.
+
+**Solução**
+Selecionar um valor de prioridade (Alta, Normal ou Baixa) na tab Geral.
+
+**Como proceder**
+1. Na ficha de oportunidade, localizar o campo Prioridade.
+2. Clicar na seta de seleção e escolher entre Alta, Normal ou Baixa.
+3. A prioridade pode influenciar a ordem de tratamento das oportunidades e alertas no centro de perfil.
+4. Guardar a alteração.
+
+**Validação final**
+A oportunidade fica marcada com a prioridade adequada, refletindo a urgência do processo.
+
+**Notas**
+- A prioridade pode ser alterada a qualquer momento se a importância se modificar.
+- Algumas organizações podem configurar prioridades personalizadas; verifique com o administrador.
+
+## FAQ-122 — Como escolho o ciclo de vendas de uma oportunidade?
+**Categoria:** Oportunidades  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Precisa de associar a oportunidade a um ciclo de vendas que define as etapas e tarefas a realizar.
+
+**Diagnóstico**
+O campo Cód. Ciclo de Vendas pode estar em branco ou incorreto.
+
+**Causa provável**
+Desconhecimento dos ciclos de vendas disponíveis e do seu propósito.
+
+**Solução**
+Escolher o código apropriado consoante o tipo de oportunidade (Concursos Públicos, Ajustes Diretos, Propostas Simples, etc.).
+
+**Como proceder**
+1. Na ficha de oportunidade, localizar o campo Cód. Ciclo de Vendas.
+2. Clicar na seta para abrir a lista de ciclos disponíveis.
+3. Selecionar o ciclo que melhor se adapta ao tipo de oportunidade; por exemplo, Concursos Públicos tem etapas de preparação de proposta, envio, acompanhamento, etc.
+4. Confirmar; o ciclo define automaticamente as etapas e tarefas associadas.
+5. Prosseguir com o processo de Ativar Primeira Etapa quando estiver pronto.
+
+**Validação final**
+O ciclo de vendas está selecionado corretamente e orienta o processo de acompanhamento da oportunidade.
+
+**Notas**
+- Pode consultar a descrição de cada ciclo na tabela de ciclos de vendas.
+- A alteração do ciclo após iniciar etapas pode não ser recomendada; verifique com o administrador.
+
+## FAQ-123 — Como adiciono anexos a uma oportunidade?
+**Categoria:** Oportunidades / Documentação  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+É necessário associar documentos relevantes (cadernos de encargos, cadernos de condições, certificados) à oportunidade.
+
+**Diagnóstico**
+A ficha de oportunidade permite anexar ficheiros, mas o utilizador não sabe como fazê lo.
+
+**Causa provável**
+Falta de experiência com a funcionalidade de anexos.
+
+**Solução**
+Utilizar a opção de anexos no menu da oportunidade para carregar ficheiros.
+
+**Como proceder**
+1. Abrir a ficha da oportunidade.
+2. No canto superior ou menu, clicar em Anexos (ou ícone de clip).
+3. Selecionar Novo Anexo ou Carregar Ficheiro.
+4. Navegar até ao local do ficheiro (por exemplo, PDF do caderno de encargos) e selecionar Abrir.
+5. O ficheiro fica associado à oportunidade; pode adicionar notas ou uma descrição ao anexo.
+6. Repetir para outros documentos.
+
+**Validação final**
+Os anexos aparecem listados na ficha da oportunidade e podem ser abertos ou descarregados quando necessário.
+
+**Notas**
+- Guarde os anexos com nomes claros para fácil identificação.
+- O tamanho máximo de ficheiro depende da configuração do Business Central ou do SharePoint.
+
+## FAQ-124 — Que tipo de anexos devo associar a uma oportunidade de concurso?
+**Categoria:** Oportunidades / Documentação  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O utilizador quer saber que documentos são relevantes quando a oportunidade é um concurso público.
+
+**Diagnóstico**
+Os concursos exigem documentos específicos para preparação e submissão da proposta.
+
+**Causa provável**
+Desconhecimento dos requisitos documentais de um concurso.
+
+**Solução**
+Associar os documentos fornecidos pelo cliente e os internos necessários para elaborar a proposta.
+
+**Como proceder**
+1. Na fase inicial, anexar o Programa de Concurso e o Caderno de Encargos fornecidos pela entidade adjudicante.
+2. Anexar o Caderno de Condições e eventuais anexos técnicos relativos ao procedimento.
+3. Adicionar documentos internos como Memória Descritiva, Declarações de Responsabilidade ou certificações que acompanhem a proposta.
+4. Garantir que todos os anexos estão atualizados e completos antes de gerar a proposta.
+
+**Validação final**
+Todos os documentos pertinentes estão anexados à oportunidade e servem de base para a elaboração da proposta.
+
+**Notas**
+- Mantenha a ordem e a nomenclatura dos ficheiros para facilitar a consulta.
+- Verifique se existem anexos obrigatórios específicos do setor (licenças, certificados).
+
+## FAQ-125 — Como adiciono ligações externas a uma oportunidade?
+**Categoria:** Oportunidades / Ligações  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+É necessário associar links externos, como páginas web ou pastas partilhadas, à oportunidade.
+
+**Diagnóstico**
+O módulo de oportunidades permite criar ligações externas, mas esta funcionalidade não foi utilizada.
+
+**Causa provável**
+Desconhecimento da opção Ligações na ficha da oportunidade.
+
+**Solução**
+Usar a opção Ligações para adicionar URL ou referências externas.
+
+**Como proceder**
+1. Abrir a ficha da oportunidade.
+2. No menu, selecionar Ligações ou Anexos → Ligações.
+3. Clicar em Nova Ligação.
+4. Introduzir o URL (por exemplo, endereço de uma pasta SharePoint, página do concurso) e uma Descrição.
+5. Guardar a ligação; ela aparece na lista de ligações da oportunidade.
+
+**Validação final**
+As ligações externas ficam acessíveis através da ficha da oportunidade e permitem navegar rapidamente para recursos externos.
+
+**Notas**
+- Verifique regularmente se as ligações ainda são válidas e atualizadas.
+- Pode atribuir permissões no SharePoint para controlar acesso a pastas ligadas.
+
+## FAQ-126 — Que cuidados devo ter ao associar uma pasta SharePoint a uma oportunidade?
+**Categoria:** Oportunidades / Ligações  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+A oportunidade necessita de estar ligada a uma pasta de documentos no SharePoint para colaboração.
+
+**Diagnóstico**
+Uma associação incorreta pode causar problemas de acesso ou de organização de ficheiros.
+
+**Causa provável**
+Falta de boas práticas na criação e associação de pastas.
+
+**Solução**
+Criar pastas específicas por oportunidade e assegurar permissões adequadas antes de associar.
+
+**Como proceder**
+1. No SharePoint, criar uma subpasta com o nome ou código da oportunidade numa biblioteca adequada.
+2. Definir as permissões de acesso para a equipa que irá trabalhar na oportunidade.
+3. Na ficha da oportunidade, utilizar a opção Ligações para adicionar o URL da pasta SharePoint recém criada.
+4. Verificar se o link abre corretamente para os utilizadores.
+5. Manter a organização de documentos dentro dessa pasta (subpastas por fase ou tipo de documento).
+
+**Validação final**
+A pasta está ligada e os utilizadores autorizados conseguem aceder e colaborar nos documentos da oportunidade.
+
+**Notas**
+- Evite associar a biblioteca raiz do SharePoint; crie uma pasta específica por oportunidade.
+- Documentos sensíveis devem ter permissão restrita.
+
+## FAQ-127 — Que tipo de notas posso colocar numa oportunidade?
+**Categoria:** Oportunidades / Notas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Pretende registar observações e informações que não cabem nos campos estruturados da oportunidade.
+
+**Diagnóstico**
+As notas permitem documentar detalhes importantes como chamadas telefónicas, reuniões e decisões internas.
+
+**Causa provável**
+Não utilização da funcionalidade Notas por desconhecimento.
+
+**Solução**
+Adicionar notas através da opção de comentários ou notas na ficha da oportunidade.
+
+**Como proceder**
+1. Abrir a ficha da oportunidade.
+2. Selecionar Notas ou Comentários (dependendo da versão).
+3. Escrever o texto da nota, mencionando data, autor e assunto (por exemplo, "Reunião com cliente X" ou "Sugestão do gestor").
+4. Guardar a nota; ela fica registada na ficha com data e hora.
+5. Adicionar tantas notas quantas necessárias ao longo do ciclo de vendas.
+
+**Validação final**
+As notas ficam visíveis na ficha e servem de histórico para todos os intervenientes.
+
+**Notas**
+- Utilize uma linguagem objetiva e registe apenas informação relevante.
+- As notas não substituem anexos ou campos estruturados; use-as como complemento.
+
+## FAQ-128 — Como registo requisitos do cliente numa oportunidade?
+**Categoria:** Oportunidades / Concursos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O cliente define requisitos específicos que devem constar na proposta (por exemplo, país de origem, marca, visibilidade do CDM).
+
+**Diagnóstico**
+Estes requisitos devem ser registados na ficha da oportunidade para serem impressos ou considerados na proposta.
+
+**Causa provável**
+Desconhecimento dos campos disponíveis para requisitos.
+
+**Solução**
+Usar o separador de requisitos na ficha da oportunidade para preencher os campos relevantes.
+
+**Como proceder**
+1. Na ficha da oportunidade, identificar que se trata de um concurso ou que há requisitos específicos.
+2. Aceder ao separador Requisitos ou Procedimento, conforme o layout.
+3. Preencher os campos solicitados pelo cliente (por exemplo, País de Origem, Marca, Visibilidade do CDM, Certificados exigidos).
+4. Verificar se há campos opcionais que devem ser incluídos na proposta.
+5. Guardar os dados; estes serão utilizados na proposta de venda.
+
+**Validação final**
+Todos os requisitos estão registados e serão considerados no documento final.
+
+**Notas**
+- Se a oportunidade não for um concurso, estes campos podem ficar em branco.
+- Recolher todos os requisitos antes de iniciar a elaboração da proposta evita atrasos.
+
+## FAQ-129 — Quando devo preencher os requisitos de concurso?
+**Categoria:** Oportunidades / Concursos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+Existe dúvida sobre o momento ideal para registar as informações do procedimento do concurso.
+
+**Diagnóstico**
+Os requisitos são determinantes para a proposta e devem ser registados atempadamente.
+
+**Causa provável**
+Falta de metodologia no preenchimento das fichas de concurso.
+
+**Solução**
+Preencher os requisitos logo que a oportunidade é identificada como concurso e a documentação é recebida.
+
+**Como proceder**
+1. Assim que for confirmada a participação num concurso, abrir a ficha da oportunidade.
+2. No separador Requisitos, inserir imediatamente as informações básicas: Número do Procedimento, Título do Procedimento, Data/Hora Limite de Entrega, etc.
+3. Acrescentar outros requisitos à medida que surgirem, garantindo que todos estão registados antes de gerar a proposta.
+4. Atualizar a ficha sempre que houver clarificações ou aditamentos por parte do cliente.
+
+**Validação final**
+Os requisitos estão completos antes da elaboração da proposta, evitando omissões no documento final.
+
+**Notas**
+- Um registo atempado permite planear o ciclo de vendas de forma mais eficiente.
+- Actualize os requisitos se forem recebidos adendos ou esclarecimentos do concurso.
+
+## FAQ-130 — Que campos devo preencher quando a oportunidade é um concurso?
+**Categoria:** Oportunidades / Concursos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+A oportunidade diz respeito a um concurso público e requer informação adicional.
+
+**Diagnóstico**
+Alguns campos da ficha da oportunidade são específicos para concursos e devem ser preenchidos para que apareçam na proposta.
+
+**Causa provável**
+Falta de conhecimento sobre os campos específicos de concursos.
+
+**Solução**
+Preencher os campos de procedimento e requisitos na ficha de oportunidade.
+
+**Como proceder**
+1. Na ficha da oportunidade, aceder ao separador Requisitos.
+2. Preencher o campo Procedimento com o número do concurso (ex.: número do anúncio no Diário da República).
+3. Preencher o Título do Procedimento com a designação oficial, que será impressa na proposta.
+4. Definir a Data/Hora Limite de Entrega da Proposta conforme o caderno de encargos.
+5. Ativar e preencher outros campos específicos solicitados (País de origem, Marca, Certificações).
+6. Guardar a ficha.
+
+**Validação final**
+Todos os campos específicos do concurso estão preenchidos, permitindo a geração de propostas e documentos regulamentares.
+
+**Notas**
+- Se algum campo não se aplicar, pode deixar em branco, mas confirme se não é obrigatório pelo cliente.
+- Utilize notas para explicar campos não padronizados.
+
+## FAQ-131 — Como identifico o número do procedimento de concurso?
+**Categoria:** Oportunidades / Concursos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+É necessário introduzir o número do procedimento (ou concurso) na ficha da oportunidade.
+
+**Diagnóstico**
+O documento do concurso indica o número, mas o utilizador não sabe em que campo o colocar.
+
+**Causa provável**
+Desconhecimento da estrutura da ficha de oportunidade.
+
+**Solução**
+Preencher o campo Procedimento no separador de requisitos com o número oficial do concurso.
+
+**Como proceder**
+1. Consultar o anúncio do concurso ou o convite e identificar o número do procedimento (por exemplo, o número do anúncio no Portal Base).
+2. Na ficha da oportunidade, aceder ao separador Requisitos.
+3. Introduzir o número no campo Procedimento.
+4. Guardar a ficha.
+
+**Validação final**
+O número do procedimento está corretamente registado na oportunidade e será utilizado nos documentos oficiais.
+
+**Notas**
+- Verifique que o número coincide com o indicado nos documentos do cliente para evitar erros.
+- Se houver vários procedimentos, crie oportunidades separadas para cada um.
+
+## FAQ-132 — Como identifico o título do procedimento que será impresso na proposta?
+**Categoria:** Oportunidades / Concursos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**
+O título do concurso deve ser impresso na proposta de venda e deve corresponder ao que consta no caderno de encargos.
+
+**Diagnóstico**
+O campo de título pode estar em branco ou incorreto e precisa ser atualizado.
+
+**Causa provável**
+O utilizador não sabe onde preencher o título do procedimento.
+
+**Solução**
+Usar o campo Título do Procedimento no separador de requisitos da oportunidade.
+
+**Como proceder**
+1. Abrir a ficha da oportunidade.
+2. Aceder ao separador Requisitos.
+3. No campo Título do Procedimento, introduzir o nome oficial do concurso (por exemplo, "Fornecimento de Medicamentos para Hospital X").
+4. Guardar a ficha.
+5. Quando a proposta de venda for gerada, o título será impresso conforme este campo.
+
+**Validação final**
+O título está registado e aparece corretamente na proposta de venda e documentos relacionados.
+
+**Notas**
+- Certifique se de que o título corresponde exatamente ao indicado nos documentos oficiais para evitar impugnações.
+- Pode utilizar notas para incluir versões abreviadas ou traduções, se necessário.
