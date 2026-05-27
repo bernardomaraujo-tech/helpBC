@@ -25,6 +25,14 @@ export interface Article {
 
 export type TicketStatus = 'Aberto' | 'Em espera' | 'Resolvido';
 export type TicketPriority = 'Baixa' | 'Média' | 'Alta';
+export type ConversationAuthor = 'user' | 'assistant' | 'agent';
+
+export interface ConversationMessage {
+  id: string;
+  author: ConversationAuthor;
+  text: string;
+  createdAt: string;
+}
 
 export interface Ticket {
   id: string;
@@ -36,6 +44,8 @@ export interface Ticket {
   createdAt: string;
   message: string;
   suggestedArticleId?: string;
+  messages?: ConversationMessage[];
+  updatedAt?: string;
 }
 
 export interface ChatMessage {

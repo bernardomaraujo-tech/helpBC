@@ -1,4 +1,4 @@
-import { AlertTriangle, Bot, FileText, Paperclip, Send } from 'lucide-react';
+import { AlertTriangle, Bot, FileText, MessageCircle, Paperclip, Send } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { Tabs } from '../components/Tabs';
 import { articles } from '../data/articles';
@@ -9,6 +9,7 @@ interface Props {
   tickets: Ticket[];
   onEscalate: (ticket: Ticket) => void;
   onOpenArticle: (articleId: string) => void;
+  onAddTicketMessage: (ticketId: string, text: string) => void;
 }
 
 const initialMessages: ChatMessage[] = [
@@ -20,11 +21,19 @@ const initialMessages: ChatMessage[] = [
   }
 ];
 
-export function UserPortal({ tickets, onEscalate, onOpenArticle }: Props) {
+function nowLabel() {
+  return new Date().toLocaleTimeString('pt-PT', { hour: '2-digit', minute: '2-digit' });
+}
+
+export function UserPortal({ tickets, onEscalate, onOpenArticle, onAddTicketMessage }: Props) {
   const [tab, setTab] = useState('chat');
   const [query, setQuery] = useState('');
   const [messages, setMessages] = useState<ChatMessage[]>(initialMessages);
   const [lastQuery, setLastQuery] = useState('');
+  const [selectedTicketId, setSelectedTicketId] = useState(tickets[0]?.id ?? '');
+  const [ticketReply, setTicketReply] = useState('');
+
+  const selectedTicket = tickets.find((ticket) => ticket.id === selectedTicketId) ?? tickets[0];
 
   const suggestedArticles = useMemo(
     () => searchArticles(lastQuery || query, articles, { audience: 'user' }),
@@ -45,13 +54,13 @@ export function UserPortal({ tickets, onEscalate, onOpenArticle }: Props) {
         id: crypto.randomUUID(),
         author: 'user',
         text: query,
-        createdAt: new Date().toLocaleTimeString('pt-PT', { hour: '2-digit', minute: '2-digit' })
+        createdAt: nowLabel()
       },
       {
         id: crypto.randomUUID(),
         author: 'assistant',
         text: response,
-        createdAt: new Date().toLocaleTimeString('pt-PT', { hour: '2-digit', minute: '2-digit' })
+        createdAt: nowLabel()
       }
     ]);
 
@@ -60,20 +69,46 @@ export function UserPortal({ tickets, onEscalate, onOpenArticle }: Props) {
   }
 
   function escalate() {
+    const ticketId = `TCK-${Math.floor(Math.random() * 900 + 100)}`;
+    const createdAt = nowLabel();
+    const subject = lastQuery || 'Pedido enviado pelo utilizador';
+
     const ticket: Ticket = {
-      id: `TCK-${Math.floor(Math.random() * 900 + 100)}`,
-      subject: lastQuery || 'Pedido enviado pelo utilizador',
+      id: ticketId,
+      subject,
       requester: 'Utilizador Demo',
       area: suggestedArticles[0]?.category ?? 'Configuração',
       status: 'Aberto',
       priority: 'Média',
-      createdAt: new Date().toLocaleTimeString('pt-PT', { hour: '2-digit', minute: '2-digit' }),
-      message: lastQuery || 'Pedido enviado pelo utilizador através do chat.',
-      suggestedArticleId: suggestedArticles[0]?.id
+      createdAt,
+      updatedAt: createdAt,
+      message: subject,
+      suggestedArticleId: suggestedArticles[0]?.id,
+      messages: [
+        {
+          id: `${ticketId}-M1`,
+          author: 'user',
+          text: subject,
+          createdAt
+        },
+        {
+          id: `${ticketId}-M2`,
+          author: 'assistant',
+          text: 'Pedido enviado para análise por agente.',
+          createdAt
+        }
+      ]
     };
 
     onEscalate(ticket);
+    setSelectedTicketId(ticketId);
     setTab('requests');
+  }
+
+  function sendTicketReply() {
+    if (!selectedTicket || !ticketReply.trim()) return;
+    onAddTicketMessage(selectedTicket.id, ticketReply.trim());
+    setTicketReply('');
   }
 
   return (
@@ -153,18 +188,67 @@ export function UserPortal({ tickets, onEscalate, onOpenArticle }: Props) {
             </aside>
           </div>
         ) : (
-          <div className="requests-list">
-            {tickets.map((ticket) => (
-              <article key={ticket.id} className="ticket-card">
-                <div>
-                  <strong>{ticket.subject}</strong>
-                  <p>{ticket.message}</p>
-                </div>
-                <span className={`status status-${ticket.status.replace(' ', '-').toLowerCase()}`}>
-                  {ticket.status}
-                </span>
-              </article>
-            ))}
+          <div className="requests-chat-layout">
+            <div className="requests-list request-selector">
+              {tickets.map((ticket) => (
+                <button
+                  key={ticket.id}
+                  className={`ticket-card ticket-selector-card ${ticket.id === selectedTicket?.id ? 'selected' : ''}`}
+                  onClick={() => setSelectedTicketId(ticket.id)}
+                >
+                  <div>
+                    <strong>{ticket.subject}</strong>
+                    <p>{ticket.message}</p>
+                  </div>
+                  <span className={`status status-${ticket.status.replace(' ', '-').toLowerCase()}`}>
+                    {ticket.status}
+                  </span>
+                </button>
+              ))}
+            </div>
+
+            <div className="chat-card ticket-chat-card">
+              {selectedTicket ? (
+                <>
+                  <div className="section-header">
+                    <div>
+                      <h2>{selectedTicket.subject}</h2>
+                      <span>Conversa com o agente</span>
+                    </div>
+                    <MessageCircle size={20} />
+                  </div>
+
+                  <div className="ticket-thread user-ticket-thread">
+                    {(selectedTicket.messages ?? []).map((message) => (
+                      <div key={message.id} className={`ticket-message ticket-message-${message.author}`}>
+                        <span>{message.author === 'agent' ? 'Agente' : message.author === 'assistant' ? 'Assistente' : 'Tu'}</span>
+                        <p>{message.text}</p>
+                        <small>{message.createdAt}</small>
+                      </div>
+                    ))}
+                  </div>
+
+                  {selectedTicket.status !== 'Resolvido' ? (
+                    <div className="chat-input ticket-reply-input">
+                      <Paperclip size={18} />
+                      <input
+                        value={ticketReply}
+                        onChange={(event) => setTicketReply(event.target.value)}
+                        onKeyDown={(event) => event.key === 'Enter' && sendTicketReply()}
+                        placeholder="Responder ao agente..."
+                      />
+                      <button onClick={sendTicketReply} aria-label="Enviar resposta ao agente">
+                        <Send size={18} />
+                      </button>
+                    </div>
+                  ) : (
+                    <p className="resolved-note">Este pedido está resolvido.</p>
+                  )}
+                </>
+              ) : (
+                <p className="muted">Ainda não existem pedidos.</p>
+              )}
+            </div>
           </div>
         )}
       </section>
