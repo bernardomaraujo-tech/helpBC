@@ -1,4 +1,4 @@
-import { AlertTriangle, Bot, FileText, MessageCircle, Paperclip, Send } from 'lucide-react';
+import { AlertTriangle, BookOpen, Bot, FileText, MessageCircle, Paperclip, Send } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { Tabs } from '../components/Tabs';
 import { articles } from '../data/articles';
@@ -34,6 +34,8 @@ export function UserPortal({ tickets, onEscalate, onOpenArticle, onAddTicketMess
   const [ticketReply, setTicketReply] = useState('');
 
   const selectedTicket = tickets.find((ticket) => ticket.id === selectedTicketId) ?? tickets[0];
+
+  const userArticles = useMemo(() => articles.filter((article) => article.availableForUser), []);
 
   const suggestedArticles = useMemo(
     () => searchArticles(lastQuery || query, articles, { audience: 'user' }),
@@ -127,6 +129,7 @@ export function UserPortal({ tickets, onEscalate, onOpenArticle, onAddTicketMess
           tone="teal"
           tabs={[
             { key: 'chat', label: 'Chat' },
+            { key: 'kb', label: 'Base de conhecimento' },
             { key: 'requests', label: 'Os meus pedidos' }
           ]}
         />
@@ -186,6 +189,22 @@ export function UserPortal({ tickets, onEscalate, onOpenArticle, onAddTicketMess
                 <button onClick={escalate}>Enviar para agente</button>
               </div>
             </aside>
+          </div>
+        ) : tab === 'kb' ? (
+          <div className="kb-grid">
+            {userArticles.map((article) => (
+              <article key={article.id} className="kb-card" onClick={() => onOpenArticle(article.id)}>
+                <span>{article.category}</span>
+                <h2>{article.title}</h2>
+                <p>{article.problem}</p>
+              </article>
+            ))}
+
+            {userArticles.length === 0 && (
+              <div className="chat-card">
+                <p className="muted">Ainda não existem artigos disponíveis para utilizador.</p>
+              </div>
+            )}
           </div>
         ) : (
           <div className="requests-chat-layout">
