@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+
   workflow_dispatch:
 
 permissions:
@@ -20,7 +21,11 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
+
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout
@@ -30,20 +35,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-
-      - name: Show project files
-        run: |
-          pwd
-          ls -la
-          cat package.json
 
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
-
-      - name: Verify dependencies
-        run: |
-          npm ls react react-dom lucide-react @vitejs/plugin-react vite typescript
 
       - name: Build
         run: npm run build
