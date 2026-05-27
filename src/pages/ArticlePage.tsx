@@ -1,9 +1,107 @@
+import type { ReactNode } from 'react';
 import { ArrowLeft, Printer, Share2, ThumbsDown, ThumbsUp } from 'lucide-react';
 import { articles } from '../data/articles';
 
 interface Props {
   articleId: string;
   onBack: () => void;
+}
+
+function renderInline(text: string): ReactNode[] {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+
+  return parts.map((part, index) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={index}>{part.slice(2, -2)}</strong>;
+    }
+
+    return part;
+  });
+}
+
+function MarkdownContent({ content }: { content: string }) {
+  const lines = content.split('\n');
+  const blocks: ReactNode[] = [];
+  let index = 0;
+
+  while (index < lines.length) {
+    const line = lines[index].trim();
+
+    if (!line) {
+      index += 1;
+      continue;
+    }
+
+    const heading = line.match(/^(#{3,4})\s+(.+)$/);
+    if (heading) {
+      const HeadingTag = heading[1].length === 3 ? 'h3' : 'h4';
+      blocks.push(<HeadingTag key={`heading-${index}`}>{renderInline(heading[2])}</HeadingTag>);
+      index += 1;
+      continue;
+    }
+
+    if (/^\d+\.\s+/.test(line)) {
+      const items: string[] = [];
+
+      while (index < lines.length) {
+        const current = lines[index].trim();
+        const numbered = current.match(/^\d+\.\s+(.+)$/);
+
+        if (!numbered) break;
+
+        items.push(numbered[1]);
+        index += 1;
+      }
+
+      blocks.push(
+        <ol key={`ol-${index}`}>
+          {items.map((item, itemIndex) => (
+            <li key={`${item}-${itemIndex}`}>{renderInline(item)}</li>
+          ))}
+        </ol>
+      );
+      continue;
+    }
+
+    if (/^-\s+/.test(line)) {
+      const items: string[] = [];
+
+      while (index < lines.length) {
+        const current = lines[index].trim();
+        const bullet = current.match(/^-\s+(.+)$/);
+
+        if (!bullet) break;
+
+        items.push(bullet[1]);
+        index += 1;
+      }
+
+      blocks.push(
+        <ul key={`ul-${index}`}>
+          {items.map((item, itemIndex) => (
+            <li key={`${item}-${itemIndex}`}>{renderInline(item)}</li>
+          ))}
+        </ul>
+      );
+      continue;
+    }
+
+    const paragraph: string[] = [line];
+    index += 1;
+
+    while (index < lines.length) {
+      const next = lines[index].trim();
+
+      if (!next || /^(#{3,4})\s+/.test(next) || /^\d+\.\s+/.test(next) || /^-\s+/.test(next)) break;
+
+      paragraph.push(next);
+      index += 1;
+    }
+
+    blocks.push(<p key={`p-${index}`}>{renderInline(paragraph.join(' '))}</p>);
+  }
+
+  return <>{blocks}</>;
 }
 
 export function ArticlePage({ articleId, onBack }: Props) {
@@ -42,47 +140,41 @@ export function ArticlePage({ articleId, onBack }: Props) {
 
         <section>
           <h2>Problema</h2>
-          <p>{article.problem}</p>
+          <MarkdownContent content={article.problem} />
         </section>
 
         {article.diagnosis && (
           <section>
             <h2>Diagnóstico</h2>
-            <p>{article.diagnosis}</p>
+            <MarkdownContent content={article.diagnosis} />
           </section>
         )}
 
         {article.cause && (
           <section>
             <h2>Causa provável</h2>
-            <p>{article.cause}</p>
+            <MarkdownContent content={article.cause} />
           </section>
         )}
 
         {article.solution && (
           <section>
             <h2>Solução</h2>
-            <p>{article.solution}</p>
+            <MarkdownContent content={article.solution} />
           </section>
         )}
 
-        <section>
-          <h2>Como proceder</h2>
-          {article.steps.length > 0 ? (
-            <ol>
-              {article.steps.map((step) => (
-                <li key={step}>{step}</li>
-              ))}
-            </ol>
-          ) : (
-            <pre className="markdown-block">{article.procedure}</pre>
-          )}
-        </section>
+        {article.procedure && (
+          <section>
+            <h2>Como proceder</h2>
+            <MarkdownContent content={article.procedure} />
+          </section>
+        )}
 
         {article.validation && (
           <section>
             <h2>Validação final</h2>
-            <p>{article.validation}</p>
+            <MarkdownContent content={article.validation} />
           </section>
         )}
 
@@ -91,7 +183,7 @@ export function ArticlePage({ articleId, onBack }: Props) {
             <h2>Notas</h2>
             <ul>
               {article.notes.map((note) => (
-                <li key={note}>{note}</li>
+                <li key={note}>{renderInline(note)}</li>
               ))}
             </ul>
           </section>
