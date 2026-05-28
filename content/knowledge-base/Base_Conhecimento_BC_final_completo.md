@@ -1,4 +1,4 @@
-## PRD-NEW-001 — Criar novo produto
+## BC-KB-001 — Criar novo produto
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -32,7 +32,6 @@ Criar uma nova ficha de produto a partir da lista de "Produtos", preencher o nú
 1. Será aberta uma nova "Ficha de Produto".
 2. Começar por preencher o campo "Nº" com o número/código do produto.
 3. Confirmar se o número atribuído respeita a codificação interna definida para produtos.
-4. Guardar a ficha, se necessário, para garantir que o registo fica criado antes de continuar o preenchimento.
 
 ### 3. Preencher os campos obrigatórios
 1. Na ficha do produto, consultar a lista lateral "eInfo Obrigatória".
@@ -91,7 +90,7 @@ O processo está correto quando:
 - Se existirem campos obrigatórios em falta, o sistema poderá impedir o envio do pedido de aprovação.
 - Apenas o utilizador que enviou o pedido e/ou os aprovadores conseguem acompanhar determinados detalhes do estado da aprovação.
 
-## PRD-STA-001 — Verificar estado de criação de produtos
+## BC-KB-002 — Verificar estado de criação de produtos
 **Categoria:** Produtos
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -119,9 +118,7 @@ A lista mostra apenas os produtos cujo estado de workflow é "Em Progresso".
 **Notas**
 Útil para acompanhar pedidos de aprovação pendentes e evitar duplicação de produtos.
 
-
-
-## PRD-APR-001 — Aprovação de novos produtos
+## BC-KB-003 — Aprovação de novos produtos
 **Categoria:** Produtos
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -145,14 +142,12 @@ Verificar se foi solicitada aprovação do produto e enviar o pedido de aprovaç
 4. Contactar o aprovador se necessário para agilizar o processo.
 
 **Validação final**
-O estado do produto muda para aprovado e já é possível utilizá‑lo em documentos.
+O estado do produto muda para aprovado e já é possível utilizá-lo em documentos.
 
 **Notas**
 Confirme sempre que todos os campos obrigatórios estão preenchidos antes de enviar o pedido. Atenção, só quem solicita o pedido de aprovação e ou os elementos aprovadores é que conseguem ver o estado da aprovação.
 
-
-
-## PRD-CAT-001 — Criar produto a partir do catálogo
+## BC-KB-004 — Criar produto a partir do catálogo
 **Categoria:** Produtos
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -182,8 +177,7 @@ O produto é criado com base na informação do catálogo e surge como bloqueado
 **Notas**
 A criação a partir do catálogo evita duplicar dados e assegura consistência dos dados.
 
-
-## PRD-ATR-001 — Adicionar atributos ao produto
+## BC-KB-005 — Adicionar atributos ao produto
 **Categoria:** Produtos
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -204,7 +198,7 @@ Adicionar ou atualizar atributos na ficha do produto.
 1. Abrir a ficha do produto.
 2. No menu, selecionar "Produto" → "Atributos".
 3. Escolher o atributo pretendido e inserir o valor correspondente.
-4. Repetir para todos os atributos necessários e guardar.
+4. Repetir para todos os atributos necessários.
 
 **Validação final**
 Os atributos são visíveis na ficha e podem ser usados em pesquisas e análises.
@@ -212,8 +206,7 @@ Os atributos são visíveis na ficha e podem ser usados em pesquisas e análises
 **Notas**
 Os atributos permitem filtrar produtos e apresentar informação adicional em propostas ou relatórios.
 
-
-## PRD-ATR-002 — Filtrar produtos por atributos
+## BC-KB-006 — Filtrar produtos por atributos
 **Categoria:** Produtos
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -242,9 +235,7 @@ A lista apresenta unicamente os produtos que correspondem aos atributos selecion
 **Notas**
 É possível combinar vários atributos para refinar a pesquisa.
 
-
-
-## PRD-DIC-001 — Importar Dicionário ANF
+## BC-KB-007 — Importar Dicionário ANF
 **Categoria:** Produtos
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -271,12 +262,9 @@ Importar o dicionário através da funcionalidade eDicoANF.
 Os dados importados ficam visíveis na ficha de produto e na área eANF Dico.
 
 **Notas**
-Certifique‑se de que o ficheiro a importar está no formato correto fornecido pela ANF.
+Certifique-se de que o ficheiro a importar está no formato correto fornecido pela ANF.
 
-
-
-
-## PRD-PVA-001 — Importar dados PVA, PIC, PMA, PVFD, PVAD
+## BC-KB-008 — Importar dados PVA, PIC, PMA, PVFD, PVAD
 **Categoria:** Produtos
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -305,9 +293,7 @@ Os campos de preços e margens são atualizados na ficha de produto.
 **Notas**
 Mantenha estes ficheiros atualizados para garantir preços corretos nas propostas.
 
-
-
-## CUS-NEW-001 — Criar novo cliente
+## BC-KB-009 — Criar novo cliente
 **Categoria:** Clientes
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -335,9 +321,7 @@ O cliente aparece na lista de clientes e o pedido de aprovação é criado.
 **Notas**
 Garanta que todos os campos obrigatórios estão preenchidos antes de enviar a aprovação.
 
-
-
-## CUS-STA-001 — Verificar estado de criação de clientes
+## BC-KB-010 — Verificar estado de criação de clientes
 **Categoria:** Clientes
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -365,9 +349,7 @@ São listados apenas os clientes em processo de aprovação.
 **Notas**
 Útil para controlar pedidos de aprovação pendentes e assegurar acompanhamento.
 
-
-
-## CUS-APR-001 — Aprovação de novos clientes
+## BC-KB-011 — Aprovação de novos clientes
 **Categoria:** Clientes
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -391,14 +373,12 @@ Enviar o pedido de aprovação e acompanhar o estado nas solicitações.
 4. Nas solicitações pendentes, poderá aprovar, rejeitar, abrir o registo ou adicionar um comentário.
 
 **Validação final**
-O cliente torna‑se ativo após a aprovação e pode ser utilizado nas operações.
+O cliente torna-se ativo após a aprovação e pode ser utilizado nas operações.
 
 **Notas**
 Verifique que os campos obrigatórios estão preenchidos no grupo de fluxo de aprovação correspondente.
 
-
-
-## CUS-ADR-001 — Configurar diferentes endereços de envio
+## BC-KB-012 — Configurar diferentes endereços de envio
 **Categoria:** Clientes
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -419,7 +399,7 @@ Criar endereços de envio na ficha de cliente.
 1. Abrir a ficha do cliente pretendido.
 2. No menu superior, selecionar "Cliente" → "Endereços Envio".
 3. Clicar em "+ Novo" para adicionar um novo endereço.
-4. Preencher os dados de envio (morada, código postal, localidade, etc.) e guardar.
+4. Preencher os dados de envio (morada, código postal, localidade, etc.).
 
 **Validação final**
 Os novos endereços ficam disponíveis para seleção em documentos de venda e logística.
@@ -427,9 +407,7 @@ Os novos endereços ficam disponíveis para seleção em documentos de venda e l
 **Notas**
 É possível definir um endereço predefinido ou selecionar diferentes moradas conforme o tipo de documento.
 
-
-
-## CUS-CON-001 — Criar novos contactos para o cliente
+## BC-KB-013 — Criar novos contactos para o cliente
 **Categoria:** Clientes
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -444,13 +422,12 @@ O utilizador não sabe como criar contactos a partir do Outlook ou da ficha de c
 Desconhecimento dos métodos de criação de contactos.
 
 **Solução**
-Criar contactos através do add‑in de Outlook ou diretamente na ficha de cliente.
+Criar contactos através do add-in de Outlook ou diretamente na ficha de cliente.
 
 **Como proceder**
-1. Método 1 – Outlook: selecione o email do contacto pretendido e utilize o suplemento do Business Central no Outlook para adicionar o contacto. Confirme o nome e guarde.
+1. Método 1 – Outlook: selecione o email do contacto pretendido e utilize o suplemento do Business Central no Outlook para adicionar o contacto. Confirme o nome.
 2. Método 2 – Ficha de Cliente: aceder a "Clientes", selecionar a ficha do cliente, ir a "Base" → "Contacto".
 3. Se não existir nenhum contacto associado, responder "Sim" quando questionado e preencher a ficha do novo contacto.
-4. Guardar as informações e repetir para outros contactos se necessário.
 
 **Validação final**
 Os contactos ficam associados ao cliente e são visíveis na lista de contactos.
@@ -458,8 +435,7 @@ Os contactos ficam associados ao cliente e são visíveis na lista de contactos.
 **Notas**
 Os contactos podem ser editados ou eliminados através da opção de menu (três pontos) na lista de contactos.
 
-
-## SUP-NEW-001 — Criar novo fornecedor
+## BC-KB-014 — Criar novo fornecedor
 **Categoria:** Fornecedores
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -468,7 +444,7 @@ Os contactos podem ser editados ou eliminados através da opção de menu (três
 É necessário registar um novo fornecedor no sistema.
 
 **Diagnóstico**
-O utilizador não iniciou o processo ou não sabe como fazê‑lo.
+O utilizador não iniciou o processo ou não sabe como fazê-lo.
 
 **Causa provável**
 Falta de conhecimento do processo de criação de fornecedores.
@@ -486,10 +462,9 @@ Criar o fornecedor através da ficha de fornecedor e enviar pedido de aprovaçã
 O fornecedor surge na lista e o pedido de aprovação é registado.
 
 **Notas**
-Assegure‑se de que todas as informações estão corretas antes de enviar para aprovação.
+Assegure-se de que todas as informações estão corretas antes de enviar para aprovação.
 
-
-## SUP-STA-001 — Verificar estado de criação de fornecedores
+## BC-KB-015 — Verificar estado de criação de fornecedores
 **Categoria:** Fornecedores
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -517,9 +492,7 @@ A lista apresenta apenas os fornecedores cujo estado de workflow está "Em Progr
 **Notas**
 Permite monitorizar pedidos de aprovação pendentes e evitar atrasos.
 
-
-
-## SUP-APR-001 — Aprovação de novos fornecedores
+## BC-KB-016 — Aprovação de novos fornecedores
 **Categoria:** Fornecedores
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -543,14 +516,12 @@ Enviar o pedido de aprovação e acompanhar nas solicitações pendentes.
 4. Nas solicitações pendentes pode aprovar, rejeitar, abrir registo ou adicionar comentários.
 
 **Validação final**
-Após a aprovação, o fornecedor torna‑se ativo e pode ser utilizado.
+Após a aprovação, o fornecedor torna-se ativo e pode ser utilizado.
 
 **Notas**
-Considere configurar um alerta para identificar fornecedores que requerem aprovação pré‑encomenda.
+Considere configurar um alerta para identificar fornecedores que requerem aprovação pré-encomenda.
 
-
-
-## OPP-NEW-001 — Criar nova oportunidade
+## BC-KB-017 — Criar nova oportunidade
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -578,9 +549,7 @@ A oportunidade fica registada e visível na lista.
 **Notas**
 As oportunidades podem representar concursos, ajustes diretos ou propostas simples.
 
-
-
-## OPP-CHAR-001 — Caracterizar a oportunidade
+## BC-KB-018 — Caracterizar a oportunidade
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -610,9 +579,7 @@ A ficha da oportunidade contém todos os campos obrigatórios preenchidos.
 **Notas**
 Podem ser adicionados anexos, ligações e notas para documentar requisitos ou informações adicionais.
 
-
-
-## OPP-REQ-001 — Identificar requisitos de concurso
+## BC-KB-019 — Identificar requisitos de concurso
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -642,15 +609,13 @@ Todos os requisitos do concurso estão registados e prontos para constar na prop
 **Notas**
 Ignorar este passo se a oportunidade não for um concurso.
 
-
-
-## OPP-CYCLE-001 — Gerir o ciclo de vendas da oportunidade
+## BC-KB-020 — Gerir o ciclo de vendas da oportunidade
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
 
 **Problema**
-A oportunidade deve seguir um ciclo de vendas com etapas e ações pré‑definidas.
+A oportunidade deve seguir um ciclo de vendas com etapas e ações pré-definidas.
 
 **Diagnóstico**
 O ciclo de vendas não foi selecionado ou não está a avançar.
@@ -673,9 +638,7 @@ O estado da oportunidade reflete a etapa atual e as tarefas geradas são executa
 **Notas**
 O ciclo de vendas define as tarefas e responsabilidades associadas à oportunidade.
 
-
-
-## OPP-ACT-001 — Aceder à lista de ações a efetuar
+## BC-KB-021 — Aceder à lista de ações a efetuar
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -703,9 +666,7 @@ As listas mostram as ações pendentes e o respetivo responsável.
 **Notas**
 Consultar regularmente para garantir que as tarefas são cumpridas dentro dos prazos.
 
-
-
-## OPP-ASSOC-001 — Associar proposta de venda à oportunidade
+## BC-KB-022 — Associar proposta de venda à oportunidade
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -733,9 +694,7 @@ A proposta de venda aparece associada à oportunidade com a informação correta
 **Notas**
 Após associar, é possível ajustar linhas de produto ou condições antes de enviar ao cliente.
 
-
-
-## OPP-UNASSOC-001 — Retirar associação da proposta de venda
+## BC-KB-023 — Retirar associação da proposta de venda
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -761,11 +720,9 @@ Remover a associação, corrigir e criar nova proposta de venda.
 A nova proposta de venda está correta e associada à oportunidade.
 
 **Notas**
-Se preferir, pode eliminar completamente a proposta de venda e recriá‑la do zero.
+Se preferir, pode eliminar completamente a proposta de venda e recriá-la do zero.
 
-
-
-## OPP-DEL-001 — Eliminar uma proposta de venda
+## BC-KB-024 — Eliminar uma proposta de venda
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -774,7 +731,7 @@ Se preferir, pode eliminar completamente a proposta de venda e recriá‑la do z
 Uma proposta de venda já não é necessária ou contém erros irreversíveis.
 
 **Diagnóstico**
-Decidiu‑se eliminar a proposta em vez de alterar.
+Decidiu-se eliminar a proposta em vez de alterar.
 
 **Causa provável**
 A informação da proposta está desatualizada ou incorreta.
@@ -793,9 +750,7 @@ A proposta de venda é removida e a associação com a oportunidade desaparece a
 **Notas**
 Depois de eliminada, é necessário criar uma nova proposta se o cliente ainda estiver interessado.
 
-
-
-## OPP-COMM-001 — Adicionar comentários de produto à proposta de venda
+## BC-KB-025 — Adicionar comentários de produto à proposta de venda
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -824,9 +779,7 @@ Os comentários aparecem na impressão da proposta de venda.
 **Notas**
 Utilize comentários para especificações técnicas, condições especiais ou qualquer informação adicional relevante.
 
-
-
-## OPP-PRT-001 — Imprimir uma proposta de venda para concurso
+## BC-KB-026 — Imprimir uma proposta de venda para concurso
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -847,7 +800,7 @@ Usar a opção de impressão/ envio apropriada na proposta de venda.
 1. Abrir a proposta de venda desejada.
 2. Selecionar "Imprimir/Enviar".
 3. Escolher a opção "Imprimir Proposta Concursos" para gerar o documento.
-4. Imprimir ou guardar o ficheiro conforme necessário.
+4. Imprimir ou descarregar o ficheiro conforme necessário.
 
 **Validação final**
 É gerado um documento formatado para concursos, pronto a ser entregue ao cliente.
@@ -855,9 +808,7 @@ Usar a opção de impressão/ envio apropriada na proposta de venda.
 **Notas**
 Verifique se os anexos e requisitos do concurso estão completos antes de imprimir.
 
-
-
-## OPP-SAMPLES-001 — Solicitar envio de amostras
+## BC-KB-027 — Solicitar envio de amostras
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -876,7 +827,7 @@ Criar e libertar um pedido de amostras a partir da oportunidade.
 
 **Como proceder**
 1. Na ficha da oportunidade ou proposta de venda, selecionar "Base" → "eSolicitar Envio de Amostras".
-2. Será criado um novo pedido de amostras; verificar o ID do utilizador e o endereço de envio no separador "Transferir‑para".
+2. Será criado um novo pedido de amostras; verificar o ID do utilizador e o endereço de envio no separador "Transferir-para".
 3. Se a morada não estiver correta, aceder à ficha do cliente através de "Nº Entidade Externa" e criar um código de envio específico ou preencher manualmente a morada no pedido.
 4. Atualizar a data de envio nas linhas do pedido.
 5. Para libertar o pedido para a logística, alterar o estado de "Aberto" para "Liberto" através de "Base" → "Libertar" → "Libertar".
@@ -885,11 +836,9 @@ Criar e libertar um pedido de amostras a partir da oportunidade.
 O pedido de amostras está liberto e pronto para expedição pela logística.
 
 **Notas**
-Certifique‑se de que as quantidades e os códigos de produto estão corretos no pedido.
+Certifique-se de que as quantidades e os códigos de produto estão corretos no pedido.
 
-
-
-## OPP-COMP-001 — Associar informação da concorrência
+## BC-KB-028 — Associar informação da concorrência
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -910,7 +859,6 @@ Associar e preencher informação da concorrência na oportunidade.
 1. Abrir a oportunidade desejada.
 2. Selecionar "Relacionado" → "Concorrência" → "Informação da Concorrência".
 3. Preencher a informação diretamente na tabela ou importar a partir de Excel (copiar e colar dados).
-4. Guardar a informação para referência futura.
 
 **Validação final**
 A ficha da oportunidade contém as linhas de concorrência preenchidas.
@@ -918,9 +866,7 @@ A ficha da oportunidade contém as linhas de concorrência preenchidas.
 **Notas**
 Pode colar dados a partir de uma folha Excel para facilitar a inserção massiva.
 
-
-
-## OPP-CLOSE-001 — Fechar uma oportunidade
+## BC-KB-029 — Fechar uma oportunidade
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -943,16 +889,13 @@ Fechar a oportunidade indicando o estado e motivos.
 3. Selecionar um "Cód. Fecho Oportunidade" conforme o motivo (podem existir códigos diferentes para ganhas e perdidas).
 4. Indicar a "Data Encerramento".
 
-
 **Validação final**
 A oportunidade fica com estado encerrado e deixa de aparecer na lista de oportunidades ativas.
 
 **Notas**
 Pode criar códigos de fecho personalizados para melhor análise de motivos de perda ou ganho.
 
-
-
-## PUR-REQ-001 — Aceder à folha de requisição
+## BC-KB-030 — Aceder à folha de requisição
 **Categoria:** Compras
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -981,9 +924,7 @@ A folha correta está aberta e pronta para receber sugestões de compra.
 **Notas**
 Uma configuração adequada evita conflitos entre utilizadores ao gerar sugestões.
 
-
-
-## PUR-REQ-002 — Sugerir requisição de produtos
+## BC-KB-031 — Sugerir requisição de produtos
 **Categoria:** Compras
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -1011,9 +952,7 @@ As linhas de sugestão são geradas na folha de requisição.
 **Notas**
 É importante que o planeamento esteja corretamente configurado nas fichas de produto antes de gerar as sugestões.
 
-
-
-## PUR-REQ-003 — Definir parâmetros da sugestão na folha de requisição
+## BC-KB-032 — Definir parâmetros da sugestão na folha de requisição
 **Categoria:** Compras
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -1043,9 +982,7 @@ A sugestão gerada reflete corretamente os parâmetros definidos e as necessidad
 **Notas**
 Escolher um período adequado é crucial para uma sugestão assertiva, especialmente para produtos com lead time longo.
 
-
-
-## PUR-REQ-004 — Aplicar filtros na sugestão da folha de requisição
+## BC-KB-033 — Aplicar filtros na sugestão da folha de requisição
 **Categoria:** Compras
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -1074,9 +1011,7 @@ A folha de requisição apresenta apenas as linhas relativas aos filtros aplicad
 **Notas**
 Os filtros são úteis para análises focadas, como reaprovisionar apenas de determinados fornecedores.
 
-
-
-## PUR-REQ-005 — Editar linhas de sugestão na folha de requisição
+## BC-KB-034 — Editar linhas de sugestão na folha de requisição
 **Categoria:** Compras
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -1106,9 +1041,7 @@ As linhas editadas refletem as quantidades e ações corretas antes de executar 
 **Notas**
 Aceitar ou rejeitar a "Mensagem de Ação" define se a linha será processada na encomenda de compra.
 
-
-
-## PUR-REQ-006 — Verificar origem da sugestão
+## BC-KB-035 — Verificar origem da sugestão
 **Categoria:** Compras
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -1136,9 +1069,7 @@ A origem da sugestão é identificada e justificada.
 **Notas**
 Conhecer a origem ajuda a tomar decisões mais informadas sobre aceitar ou rejeitar a sugestão.
 
-
-
-## PUR-REQ-007 — Selecionar fornecedores alternativos
+## BC-KB-036 — Selecionar fornecedores alternativos
 **Categoria:** Compras
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -1167,9 +1098,7 @@ A linha reflete o fornecedor alternativo escolhido.
 **Notas**
 É importante que os fornecedores alternativos estejam previamente configurados na ficha de produto.
 
-
-
-## PUR-REQ-008 — Executar mensagens de ação
+## BC-KB-037 — Executar mensagens de ação
 **Categoria:** Compras
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -1195,11 +1124,9 @@ Executar as ações a partir da folha de requisição.
 As encomendas de compra são geradas conforme as linhas e mensagens de ação.
 
 **Notas**
-Certifique‑se de que todas as linhas estão corretas antes de executar, pois o processamento é automático.
+Certifique-se de que todas as linhas estão corretas antes de executar, pois o processamento é automático.
 
-
-
-## PUR-VAL-001 — Valor mínimo de compra por encomenda
+## BC-KB-038 — Valor mínimo de compra por encomenda
 **Categoria:** Compras
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -1214,13 +1141,13 @@ Foi emitido um alerta de valor mínimo de compra.
 O valor total da encomenda está abaixo do mínimo definido na ficha do fornecedor.
 
 **Solução**
-Rever o valor total da encomenda e ajustá‑la para cumprir o mínimo.
+Rever o valor total da encomenda e ajustá-la para cumprir o mínimo.
 
 **Como proceder**
 1. Configurar o valor mínimo de compra na ficha do fornecedor.
 2. No momento de libertar a encomenda de compra, o sistema verifica se o valor total cumpre o mínimo.
 3. Se o alerta surgir, adicionar mais linhas ou quantidades até atingir o valor mínimo.
-4. Guardar e libertar novamente a encomenda.
+4. libertar novamente a encomenda.
 
 **Validação final**
 A encomenda cumpre o valor mínimo e é libertada sem alertas.
@@ -1228,7 +1155,7 @@ A encomenda cumpre o valor mínimo e é libertada sem alertas.
 **Notas**
 Esta configuração ajuda a cumprir acordos comerciais e a minimizar custos logísticos.
 
-## FIN-REC-001 — Erro ao registar recibo em diário de cobranças
+## BC-KB-039 — Erro ao registar recibo em diário de cobranças
 **Categoria:** Financeiro / Cobranças  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -1252,9 +1179,8 @@ Verificar a ficha do cliente e confirmar se a opção "Emitir Recibo" está marc
 2. Ir ao separador "Pagamentos".
 3. Confirmar se a opção "Emitir Recibo" está marcada.
 4. Se não estiver marcada, ativar essa opção.
-5. Guardar as alterações.
-6. Regressar ao diário de cobranças.
-7. Voltar a tentar registar o recibo.
+5. Regressar ao diário de cobranças.
+6. Voltar a tentar registar o recibo.
 
 **Validação final**
 O recibo é registado sem apresentar erro relacionado com a numeração de recibos.
@@ -1262,9 +1188,7 @@ O recibo é registado sem apresentar erro relacionado com a numeração de recib
 **Notas**
 Sempre que este erro surgir no registo de recibos, validar primeiro a configuração do cliente antes de analisar a configuração geral de numeração.
 
-
-
-## EXC-ADDIN-001 — Suplemento do Excel do Business Central deixou de funcionar
+## BC-KB-040 — Suplemento do Excel do Business Central deixou de funcionar
 **Categoria:** Excel / Integrações  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim
@@ -1304,9 +1228,7 @@ O painel do Business Central volta a abrir no Excel e permite atualizar, publica
 **Notas**
 Caso o problema seja apenas de autenticação, pode ser suficiente terminar sessão e iniciar sessão novamente no painel do suplemento.
 
-
-
-## USR-NEW-001 — Criação e configuração de novos utilizadores no Business Central
+## BC-KB-041 — Criação e configuração de novos utilizadores no Business Central
 **Categoria:** Utilizadores / Permissões  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -1337,7 +1259,6 @@ O pedido de novo utilizador deve incluir:
 1. Aceder à página de administração do Microsoft 365.
 2. Localizar o utilizador.
 3. Atribuir a licença do Business Central correspondente à função do colaborador.
-4. Guardar as alterações.
 
 ### 3. Sincronizar utilizador no Business Central
 1. No Business Central, pesquisar por "Utilizadores".
@@ -1397,9 +1318,7 @@ O utilizador consegue aceder ao Business Central, entra na empresa correta, tem 
 **Notas**
 Sempre que possível, usar um utilizador de referência com funções equivalentes. Isto reduz o risco de falhas de permissões e configurações esquecidas.
 
-
-
-## LOG-DEL-001 — Erro nas etiquetas de envio por código postal não reconhecido na delegação
+## BC-KB-042 — Erro nas etiquetas de envio por código postal não reconhecido na delegação
 **Categoria:** Logística Externa / Parcel  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -1430,9 +1349,8 @@ Adicionar manualmente o código postal em falta na lista de delegações do oper
 9. Repetir o processo nos dois operadores:
    - Parcel 1
    - Parcel 2
-10. Guardar as alterações.
-11. Voltar ao documento/envio.
-12. Gerar novamente a etiqueta.
+10. Voltar ao documento/envio.
+11. Gerar novamente a etiqueta.
 
 **Validação final**
 A etiqueta é gerada corretamente e a delegação é associada sem erro.
@@ -1440,9 +1358,7 @@ A etiqueta é gerada corretamente e a delegação é associada sem erro.
 **Notas**
 Em caso de dúvida sobre a delegação correta, validar o código postal junto das Operações ou com o responsável de Logística Externa.
 
-
-
-## SAL-APP-001 — Erro na aprovação de encomenda por cliente sem gestor comercial para produtos de Diagnóstico
+## BC-KB-043 — Erro na aprovação de encomenda por cliente sem gestor comercial para produtos de Diagnóstico
 **Categoria:** Vendas / Aprovações  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -1469,9 +1385,8 @@ Corrigir a alocação de gestores comerciais na ficha do cliente, adicionando a 
 6. Se o gestor for responsável por todas as áreas:
    - Remover o filtro da área de gestão.
 7. Confirmar que o código de vendedor está corretamente atribuído.
-8. Guardar as alterações.
-9. Voltar à encomenda de venda.
-10. Reenviar a encomenda para aprovação.
+8. Voltar à encomenda de venda.
+9. Reenviar a encomenda para aprovação.
 
 **Validação final**
 A encomenda é reenviada para aprovação sem erro de gestor indefinido.
@@ -1479,9 +1394,7 @@ A encomenda é reenviada para aprovação sem erro de gestor indefinido.
 **Notas**
 Quando o erro ocorrer noutros clientes, validar se também têm apenas o filtro Farma-Amb ativo na alocação de gestores comerciais.
 
-
-
-## USR-GRP-001 — Eliminação de e-mails automáticos enviados para utilizadores inativos
+## BC-KB-044 — Eliminação de e-mails automáticos enviados para utilizadores inativos
 **Categoria:** Utilizadores / Grupos de Tarefas  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -1508,7 +1421,6 @@ Rever os Grupos de Tarefas de Utilizador e remover os utilizadores inativos.
 7. Selecionar o utilizador inativo.
 8. Clicar em "Eliminar Linha".
 9. Repetir a validação em todos os grupos aplicáveis.
-10. Guardar as alterações.
 
 **Validação final**
 Os utilizadores inativos deixam de constar nos Grupos de Tarefas de Utilizador e os e-mails automáticos deixam de ser enviados para esses endereços.
@@ -1516,9 +1428,7 @@ Os utilizadores inativos deixam de constar nos Grupos de Tarefas de Utilizador e
 **Notas**
 Sempre que um colaborador sai da empresa, deve ser validado se continua associado a grupos de tarefas, aprovações ou notificações automáticas.
 
-
-
-## OPP-SAMPLES-002 — Erro ao enviar pedido de amostras por Código Departamento em falta
+## BC-KB-045 — Erro ao enviar pedido de amostras por Código Departamento em falta
 **Categoria:** Oportunidades / Amostras  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim
@@ -1544,8 +1454,7 @@ Preencher o campo "Código Departamento" em todas as linhas onde esteja vazio.
 4. Preencher o campo com o valor correto, por exemplo:
    - FARMA-AMB
    - DIAGNÓSTICO
-5. Guardar as alterações.
-6. Repetir o envio do pedido de amostras.
+5. Repetir o envio do pedido de amostras.
 
 **Validação final**
 O pedido de amostras é enviado sem apresentar erro de Código Departamento.
@@ -1553,9 +1462,7 @@ O pedido de amostras é enviado sem apresentar erro de Código Departamento.
 **Notas**
 Se existirem várias linhas, validar todas antes de repetir o envio. Basta uma linha sem Código Departamento para o erro persistir.
 
-
-
-## TRA-GC-001 — Erro ao criar Ordem de Transferência por falta de associação de Gestor Comercial no cliente
+## BC-KB-046 — Erro ao criar Ordem de Transferência por falta de associação de Gestor Comercial no cliente
 **Categoria:** Transferências / Dimensões  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -1582,10 +1489,9 @@ Atribuir o Gestor Comercial correto na ficha do cliente e confirmar se o vendedo
 5. Validar se o vendedor tem as dimensões associadas:
    - Departamento
    - Área de Gestão de Produto
-6. Guardar as alterações.
-7. Voltar à Ordem de Transferência.
-8. Atualizar a página/documento.
-9. Confirmar se os campos de dimensão passaram a ser preenchidos corretamente.
+6. Voltar à Ordem de Transferência.
+7. Atualizar a página/documento.
+8. Confirmar se os campos de dimensão passaram a ser preenchidos corretamente.
 
 **Validação final**
 A Ordem de Transferência deixa de apresentar erro de valor dimensão "INDEFINIDO" e as dimensões comerciais ficam preenchidas.
@@ -1593,9 +1499,7 @@ A Ordem de Transferência deixa de apresentar erro de valor dimensão "INDEFINID
 **Notas**
 Este erro é recorrente em clientes configurados com gestor comercial genérico. Sempre que um cliente passa a ter gestor atribuído, deve ser atualizada a ficha para evitar erros em documentos futuros.
 
-
-
-## TRA-DIM-001 — Configurar dimensões numa Ordem de Transferência
+## BC-KB-047 — Configurar dimensões numa Ordem de Transferência
 **Categoria:** Transferências / Dimensões  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim
@@ -1625,7 +1529,7 @@ Configurar as dimensões no cabeçalho da Ordem de Transferência, garantindo qu
    - FARMA-AMB
    - DIAGNÓSTICO
    - RETALHO
-8. Guardar e fechar.
+8. Fechar.
 9. Rever as linhas da Ordem de Transferência.
 10. Confirmar se as dimensões foram aplicadas corretamente.
 
@@ -1635,9 +1539,7 @@ A Ordem de Transferência fica com as dimensões corretas no cabeçalho e nas li
 **Notas**
 Sempre que possível, configurar dimensões no cabeçalho para garantir consistência em todas as linhas. Se existirem dimensões manuais nas linhas, validar se não entram em conflito com o cabeçalho.
 
-
-
-## PRD-PVA-002 — Atualização mensal de preços e margens com ficheiro da Glintt
+## BC-KB-048 — Atualização mensal de preços e margens com ficheiro da Glintt
 **Categoria:** Produtos / Preços  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -1663,7 +1565,7 @@ Preparar o ficheiro de Preços e Margens em formato CSV, separado por vírgulas,
    - tiago.valadas@glintt.com
 3. O pedido deve ser feito no início de cada mês.
 
-### 2. Guardar o ficheiro
+### 2. Exportar o ficheiro
 1. Copiar o ficheiro recebido para a pasta local:
    - C:\Users\baraujo\Quilaban\TIC - TIC\Preços ANF (periodicidade mensal)
 
@@ -1672,7 +1574,7 @@ Preparar o ficheiro de Preços e Margens em formato CSV, separado por vírgulas,
 2. Selecionar apenas as primeiras 11 colunas:
    - A até K
 3. Remover todas as linhas de cabeçalho.
-4. Guardar o ficheiro em formato:
+4. Exportar o ficheiro em formato:
    - CSV (Comma delimited) (.csv)
 5. Confirmar que o separador utilizado é a vírgula.
 
@@ -1693,9 +1595,7 @@ O sistema aceita o ficheiro sem erros e os preços/margens ficam atualizados no 
 **Notas**
 Este caso complementa o procedimento genérico de importação PVA/PIC/PMA/PVFD/PVAD, acrescentando a preparação mensal do ficheiro e os requisitos de formato.
 
-
-
-## SAL-PREPAY-001 — Erro ao registar Fatura Antecipada por percentagem de pré-pagamento em falta
+## BC-KB-049 — Erro ao registar Fatura Antecipada por percentagem de pré-pagamento em falta
 **Categoria:** Vendas / Pré-pagamentos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim
@@ -1718,9 +1618,8 @@ Reabrir a encomenda de venda e preencher manualmente o campo "% Pré-pagamento" 
 3. Se estiver libertada, reabrir a encomenda.
 4. No cabeçalho da encomenda, localizar o campo "% Pré-pagamento".
 5. Preencher o valor pretendido, por exemplo "100%".
-6. Guardar a encomenda.
-7. Libertar ou aprovar novamente a encomenda, se aplicável.
-8. Registar a Fatura Antecipada.
+6. Libertar ou aprovar novamente a encomenda, se aplicável.
+7. Registar a Fatura Antecipada.
 
 **Validação final**
 A fatura antecipada é registada sem erro de quantidades para faturar.
@@ -1728,9 +1627,7 @@ A fatura antecipada é registada sem erro de quantidades para faturar.
 **Notas**
 Quando surgir erro de quantidades em faturas antecipadas, confirmar primeiro se o campo "% Pré-pagamento" está preenchido no documento.
 
-
-
-## LOG-STATUS-001 — Erro na atualização automática do estado das encomendas Parcel / Order Status
+## BC-KB-050 — Erro na atualização automática do estado das encomendas Parcel / Order Status
 **Categoria:** Logística Externa / Parcel  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -1771,9 +1668,7 @@ Os estados das encomendas ficam atualizados e deixam de aparecer como pendentes 
 **Notas**
 A execução manual força a atualização imediata. Algumas tarefas podem processar apenas um período limitado de dias, por exemplo os últimos 10 dias.
 
-
-
-## AGT-001 — Comunicação de documentos à AGT
+## BC-KB-051 — Comunicação de documentos à AGT
 **Categoria:** AGT / Angola  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -1865,11 +1760,9 @@ A ordem correta é crítica:
 2. Comunicar documento.
 3. Obter estado AGT.
 
-Recomenda-se criar vistas guardadas para os filtros usados com maior frequência.
+Recomenda-se criar vistas personalizadas para os filtros usados com maior frequência.
 
-
-
-## EXC-AUTH-001 — Erro no plugin Business Central no Excel com msal.js timed_out
+## BC-KB-052 — Erro no plugin Business Central no Excel com msal.js timed_out
 **Categoria:** Excel / Integrações  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim
@@ -1907,9 +1800,7 @@ O plugin volta a comunicar corretamente com o Business Central e deixa de aprese
 Antes de reinstalar o suplemento, testar sempre primeiro:
 Terminar Sessão → Iniciar Sessão.
 
-
-
-## MOB-LOG-001 — Erro na Logística Externa após faturação via Mobilidade com guia refletida em vez da fatura
+## BC-KB-053 — Erro na Logística Externa após faturação via Mobilidade com guia refletida em vez da fatura
 **Categoria:** Mobilidade / Logística Externa  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -1983,7 +1874,7 @@ Confirmar que:
 **Notas**
 Sempre que, após faturação via Mobilidade, a Logística Externa apresentar a Guia de Remessa de Venda em vez da Fatura, deve ser validado o registo da Mobilidade e a primeira Fatura de Venda gerada no processo.
 
-## APR-DEL-001 — Delegar aprovação temporária de encomenda urgente
+## BC-KB-054 — Delegar aprovação temporária de encomenda urgente
 **Categoria:** Aprovações / Vendas  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2019,9 +1910,7 @@ A aprovação fica atribuída ao novo utilizador e o processo pode avançar sem 
 Em períodos de ausência planeada, como férias, deve estar definido um substituto na configuração do utilizador de aprovação.  
 Se existirem conflitos, aprovações duplicadas ou funções sobrepostas, considerar passar a tarefa para outro colega direto.
 
-
-
-## SAL-PRICE-001 — Erro ao criar lista de preços para instituições com tipo Preços e Descontos
+## BC-KB-055 — Erro ao criar lista de preços para instituições com tipo Preços e Descontos
 **Categoria:** Vendas / Preços  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2060,9 +1949,7 @@ A lista de preços fica ativa, com tipo correto, e permite inserir/importar pre�
 **Notas**
 A configuração do tipo da lista deve ser definida antes de inserir linhas. Alterar a estrutura depois de existirem dados pode gerar erros ou inconsistências.
 
-
-
-## SAL-POST-001 — Erro ao faturar encomenda de venda por Data de Registo desatualizada
+## BC-KB-056 — Erro ao faturar encomenda de venda por Data de Registo desatualizada
 **Categoria:** Vendas / Faturação  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2084,9 +1971,8 @@ Atualizar a Data de Registo na Configuração Utilizador para a data atual antes
 2. Localizar o utilizador que está a tentar faturar.
 3. Verificar o campo "Data de Registo".
 4. Se a data estiver diferente do dia atual, atualizar para a data correta.
-5. Guardar a alteração.
-6. Voltar à encomenda de venda.
-7. Repetir a tentativa de faturação.
+5. Voltar à encomenda de venda.
+6. Repetir a tentativa de faturação.
 
 **Validação final**
 A encomenda de venda é faturada sem bloqueio relacionado com a Data de Registo.
@@ -2094,9 +1980,7 @@ A encomenda de venda é faturada sem bloqueio relacionado com a Data de Registo.
 **Notas**
 Este erro pode surgir quando o utilizador ficou com uma data de trabalho anterior configurada. Validar sempre a Data de Registo antes de investigar outros bloqueios de faturação.
 
-
-
-## SAL-DROPSHIP-001 — Erro ao faturar encomenda de venda por envio direto sem associação à encomenda de compra
+## BC-KB-057 — Erro ao faturar encomenda de venda por envio direto sem associação à encomenda de compra
 **Categoria:** Vendas / Envio Direto  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2120,8 +2004,7 @@ Preencher manualmente, na linha da encomenda de venda, os campos de ligação à
 2. Localizar a linha marcada como envio direto.
 3. Preencher o campo "Nº Encomenda Compra" com o número da encomenda de compra associada.
 4. Preencher o campo "Nº Linha Enc. Compra" com o número da linha correspondente da encomenda de compra.
-5. Guardar as alterações.
-6. Pedir ao utilizador para voltar a tentar faturar.
+5. Pedir ao utilizador para voltar a tentar faturar.
 
 **Validação final**
 A encomenda de venda é faturada sem erro de envio direto por falta de associação à encomenda de compra.
@@ -2129,9 +2012,7 @@ A encomenda de venda é faturada sem erro de envio direto por falta de associaç
 **Notas**
 Este erro deve ser tratado linha a linha. Confirmar sempre se a encomenda de compra indicada corresponde ao produto e à linha correta.
 
-
-
-## APR-TEAM-001 — Configurar Team Approval em aprovações de venda
+## BC-KB-058 — Configurar Team Approval em aprovações de venda
 **Categoria:** Aprovações / Workflow  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2162,9 +2043,7 @@ Quando um elemento do grupo aprova, o pedido fica aprovado, as restantes aprova�
 **Notas**
 Utilizar a mesma sequência significa que os aprovadores têm igual importância. Basta uma aprovação para concluir o passo do workflow.
 
-
-
-## APR-SUB-001 — Configurar substituto para delegações de aprovação em caso de ausência
+## BC-KB-059 — Configurar substituto para delegações de aprovação em caso de ausência
 **Categoria:** Aprovações / Delegações  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2186,11 +2065,10 @@ Definir o substituto na configuração do utilizador de aprovação e, quando ne
 2. Localizar o utilizador aprovador ausente.
 3. Verificar o campo "Substituir".
 4. Caso esteja vazio, preencher com o utilizador substituto.
-5. Guardar a alteração.
-6. Aceder ao pedido/documento pendente de aprovação.
-7. Ir ao separador "Aprovações".
-8. Delegar a aprovação para o substituto, se necessário.
-9. Confirmar que a nova linha de aprovação foi criada corretamente.
+5. Aceder ao pedido/documento pendente de aprovação.
+6. Ir ao separador "Aprovações".
+7. Delegar a aprovação para o substituto, se necessário.
+8. Confirmar que a nova linha de aprovação foi criada corretamente.
 
 **Validação final**
 A aprovação passa a estar disponível para o substituto e o processo deixa de ficar bloqueado pela ausência do aprovador titular.
@@ -2198,9 +2076,7 @@ A aprovação passa a estar disponível para o substituto e o processo deixa de 
 **Notas**
 A delegação pode ser efetuada pelo utilizador que submete o pedido, pelo aprovador ou pelo gestor de aprovações, conforme permissões existentes.
 
-
-
-## SAL-ANL-001 — Consultar vendas por cliente e produto
+## BC-KB-060 — Consultar vendas por cliente e produto
 **Categoria:** Vendas / Análise  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim
@@ -2239,9 +2115,7 @@ Consultar as linhas registadas de faturas e notas de crédito, aplicando filtros
 **Notas**
 Este procedimento é útil para responder a pedidos comerciais sobre histórico de vendas por cliente e produto.
 
-
-
-## MOB-EMAIL-001 — Erro ao puxar envio na Mobilidade por e-mail em falta no Vendedor/Comprador
+## BC-KB-061 — Erro ao puxar envio na Mobilidade por e-mail em falta no Vendedor/Comprador
 **Categoria:** Mobilidade / Vendedores  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2265,9 +2139,8 @@ Preencher o campo "E-mail" na ficha do Vendedor/Comprador indicado no erro.
 2. Abrir o registo com o código indicado no erro, por exemplo "GC-HC".
 3. Localizar o campo "E-mail".
 4. Introduzir o endereço de e-mail correto.
-5. Guardar a ficha.
-6. Voltar ao processo da mobilidade.
-7. Puxar novamente os dados/envios.
+5. Voltar ao processo da mobilidade.
+6. Puxar novamente os dados/envios.
 
 **Validação final**
 Os dados dos envios são carregados sem erro de e-mail em falta no Vendedor/Comprador.
@@ -2275,9 +2148,7 @@ Os dados dos envios são carregados sem erro de e-mail em falta no Vendedor/Comp
 **Notas**
 Sempre que o erro indicar um código de vendedor específico, validar primeiro a respetiva ficha em Vendedores/Compradores.
 
-
-
-## OPP-SAMPLES-003 — Erro ao criar pedido de amostra por dimensão AREA.GEST.PRODUTO em falta
+## BC-KB-062 — Erro ao criar pedido de amostra por dimensão AREA.GEST.PRODUTO em falta
 **Categoria:** Oportunidades / Amostras  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2301,8 +2172,7 @@ Preencher a dimensão padrão "Área de Gestão do Produto" na ficha do produto.
 2. Abrir a ficha do produto indicado na mensagem de erro.
 3. Aceder às "Dimensões" ou "Dimensões Padrão" do produto.
 4. Preencher a dimensão "AREA.GEST.PRODUTO" com o valor correto.
-5. Guardar a ficha do produto.
-6. Repetir a tentativa de criação ou envio do pedido de amostra.
+5. Repetir a tentativa de criação ou envio do pedido de amostra.
 
 **Validação final**
 O pedido de amostra avança sem erro de dimensão padrão em falta.
@@ -2310,9 +2180,7 @@ O pedido de amostra avança sem erro de dimensão padrão em falta.
 **Notas**
 Este erro está relacionado com configuração base do produto. Deve ser corrigido na ficha do produto e não apenas no documento.
 
-
-
-## LOG-PICK-001 — Produto não incluído na recolha por lotes bloqueados
+## BC-KB-063 — Produto não incluído na recolha por lotes bloqueados
 **Categoria:** Logística / Recolhas  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2346,9 +2214,7 @@ Validar disponibilidade, reservas, validade e bloqueio dos lotes. Se todos os lo
 **Notas**
 Não desbloquear lotes sem validação da área responsável. O bloqueio pode estar relacionado com qualidade, validade, reserva operacional ou restrição interna.
 
-
-
-## PUR-QUAL-001 — Erro de dimensões por qualificação de fornecedor e produto em encomenda de compra
+## BC-KB-064 — Erro de dimensões por qualificação de fornecedor e produto em encomenda de compra
 **Categoria:** Compras / Qualidade  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2385,9 +2251,7 @@ Depois de o fornecedor ficar qualificado para o produto, a receção pode avanç
 **Notas**
 Enquanto a qualificação não for concluída, a encomenda ficará bloqueada à receção.
 
-
-
-## SAL-MULT-001 — Erro de múltiplos de venda por produto com restrição de quantidade
+## BC-KB-065 — Erro de múltiplos de venda por produto com restrição de quantidade
 **Categoria:** Vendas / Produtos  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2427,9 +2291,7 @@ O documento é registado com sucesso, respeitando a configuração aprovada para
 **Notas**
 Alterações a múltiplos de venda devem ser sempre validadas com a Gestão de Produto, porque podem impactar condições comerciais, embalagem, logística e faturação.
 
-
-
-## PRT-PRINTNODE-001 — Configurar impressora no Business Central com PrintNode
+## BC-KB-066 — Configurar impressora no Business Central com PrintNode
 **Categoria:** Impressoras / PrintNode  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2467,9 +2329,7 @@ Os documentos são impressos na impressora correta, para os utilizadores/mapas d
 **Notas**
 Validar sempre com uma impressão real/local. A impressora pode estar corretamente atribuída, mas ainda assim necessitar de afinação de largura e altura.
 
-
-
-## SUP-BLOCK-001 — Fornecedor bloqueado por aprovação rejeitada
+## BC-KB-067 — Fornecedor bloqueado por aprovação rejeitada
 **Categoria:** Fornecedores / Aprovações  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2506,9 +2366,7 @@ Após novo pedido de aprovação aceite, o fornecedor fica desbloqueado e passa 
 **Notas**
 Todos os novos fornecedores necessitam de aprovação concluída para estarem desbloqueados. Aprovações rejeitadas mantêm o fornecedor bloqueado.
 
-
-
-## PRD-LEAD-001 — Erro na ficha de produto ao preencher Prazo de Entrega
+## BC-KB-068 — Erro na ficha de produto ao preencher Prazo de Entrega
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim
@@ -2533,7 +2391,6 @@ Inserir sempre o número acompanhado da unidade de tempo pretendida.
    - 56D = 56 dias
    - 8S = 8 semanas
    - 2M = 2 meses
-5. Guardar a ficha do produto.
 
 **Validação final**
 O campo é validado sem erro e a ficha do produto é gravada corretamente.
@@ -2547,9 +2404,7 @@ Unidades válidas:
 - U = Anos
 - A, C = Unidade atual baseada na data
 
-
-
-## SAL-APP-002 — Erro na aprovação de proposta de venda por falta de gestor comercial FARMA-AMB
+## BC-KB-069 — Erro na aprovação de proposta de venda por falta de gestor comercial FARMA-AMB
 **Categoria:** Vendas / Aprovações  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2580,9 +2435,7 @@ A proposta de venda é enviada para aprovação sem erro relacionado com gestor 
 **Notas**
 Este caso é semelhante a erros de aprovação por ausência de gestor comercial, mas aplica-se especificamente a propostas de venda com produtos FARMA-AMB.
 
-
-
-## TRA-BOM-001 — Expandir Kit
+## BC-KB-070 — Expandir Kit
 **Categoria:** Transferências / Kits  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim
@@ -2615,9 +2468,7 @@ O kit é expandido e os artigos componentes ficam visíveis na Ordem de Transfer
 **Notas**
 Validar sempre as quantidades após a explosão do kit, antes de avançar com o envio ou movimentação.
 
-
-
-## SAL-INV-001 — Corrigir Nº Documento Externo em fatura de venda já emitida
+## BC-KB-071 — Corrigir Nº Documento Externo em fatura de venda já emitida
 **Categoria:** Vendas / Faturas Registadas  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2640,8 +2491,7 @@ Abrir a fatura registada e utilizar a função "Atualizar Documento" para corrig
 1. Aceder à fatura de venda já registada.
 2. No separador "Base", selecionar a opção "Atualizar Documento".
 3. Introduzir o número correto da encomenda do cliente no campo "Documento Externo".
-4. Guardar a alteração.
-5. Confirmar que o número atualizado aparece na vista da fatura.
+4. Confirmar que o número atualizado aparece na vista da fatura.
 
 **Validação final**
 A fatura registada passa a apresentar o Nº Documento Externo correto.
@@ -2649,9 +2499,7 @@ A fatura registada passa a apresentar o Nº Documento Externo correto.
 **Notas**
 A atualização será comunicada apenas no envio eletrónico diário, normalmente ao fim da tarde.
 
-
-
-## WHS-PUT-001 — Erro ao criar arrumação de produto em folha de armazém
+## BC-KB-072 — Erro ao criar arrumação de produto em folha de armazém
 **Categoria:** Armazém / Arrumação  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2675,10 +2523,9 @@ Configurar uma posição de armazém para o produto, marcando-a como "Fixo" e "P
 4. Verificar se os campos "Fixo" e "Padrão" estão marcados.
 5. Se não estiverem, selecionar a posição correta.
 6. Ativar os campos "Fixo" e "Padrão".
-7. Guardar a alteração.
-8. Voltar à Folha de Arrumação.
-9. Ir a "Base" → "Criar Doc. Arrumação".
-10. Clicar em "OK" para gerar o documento de arrumação atualizado.
+7. Voltar à Folha de Arrumação.
+8. Ir a "Base" → "Criar Doc. Arrumação".
+9. Clicar em "OK" para gerar o documento de arrumação atualizado.
 
 **Validação final**
 O documento de arrumação é criado corretamente e o produto deixa de desaparecer do processo.
@@ -2686,7 +2533,7 @@ O documento de arrumação é criado corretamente e o produto deixa de desaparec
 **Notas**
 Validar sempre a posição correta antes de marcar como Fixo e Padrão, para evitar impacto em processos de armazém futuros.
 
-## FAQ-073 — Como crio um novo produto no Business Central?
+## BC-KB-073 — Como crio um novo produto no Business Central?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -2721,7 +2568,7 @@ O produto aparece na lista de produtos, a ficha está preenchida e o pedido de a
 - A aplicação de modelos acelera o preenchimento mas não dispensa a verificação manual dos campos obrigatórios.
 - Acompanhe o estado da aprovação para saber quando o produto fica disponível.
 
-## FAQ-074 — Que campos obrigatórios devo preencher numa nova Ficha de Produto?
+## BC-KB-074 — Que campos obrigatórios devo preencher numa nova Ficha de Produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -2753,7 +2600,7 @@ Todos os campos assinalados na eInfo Obrigatória estão completos, permitindo o
 - Os campos obrigatórios podem variar consoante o tipo de produto e o modelo aplicado.
 - Utilize a função de filtro na lista de produtos para identificar produtos com campos em falta.
 
-## FAQ-075 — Para que serve a opção “Aplicar Modelo” na criação de um produto?
+## BC-KB-075 — Para que serve a opção “Aplicar Modelo” na criação de um produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -2784,7 +2631,7 @@ Os campos da ficha exibem os valores do modelo e o utilizador ajustou eventuais 
 - O modelo é um atalho para preencher campos estruturais; não substitui a validação manual dos dados.
 - Caso não exista um modelo adequado, é preferível deixar a opção em branco e preencher tudo manualmente.
 
-## FAQ-076 — Como envio um novo produto para aprovação?
+## BC-KB-076 — Como envio um novo produto para aprovação?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -2816,7 +2663,7 @@ O pedido surge na lista de solicitações para aprovar e o produto fica bloquead
 - Se surgirem erros de campos em falta, completar esses campos antes de reenviar.
 - Apenas os utilizadores com permissões adequadas podem enviar pedidos de aprovação.
 
-## FAQ-077 — Onde posso consultar o estado de aprovação de um produto?
+## BC-KB-077 — Onde posso consultar o estado de aprovação de um produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -2847,7 +2694,7 @@ O estado de aprovação e o aprovador são visíveis e atualizados em tempo real
 - Pode receber notificações de aprovação por email caso o workflow esteja configurado para tal.
 - Utilize filtros na lista de produtos com estado de workflow "Em Progresso" para visualizar rapidamente os produtos pendentes de aprovação.
 
-## FAQ-078 — Como vejo quem são os responsáveis pela aprovação de um produto?
+## BC-KB-078 — Como vejo quem são os responsáveis pela aprovação de um produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -2877,7 +2724,7 @@ O utilizador conhece o(s) aprovador(es) atribuídos ao pedido de aprovação do 
 - Os aprovadores podem ser definidos por grupo ou por função.
 - Em workflows complexos, podem existir múltiplos aprovadores sequenciais; acompanhe as diferentes etapas.
 
-## FAQ-079 — Como filtro produtos que ainda estão em criação ou aprovação?
+## BC-KB-079 — Como filtro produtos que ainda estão em criação ou aprovação?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -2901,13 +2748,13 @@ Aplicar um filtro no campo Workflowstatus da lista de produtos com o valor Em Pr
 4. Se desejar ver produtos aprovados ou rejeitados, altere o filtro para o valor correspondente.
 
 **Validação final**
-A lista exibe exclusivamente produtos cujo estado de workflow é "Em Progresso", facilitando o acompanhamento das criações em curso newtab.
+A lista exibe exclusivamente produtos cujo estado de workflow é "Em Progresso", facilitando o acompanhamento das criações em curso
 
 **Notas**
-- Pode guardar o filtro como uma vista personalizada para uso futuro.
+- Pode criar uma vista personalizada com esse filtro para uso futuro.
 - Utilize filtros adicionais (por exemplo, Data de Criação) para refinar a pesquisa.
 
-## FAQ-080 — Como aprovo ou rejeito um novo produto?
+## BC-KB-080 — Como aprovo ou rejeito um novo produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -2939,7 +2786,7 @@ O pedido desaparece da lista de pendentes e o produto passa para o estado de apr
 - Apenas aprovadores designados podem realizar esta operação.
 - Ao rejeitar, indique sempre o motivo para que o autor possa corrigir a ficha e reenviar.
 
-## FAQ-081 — Como abro o registo de um produto pendente de aprovação?
+## BC-KB-081 — Como abro o registo de um produto pendente de aprovação?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -2970,7 +2817,7 @@ O utilizador consegue aceder à ficha para análise e correção antes da decis�
 - A opção Abrir Registo é útil para avaliar rapidamente o conteúdo do pedido sem navegar pela lista de produtos.
 - Utilize esta funcionalidade para corrigir erros e evitar rejeições desnecessárias.
 
-## FAQ-082 — Como adiciono comentários a uma aprovação de produto?
+## BC-KB-082 — Como adiciono comentários a uma aprovação de produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -2991,8 +2838,7 @@ Usar o campo de comentário na solicitação para registar notas e instruções.
 1. Aceder à página Solicitações para Aprovar e localizar o pedido.
 2. Selecionar a linha e escolher Comentários ou Adicionar Comentário (dependendo da versão).
 3. Escrever o comentário indicando as justificações, observações ou instruções para o aprovador.
-4. Guardar o comentário; ele ficará associado ao pedido.
-5. O aprovador poderá ler o comentário antes de tomar a decisão.
+4. O aprovador poderá ler o comentário antes de tomar a decisão.
 
 **Validação final**
 O comentário é visível na solicitação e pode ser lido pelo aprovador antes de aprovar ou rejeitar o produto.
@@ -3001,7 +2847,7 @@ O comentário é visível na solicitação e pode ser lido pelo aprovador antes 
 - Utilize comentários de forma clara e objetiva; evite informação irrelevante.
 - Pode adicionar mais do que um comentário durante o processo de aprovação.
 
-## FAQ-083 — Como crio um produto a partir do Catálogo de Produtos?
+## BC-KB-083 — Como crio um produto a partir do Catálogo de Produtos?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3033,7 +2879,7 @@ O produto criado a partir do catálogo aparece na lista de produtos e o pedido d
 - O produto é criado inicialmente com estado Bloqueado; só após aprovação fica ativo.
 - Este processo é útil para itens padronizados que já existem no catálogo corporativo.
 
-## FAQ-084 — Que informação tenho de preencher na Ficha Produto Catálogo antes de criar o produto?
+## BC-KB-084 — Que informação tenho de preencher na Ficha Produto Catálogo antes de criar o produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3064,7 +2910,7 @@ O produto é criado sem erros e encontra se pronto para preenchimento dos restan
 - O campo Nº Fornecedor é essencial para estabelecer a relação de fornecimento inicial.
 - Caso o fornecedor não exista, crie primeiro o fornecedor antes de associá lo ao produto.
 
-## FAQ-085 — O que acontece ao produto quando é criado a partir do Catálogo de Produtos?
+## BC-KB-085 — O que acontece ao produto quando é criado a partir do Catálogo de Produtos?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3095,7 +2941,7 @@ O produto criado a partir do catálogo cumpre os mesmos requisitos de um produto
 - O estado Bloqueado impede a utilização em documentos enquanto a ficha não estiver completa.
 - Use esta funcionalidade para acelerar a criação de produtos recorrentes.
 
-## FAQ-086 — Como adiciono atributos a uma Ficha de Produto?
+## BC-KB-086 — Como adiciono atributos a uma Ficha de Produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3118,7 +2964,6 @@ Utilizar a funcionalidade Atributos na ficha de produto para atribuir valores ao
 3. Na janela de atributos, clicar em + Novo e selecionar o atributo (por exemplo, Tamanho, Cor, Marca).
 4. Escolher ou introduzir o valor apropriado para esse atributo.
 5. Repetir para todos os atributos necessários.
-6. Guardar a ficha de atributos; os valores ficam associados ao produto e serão utilizados em filtros e relatórios.
 
 **Validação final**
 Os atributos e os seus valores aparecem listados na ficha e podem ser usados em filtros de oportunidades e propostas.
@@ -3127,7 +2972,7 @@ Os atributos e os seus valores aparecem listados na ficha e podem ser usados em 
 - Os atributos têm de estar previamente definidos a nível de empresa antes de serem atribuídos.
 - Podem ser utilizados para segmentar produtos em relatórios e listas.
 
-## FAQ-087 — Para que servem os atributos de produto?
+## BC-KB-087 — Para que servem os atributos de produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3157,7 +3002,7 @@ Os atributos estão definidos e são visíveis nas listagens, permitindo filtrar
 - Os atributos também podem ser usados para gerar etiquetas ou documentos personalizados.
 - Mantenha a lista de atributos organizada e consistente para evitar redundâncias.
 
-## FAQ-088 — Onde posso consultar os atributos associados a um produto?
+## BC-KB-088 — Onde posso consultar os atributos associados a um produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3188,7 +3033,7 @@ A lista de atributos e valores do produto é apresentada corretamente.
 - Pode exportar a lista de atributos para Excel se necessitar de partilhar ou analisar externamente.
 - Apenas atributos previamente definidos podem ser adicionados ou editados.
 
-## FAQ-089 — Como filtro a lista de produtos por atributos?
+## BC-KB-089 — Como filtro a lista de produtos por atributos?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3213,13 +3058,13 @@ Aplicar filtros de atributos através da janela de pesquisa de atributos.
 5. Para remover o filtro, voltar à janela de atributos e limpar os valores.
 
 **Validação final**
-A lista exibe unicamente os produtos que correspondem aos atributos escolhidos newtab.
+A lista exibe unicamente os produtos que correspondem aos atributos escolhidos
 
 **Notas**
-- Guardar filtros de atributos como vistas facilita pesquisas futuras.
+- Criar vistas com filtros de atributos facilita pesquisas futuras.
 - Filtros combinados (atributos + campos tradicionais) proporcionam maior precisão.
 
-## FAQ-090 — Como limpo um filtro de atributos aplicado à lista de produtos?
+## BC-KB-090 — Como limpo um filtro de atributos aplicado à lista de produtos?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3240,7 +3085,7 @@ Reabrir a janela de atributos e limpar os valores aplicados.
 1. Na lista de Produtos, clicar em Filtrar → Atributos.
 2. Para cada atributo com filtro ativo, selecionar Limpar Valor ou apagar manualmente.
 3. Confirmar; a lista volta a mostrar todos os produtos.
-4. Guardar a vista sem filtros se necessitar de aceder frequentemente à lista completa.
+4. Criar uma vista sem filtros se necessitar de aceder frequentemente à lista completa.
 
 **Validação final**
 A lista de produtos deixa de ter filtros e apresenta todos os registos.
@@ -3249,7 +3094,7 @@ A lista de produtos deixa de ter filtros e apresenta todos os registos.
 - Pode alternar rapidamente entre vistas filtradas e não filtradas através de favoritos.
 - Limpar os filtros garante que novos produtos não são escondidos.
 
-## FAQ-091 — Que atributos de produto são usados em oportunidades e propostas?
+## BC-KB-091 — Que atributos de produto são usados em oportunidades e propostas?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3279,7 +3124,7 @@ Os produtos selecionados na proposta correspondem às características solicitad
 - Os atributos são particularmente úteis em oportunidades complexas com muitos requisitos técnicos.
 - Garanta que todos os produtos têm atributos atualizados para que os filtros sejam eficazes.
 
-## FAQ-092 — Como importo o Dicionário ANF?
+## BC-KB-092 — Como importo o Dicionário ANF?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -3311,7 +3156,7 @@ As substâncias e grupos ANF são atualizados e disponíveis para utilização e
 - Esta operação deve ser executada por um administrador ou utilizador com permissões de importação.
 - Mantenha um backup antes de realizar importações massivas.
 
-## FAQ-093 — Onde são atualizados os dados importados do Dicionário ANF?
+## BC-KB-093 — Onde são atualizados os dados importados do Dicionário ANF?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -3341,7 +3186,7 @@ Os campos de substância e grupo terapêutico nas fichas de produto refletem as 
 - Caso algum dado não tenha sido importado, consulte o log de importação para identificar erros.
 - A atualização pode afetar relatórios regulatórios; confirme se estão a utilizar a informação correta.
 
-## FAQ-094 — Como importo dados de PVA, PIC, PMA, PVFD e PVAD?
+## BC-KB-094 — Como importo dados de PVA, PIC, PMA, PVFD e PVAD?
 **Categoria:** Produtos / Preços  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -3372,9 +3217,9 @@ As tabelas de PVA, PIC, PMA, PVFD e PVAD estão atualizadas e os preços reflete
 
 **Notas**
 - As importações devem ser realizadas em ambiente de testes antes de passar a produção.
-- Guarde os ficheiros de importação como registo e em caso de auditoria.
+- Mantenha os ficheiros de importação como registo e para efeitos de auditoria.
 
-## FAQ-095 — Onde posso consultar a informação de PVA, PIC, PMA, PVFD e PVAD na ficha do produto?
+## BC-KB-095 — Onde posso consultar a informação de PVA, PIC, PMA, PVFD e PVAD na ficha do produto?
 **Categoria:** Produtos / Preços  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3405,7 +3250,7 @@ Os valores de PVA, PIC, PMA, PVFD e PVAD apresentados correspondem aos dados imp
 - Os preços podem estar sujeitos a arredondamentos e impostos; confirme se os valores se aplicam ao contexto correto.
 - Utilize relatórios de preços para comparar os diferentes valores entre produtos.
 
-## FAQ-096 — Como crio um novo cliente?
+## BC-KB-096 — Como crio um novo cliente?
 **Categoria:** Clientes  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3428,17 +3273,16 @@ Criar a ficha de cliente através da lista de clientes, preencher os campos obri
 3. Se existir, escolher um Modelo de Cliente para pré preencher dados.
 4. Preencher os campos obrigatórios indicados na secção eInfo Obrigatória (Nome, Nº Identificação Fiscal, Grupo Registo Cliente, Grupo Registo VAT Cliente, etc.).
 5. Adicionar endereços de faturação e envio, contactos e outras informações relevantes.
-6. Guardar a ficha e verificar se todos os campos obrigatórios estão preenchidos.
-7. Submeter para aprovação através de Pedido → Enviar Pedido Aprovação.
+6. Submeter para aprovação através de Pedido → Enviar Pedido Aprovação.
 
 **Validação final**
-O cliente aparece na lista de clientes com o pedido de aprovação pendente ou aprovado newtab.
+O cliente aparece na lista de clientes com o pedido de aprovação pendente ou aprovado
 
 **Notas**
 - Utilize modelos de cliente para acelerar a criação.
 - Verifique se o NIF e dados de faturação estão corretos para evitar rejeições.
 
-## FAQ-097 — Que campos obrigatórios devo preencher antes de pedir aprovação de um cliente?
+## BC-KB-097 — Que campos obrigatórios devo preencher antes de pedir aprovação de um cliente?
 **Categoria:** Clientes  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3468,9 +3312,8 @@ A ficha exibe todos os campos obrigatórios preenchidos, permitindo o envio do p
 
 **Notas**
 - Alguns campos (como limite de crédito) podem ser exigidos apenas em certos workflows; confirme com a sua organização.
-- Guardar periodicamente a ficha evita perda de informação.
 
-## FAQ-098 — Como envio um novo cliente para aprovação?
+## BC-KB-098 — Como envio um novo cliente para aprovação?
 **Categoria:** Clientes  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3489,7 +3332,7 @@ Utilizar o menu Pedido na ficha de cliente para enviar o pedido de aprovação.
 
 **Como proceder**
 1. Abrir a ficha do cliente recém criado.
-2. Garantir que todos os campos obrigatórios estão preenchidos e guardados.
+2. Garantir que todos os campos obrigatórios estão preenchidos.
 3. Aceder ao menu Pedido no topo da ficha.
 4. Selecionar Enviar Pedido Aprovação.
 5. Confirmar a submissão; o sistema criará a solicitação e notificará o aprovador.
@@ -3501,7 +3344,7 @@ O pedido de aprovação é criado e aparece na lista de solicitações para apro
 - Caso a opção não esteja visível, verifique se o workflow está ativo para clientes.
 - Depois de enviado, algumas alterações na ficha podem ficar bloqueadas.
 
-## FAQ-099 — Onde consulto o estado de aprovação de um cliente?
+## BC-KB-099 — Onde consulto o estado de aprovação de um cliente?
 **Categoria:** Clientes  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3531,7 +3374,7 @@ O utilizador identifica com clareza o estado da aprovação e o responsável pel
 - Em workflows multietapa, podem existir vários níveis de aprovação; acompanhe cada etapa na página de solicitações.
 - Utilize notificações automáticas para ser informado quando o cliente for aprovado.
 
-## FAQ-100 — Como filtro clientes com workflow em progresso?
+## BC-KB-100 — Como filtro clientes com workflow em progresso?
 **Categoria:** Clientes  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3552,7 +3395,7 @@ Aplicar um filtro no campo Workflowstatus com o valor Em Progresso.
 1. Abrir a lista de Clientes.
 2. Clicar em Filtrar e escolher o campo Workflowstatus.
 3. Definir o valor para Em Progresso; isto mostrará apenas os clientes cujo pedido de aprovação está pendente.
-4. Guardar esta vista para consultas futuras se necessário.
+4. sta vista para consultas futuras se necessário.
 
 **Validação final**
 A lista apresenta unicamente os clientes em processo de aprovação, facilitando o acompanhamento.
@@ -3561,7 +3404,7 @@ A lista apresenta unicamente os clientes em processo de aprovação, facilitando
 - Pode combinar este filtro com outros (por exemplo, por vendedor) para análises mais específicas.
 - Limpar o filtro após a análise devolve a lista completa.
 
-## FAQ-101 — Como aprovo ou rejeito um novo cliente?
+## BC-KB-101 — Como aprovo ou rejeito um novo cliente?
 **Categoria:** Clientes  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -3593,7 +3436,7 @@ O pedido desaparece da lista de pendentes e o cliente passa a ativo ou rejeitado
 - Apenas utilizadores designados como aprovadores podem realizar esta operação.
 - Registar o motivo da rejeição ajuda o criador a corrigir e reenviar o pedido.
 
-## FAQ-102 — Como crio diferentes endereços de envio para um cliente?
+## BC-KB-102 — Como crio diferentes endereços de envio para um cliente?
 **Categoria:** Clientes  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3602,7 +3445,7 @@ O pedido desaparece da lista de pendentes e o cliente passa a ativo ou rejeitado
 Um cliente utiliza várias moradas de entrega e é necessário registar e gerir estas moradas.
 
 **Diagnóstico**
-A ficha de cliente principal apenas guarda uma morada de faturação; as moradas adicionais são geridas separadamente.
+A ficha de cliente principal apenas contém uma morada de faturação; as moradas adicionais são geridas separadamente.
 
 **Causa provável**
 Desconhecimento da funcionalidade de Endereços Envio.
@@ -3615,8 +3458,7 @@ Criar e gerir as moradas de envio na secção de endereços do cliente.
 2. No menu superior, selecionar Cliente → Endereços Envio.
 3. Na janela de endereços, clicar em + Novo.
 4. Preencher os campos da morada de envio (Nome do Destinatário, Morada, Código Postal, Localidade, País, Contacto).
-5. Guardar a morada e repetir o processo para outras moradas.
-6. Opcionalmente, definir uma morada de envio predefinida através da seleção de Definir como predefinido.
+5. Opcionalmente, definir uma morada de envio predefinida através da seleção de Definir como predefinido.
 
 **Validação final**
 As moradas estão disponíveis para seleção nos documentos de venda e logística e podem ser alteradas consoante a encomenda.
@@ -3625,7 +3467,7 @@ As moradas estão disponíveis para seleção nos documentos de venda e logísti
 - Pode eliminar ou editar moradas de envio a partir da mesma janela.
 - Certifique se de que a morada de envio corresponde ao local de entrega real para evitar devoluções.
 
-## FAQ-103 — Como crio um novo contacto a partir do Outlook?
+## BC-KB-103 — Como crio um novo contacto a partir do Outlook?
 **Categoria:** Clientes / Contactos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3650,13 +3492,13 @@ Usar o add in do Business Central no Outlook para criar o contacto a partir do e
 5. Confirmar a criação; o contacto fica imediatamente associado ao cliente correspondente ou como contacto independente.
 
 **Validação final**
-O novo contacto aparece na lista de contactos no Business Central e está relacionado com o cliente correto. newtab
+O novo contacto aparece na lista de contactos no Business Central e está relacionado com o cliente correto.
 
 **Notas**
 - Esta funcionalidade requer que o add in do Business Central esteja configurado no Outlook.
 - Os contactos criados no Outlook podem ser editados posteriormente na ficha de cliente.
 
-## FAQ-104 — Como crio um contacto a partir da Ficha de Cliente?
+## BC-KB-104 — Como crio um contacto a partir da Ficha de Cliente?
 **Categoria:** Clientes / Contactos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3678,7 +3520,7 @@ Usar a opção Contacto na ficha de cliente para criar novos contactos.
 2. No menu, selecionar Base → Contacto.
 3. Se não existir nenhum contacto associado, o sistema pergunta se deseja criar um; responder Sim.
 4. Preencher a ficha do novo contacto com nome, email, telefone e cargo.
-5. Guardar e fechar; o contacto fica associado ao cliente.
+5. Fechar; o contacto fica associado ao cliente.
 6. Para adicionar contactos adicionais, repetir o processo.
 
 **Validação final**
@@ -3688,7 +3530,7 @@ Os contactos estão listados na ficha do cliente e podem ser utilizados em oport
 - Os contactos criados podem ser editados ou eliminados posteriormente através da lista de contactos.
 - É possível definir um contacto predefinido para faturação ou envio.
 
-## FAQ-105 — Como edito ou elimino um contacto associado a um cliente?
+## BC-KB-105 — Como edito ou elimino um contacto associado a um cliente?
 **Categoria:** Clientes / Contactos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3708,7 +3550,7 @@ Abrir a lista de contactos do cliente e utilizar as opções de editar ou elimin
 **Como proceder**
 1. Abrir a ficha do cliente.
 2. Selecionar Base → Contacto para ver a lista de contactos.
-3. Para editar, selecionar o contacto e clicar em Editar; alterar os campos necessários (nome, cargo, email, etc.) e guardar.
+3. Para editar, selecionar o contacto e clicar em Editar; alterar os campos necessários (nome, cargo, email, etc.).
 4. Para eliminar, clicar nos três pontos (menu de contexto) à direita do contacto e escolher Eliminar; confirmar a eliminação.
 5. Atualizar a ficha do cliente para refletir as alterações.
 
@@ -3719,7 +3561,7 @@ As alterações estão refletidas na lista de contactos e o contacto eliminado d
 - A eliminação é permanente; garanta que o contacto não é usado noutros registos antes de o eliminar.
 - Os contactos editados mantêm o histórico de transações associadas ao cliente.
 
-## FAQ-106 — Como crio um novo fornecedor?
+## BC-KB-106 — Como crio um novo fornecedor?
 **Categoria:** Fornecedores  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3741,16 +3583,15 @@ Criar a ficha de fornecedor a partir da lista de fornecedores, preencher os camp
 2. Clicar em Novo; a ficha de fornecedor abre com o número gerado automaticamente.
 3. Preencher a secção eInfo Obrigatória com Nome, Endereço, Código Postal, País, Grupo Registo Fornecedor e Grupo Registo VAT Fornecedor.
 4. Adicionar dados de contacto, condições de pagamento, moeda e valores mínimos de encomenda, se aplicável.
-5. Guardar a ficha e, se necessário, ir a Pedido → Enviar Pedido Aprovação para iniciar o workflow de aprovação.
 
 **Validação final**
-O fornecedor surge na lista de fornecedores com a informação completa e o pedido de aprovação enviado newtab.
+O fornecedor surge na lista de fornecedores com a informação completa e o pedido de aprovação enviado
 
 **Notas**
 - Utilize a numeração automática para uniformidade.
 - Confirme se o fornecedor já existe para evitar duplicados.
 
-## FAQ-107 — O número de fornecedor é manual ou automático?
+## BC-KB-107 — O número de fornecedor é manual ou automático?
 **Categoria:** Fornecedores  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3769,7 +3610,7 @@ Por defeito, o número do fornecedor é atribuído automaticamente pela série d
 
 **Como proceder**
 1. Ao criar um fornecedor, o campo Nº é preenchido automaticamente com base na série de numeração configurada.
-2. Se a empresa permitir numeração manual, o campo Nº pode ser editado antes de guardar; contudo, esta opção deve ser evitada para manter consistência.
+2. Se a empresa permitir numeração manual, o campo Nº pode ser editado antes de concluir a criação; contudo, esta opção deve ser evitada para manter consistência.
 3. Para alterar a configuração de numeração, aceder a Configuração → Configuração de Compras e verificar a série atribuída a fornecedores.
 
 **Validação final**
@@ -3779,7 +3620,7 @@ O número do fornecedor é gerado corretamente ou introduzido manualmente confor
 - A numeração automática previne duplicação e garante rastreabilidade.
 - Alterar a série de numeração requer permissões de administrador.
 
-## FAQ-108 — Que campos obrigatórios devo preencher numa nova Ficha de Fornecedor?
+## BC-KB-108 — Que campos obrigatórios devo preencher numa nova Ficha de Fornecedor?
 **Categoria:** Fornecedores  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3811,7 +3652,7 @@ Todos os campos da secção obrigatória estão preenchidos, permitindo o envio 
 - Campos adicionais podem ser obrigatórios consoante o workflow configurado.
 - Revise as informações de banco e envio se forem necessárias para pagamentos e logística.
 
-## FAQ-109 — Como envio um fornecedor para aprovação?
+## BC-KB-109 — Como envio um fornecedor para aprovação?
 **Categoria:** Fornecedores  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3842,7 +3683,7 @@ O pedido de aprovação aparece na lista de solicitações pendentes e o fornece
 - Verifique se o workflow de aprovação está configurado para fornecedores; caso contrário, a opção pode não estar disponível.
 - Após envio, algumas edições podem ficar bloqueadas até à decisão.
 
-## FAQ-110 — Onde verifico o estado de aprovação de um fornecedor?
+## BC-KB-110 — Onde verifico o estado de aprovação de um fornecedor?
 **Categoria:** Fornecedores  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3873,7 +3714,7 @@ O estado da aprovação é conhecido e pode ser acompanhado até à decisão fin
 - Utilize notificações ou alertas para receber informação de novas aprovações.
 - Em workflows multilivelo, acompanhe cada etapa da aprovação separadamente.
 
-## FAQ-111 — Como filtro fornecedores com workflow em progresso?
+## BC-KB-111 — Como filtro fornecedores com workflow em progresso?
 **Categoria:** Fornecedores  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3894,16 +3735,16 @@ Aplicar um filtro no campo Workflowstatus com o valor Em Progresso na lista de f
 1. Aceder à lista de Fornecedores.
 2. Clicar em Filtrar e selecionar o campo Workflowstatus.
 3. Definir o valor Em Progresso para listar apenas fornecedores ainda em aprovação.
-4. Guardar a vista personalizada se necessário para consultas futuras.
+4. a vista personalizada se necessário para consultas futuras.
 
 **Validação final**
-A lista apresenta apenas fornecedores cujo estado de workflow está em progresso newtab.
+A lista apresenta apenas fornecedores cujo estado de workflow está em progresso
 
 **Notas**
 - Pode combinar este filtro com outros (por exemplo, por comprador) para análises específicas.
 - Limpar o filtro volta a apresentar todos os fornecedores.
 
-## FAQ-112 — Como aprovo ou rejeito um novo fornecedor?
+## BC-KB-112 — Como aprovo ou rejeito um novo fornecedor?
 **Categoria:** Fornecedores  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -3934,7 +3775,7 @@ O fornecedor é aprovado e passa a ativo ou é rejeitado e removido do fluxo, co
 - Apenas os utilizadores com permissão de aprovador podem executar esta ação.
 - Indicar as razões da rejeição evita erros recorrentes na criação de fornecedores.
 
-## FAQ-113 — Como identifico fornecedores que requerem aprovação de Packaging ou Artworks?
+## BC-KB-113 — Como identifico fornecedores que requerem aprovação de Packaging ou Artworks?
 **Categoria:** Fornecedores  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -3964,7 +3805,7 @@ Fornecedores identificados requerem aprovação extra, e o processo de aprovaç�
 - Se os campos não existirem, consulte a equipa de sistemas para configurar esta funcionalidade.
 - Este procedimento reduz o risco de erros nos materiais de embalagem e cumprimento de normas.
 
-## FAQ-114 — Onde configuro a aprovação pré encomenda para fornecedores?
+## BC-KB-114 — Onde configuro a aprovação pré encomenda para fornecedores?
 **Categoria:** Fornecedores / Compras  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -3995,7 +3836,7 @@ As encomendas de compra para fornecedores configurados ou valores acima do limia
 - Esta configuração requer permissões de administrador.
 - Ajuste os parâmetros do workflow conforme a política interna da empresa.
 
-## FAQ-115 — Como consulto as solicitações pendentes para aprovar?
+## BC-KB-115 — Como consulto as solicitações pendentes para aprovar?
 **Categoria:** Aprovações  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4023,9 +3864,9 @@ Todas as solicitações pendentes são visíveis e organizadas, permitindo ao ap
 
 **Notas**
 - É possível adicionar colunas adicionais à vista para facilitar a análise (por exemplo, valor da encomenda).
-- Guarde vistas personalizadas para diferentes tipos de aprovações.
+- Crie vistas personalizadas para diferentes tipos de aprovações.
 
-## FAQ-116 — Que opções existem numa linha de aprovação pendente?
+## BC-KB-116 — Que opções existem numa linha de aprovação pendente?
 **Categoria:** Aprovações  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -4049,7 +3890,7 @@ o Aprovar: aceita o pedido e finaliza o processo.
 o Rejeitar: recusa o pedido; deve ser indicado um comentário com o motivo.
 o Abrir Registo: abre a ficha do documento (produto, cliente, fornecedor, encomenda) para revisão.
 o Adicionar Comentário: permite escrever observações sem aprovar ou rejeitar.
-3. Escolher a ação apropriada com base na análise.
+1. Escolher a ação apropriada com base na análise.
 
 **Validação final**
 O aprovador conhece e utiliza as opções corretamente, conduzindo o pedido ao estado final desejado.
@@ -4058,7 +3899,7 @@ O aprovador conhece e utiliza as opções corretamente, conduzindo o pedido ao e
 - Uma vez aprovada ou rejeitada, a solicitação desaparece da lista pendente.
 - Os comentários ficam registados para consulta futura.
 
-## FAQ-117 — Quando devo usar a opção “Abrir Registo” numa aprovação?
+## BC-KB-117 — Quando devo usar a opção “Abrir Registo” numa aprovação?
 **Categoria:** Aprovações  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -4088,7 +3929,7 @@ O aprovador tomou uma decisão informada após analisar o conteúdo completo do 
 - Esta opção é recomendada quando há dúvidas sobre a completude ou exatidão da informação.
 - Evita aprovações erradas que poderiam comprometer processos futuros.
 
-## FAQ-118 — Como crio uma nova oportunidade?
+## BC-KB-118 — Como crio uma nova oportunidade?
 **Categoria:** Oportunidades  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4109,16 +3950,15 @@ Criar uma oportunidade na lista de oportunidades.
 1. A partir da pesquisa, abrir Oportunidades.
 2. Clicar em Novo para criar uma nova oportunidade.
 3. Preencher o formulário em branco; o campo Nº pode ser gerado automaticamente.
-4. Guardar a ficha para prosseguir com o preenchimento de detalhes.
 
 **Validação final**
-A oportunidade fica registada e visível na lista de oportunidades newtab.
+A oportunidade fica registada e visível na lista de oportunidades
 
 **Notas**
 - O tipo de oportunidade (concurso, ajuste, proposta) pode ser indicado na ficha mais tarde.
 - É possível associar anexos, ligações e notas após a criação.
 
-## FAQ-119 — Que informação devo preencher na tab Geral de uma oportunidade?
+## BC-KB-119 — Que informação devo preencher na tab Geral de uma oportunidade?
 **Categoria:** Oportunidades  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4143,16 +3983,15 @@ Preencher os campos principais: Número, Descrição, Contacto, Prioridade, Cicl
 5. Definir a Prioridade (Alta, Normal, Baixa).
 6. Selecionar o Cód. Ciclo de Vendas que determina as etapas da oportunidade.
 7. Indicar o Cód. Vendedor responsável pelo acompanhamento.
-8. Guardar a ficha.
 
 **Validação final**
-A tab Geral fica completa e a oportunidade pode avançar para as próximas fases newtab.
+A tab Geral fica completa e a oportunidade pode avançar para as próximas fases
 
 **Notas**
 - Estes campos são obrigatórios para que o workflow de oportunidade funcione corretamente.
 - Pode adicionar mais detalhes (origem, categoria) conforme a configuração.
 
-## FAQ-120 — Como identifico o contacto associado a uma oportunidade?
+## BC-KB-120 — Como identifico o contacto associado a uma oportunidade?
 **Categoria:** Oportunidades  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4182,7 +4021,7 @@ O contacto associado reflete a pessoa certa para acompanhamento da oportunidade.
 - Se o contacto não existir, crie-o previamente na ficha de cliente.
 - O contacto pode ser alterado a qualquer momento, antes de fechar a oportunidade.
 
-## FAQ-121 — Como defino a prioridade de uma oportunidade?
+## BC-KB-121 — Como defino a prioridade de uma oportunidade?
 **Categoria:** Oportunidades  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4203,7 +4042,6 @@ Selecionar um valor de prioridade (Alta, Normal ou Baixa) na tab Geral.
 1. Na ficha de oportunidade, localizar o campo Prioridade.
 2. Clicar na seta de seleção e escolher entre Alta, Normal ou Baixa.
 3. A prioridade pode influenciar a ordem de tratamento das oportunidades e alertas no centro de perfil.
-4. Guardar a alteração.
 
 **Validação final**
 A oportunidade fica marcada com a prioridade adequada, refletindo a urgência do processo.
@@ -4212,7 +4050,7 @@ A oportunidade fica marcada com a prioridade adequada, refletindo a urgência do
 - A prioridade pode ser alterada a qualquer momento se a importância se modificar.
 - Algumas organizações podem configurar prioridades personalizadas; verifique com o administrador.
 
-## FAQ-122 — Como escolho o ciclo de vendas de uma oportunidade?
+## BC-KB-122 — Como escolho o ciclo de vendas de uma oportunidade?
 **Categoria:** Oportunidades  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4243,7 +4081,7 @@ O ciclo de vendas está selecionado corretamente e orienta o processo de acompan
 - Pode consultar a descrição de cada ciclo na tabela de ciclos de vendas.
 - A alteração do ciclo após iniciar etapas pode não ser recomendada; verifique com o administrador.
 
-## FAQ-123 — Como adiciono anexos a uma oportunidade?
+## BC-KB-123 — Como adiciono anexos a uma oportunidade?
 **Categoria:** Oportunidades / Documentação  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4272,10 +4110,10 @@ Utilizar a opção de anexos no menu da oportunidade para carregar ficheiros.
 Os anexos aparecem listados na ficha da oportunidade e podem ser abertos ou descarregados quando necessário.
 
 **Notas**
-- Guarde os anexos com nomes claros para fácil identificação.
+- Use nomes claros nos anexos para fácil identificação.
 - O tamanho máximo de ficheiro depende da configuração do Business Central ou do SharePoint.
 
-## FAQ-124 — Que tipo de anexos devo associar a uma oportunidade de concurso?
+## BC-KB-124 — Que tipo de anexos devo associar a uma oportunidade de concurso?
 **Categoria:** Oportunidades / Documentação  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4305,7 +4143,7 @@ Todos os documentos pertinentes estão anexados à oportunidade e servem de base
 - Mantenha a ordem e a nomenclatura dos ficheiros para facilitar a consulta.
 - Verifique se existem anexos obrigatórios específicos do setor (licenças, certificados).
 
-## FAQ-125 — Como adiciono ligações externas a uma oportunidade?
+## BC-KB-125 — Como adiciono ligações externas a uma oportunidade?
 **Categoria:** Oportunidades / Ligações  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4327,7 +4165,6 @@ Usar a opção Ligações para adicionar URL ou referências externas.
 2. No menu, selecionar Ligações ou Anexos → Ligações.
 3. Clicar em Nova Ligação.
 4. Introduzir o URL (por exemplo, endereço de uma pasta SharePoint, página do concurso) e uma Descrição.
-5. Guardar a ligação; ela aparece na lista de ligações da oportunidade.
 
 **Validação final**
 As ligações externas ficam acessíveis através da ficha da oportunidade e permitem navegar rapidamente para recursos externos.
@@ -4336,7 +4173,7 @@ As ligações externas ficam acessíveis através da ficha da oportunidade e per
 - Verifique regularmente se as ligações ainda são válidas e atualizadas.
 - Pode atribuir permissões no SharePoint para controlar acesso a pastas ligadas.
 
-## FAQ-126 — Que cuidados devo ter ao associar uma pasta SharePoint a uma oportunidade?
+## BC-KB-126 — Que cuidados devo ter ao associar uma pasta SharePoint a uma oportunidade?
 **Categoria:** Oportunidades / Ligações  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4367,7 +4204,7 @@ A pasta está ligada e os utilizadores autorizados conseguem aceder e colaborar 
 - Evite associar a biblioteca raiz do SharePoint; crie uma pasta específica por oportunidade.
 - Documentos sensíveis devem ter permissão restrita.
 
-## FAQ-127 — Que tipo de notas posso colocar numa oportunidade?
+## BC-KB-127 — Que tipo de notas posso colocar numa oportunidade?
 **Categoria:** Oportunidades / Notas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4388,8 +4225,7 @@ Adicionar notas através da opção de comentários ou notas na ficha da oportun
 1. Abrir a ficha da oportunidade.
 2. Selecionar Notas ou Comentários (dependendo da versão).
 3. Escrever o texto da nota, mencionando data, autor e assunto (por exemplo, "Reunião com cliente X" ou "Sugestão do gestor").
-4. Guardar a nota; ela fica registada na ficha com data e hora.
-5. Adicionar tantas notas quantas necessárias ao longo do ciclo de vendas.
+4. Adicionar tantas notas quantas necessárias ao longo do ciclo de vendas.
 
 **Validação final**
 As notas ficam visíveis na ficha e servem de histórico para todos os intervenientes.
@@ -4398,7 +4234,7 @@ As notas ficam visíveis na ficha e servem de histórico para todos os interveni
 - Utilize uma linguagem objetiva e registe apenas informação relevante.
 - As notas não substituem anexos ou campos estruturados; use-as como complemento.
 
-## FAQ-128 — Como registo requisitos do cliente numa oportunidade?
+## BC-KB-128 — Como registo requisitos do cliente numa oportunidade?
 **Categoria:** Oportunidades / Concursos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4420,7 +4256,6 @@ Usar o separador de requisitos na ficha da oportunidade para preencher os campos
 2. Aceder ao separador Requisitos ou Procedimento, conforme o layout.
 3. Preencher os campos solicitados pelo cliente (por exemplo, País de Origem, Marca, Visibilidade do CDM, Certificados exigidos).
 4. Verificar se há campos opcionais que devem ser incluídos na proposta.
-5. Guardar os dados; estes serão utilizados na proposta de venda.
 
 **Validação final**
 Todos os requisitos estão registados e serão considerados no documento final.
@@ -4429,7 +4264,7 @@ Todos os requisitos estão registados e serão considerados no documento final.
 - Se a oportunidade não for um concurso, estes campos podem ficar em branco.
 - Recolher todos os requisitos antes de iniciar a elaboração da proposta evita atrasos.
 
-## FAQ-129 — Quando devo preencher os requisitos de concurso?
+## BC-KB-129 — Quando devo preencher os requisitos de concurso?
 **Categoria:** Oportunidades / Concursos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4459,7 +4294,7 @@ Os requisitos estão completos antes da elaboração da proposta, evitando omiss
 - Um registo atempado permite planear o ciclo de vendas de forma mais eficiente.
 - Actualize os requisitos se forem recebidos adendos ou esclarecimentos do concurso.
 
-## FAQ-130 — Que campos devo preencher quando a oportunidade é um concurso?
+## BC-KB-130 — Que campos devo preencher quando a oportunidade é um concurso?
 **Categoria:** Oportunidades / Concursos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4482,7 +4317,6 @@ Preencher os campos de procedimento e requisitos na ficha de oportunidade.
 3. Preencher o Título do Procedimento com a designação oficial, que será impressa na proposta.
 4. Definir a Data/Hora Limite de Entrega da Proposta conforme o caderno de encargos.
 5. Ativar e preencher outros campos específicos solicitados (País de origem, Marca, Certificações).
-6. Guardar a ficha.
 
 **Validação final**
 Todos os campos específicos do concurso estão preenchidos, permitindo a geração de propostas e documentos regulamentares.
@@ -4491,7 +4325,7 @@ Todos os campos específicos do concurso estão preenchidos, permitindo a geraç
 - Se algum campo não se aplicar, pode deixar em branco, mas confirme se não é obrigatório pelo cliente.
 - Utilize notas para explicar campos não padronizados.
 
-## FAQ-131 — Como identifico o número do procedimento de concurso?
+## BC-KB-131 — Como identifico o número do procedimento de concurso?
 **Categoria:** Oportunidades / Concursos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4512,7 +4346,6 @@ Preencher o campo Procedimento no separador de requisitos com o número oficial 
 1. Consultar o anúncio do concurso ou o convite e identificar o número do procedimento (por exemplo, o número do anúncio no Portal Base).
 2. Na ficha da oportunidade, aceder ao separador Requisitos.
 3. Introduzir o número no campo Procedimento.
-4. Guardar a ficha.
 
 **Validação final**
 O número do procedimento está corretamente registado na oportunidade e será utilizado nos documentos oficiais.
@@ -4521,7 +4354,7 @@ O número do procedimento está corretamente registado na oportunidade e será u
 - Verifique que o número coincide com o indicado nos documentos do cliente para evitar erros.
 - Se houver vários procedimentos, crie oportunidades separadas para cada um.
 
-## FAQ-132 — Como identifico o título do procedimento que será impresso na proposta?
+## BC-KB-132 — Como identifico o título do procedimento que será impresso na proposta?
 **Categoria:** Oportunidades / Concursos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4542,8 +4375,7 @@ Usar o campo Título do Procedimento no separador de requisitos da oportunidade.
 1. Abrir a ficha da oportunidade.
 2. Aceder ao separador Requisitos.
 3. No campo Título do Procedimento, introduzir o nome oficial do concurso (por exemplo, "Fornecimento de Medicamentos para Hospital X").
-4. Guardar a ficha.
-5. Quando a proposta de venda for gerada, o título será impresso conforme este campo.
+4. Quando a proposta de venda for gerada, o título será impresso conforme este campo.
 
 **Validação final**
 O título está registado e aparece corretamente na proposta de venda e documentos relacionados.
@@ -4551,3 +4383,2767 @@ O título está registado e aparece corretamente na proposta de venda e document
 **Notas**
 - Certifique se de que o título corresponde exatamente ao indicado nos documentos oficiais para evitar impugnações.
 - Pode utilizar notas para incluir versões abreviadas ou traduções, se necessário.
+
+## BC-KB-133 — Como defino a data e hora limite de entrega da proposta?
+**Categoria:** Oportunidades / Concursos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Ao preparar uma proposta para um concurso público ou ajuste directo, é necessário indicar a data e hora em que o cliente exige a entrega da proposta de venda.
+
+**Diagnóstico**  
+A ficha de oportunidade contém um separador de requisitos com um campo próprio para a data/hora limite, mas este campo está vazio ou contém informação errada.
+
+**Causa provável**  
+O utilizador não sabe onde inserir a data e hora de entrega ou esqueceu-se de a registar.
+
+**Solução**  
+Preencher o campo Data/Hora Limite de Entrega da Proposta no separador de requisitos da oportunidade.
+
+**Como proceder**  
+1. Abrir a ficha da oportunidade relacionada com o concurso.
+2. Aceder ao separador Requisitos.
+3. Localizar o campo Data/Hora Limite de Entrega da Proposta.
+4. Introduzir a data e hora exacta exigida pelo cliente (por exemplo, 27-05-2026 10:00).
+
+**Validação final**  
+A data e hora limite aparecem preenchidas no separador de requisitos e serão impressas no documento de proposta.
+
+**Notas**  
+- Verifique sempre as especificações do concurso para não introduzir datas erradas.
+- Ajuste a hora de acordo com o fuso horário do cliente quando aplicável.
+
+## BC-KB-134 — Para que servem os campos de requisitos do concurso?
+**Categoria:** Oportunidades / Concursos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Nas oportunidades de concurso existem vários campos específicos (País de origem, marca, CDM, etc.) e o utilizador não sabe se devem ser preenchidos.
+
+**Diagnóstico**  
+Os campos não foram completados, o que pode levar a propostas incompletas ou rejeitadas.
+
+**Causa provável**  
+Falta de conhecimento sobre a finalidade destes campos e sobre a impressão automática na proposta.
+
+**Solução**  
+Utilizar os campos do separador Requisitos para registar informação exigida pelo cliente no concurso.
+
+**Como proceder**  
+1. Abrir a ficha da oportunidade de concurso.
+2. Ir ao separador Requisitos.
+3. Preencher os campos disponíveis, como País de Origem, Marca, N.º de Lote/CDM, País de Fabrico ou outros solicitados no caderno de encargos.
+4. Se algum campo não for aplicável, deixar em branco ou indicar “Não aplicável”.
+
+**Validação final**  
+Os campos de requisitos estão preenchidos e a informação será incluída na proposta de venda.
+
+**Notas**  
+- Estes campos são opcionais em oportunidades normais, mas obrigatórios quando especificados no concurso.
+- Informações incorrectas podem invalidar a proposta; valide com a documentação oficial.
+
+## BC-KB-135 — O que é o ciclo de vendas da oportunidade?
+**Categoria:** Oportunidades  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+É necessário seguir um conjunto de etapas na gestão de uma oportunidade, mas o utilizador não sabe como funciona o ciclo de vendas.
+
+**Diagnóstico**  
+O campo Cód. Ciclo de Vendas está vazio e a oportunidade não gera tarefas ou alertas.
+
+**Causa provável**  
+O utilizador não conhece os ciclos pré-definidos (ex.: Concursos Públicos, Ajustes Directos) e não seleccionou nenhum.
+
+**Solução**  
+O ciclo de vendas é uma estrutura com etapas e ações que guiam a oportunidade desde a criação até ao fecho; deve ser seleccionado na ficha para que o sistema gere tarefas automaticamente.
+
+**Como proceder**  
+1. Abrir a ficha da oportunidade.
+2. No separador Geral, localizar o campo Cód. Ciclo de Vendas.
+3. Seleccionar o ciclo adequado (por exemplo, CONCURSO) de acordo com o tipo de negócio.
+4. Activar a primeira etapa do ciclo para iniciar o fluxo de tarefas.
+
+**Validação final**  
+O ciclo de vendas está seleccionado e a oportunidade mostra o estado de etapa em curso, com tarefas geradas.
+
+**Notas**  
+- Os ciclos podem ser configurados pela administração para reflectir processos internos.
+- Se nenhum ciclo for aplicado, não serão geradas tarefas automáticas.
+
+## BC-KB-136 — Como activo a primeira etapa do ciclo de vendas?
+**Categoria:** Oportunidades  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Após atribuir um ciclo à oportunidade, o utilizador não sabe como iniciar a primeira etapa.
+
+**Diagnóstico**  
+A oportunidade permanece com estado “Não iniciada” e não são criadas tarefas.
+
+**Causa provável**  
+Falta de acção manual para iniciar o ciclo.
+
+**Solução**  
+Utilizar a opção “Ativar Primeira Etapa” para colocar a oportunidade em curso.
+
+**Como proceder**  
+1. Na ficha da oportunidade com ciclo de vendas atribuído, clicar em Processar.
+2. Seleccionar Ativar Primeira Etapa.
+3. Confirmar a operação; o estado da oportunidade muda para Em curso e são geradas as primeiras tarefas.
+
+**Validação final**  
+A etapa inicial está activa e as tarefas correspondentes são criadas.
+
+**Notas**  
+- Este passo só precisa de ser executado uma vez, no início da oportunidade.
+- Se a etapa já estiver activa, a opção fica indisponível.
+
+## BC-KB-137 — O que acontece quando activo a primeira etapa do ciclo de vendas?
+**Categoria:** Oportunidades  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+O utilizador quer saber quais as consequências de activar o ciclo de vendas.
+
+**Diagnóstico**  
+Desconhecimento das funcionalidades automáticas associadas ao ciclo.
+
+**Causa provável**  
+Falta de formação sobre a configuração de ciclos e tarefas.
+
+**Solução**  
+Activar o ciclo desencadeia a criação de tarefas a efectuar e altera o estado da oportunidade, permitindo o seu acompanhamento.
+
+**Como proceder**  
+1. Após clicar em Ativar Primeira Etapa, o estado da oportunidade muda para Em curso.
+2. O sistema cria automaticamente uma ou mais Ações a Efetuar atribuídas ao responsável de vendas ou à equipa.
+3. Estas acções aparecem no centro de perfil do utilizador e na ficha da oportunidade.
+
+**Validação final**  
+O estado da oportunidade é “Em curso”, e as tarefas geradas podem ser vistas nas listas de acções.
+
+**Notas**  
+- As tarefas guiam o utilizador através das actividades necessárias, como contacto com cliente, envio de proposta, etc.
+- A falta de conclusão das tarefas pode bloquear a progressão para etapas seguintes.
+
+## BC-KB-138 — Como passo para a etapa seguinte do ciclo de vendas?
+**Categoria:** Oportunidades  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Após concluir as tarefas da etapa actual, pretende avançar para a próxima fase do ciclo.
+
+**Diagnóstico**  
+O campo de estado permanece na etapa actual porque a mudança não foi solicitada.
+
+**Causa provável**  
+O utilizador não sabe como registar a conclusão da etapa ou onde actualizar o ciclo.
+
+**Solução**  
+Utilizar a opção de actualizar etapa para avançar no ciclo de vendas.
+
+**Como proceder**  
+1. Na ficha da oportunidade, garantir que todas as tarefas da etapa actual estão concluídas.
+2. Seleccionar Base → Actualizar (ou opção equivalente) para indicar a conclusão da etapa.
+3. Preencher as informações adicionais solicitadas (por exemplo, data de conclusão, notas).
+4. Confirmar; a etapa seguinte passa a ficar em curso e são criadas novas tarefas.
+
+**Validação final**  
+O ciclo avança para a nova etapa e as tarefas associadas são geradas.
+
+**Notas**  
+- Se não aparecer a opção para actualizar, verifique se existem tarefas por concluir.
+- Apenas utilizadores com permissões adequadas podem avançar etapas.
+
+## BC-KB-139 — Como acedo às ações a efetuar de uma oportunidade?
+**Categoria:** Oportunidades  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Necessita de ver a lista de tarefas ou acções associadas a uma oportunidade específica.
+
+**Diagnóstico**  
+As acções existem mas não são visíveis porque não foram abertas a partir da ficha.
+
+**Causa provável**  
+Desconhecimento da localização do menu Ações a Efetuar.
+
+**Solução**  
+Aceder à lista de acções a partir da oportunidade ou do centro de perfil.
+
+**Como proceder**  
+1. Abra a ficha da oportunidade e clique em Ações a Efetuar (normalmente localizada no topo ou no separador de acções).
+2. É apresentada uma lista com todas as tarefas geradas para a oportunidade, indicando o responsável, data de vencimento e estado.
+3. Como alternativa, aceda ao Centro de Perfil e consulte a secção de Ações Pendentes para ver as acções de todas as oportunidades.
+
+**Validação final**  
+A lista de acções mostra as tarefas activas e concluídas da oportunidade.
+
+**Notas**  
+- Use filtros por estado (Por Iniciar, Em Curso, Concluído) para organizar o trabalho.
+- A lista permite abrir cada acção para editar ou concluir.
+
+## BC-KB-140 — Como vejo as minhas ações pendentes no Centro de Perfil?
+**Categoria:** Oportunidades / Gestão de Tarefas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Quer acompanhar todas as tarefas que lhe estão atribuídas, independentemente da oportunidade.
+
+**Diagnóstico**  
+O utilizador não usa a área de painel ou vê apenas tarefas por acaso.
+
+**Causa provável**  
+Desconhecimento das funcionalidades do Centro de Perfil.
+
+**Solução**  
+Usar o Centro de Perfil para visualizar as suas acções pendentes.
+
+**Como proceder**  
+1. No menu principal do Business Central, seleccionar Centro de Perfil.
+2. Na secção Ações Pendentes, encontra a lista de todas as tarefas atribuídas ao seu código de vendedor.
+3. Clicar numa acção para abrir e editar, ou marcar como concluída quando apropriado.
+
+**Validação final**  
+O utilizador vê todas as suas acções pendentes num único painel.
+
+**Notas**  
+- Pode ordenar por data de vencimento para priorizar tarefas urgentes.
+- As acções da equipa não aparecem aqui; para isso use o separador de equipa.
+
+## BC-KB-141 — Como vejo as ações pendentes da minha equipa?
+**Categoria:** Oportunidades / Gestão de Tarefas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Como responsável de equipa, precisa de acompanhar as tarefas atribuídas aos membros da equipa.
+
+**Diagnóstico**  
+As acções da equipa estão distribuídas e não são facilmente acessíveis num único ecrã.
+
+**Causa provável**  
+O utilizador não está familiarizado com as opções de visão da equipa no centro de perfil ou na lista de acções.
+
+**Solução**  
+Visualizar as acções da equipa através das listas partilhadas ou de relatórios.
+
+**Como proceder**  
+1. No Centro de Perfil, localizar a área Ações da Equipa (por vezes chamada Actividades da Equipa).
+2. Esta secção apresenta todas as tarefas atribuídas aos membros da equipa que gere.
+3. Usar filtros de Responsável para analisar as acções por colaborador.
+4. Para mais detalhe, abrir a ficha da oportunidade respectiva e ver as acções.
+
+**Validação final**  
+O responsável consegue ver e monitorizar as acções pendentes dos membros da sua equipa.
+
+**Notas**  
+- Para visualizar acções da equipa é necessário ter permissões de supervisor ou gestor.
+- Esta visão ajuda a equilibrar cargas de trabalho e a identificar atrasos.
+
+## BC-KB-142 — Qual é a diferença entre tarefas minhas e tarefas de equipa?
+**Categoria:** Oportunidades / Gestão de Tarefas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Confusão entre as tarefas que o utilizador deve executar e as tarefas delegadas à sua equipa.
+
+**Diagnóstico**  
+O utilizador não distingue os filtros Minhas e Equipa nas listas de acções.
+
+**Causa provável**  
+Falta de clarificação sobre a atribuição de responsáveis.
+
+**Solução**  
+Entender que cada acção possui um campo Código Vendedor; as tarefas “Minhas” são aquelas em que o código coincide com o seu, enquanto as de equipa pertencem a outros membros sob a sua supervisão.
+
+**Como proceder**  
+1. Na lista de Ações a Efetuar ou no Centro de Perfil, utilizar o filtro Responsável.
+2. Seleccionar Código Vendedor = Meu Utilizador para ver apenas as suas tarefas.
+3. Seleccionar os códigos dos membros da equipa para ver as tarefas atribuídas a cada um.
+4. Alternativamente, usar a secção Minhas Ações vs Ações da Equipa se existir no painel.
+
+**Validação final**  
+As tarefas são filtradas correctamente, distinguindo as que são da sua responsabilidade das da equipa.
+
+**Notas**  
+- Saber diferenciar permite gerir melhor o tempo e monitorizar a equipa sem confusão.
+- Reatribuir uma acção muda o código e, portanto, altera a lista em que aparece.
+
+## BC-KB-143 — Como configuro equipas no Business Central?
+**Categoria:** Oportunidades / Configuração  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Uma organização de vendas pretende criar equipas para agrupar vendedores e gerir oportunidades de forma colaborativa.
+
+**Diagnóstico**  
+Não existem equipas definidas ou as equipas actuais não reflectem a estrutura da empresa.
+
+**Causa provável**  
+A configuração inicial não incluiu a definição de equipas ou estas precisam de ser ajustadas.
+
+**Solução**  
+Criar e editar registos de equipas através da configuração do Business Central.
+
+**Como proceder**  
+1. Na pesquisa global, escrever Equipas de Vendas (ou similar) e seleccionar a página.
+2. Clicar em Novo para criar uma nova equipa.
+3. Definir um Código e Descrição para a equipa (ex.: EQUIPA_A, “Equipa Hospitalar”).
+4. Configurar um Responsável se aplicável.
+
+**Validação final**  
+A equipa fica disponível na lista e pode ser seleccionada em oportunidades e acções.
+
+**Notas**  
+- A criação e edição de equipas requer permissão de administrador ou de configuração.
+- Actualize as equipas periodicamente para reflectir alterações na organização.
+
+## BC-KB-144 — Como adiciono vendedores a uma equipa?
+**Categoria:** Oportunidades / Configuração  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Precisa de atribuir um ou mais vendedores a uma equipa de vendas já existente.
+
+**Diagnóstico**  
+A equipa foi criada mas não tem membros associados.
+
+**Causa provável**  
+Esquecimento ou dificuldade em localizar a lista de membros da equipa.
+
+**Solução**  
+Adicionar vendedores na página de linhas da equipa.
+
+**Como proceder**  
+1. Abrir a página Equipas de Vendas e seleccionar a equipa pretendida.
+2. Clicar em Membros (ou Linhas de Equipa).
+3. Na lista, seleccionar Novo e escolher o vendedor a adicionar através do campo Código Vendedor.
+4. Repetir para cada vendedor adicional.
+
+**Validação final**  
+Os vendedores aparecem como membros da equipa seleccionada.
+
+**Notas**  
+- Se o vendedor não estiver disponível na lista, verifique se está criado como utilizador/vendedor no sistema.
+- Uma equipa pode ter vários vendedores; um vendedor pode pertencer a várias equipas.
+
+## BC-KB-145 — Como removo vendedores de uma equipa?
+**Categoria:** Oportunidades / Configuração  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+É necessário remover um membro de uma equipa de vendas, por exemplo, por alteração de funções.
+
+**Diagnóstico**  
+O vendedor continua associado à equipa no sistema.
+
+**Causa provável**  
+A operação de remoção não foi feita.
+
+**Solução**  
+Eliminar a linha do membro na página de equipas.
+
+**Como proceder**  
+1. Aceder à página Equipas de Vendas e abrir a equipa pretendida.
+2. Clicar em Membros para ver a lista actual.
+3. Seleccionar a linha referente ao vendedor a remover e clicar em Eliminar.
+4. Confirmar a remoção.
+
+**Validação final**  
+O vendedor deixa de constar na lista de membros da equipa.
+
+**Notas**  
+- A remoção não elimina o vendedor do sistema, apenas retira a associação à equipa.
+- Reatribua as tarefas pendentes do vendedor removido, se necessário.
+
+## BC-KB-146 — Como edito uma ação a efetuar?
+**Categoria:** Oportunidades / Gestão de Tarefas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Uma acção criada automaticamente pode precisar de correcções, como alterar a data de vencimento ou o objectivo.
+
+**Diagnóstico**  
+A acção foi criada com valores predefinidos e necessita de ajuste manual.
+
+**Causa provável**  
+Informação adicional chegou após a criação da acção ou houve uma mudança de prioridade.
+
+**Solução**  
+Editar a acção directamente na lista.
+
+**Como proceder**  
+1. Aceder à lista de Ações a Efetuar (via oportunidade ou centro de perfil).
+2. Seleccionar a linha da acção a editar.
+3. Clicar em Abrir Detalhes ou utilizar o menu Linha → Detalhes.
+4. Editar os campos necessários, como Descrição, Data Vencimento, Código Vendedor ou Prioridade.
+
+**Validação final**  
+Os campos alterados reflectem a nova informação e a acção aparece actualizada.
+
+**Notas**  
+- Tenha cuidado ao alterar o código de vendedor; isso transfere a tarefa para outro colaborador.
+- Algumas alterações podem exigir permissões específicas.
+
+## BC-KB-147 — Como altero o responsável de uma ação?
+**Categoria:** Oportunidades / Gestão de Tarefas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Uma tarefa atribuída a um vendedor precisa de ser transferida para outro colaborador.
+
+**Diagnóstico**  
+O campo Código Vendedor da acção está atribuído à pessoa errada.
+
+**Causa provável**  
+Alteração na disponibilidade ou reestruturação das equipas.
+
+**Solução**  
+Editar o código de vendedor da acção para o novo responsável.
+
+**Como proceder**  
+1. Abrir a acção a partir da lista de Ações a Efetuar.
+2. Localizar o campo Código Vendedor ou Responsável.
+3. Seleccionar o novo código (vendedor) a quem pretende atribuir a tarefa.
+4. Informar o novo responsável sobre a tarefa.
+
+**Validação final**  
+A acção passa a aparecer na lista do novo responsável e deixa de constar na lista do anterior.
+
+**Notas**  
+- Ao alterar o responsável, as datas e outras definições mantêm-se.
+- Confirme com a pessoa antes de transferir tarefas críticas.
+
+## BC-KB-148 — O que acontece quando altero o código de vendedor de uma ação?
+**Categoria:** Oportunidades / Gestão de Tarefas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Deseja compreender o impacto da troca do responsável numa tarefa.
+
+**Diagnóstico**  
+Alterar o código de vendedor é equivalente a reatribuir a tarefa a outro utilizador.
+
+**Causa provável**  
+O utilizador teme perder a informação ou o seguimento da acção.
+
+**Solução**  
+Ao reatribuir uma acção, o sistema remove-a da lista do vendedor original e adiciona-a à lista do novo responsável; a acção mantém o seu historial.
+
+**Como proceder**  
+1. No ecrã de edição da acção, alterar o campo Código Vendedor para o novo responsável.
+2. O novo responsável passa a ver a acção no centro de perfil; o anterior já não tem acesso directo.
+
+**Validação final**  
+A reatribuição é visível na lista de acções de ambos os vendedores e a acção permanece íntegra.
+
+**Notas**  
+- Utilize esta funcionalidade para redistribuir trabalho em períodos de férias ou reestruturação.
+- O histórico de alterações fica registado na ficha da acção.
+
+## BC-KB-149 — Como altero o estado de uma ação para “Em Curso”?
+**Categoria:** Oportunidades / Gestão de Tarefas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Uma acção foi criada com estado Por Iniciar e o utilizador já começou a trabalhá-la.
+
+**Diagnóstico**  
+O estado não reflecte a situação actual e pode provocar confusão no relatório de tarefas.
+
+**Causa provável**  
+O utilizador não actualizou manualmente o estado da acção.
+
+**Solução**  
+Definir o estado da acção como Em Curso.
+
+**Como proceder**  
+1. Aceder à lista de Ações a Efetuar e abrir a acção desejada.
+2. No campo Estado, seleccionar Em Curso.
+
+**Validação final**  
+O estado da acção passa a Em Curso e o centro de perfil reflecte a mudança.
+
+**Notas**  
+- O estado Em Curso permite diferenciar tarefas iniciadas das que ainda aguardam início.
+- Este campo pode ser filtrado para priorização.
+
+## BC-KB-150 — Como concluo uma ação?
+**Categoria:** Oportunidades / Gestão de Tarefas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Após terminar a actividade correspondente, é necessário encerrar a tarefa no sistema.
+
+**Diagnóstico**  
+A acção permanece em estado Por Iniciar ou Em Curso, apesar de concluída.
+
+**Causa provável**  
+O utilizador não executou a conclusão na interface.
+
+**Solução**  
+Alterar o estado para Concluído e registar a interacção ou nota final.
+
+**Como proceder**  
+1. Abra a acção através da lista de Ações a Efetuar.
+2. Seleccionar Estado = Concluído.
+3. Preencher, se necessário, um registo de interacção ou comentário com o resultado da tarefa.
+
+**Validação final**  
+A acção deixa de aparecer nas listas de pendentes e passa a constar no histórico.
+
+**Notas**  
+- Concluir atempadamente as acções permite avançar etapas no ciclo de vendas.
+- O registo de interacção ajuda a documentar o que foi feito.
+
+## BC-KB-151 — O que devo fazer se não quiser registar uma nova interação ao concluir uma ação?
+**Categoria:** Oportunidades / Gestão de Tarefas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Ao concluir uma acção, o Business Central sugere criar um novo registo de interacção, mas o utilizador apenas quer marcar a tarefa como concluída.
+
+**Diagnóstico**  
+A funcionalidade de conclusão pode estar configurada para pedir interacções por defeito.
+
+**Causa provável**  
+Pode existir uma regra de interacção automática associada ao tipo de acção.
+
+**Solução**  
+Escolher a opção para concluir sem interacção quando disponível.
+
+**Como proceder**  
+1. Ao clicar para Concluir uma acção, observar se o sistema pede para registar uma nova interacção.
+2. Se surgir o diálogo, seleccionar a opção Concluir sem Interação ou simplesmente fechar a janela de registo.
+3. Verifique se o estado da acção passou a Concluído.
+
+**Validação final**  
+A acção fica concluída sem registo de nova interacção.
+
+**Notas**  
+- Documente a conclusão em notas se necessário; não é obrigatório abrir uma nova interacção.
+- Esta opção pode não estar disponível em todas as versões; fale com o administrador se tiver dúvidas.
+
+## BC-KB-152 — Como crio manualmente uma nova ação a efetuar?
+**Categoria:** Oportunidades / Gestão de Tarefas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Pretende adicionar uma tarefa que não foi gerada automaticamente pelo ciclo de vendas.
+
+**Diagnóstico**  
+O fluxo da oportunidade não contempla determinada actividade, mas esta continua a ser necessária.
+
+**Causa provável**  
+Nova informação do cliente ou necessidade interna que surge após a geração das tarefas.
+
+**Solução**  
+Criar manualmente uma acção e associá-la à oportunidade.
+
+**Como proceder**  
+1. Na ficha da oportunidade, clicar em Ações a Efetuar ou abrir a lista de acções gerais.
+2. Seleccionar Novo para criar uma nova acção.
+3. Preencher os campos principais: Descrição, Data Vencimento, Código Vendedor (responsável), Prioridade e, se aplicável, Tipo de Tarefa.
+
+**Validação final**  
+A nova acção fica visível na lista associada à oportunidade.
+
+**Notas**  
+- Manualmente pode criar tarefas para follow-up, esclarecimento ou actividades internas.
+- Garanta que a pessoa responsável foi informada da nova tarefa.
+
+## BC-KB-153 — Como atribuo uma ação manual a outro colaborador?
+**Categoria:** Oportunidades / Gestão de Tarefas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Uma acção criada manualmente deve ser executada por um colega e não por quem a criou.
+
+**Diagnóstico**  
+O criador aparece como responsável por omissão.
+
+**Causa provável**  
+O campo Código Vendedor foi preenchido com o utilizador corrente.
+
+**Solução**  
+Ao criar a acção, definir o responsável correcto ou editá-la posteriormente.
+
+**Como proceder**  
+1. Ao criar a nova acção (BC-KB-152), definir o Código Vendedor para o colaborador pretendido.
+2. Se já estiver criada, abrir a acção na lista.
+3. Alterar o campo Código Vendedor para o responsável pretendido.
+
+**Validação final**  
+A acção aparece na lista do colaborador designado.
+
+**Notas**  
+- Use a lista de vendedores para seleccionar correctamente.
+- Isto simplifica a distribuição de tarefas sem recorrer a administradores.
+
+## BC-KB-154 — Como identifico o pedido do cliente numa oportunidade?
+**Categoria:** Oportunidades  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Precisa de associar o código ou referência do pedido do cliente à oportunidade para facilitar a comunicação.
+
+**Diagnóstico**  
+O campo de referência do cliente está vazio ou incorrecto na ficha de oportunidade.
+
+**Causa provável**  
+O utilizador não localizou o campo adequado ou esqueceu-se de o preencher.
+
+**Solução**  
+Usar o campo Referência do Cliente na ficha da oportunidade.
+
+**Como proceder**  
+1. Abrir a ficha da oportunidade.
+2. No separador Geral, localizar o campo Referência do Cliente (também pode aparecer como Nº Pedido Cliente).
+3. Introduzir a referência fornecida pelo cliente.
+
+**Validação final**  
+O número de pedido do cliente fica associado à oportunidade e será transferido para a proposta.
+
+**Notas**  
+- Esta referência ajuda a identificar rapidamente a transação no lado do cliente.
+- Use o mesmo valor em todos os documentos relacionados com a oportunidade.
+
+## BC-KB-155 — Onde acedo aos produtos solicitados pelo cliente?
+**Categoria:** Oportunidades / Propostas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+O cliente enviou uma lista de produtos desejados e deseja consultá-la numa oportunidade ou proposta.
+
+**Diagnóstico**  
+Os produtos não aparecem porque não foram adicionados ou estão noutra página.
+
+**Causa provável**  
+Os produtos foram registados numa proposta ou num anexo e não na lista de produtos da oportunidade.
+
+**Solução**  
+Aceder ao separador Produtos da oportunidade ou abrir a proposta associada.
+
+**Como proceder**  
+1. Na ficha da oportunidade, seleccionar o separador Produtos (ou eProdutos).
+2. Aqui pode adicionar, editar ou consultar as linhas de produto solicitadas pelo cliente.
+3. Se a lista estiver vazia, clique em Inserir e seleccione os produtos a partir do catálogo.
+4. Alternativamente, abra a Proposta de Venda associada (BC-KB-158) para ver as linhas de produto já compiladas.
+
+**Validação final**  
+A lista de produtos solicitados pelo cliente está visível na ficha da oportunidade ou na proposta.
+
+**Notas**  
+- Garanta que as quantidades e unidades de medida reflectem o pedido do cliente.
+- Use atributos (BC-KB-156) para filtrar produtos adequados durante a selecção.
+
+## BC-KB-156 — Como uso a informação de atributos de produto numa proposta?
+**Categoria:** Oportunidades / Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Deseja aplicar filtros de atributos (ex.: fórmula, acondicionamento, embalagem) para sugerir produtos na proposta.
+
+**Diagnóstico**  
+Os atributos existem nas fichas de produtos, mas não estão a ser considerados na escolha de produtos.
+
+**Causa provável**  
+O utilizador desconhece o módulo de atributos ou não usa as funcionalidades de filtro.
+
+**Solução**  
+Utilizar a pesquisa por atributos ao adicionar produtos e apresentar esses atributos na proposta.
+
+**Como proceder**  
+1. Ao adicionar linhas de produto na oportunidade ou na proposta, utilizar a funcionalidade de filtro de atributos:
+2. Seleccionar Selecionar Produtos ou Adicionar Produtos.
+3. No painel de selecção, aplicar filtros nos campos Atributo e Valor (ex.: Atributo = "Marca", Valor = "Genérico").
+4. Confirmar a selecção; apenas os produtos que correspondem aos atributos escolhidos serão listados.
+5. Inserir os produtos desejados na proposta.
+
+**Validação final**  
+Os produtos inseridos correspondem aos atributos seleccionados, garantindo aderência às especificações do cliente.
+
+**Notas**  
+- Os atributos devem estar previamente definidos nas fichas de produto (ver BC-KB-086).
+- Este método reduz o risco de oferecer produtos fora das especificações.
+
+## BC-KB-157 — Que informações de apoio à decisão posso consultar numa oportunidade?
+**Categoria:** Oportunidades  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Precisa de analisar dados adicionais para decidir se avança ou não com uma proposta.
+
+**Diagnóstico**  
+Nem todas as informações relevantes estão visíveis por defeito na ficha de oportunidade.
+
+**Causa provável**  
+O utilizador não explorou os factboxes e relatórios associados à oportunidade.
+
+**Solução**  
+Utilizar as FactBoxes e relatórios de apoio existentes na página da oportunidade.
+
+**Como proceder**  
+1. Na ficha da oportunidade, explorar o painel lateral de FactBoxes. Estes podem incluir:
+2. Último Preço de Venda do cliente para o produto.
+3. Margem Comercial prevista.
+4. Histórico de Interacções e Ações Pendentes.
+5. Montante Total previsto da proposta.
+6. Usar relatórios padrão, como Análise de Oportunidades, para comparar ganhos e perdas por vendedor, região ou produto.
+7. Explorar outras páginas relacionadas, como Histórico de Propostas, para ver propostas anteriores ao mesmo cliente.
+
+**Validação final**  
+O utilizador tem acesso a dados detalhados para tomar uma decisão informada sobre a oportunidade.
+
+**Notas**  
+- A interpretação destas informações ajuda a priorizar oportunidades com maior probabilidade de sucesso.
+- Para análises mais avançadas, considere exportar dados para Excel ou Power BI.
+
+## BC-KB-158 — Como associo uma proposta de venda a uma oportunidade?
+**Categoria:** Oportunidades / Propostas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+É necessário criar rapidamente uma proposta de venda com base nos dados da oportunidade.
+
+**Diagnóstico**  
+A proposta ainda não foi gerada ou está associada a outra oportunidade.
+
+**Causa provável**  
+O utilizador ainda não clicou na opção de associação ou não sabe onde a encontrar.
+
+**Solução**  
+Associar a proposta de venda através da opção Associar Proposta Venda.
+
+**Como proceder**  
+1. Abrir a ficha da oportunidade.
+2. Clicar em Processar → Associar Proposta Venda.
+3. O sistema cria uma proposta de venda com as linhas de produtos e condições comerciais da oportunidade.
+4. Rever a proposta e efectuar ajustes se necessário.
+
+**Validação final**  
+A nova proposta de venda fica associada à oportunidade e visível nos campos de documento.
+
+**Notas**  
+- Esta associação facilita a passagem de informação sem duplicação manual.
+- Após associar, pode enviar a proposta para aprovação (BC-KB-188).
+
+## BC-KB-159 — Como retiro a associação de uma proposta de venda à oportunidade?
+**Categoria:** Oportunidades / Propostas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Uma proposta de venda associada à oportunidade está incorrecta e deve ser substituída.
+
+**Diagnóstico**  
+O campo Nº Documento de Venda na oportunidade contém o número de uma proposta que se pretende remover.
+
+**Causa provável**  
+Erros nos produtos, preços ou condições da proposta original.
+
+**Solução**  
+Remover a associação e criar nova proposta.
+
+**Como proceder**  
+1. Na ficha da oportunidade, apagar o valor do campo Nº Documento de Venda.
+2. Corrigir os produtos ou condições no separador Produtos ou outros campos.
+3. Voltar a usar Processar → Associar Proposta Venda para gerar uma nova proposta.
+
+**Validação final**  
+A nova proposta está correcta e associada; a anterior deixou de estar ligada à oportunidade.
+
+**Notas**  
+- Esta operação não elimina a proposta antiga; para isso, consulte a BC-KB-160.
+- Garanta que todas as informações necessárias estão corrigidas antes de associar novamente.
+
+## BC-KB-160 — Como elimino uma proposta de venda?
+**Categoria:** Oportunidades / Propostas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Uma proposta de venda foi criada por engano ou não será enviada ao cliente.
+
+**Diagnóstico**  
+A proposta está listada no sistema e ocupa espaço ou causa confusão.
+
+**Causa provável**  
+Decisão de não enviar ou criação de documento duplicado.
+
+**Solução**  
+Eliminar a proposta através da acção de apagar.
+
+**Como proceder**  
+1. Abrir a proposta de venda a eliminar.
+2. Clicar no ícone Eliminar (representado por um caixote do lixo).
+3. Confirmar a eliminação.
+
+**Validação final**  
+A proposta desaparece da lista e deixa de estar associada à oportunidade.
+
+**Notas**  
+- A eliminação não pode ser desfeita; crie nova proposta se necessário.
+- Certifique-se de que a proposta não foi enviada antes de a apagar.
+
+## BC-KB-161 — Como adiciono comentários de produto numa proposta de venda?
+**Categoria:** Oportunidades / Propostas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+É necessário incluir notas específicas em cada linha de produto de uma proposta para esclarecer condições ou características.
+
+**Diagnóstico**  
+A proposta de venda não apresenta comentários nas linhas e o utilizador desconhece a funcionalidade.
+
+**Causa provável**  
+O menu de linhas Comentário não foi utilizado.
+
+**Solução**  
+Inserir comentários na linha de produto.
+
+**Como proceder**  
+1. Na proposta de venda, seleccionar a linha de produto em que pretende adicionar o comentário.
+2. Clicar em Linha → Comentário.
+3. Inserir o texto do comentário (ex.: "Entrega em 48 h", "Produto substituto disponível").
+4. Fechar a janela; o comentário fica associado à linha.
+
+**Validação final**  
+Os comentários são impressos na proposta de venda sob a respectiva linha.
+
+**Notas**  
+- Use comentários para indicar condições especiais, esclarecimentos técnicos ou prazos de entrega.
+- Os comentários não alteram o preço ou as quantidades da linha.
+
+## BC-KB-162 — Como imprimo uma proposta de venda para concurso?
+**Categoria:** Oportunidades / Propostas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Precisa de gerar um documento formal de proposta adaptado a concursos públicos.
+
+**Diagnóstico**  
+O utilizador não sabe qual o relatório correto a usar.
+
+**Causa provável**  
+Confusão entre opções de impressão (proposta interna, concursos, factura pró-forma).
+
+**Solução**  
+Usar a opção de impressão específica para concursos.
+
+**Como proceder**  
+1. Abrir a proposta de venda associada ao concurso.
+2. Clicar em Imprimir/Enviar.
+3. Seleccionar Imprimir Proposta Concursos (ou nomenclatura similar).
+4. Gerar o documento e imprimir ou descarregar em PDF conforme necessário.
+
+**Validação final**  
+O sistema gera um documento formatado para concursos, incluindo os requisitos e campos específicos.
+
+**Notas**  
+- Verifique que todos os campos obrigatórios e anexos estão preenchidos antes de imprimir.
+- Utilize a mesma funcionalidade para enviar o documento por email.
+
+## BC-KB-163 — Como configuro o planeamento na Ficha de Produto?
+**Categoria:** Compras / Planeamento  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+É necessário que o produto seja reaprovisionado automaticamente quando o stock atinge determinados níveis, mas os parâmetros de planeamento não estão definidos.
+
+**Diagnóstico**  
+A ficha de produto não contém valores de política de reaprovisionamento, ponto de encomenda ou quantidades mínimas/máximas.
+
+**Causa provável**  
+O utilizador nunca configurou o separador Planeamento do produto.
+
+**Solução**  
+Preencher os campos de planeamento na ficha de produto para que o MRP (planeador) funcione correctamente.
+
+**Como proceder**  
+1. Abrir a ficha de produto.
+2. Navegar até ao separador Planeamento.
+3. Definir a Política de Reaprovisionamento:
+4. Fixa (Reorder Point) – cria encomendas quando o stock atinge o ponto de encomenda.
+5. Máximo – repõe até à quantidade máxima.
+6. Nenhum – não gera propostas automáticas.
+7. Preencher Ponto de Encomenda (quantidade mínima de stock).
+8. Definir Qtde. Reposição (quantidade de encomenda padrão).
+9. Indicar Qtde. Múltiplo Encomenda se as encomendas tiverem de ser múltiplos (ver BC-KB-167).
+10. Preencher Qtde. Máxima de Encomenda se pretender limitar o stock.
+
+**Validação final**  
+O separador de planeamento está preenchido e o planeador gera sugestões correctas.
+
+**Notas**  
+- Ajuste estes valores periodicamente com base na procura real.
+- Os campos de planeamento interagem com as previsões (BC-KB-180) e com a folha de requisição.
+
+## BC-KB-164 — Como configuro o planeamento na Unidade de Armazenamento?
+**Categoria:** Compras / Planeamento  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Um produto tem diferentes parâmetros de planeamento consoante a unidade de armazenamento (U/M) ou localização.
+
+**Diagnóstico**  
+Os reaprovisionamentos podem estar a ser gerados com valores errados porque a unidade de armazenamento não tem planeamento específico.
+
+**Causa provável**  
+O utilizador desconhece a página de Unidade de Armazenamento do Produto.
+
+**Solução**  
+Configurar os parâmetros de planeamento na página da unidade de armazenamento.
+
+**Como proceder**  
+1. Aceder à ficha do produto.
+2. Na acção Relacionadas → Produto → Unidades de Armazenamento, abrir a página.
+3. Seleccionar ou criar a linha da localização/unidade pretendida.
+4. Preencher os campos de planeamento específicos: Política de Reaprovisionamento, Ponto de Encomenda, Qtde. Reposição, Qtde. Múltiplo Encomenda, etc., conforme necessário para aquela localização.
+
+**Validação final**  
+Cada unidade de armazenamento tem os seus próprios parâmetros de planeamento e o sistema gera sugestões correctas.
+
+**Notas**  
+- Esta configuração é útil quando um produto é armazenado em vários armazéns ou com U/M distintas.
+- Se não for definido, os valores da ficha principal são utilizados por defeito.
+
+## BC-KB-165 — Que políticas de aprovisionamento existem no Business Central?
+**Categoria:** Compras / Planeamento  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Deseja perceber as diferentes opções de política de reaprovisionamento para escolher a mais adequada.
+
+**Diagnóstico**  
+O utilizador vê várias opções (Nenhum, Fixa, Máximo) e não sabe qual aplicar.
+
+**Causa provável**  
+Falta de conhecimento sobre o impacto de cada política no planeamento.
+
+**Solução**  
+Conhecer e seleccionar a política correcta na ficha de produto ou unidade de armazenamento.
+
+**Como proceder**  
+1. Na ficha de produto, no separador Planeamento, localizar o campo Política de Reaprovisionamento.
+2. As opções usuais são:
+3. Nenhum: o planeador não cria encomendas automaticamente; adequado para produtos de produção sob encomenda.
+4. Fixa (Reorder Point): o sistema gera encomendas quando o stock cai abaixo do Ponto de Encomenda, reabastecendo até à Qtde. Reposição.
+5. Máximo: o planeador reabastece até atingir a Qtde. Máxima de Encomenda sempre que o stock cai abaixo do ponto de encomenda.
+6. Pedido: em algumas versões, pode existir Pedido para aprovisionamento baseado em encomendas de venda específicas.
+7. Seleccionar a política mais apropriada ao ciclo de vida e consumo do produto.
+
+**Validação final**  
+A política de aprovisionamento escolhida está configurada e as sugestões de compra comportam-se conforme esperado.
+
+**Notas**  
+- A escolha errada da política pode gerar stocks em excesso ou rupturas.
+- Revise periodicamente a política à medida que a procura evolui.
+
+## BC-KB-166 — Como configuro quantidades mínimas de encomenda por produto?
+**Categoria:** Compras / Planeamento  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Alguns fornecedores exigem encomendas mínimas; o planeador deve sugerir quantidades conforme esse requisito.
+
+**Diagnóstico**  
+As propostas de compra estão a ser criadas abaixo da quantidade mínima, gerando rejeições.
+
+**Causa provável**  
+O campo Qtde. Reposição está a zero ou com valor inferior ao mínimo exigido.
+
+**Solução**  
+Definir a quantidade mínima de encomenda na ficha de produto ou na unidade de armazenamento.
+
+**Como proceder**  
+1. Abrir a ficha de produto e ir ao separador Planeamento.
+2. No campo Qtde. Reposição, introduzir a quantidade mínima que deve ser encomendada de uma só vez (por exemplo, 100 unidades).
+3. Se a quantidade mínima variar por fornecedor, configurar também a página Fornecedor do Produto para cada fornecedor (campo Quantidade Mínima).
+
+**Validação final**  
+As sugestões de compra obedecem à quantidade mínima definida.
+
+**Notas**  
+- Ajustar este valor se o fornecedor alterar o requisito.
+- Em conjunto com o Ponto de Encomenda, determina a frequência e o tamanho das encomendas.
+
+## BC-KB-167 — Como configuro múltiplos de encomenda por produto?
+**Categoria:** Compras / Planeamento  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Alguns produtos só podem ser encomendados em múltiplos de uma quantidade fixa (ex.: caixas de 12).
+
+**Diagnóstico**  
+O planeador gera quantidades que não são múltiplas e as encomendas precisam de ser corrigidas manualmente.
+
+**Causa provável**  
+O campo de múltiplo de encomenda não está definido.
+
+**Solução**  
+Preencher o campo Qtde. Múltiplo Encomenda.
+
+**Como proceder**  
+1. Abrir a ficha de produto → separador Planeamento.
+2. No campo Qtde. Múltiplo Encomenda, introduzir o múltiplo pretendido (por exemplo, 12).
+3. Se necessário, definir valores diferentes por unidade de armazenamento ou fornecedor nas páginas correspondentes.
+
+**Validação final**  
+As sugestões de compra são arredondadas ao múltiplo configurado.
+
+**Notas**  
+- Em conjunto com a Qtde. Reposição, determina o tamanho das encomendas.
+- Se o múltiplo não for definido, o sistema sugere quantidades exactas, podendo originar quantidades fraccionadas.
+
+## BC-KB-168 — Como aciono a não atualização das linhas de encomenda de compra?
+**Categoria:** Compras / Encomendas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Durante a recepção de mercadoria, as quantidades das linhas de encomenda alteram-se automaticamente, mas pretende impedir essa actualização para manter os valores originais.
+
+**Diagnóstico**  
+O parâmetro de atualização de linhas está activo por defeito.
+
+**Causa provável**  
+Configuração geral permite actualizar linhas ao lançar a recepção, alterando quantidades e valores.
+
+**Solução**  
+Desactivar a actualização automática de linhas na encomenda de compra.
+
+**Como proceder**  
+1. Abrir a Encomenda de Compra.
+2. Na faixa Processar, procurar a opção Não Actualizar Linhas (ou Lock Lines).
+3. Marcar esta opção para impedir que as linhas sejam actualizadas durante a recepção ou faturação.
+
+**Validação final**  
+Ao receber ou facturar, as quantidades originais não são alteradas.
+
+**Notas**  
+- Utilize esta opção quando pretende manter controlo manual sobre a recepção e faturação.
+- Recorde-se de ajustar manualmente as quantidades quando necessário.
+
+## BC-KB-169 — Como acedo à Folha de Requisição?
+**Categoria:** Compras / Planeamento  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+O utilizador precisa de gerar sugestões de compra, mas não encontra a Folha de Requisição.
+
+**Diagnóstico**  
+A folha de requisição não está seleccionada ou não foi criada para o utilizador.
+
+**Causa provável**  
+Não existe uma folha de requisição associada ao utilizador ou desconhece como aceder.
+
+**Solução**  
+Abrir a Folha de Requisição e garantir que existe uma folha específica.
+
+**Como proceder**  
+1. Na barra de pesquisa, escrever Folhas de Requisição e seleccionar a página.
+2. Verificar o Nome da Folha de Requisição; cada utilizador deve utilizar a sua própria folha.
+3. Se a folha não existir, solicitar a sua criação à equipa de suporte.
+4. Para mudar de folha, utilizar os três pontos e seleccionar outra folha existente.
+
+**Validação final**  
+A folha de requisição correcta está aberta e pronta para gerar sugestões.
+
+**Notas**  
+- Trabalhar numa folha própria evita conflitos com as sugestões de outros utilizadores.
+
+## BC-KB-170 — Que parâmetros devo preencher para gerar sugestões de compra?
+**Categoria:** Compras / Planeamento  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Ao gerar sugestões de reaprovisionamento na folha de requisição, surgem campos e opções que o utilizador desconhece.
+
+**Diagnóstico**  
+Os campos de data e previsões não foram configurados, resultando em sugestões incorrectas.
+
+**Causa provável**  
+Desconhecimento das opções de planeamento ao usar a funcionalidade Sugerir Requisição Produtos.
+
+**Solução**  
+Preencher os parâmetros de período e de utilização de previsão antes de gerar a sugestão.
+
+**Como proceder**  
+1. Na folha de requisição, clicar em Processar → Sugerir Requisição Produtos.
+2. Na janela que surge, definir:
+3. Data Inicial e Data Final – intervalo de tempo para o planeamento.
+4. Utilizar Previsão – activar se existir previsão de vendas (BC-KB-180).
+5. Excluir Previsão Anterior a – introduzir uma data para ignorar previsões antigas.
+6. Respeitar Parâmetros Planeamento – marcar para considerar pontos de encomenda, quantidades mínimas/máximas.
+7. Opcionalmente, aplicar filtros como Nº (produto específico) ou Nº Fornecedor.
+8. Confirmar.
+
+**Validação final**  
+As linhas de sugestão geradas reflectem o período e parâmetros definidos.
+
+**Notas**  
+- Se gerar sugestões para muitos produtos, inicie com um intervalo curto para validar resultados.
+- Ajuste os parâmetros sempre que existirem alterações significativas no consumo.
+
+## BC-KB-171 — Como edito linhas de sugestão na Folha de Requisição?
+**Categoria:** Compras / Planeamento  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Após gerar a sugestão, é necessário ajustar quantidades ou condições antes de criar encomendas de compra.
+
+**Diagnóstico**  
+As linhas sugeridas podem conter quantidades desajustadas ou fornecedores errados.
+
+**Causa provável**  
+Os parâmetros iniciais de planeamento não incluíram todas as restrições ou existem excepções.
+
+**Solução**  
+Rever e editar manualmente as linhas de sugestão.
+
+**Como proceder**  
+1. Na folha de requisição, analisar cada linha gerada.
+2. Eliminar linhas desnecessárias ou adicionar linhas manualmente.
+3. Verificar e ajustar os campos Nº (produto), Mensagem de Acção (Novo, Alterar Qtde., Reagendar), Código Localização, Quantidade Original e Quantidade.
+4. Seleccionar fornecedores alternativos, se necessário, ajustando o campo Nº Fornecedor (ver BC-KB-173).
+5. Ajustar a Data Vencimento se o planeamento assim o exigir.
+
+**Validação final**  
+As linhas de sugestão editadas correspondem às quantidades e fornecedores correctos.
+
+**Notas**  
+- Aceitar ou alterar a Mensagem de Acção determina se a linha será convertida em encomenda.
+- Registe notas ou justificação se tiver de excluir uma sugestão.
+
+## BC-KB-172 — Como verifico a origem de uma sugestão de compra?
+**Categoria:** Compras / Planeamento  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Quer identificar se a sugestão de compra provém de uma encomenda de venda, previsão ou ponto de encomenda.
+
+**Diagnóstico**  
+Não há clareza sobre a origem da sugestão na folha de requisição.
+
+**Causa provável**  
+O utilizador não utilizou a funcionalidade de rastreio de encomendas.
+
+**Solução**  
+Usar a opção Rastreio Encomenda para ver a cadeia de origem.
+
+**Como proceder**  
+1. Seleccionar a linha de sugestão na folha de requisição.
+2. Clicar em Linha → Rastreio Encomenda.
+3. Analisar a janela que mostra se a sugestão deriva de uma encomenda de venda, previsão de vendas, stock de segurança ou outros factores.
+4. Fechar a janela após a análise.
+
+**Validação final**  
+A origem da sugestão é claramente identificada e documentada.
+
+**Notas**  
+- Saber a origem ajuda a priorizar e a justificar a aceitação ou rejeição da sugestão.
+- Use esta função antes de questionar o planeador sobre quantidades inesperadas.
+
+## BC-KB-173 — Como seleciono fornecedores alternativos de um produto?
+**Categoria:** Compras / Planeamento  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Pretende trocar o fornecedor sugerido por outro configurado na ficha de produto.
+
+**Diagnóstico**  
+Na folha de requisição, a linha apresenta apenas um fornecedor padrão.
+
+**Causa provável**  
+Não foi consultada a lista de fornecedores alternativos associados ao produto.
+
+**Solução**  
+Seleccionar o fornecedor alternativo na linha de sugestão.
+
+**Como proceder**  
+1. Na folha de requisição, posicionar-se na linha desejada.
+2. Clicar no campo Nº Fornecedor e abrir a lista.
+3. Seleccionar um dos fornecedores alternativos configurados para o produto.
+4. Verificar se as restantes condições (quantidade, data) continuam adequadas.
+
+**Validação final**  
+A linha reflecte o fornecedor alternativo escolhido.
+
+**Notas**  
+- Os fornecedores alternativos devem ser configurados previamente na ficha do produto.
+- Comparar preços e prazos de entrega antes de seleccionar um fornecedor alternativo.
+
+## BC-KB-174 — Que ações posso executar a partir da Folha de Requisição?
+**Categoria:** Compras / Planeamento  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Após rever as linhas de sugestão, o utilizador não sabe que ações estão disponíveis para processar as linhas.
+
+**Diagnóstico**  
+As linhas permanecem no estado “aberto” e não geram encomendas de compra.
+
+**Causa provável**  
+O utilizador não executou as mensagens de acção ou desconhece as opções.
+
+**Solução**  
+Utilizar a funcionalidade de Executar Mensagem de Acção para processar as linhas e gerar encomendas.
+
+**Como proceder**  
+1. Na folha de requisição, depois de editar as linhas, clicar em Processar → Executar Mensagem de Acção.
+2. O sistema executa cada linha conforme a sua Mensagem de Acção:
+3. Novo – cria uma nova encomenda de compra.
+4. Alterar Quantidade – ajusta uma encomenda existente.
+5. Reagendar – altera datas.
+6. Reagendar & Mudar Qtde. – altera datas e quantidades.
+7. Cancelar – elimina a sugestão.
+8. Verificar as encomendas criadas ou actualizadas.
+
+**Validação final**  
+As encomendas são geradas e as linhas de requisição são processadas.
+
+**Notas**  
+- Certifique-se de que os dados estão correctos antes de executar; o processo é automático.
+- Após execução, as linhas desaparecem da folha de requisição.
+
+## BC-KB-175 — Como funciona a validação do valor mínimo de compra por encomenda?
+**Categoria:** Compras / Encomendas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Deseja garantir que uma encomenda de compra atinge um valor mínimo exigido pelo fornecedor.
+
+**Diagnóstico**  
+Ao libertar a encomenda, surge um aviso de que o valor total está abaixo do mínimo.
+
+**Causa provável**  
+O valor mínimo de compra está definido na ficha do fornecedor e a encomenda não o cumpre.
+
+**Solução**  
+Configurar o valor mínimo na ficha do fornecedor e ajustar a encomenda para satisfazer esse mínimo.
+
+**Como proceder**  
+1. Na ficha do fornecedor, definir o Valor Mínimo de Encomenda (campo que pode chamar-se Valor Mínimo).
+2. Criar ou editar a Encomenda de Compra com as linhas necessárias.
+3. Ao libertar a encomenda, o sistema compara o valor total com o mínimo.
+4. Se o valor for inferior, adicionar produtos ou aumentar quantidades até ultrapassar o mínimo.
+5. Libertar novamente.
+
+**Validação final**  
+A encomenda cumpre o valor mínimo e o sistema não apresenta alertas.
+
+**Notas**  
+- Esta validação ajuda a cumprir acordos comerciais e a economizar custos de transporte.
+- Ajuste o valor mínimo na ficha do fornecedor sempre que necessário.
+
+## BC-KB-176 — Em que momento é validado o valor mínimo de compra?
+**Categoria:** Compras / Encomendas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+É preciso saber quando o sistema verifica se a encomenda de compra atinge o valor mínimo.
+
+**Diagnóstico**  
+O utilizador não tem certeza se a validação ocorre na criação, ao libertar ou ao facturar.
+
+**Causa provável**  
+Falta de clarificação sobre o ponto exacto da verificação.
+
+**Solução**  
+Entender que o valor mínimo é validado no momento de libertação da encomenda.
+
+**Como proceder**  
+1. Criar ou editar a encomenda de compra normalmente.
+2. No momento de clicar em Libertar, o sistema calcula o valor total e verifica se cumpre o Valor Mínimo definido no fornecedor.
+3. Se não cumprir, é apresentado um aviso e a encomenda não é libertada.
+4. Ajustar as linhas conforme necessário e tentar libertar novamente.
+
+**Validação final**  
+O alerta surge apenas no acto de libertação; após corrigir, a encomenda é libertada.
+
+**Notas**  
+- Antes de libertar, pode consultar o total da encomenda para antever se cumpre o mínimo.
+- A validação não ocorre no registo da recepção nem da factura.
+
+## BC-KB-177 — Como registo compras a farmácias no Business Central?
+**Categoria:** Compras / Gestão de Farmácia  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+A empresa fornece produtos a farmácias e pretende registar essas compras (de farmácias para a empresa) de forma correcta no Business Central.
+
+**Diagnóstico**  
+Não existe um processo documentado específico para compras a farmácias, o que gera dúvidas na criação das encomendas.
+
+**Causa provável**  
+As farmácias são tratadas como clientes e fornecedores simultaneamente, podendo confundir o utilizador sobre o módulo a utilizar.
+
+**Solução**  
+Tratar a farmácia como fornecedor quando a empresa lhe compra produtos e utilizar o fluxo normal de encomenda de compra, atribuindo a categoria correcta para rastreio.
+
+**Como proceder**  
+1. Criar uma ficha de Fornecedor para cada farmácia a quem a empresa compra produtos (se já existir como cliente, adicionar a ficha de fornecedor com código idêntico).
+2. Na ficha do fornecedor, atribuir a categoria Farmácia ou utilizar a dimensão correspondente para segmentação.
+3. Criar uma Encomenda de Compra e seleccionar o fornecedor (farmácia).
+4. Inserir as linhas de produtos a comprar.
+5. Processar a encomenda seguindo o fluxo normal de compras (libertar, receber, registar factura).
+
+**Validação final**  
+A compra à farmácia está registada como compra e aparece nos relatórios de fornecedores.
+
+**Notas**  
+- Se a mesma entidade vender produtos à farmácia, mantenha as fichas de cliente e fornecedor separadas.
+- Use dimensões ou categorias para distinguir compras a farmácias de outros fornecedores.
+
+## BC-KB-178 — Onde devo aceder para criar uma nova compra à farmácia?
+**Categoria:** Compras / Gestão de Farmácia  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Necessita de saber em que menu iniciar o processo de compra a uma farmácia.
+
+**Diagnóstico**  
+O utilizador não localiza a opção correcta no interface.
+
+**Causa provável**  
+Os menus de compras contêm várias opções (encomendas, facturas, requisições) e há incerteza sobre a escolha.
+
+**Solução**  
+Aceder ao menu Encomendas de Compra e seleccionar a farmácia como fornecedor.
+
+**Como proceder**  
+1. No menu principal ou no campo de pesquisa, escrever Encomendas de Compra e abrir a página.
+2. Clicar em Novo para criar uma nova encomenda.
+3. Seleccionar a farmácia como fornecedor (ver BC-KB-177).
+4. Inserir as linhas de produtos e seguir o fluxo normal de compra.
+
+**Validação final**  
+Uma nova encomenda de compra à farmácia é criada correctamente.
+
+**Notas**  
+- As compras a farmácias não diferem das restantes compras em termos de processo; a diferença está na categoria do fornecedor.
+- Considere criar uma folha de aprovação específica se existir controlo adicional.
+
+## BC-KB-179 — Como acedo à previsão de necessidades?
+**Categoria:** Compras / Planeamento  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Pretende consultar a previsão de vendas/consumo para planear compras futuras.
+
+**Diagnóstico**  
+Não sabe onde encontrar a previsão de necessidades registada no sistema.
+
+**Causa provável**  
+Desconhecimento da página de Previsão de Necessidades (ou equivalente).
+
+**Solução**  
+Utilizar a página de previsão para visualizar e gerir dados de previsão.
+
+**Como proceder**  
+1. No campo de pesquisa, escrever Previsão de Necessidades ou Previsão de Vendas.
+2. Abrir a página correspondente (pode chamar-se Previsão de Demanda ou Previsão de Necessidades).
+3. Seleccionar o Período e a Unidade de Tempo (mensal, semanal, diário) para ver os dados.
+4. Filtrar por Produto, Localização ou Fornecedor conforme necessário.
+
+**Validação final**  
+A previsão de necessidades é apresentada com valores por período.
+
+**Notas**  
+- A previsão deve ser carregada previamente (ver BC-KB-180).
+- Use estes dados em conjunto com o planeador para ajustar reaprovisionamento.
+
+## BC-KB-180 — Como insiro ou edito dados de previsão de necessidades?
+**Categoria:** Compras / Planeamento  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+É necessário introduzir ou actualizar a previsão de consumo para determinados produtos.
+
+**Diagnóstico**  
+Os valores de previsão estão em branco ou desactualizados.
+
+**Causa provável**  
+As previsões não foram introduzidas manualmente nem importadas de ficheiros externos.
+
+**Solução**  
+Inserir ou editar valores de previsão em cada período na página Previsão de Necessidades.
+
+**Como proceder**  
+1. Aceder à página Previsão de Necessidades (BC-KB-179).
+2. Seleccionar o produto e período pretendido.
+3. Introduzir a quantidade prevista em cada célula para os períodos futuros (ex.: 100 unidades para Maio 2026).
+4. Repetir para todos os produtos e períodos relevantes.
+5. Alternativamente, utilizar a opção Importar de Excel para carregar previsões a partir de um ficheiro com as colunas de produto, período e quantidade.
+
+**Validação final**  
+Os valores de previsão estão registados na base de dados e podem ser utilizados pelo planeador.
+
+**Notas**  
+- Actualize as previsões regularmente com base em dados de vendas e tendências de mercado.
+- A previsão afecta as sugestões de compra quando a opção Utilizar Previsão é activada (BC-KB-170).
+
+## BC-KB-181 — Para que serve o repositório SGNCL de previsão de necessidades?
+**Categoria:** Compras / Planeamento  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Existe um repositório externo (SGNCL) que armazena previsões de necessidades, mas o utilizador não sabe a sua função no processo.
+
+**Diagnóstico**  
+O planeador ou administrador menciona o SGNCL mas o utilizador não o utiliza directamente.
+
+**Causa provável**  
+O SGNCL é uma base de dados central gerida por outra equipa e não faz parte da interface diária.
+
+**Solução**  
+Compreender que o SGNCL é utilizado para centralizar e partilhar previsões de necessidades entre parceiros, sendo carregado e consultado por scripts ou integrações.
+
+**Como proceder**  
+1. Reconhecer que o Repositório SGNCL não é uma página interactiva no Business Central.
+2. A previsão de necessidades é exportada para o SGNCL por equipas de planeamento ou TI; os dados são depois lidos pelos sistemas centrais de logística.
+3. Se for necessário actualizar o repositório, contactar a equipa responsável ou seguir os procedimentos de exportação definidos internamente.
+
+**Validação final**  
+Os dados de previsão são partilhados com o repositório e utilizados para planear necessidades a nível global.
+
+**Notas**  
+- Utilizadores comuns não precisam de interagir directamente com o SGNCL.
+- As políticas de actualização são definidas pela direcção de logística.
+
+## BC-KB-182 — Como crio uma lista de preços de compra?
+**Categoria:** Compras / Preços  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+A empresa quer registar preços de compra específicos por fornecedor, produto e quantidade mínima.
+
+**Diagnóstico**  
+Não existe uma lista de preços de compra configurada ou os preços estão a ser inseridos manualmente em cada linha de encomenda.
+
+**Causa provável**  
+Falta de utilização da funcionalidade de listas de preços de compra do Business Central.
+
+**Solução**  
+Criar uma lista de preços de compra e inserir linhas com os preços acordados.
+
+**Como proceder**  
+1. No campo de pesquisa, escrever Listas Preços de Compra (ou Preço Compra).
+2. Clicar em Novo para criar uma nova lista.
+3. Preencher os campos: Descrição, Fornecedor, Moeda (se aplicável), Data Início e Data Fim.
+4. No separador Linhas, inserir cada produto com os campos: Nº Produto, Unidade de Medida, Quantidade Mínima, Preço e, se necessário, Desconto.
+5. Por fim, clicar em Activar para que a lista fique disponível; apenas listas activas são consideradas nas encomendas.
+
+**Validação final**  
+A lista de preços de compra está activa e os preços são automaticamente sugeridos nas encomendas.
+
+**Notas**  
+- Actualize ou expire a lista quando os preços mudarem.
+- Para importar muitas linhas, utilize a função de importação de Excel com colunas correspondentes.
+
+## BC-KB-183 — Como edito uma lista de preços de compra?
+**Categoria:** Compras / Preços  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+É necessário actualizar uma lista de preços de compra existente, alterando datas, produtos ou valores.
+
+**Diagnóstico**  
+A lista de preços está activa ou pendente e contém linhas desactualizadas ou em falta.
+
+**Causa provável**  
+Revisão de contratos com fornecedores ou actualização de custos, exigindo correcções nas listas de preços.
+
+**Solução**  
+Abrir a lista de preços de compra, editar cabeçalho e linhas, reactivar se necessário.
+
+**Como proceder**  
+1. Pesquisar por Listas de Preços de Compra e abrir a lista a editar.
+2. Se a lista estiver activa, seleccionar Acções → Desactivar para permitir alterações.
+3. No cabeçalho, actualizar campos como Descrição, Data Início, Data Fim ou Fornecedor, se aplicável.
+4. No separador Linhas, navegar pelas linhas existentes e alterar os campos Quantidade Mínima, Preço, Desconto ou Unidade de Medida conforme o novo acordo.
+5. Para adicionar novos produtos, inserir uma linha em branco e preencher o Nº Produto e os restantes campos; para remover produtos, seleccionar a linha e clicar em Eliminar Linha.
+6. Verificar se todas as linhas têm preços válidos e que as datas no cabeçalho cobrem o período pretendido.
+7. Activar novamente a lista clicando em Activar; a lista fica disponível para ser usada em encomendas.
+
+**Validação final**  
+A lista de preços apresenta o estado Activa e as linhas reflectem os valores actualizados.
+
+**Notas**  
+- Apenas listas desactivadas podem ser editadas.
+- As listas activas com datas expiradas devem ser duplicadas para criar uma nova versão.
+
+## BC-KB-184 — Como activo uma lista de preços de compra?
+**Categoria:** Compras / Preços  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Após criar ou editar uma lista de preços de compra, é necessário que fique disponível para utilização nas encomendas.
+
+**Diagnóstico**  
+A lista encontra-se em estado Aberta ou Desactivada, não sendo usada no cálculo automático de preços.
+
+**Causa provável**  
+A lista foi recentemente criada ou alterada e ainda não foi activada.
+
+**Solução**  
+Utilizar a acção Activar para mudar o estado da lista para Activa.
+
+**Como proceder**  
+1. Pesquisar por Listas de Preços de Compra e seleccionar a lista pretendida.
+2. Verificar se o campo Estado está como Aberta ou Desactivada.
+3. Rever as linhas e confirma que todas as informações estão correctas.
+4. Clicar em Activar no separador superior ou em Acções → Activar.
+5. Confirmar a activação quando solicitado; o estado muda para Activa.
+6. Caso surja alguma mensagem de erro, corrigir dados obrigatórios em falta e repetir a activação.
+
+**Validação final**  
+O campo Estado da lista apresenta Activa e a lista é considerada na determinação de preços.
+
+**Notas**  
+- As listas activadas ficam bloqueadas para edição; para efectuar alterações é necessário desactivar.
+- Mantenha apenas uma lista activa por fornecedor e período para evitar conflitos.
+
+## BC-KB-185 — Como inactivo uma lista de preços de compra?
+**Categoria:** Compras / Preços  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Uma lista de preços de compra deixa de ser válida porque expirou ou foi substituída por uma nova lista.
+
+**Diagnóstico**  
+A lista ainda aparece como Activa e está a ser aplicada em encomendas apesar de estar desactualizada.
+
+**Causa provável**  
+Esquecimento em alterar o estado da lista quando termina o acordo com o fornecedor.
+
+**Solução**  
+Desactivar a lista de preços de compra para que deixe de ser considerada e/ou expirar o período de validade.
+
+**Como proceder**  
+1. Pesquisar por Listas de Preços de Compra e seleccionar a lista a inactivar.
+2. Confirmar que existe uma nova lista activa ou que já não é necessário aplicar a lista actual.
+3. Clicar em Desactivar ou, se o menu diferir, ir a Acções → Desactivar.
+4. Confirmar a desactivação quando solicitado; o estado passa a Desactivada.
+5. Em alternativa, ajustar os campos Data Fim para uma data anterior ao dia actual para que a lista expire automaticamente.
+
+**Validação final**  
+O campo Estado da lista apresenta Desactivada e os preços deixam de ser sugeridos.
+
+**Notas**  
+- Manter listas antigas desactivadas ajuda a preservar histórico sem afectar o cálculo de preços.
+- É recomendado expirar listas usando datas para manter o registo temporal.
+
+## BC-KB-186 — Como configuro preços por contacto de fornecedor?
+**Categoria:** Compras / Preços  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Determinado fornecedor tem preços específicos para diferentes contactos ou departamentos e é necessário registá-los.
+
+**Diagnóstico**  
+Os preços registados na lista de preços são globais ao fornecedor e não distinguem contactos, o que pode originar preços errados nas encomendas.
+
+**Causa provável**  
+Falta de configuração dos campos Contacto Fornecedor nas linhas da lista de preços de compra.
+
+**Solução**  
+Preencher o campo Contacto Fornecedor em cada linha da lista de preços para associar o preço ao contacto correcto.
+
+**Como proceder**  
+1. Abrir a lista de preços de compra que pretende configurar.
+2. Na zona de linhas, personalizar a vista para mostrar a coluna Contacto Fornecedor (utilize Mostrar Mais Colunas se necessário).
+3. Para cada produto, seleccionar ou introduzir o nome ou número do contacto correspondente ao departamento do fornecedor.
+4. Preencher o preço, quantidade mínima e outros campos para esse contacto específico.
+5. Repetir o processo para cada contacto que tenha preços diferentes.
+
+**Validação final**  
+Ao criar uma encomenda de compra e seleccionar o mesmo contacto do fornecedor, o preço adequado é automaticamente sugerido.
+
+**Notas**  
+- Certifique-se de que os contactos estão previamente criados na ficha do fornecedor.
+- Se não for indicado contacto na encomenda, o sistema aplica o preço sem contacto ou o preço genérico do fornecedor.
+
+## BC-KB-187 — Como configuro fornecedores alternativos do produto?
+**Categoria:** Compras / Planeamento  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Os produtos podem ser fornecidos por mais do que um fornecedor e é necessário registar fornecedores alternativos com prazos de entrega, quantidades mínimas e preços.
+
+**Diagnóstico**  
+A ficha do produto apenas contém o fornecedor principal e não estão definidos fornecedores alternativos. O planeamento ou a folha de requisão não sugere alternativas.
+
+**Causa provável**  
+O campo Fornecedores Alternativos não foi preenchido na ficha do produto.
+
+**Solução**  
+Configurar fornecedores alternativos na ficha do produto, definindo prazos de entrega, quantidades mínimas e preços unitários.
+
+**Como proceder**  
+1. Aceder à ficha do produto.
+2. Ir a Relacionado → Planeamento → Fornecedores Alternativos.
+3. Clicar em Novo para adicionar um fornecedor alternativo.
+4. Preencher os campos Nº Fornecedor, Tempo de Aprovisionamento, Quantidade Mínima, Preço Unitário e outros campos relevantes.
+5. Repetir para todos os fornecedores alternativos aplicáveis.
+
+**Validação final**  
+Na Folha de Requisição, as sugestões de compra incluem fornecedores alternativos quando o fornecedor principal não está disponível ou quando as condições são mais vantajosas.
+
+**Notas**  
+- Os fornecedores alternativos não substituem automaticamente o fornecedor principal; dependem das configurações de planeamento e quantidades.
+- Revise periodicamente prazos e preços para manter dados actualizados.
+
+## BC-KB-188 — Como peço aprovação de uma encomenda de compra?
+**Categoria:** Compras / Encomendas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+É necessário submeter uma encomenda de compra à aprovação de superiores antes de ser enviada ao fornecedor.
+
+**Diagnóstico**  
+A encomenda está em estado Aberta e contém linhas completas, mas ainda não foi enviada para aprovação.
+
+**Causa provável**  
+O utilizador não iniciou o fluxo de aprovação ou desconhece o procedimento.
+
+**Solução**  
+Enviar a encomenda para aprovação através da funcionalidade de workflows de aprovação.
+
+**Como proceder**  
+1. Aceder à Encomenda de Compra que pretende submeter.
+2. Validar que todos os campos obrigatórios no cabeçalho (Fornecedor, Datas, Localização) e nas linhas (Produto, Quantidade, Preço) estão correctos.
+3. No separador Pedido, seleccionar Enviar Pedido de Aprovação (ou Solicitar Aprovação).
+4. Confirmar o envio quando for apresentado o diálogo.
+5. O estado da encomenda muda para Pendente de Aprovação; a encomenda fica bloqueada para edições até ser aprovada ou rejeitada.
+
+**Validação final**  
+A encomenda aparece em Solicitações para Aprovar com estado Pendente, indicando que a aprovação está em curso.
+
+**Notas**  
+- Se for necessário alterar a encomenda após enviar o pedido, esta deve ser reaberta ou rejeitada pelo aprovador.
+- Os fluxos de aprovação variam conforme as permissões e valores limite definidos pela organização.
+
+## BC-KB-189 — Onde verifico o estado de aprovação de uma encomenda de compra?
+**Categoria:** Compras / Encomendas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Após enviar uma encomenda de compra para aprovação, o utilizador pretende acompanhar o estado e saber se já foi aprovada ou rejeitada.
+
+**Diagnóstico**  
+Não é claro onde consultar a lista de solicitações pendentes ou o histórico de aprovações.
+
+**Causa provável**  
+Desconhecimento da página Solicitações para Aprovar ou dos filtros necessários.
+
+**Solução**  
+Utilizar a página Solicitações para Aprovar ou consultar o campo Estado de Aprovação directamente na encomenda.
+
+**Como proceder**  
+1. Pesquisar por Solicitações para Aprovar e abrir a página.
+2. Na lista, filtrar pelo campo Tipo de Documento para Encomenda de Compra.
+3. Localizar a encomenda pelo número ou fornecedor e observar a coluna Estado (Pendente, Aprovado, Rejeitado).
+4. Para mais detalhes, abrir o registo e consultar as entradas de workflow.
+5. Em alternativa, abrir a própria encomenda de compra: o cabeçalho exibe o campo Estado de Aprovação com o valor actual.
+
+**Validação final**  
+O utilizador consegue ver se a encomenda está pendente, aprovada ou rejeitada e, no caso de aprovação, consegue prosseguir para o envio ao fornecedor.
+
+**Notas**  
+- Os registos de aprovação apresentam detalhes como data, hora e comentário de aprovação.
+- As notificações por email podem ser configuradas para informar o requisitante automaticamente.
+
+## BC-KB-190 — Como aprovo uma encomenda de compra?
+**Categoria:** Compras / Encomendas  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Um colaborador com permissões de aprovador precisa aprovar ou rejeitar uma encomenda de compra pendente.
+
+**Diagnóstico**  
+A encomenda encontra-se em estado Pendente de Aprovação e aguarda a decisão do aprovador.
+
+**Causa provável**  
+As regras de aprovação exigem intervenção manual para valores acima de determinados limites.
+
+**Solução**  
+Aceder às solicitações de aprovação, analisar a encomenda e selecionar Aprovar ou Rejeitar.
+
+**Como proceder**  
+1. Pesquisar por Solicitações para Aprovar e aplicar o filtro para encomendas de compra.
+2. Seleccionar a linha da encomenda que pretende aprovar.
+3. Clicar em Aprovar para autorizar o pedido ou em Rejeitar para devolvê-lo ao requisitante.
+4. Se necessário, adicionar um comentário ou motivo de rejeição.
+5. Após aprovar, o estado muda para Aprovado e a encomenda desbloqueia; o requisitante pode continuar com o processo (envio, recepção, etc.).
+
+**Validação final**  
+A encomenda de compra fica com estado Aprovado e pode ser registada ou enviada ao fornecedor.
+
+**Notas**  
+- Os aprovadores devem validar preços, quantidades e impacto orçamental antes de aprovar.
+- Após aprovação, quaisquer alterações na encomenda podem exigir nova aprovação.
+
+## BC-KB-191 — Como fecho encomendas de compra completamente faturadas?
+**Categoria:** Compras / Encomendas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Algumas encomendas de compra já foram completamente recebidas e faturadas, mas continuam visíveis como Aberto e constam nos relatórios de compromissos.
+
+**Diagnóstico**  
+O sistema mantém encomendas abertas até que sejam manualmente encerradas, mesmo quando não existem mais quantidades por receber ou faturar.
+
+**Causa provável**  
+Falta de conhecimento sobre a funcionalidade Fechar Encomenda ou Encerrar.
+
+**Solução**  
+Fechar manualmente a encomenda de compra após verificar que todas as quantidades foram recebidas e faturadas.
+
+**Como proceder**  
+1. Abrir a Encomenda de Compra que pretende encerrar.
+2. Verificar que as colunas Qtd. Recebida e Qtd. Faturada coincidem com a Qtd. Encomendada em todas as linhas.
+3. No separador Processo, clicar em Fechar Encomenda (ou Fechar conforme versão).
+4. Confirmar o fecho; o estado da encomenda muda para Fechada.
+
+**Validação final**  
+A encomenda desaparece da lista de abertas e fica marcada como Fechada, não contribuindo para relatórios de compromissos.
+
+**Notas**  
+- Apenas feche encomendas completamente recebidas e faturadas; caso contrário surgirão discrepâncias.
+- O fecho não afecta o histórico de movimentação nem os documentos registados.
+
+## BC-KB-192 — Como atribuo motivos de não fornecimento numa encomenda de compra?
+**Categoria:** Compras / Encomendas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Após recepção de uma encomenda de compra, algumas quantidades não foram entregues e é necessário registar o motivo de não fornecimento para análise.
+
+**Diagnóstico**  
+Existem linhas da encomenda parcialmente recebidas ou com entrega zero e o campo Motivo Não Fornecimento está em branco.
+
+**Causa provável**  
+Falta de registo do motivo por parte do operador ou ausência de parâmetros para recolher a informação.
+
+**Solução**  
+Associar um motivo de não fornecimento à linha da encomenda de compra para posterior tratamento e estatísticas.
+
+**Como proceder**  
+1. Aceder à Encomenda de Compra depois da recepção parcial.
+2. Seleccionar a linha afectada e expandir para ver os detalhes.
+3. Adicionar a coluna Motivo Não Fornecimento à vista, se não estiver visível (utilizar Escolher Colunas).
+4. Escolher o motivo adequado na lista (ex.: Falta de Stock, Produto Descontinuado, Erro de Planeamento).
+
+**Validação final**  
+O campo Motivo Não Fornecimento fica preenchido na linha e pode ser utilizado para relatórios e análises de fornecedores.
+
+**Notas**  
+- Definir previamente a lista de motivos na configuração para garantir consistência.
+- Este campo não altera o valor recepcionado mas auxilia no acompanhamento de performance do fornecedor.
+
+## BC-KB-193 — Como valido encomendas de venda?
+**Categoria:** Vendas / Encomendas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Antes de registar ou enviar uma encomenda de venda, o utilizador pretende garantir que todos os dados estão correctos e que a encomenda passa nas validações do sistema.
+
+**Diagnóstico**  
+A encomenda contém linhas de produtos e dados do cliente, mas podem existir campos incompletos ou erros de crédito, preços e disponibilidades.
+
+**Causa provável**  
+Falta de revisão dos campos obrigatórios ou ausência de verificação prévia de crédito e stock.
+
+**Solução**  
+Utilizar a funcionalidade de Validar encomendas de venda para identificar e corrigir erros antes de registar.
+
+**Como proceder**  
+1. Aceder à Encomenda de Venda que pretende validar.
+2. No separador Processo, clicar em Validar (ou Verificar Documento).
+3. O sistema verifica: existência de produto, disponibilidade em stock, restrições de crédito do cliente, preços e descontos, e campos obrigatórios.
+4. Se existirem erros ou avisos, o sistema apresenta mensagens; ler cada mensagem, corrigir os campos indicados e executar novamente a validação.
+5. Quando não existirem mensagens de erro, a encomenda está pronta para registo ou envio.
+
+**Validação final**  
+A encomenda de venda é validada sem erros e está apta a ser registada ou enviada.
+
+**Notas**  
+- A validação não regista a encomenda; serve apenas para detecção precoce de problemas.
+- Correções de crédito podem exigir intervenção do departamento financeiro.
+
+## BC-KB-194 — Como registo motivos de não fornecimento em vendas?
+**Categoria:** Vendas / Encomendas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Em determinadas vendas, as quantidades encomendadas não são totalmente fornecidas e é necessário registar o motivo para análise e comunicação ao cliente.
+
+**Diagnóstico**  
+Existem linhas de encomenda de venda com quantidades por entregar, mas o campo Motivo Não Fornecimento não está preenchido.
+
+**Causa provável**  
+O utilizador não acrescentou o motivo ou desconhece a coluna correspondente nas linhas da encomenda.
+
+**Solução**  
+Preencher o campo Motivo Não Fornecimento nas linhas de encomenda de venda afectadas.
+
+**Como proceder**  
+1. Abrir a Encomenda de Venda com entregas parciais.
+2. Seleccionar a linha onde faltou fornecer o produto.
+3. Personalizar a vista para mostrar a coluna Motivo Não Fornecimento.
+4. Seleccionar o motivo adequado (ex.: Falta de Stock, Produto Descontinuado).
+5. Comunicar o motivo ao cliente através de relatório ou mensagem, se necessário.
+
+**Validação final**  
+O campo Motivo Não Fornecimento está preenchido nas linhas com falta de entrega.
+
+**Notas**  
+- A lista de motivos é comum às compras e vendas; configure-a para uniformizar relatórios.
+- Os motivos registados alimentam indicadores de serviço ao cliente.
+
+## BC-KB-195 — Como faço faturação antecipada?
+**Categoria:** Vendas / Faturação  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+É necessário emitir uma fatura de pré-pagamento ou faturação antecipada antes da entrega dos produtos, de acordo com o contrato com o cliente.
+
+**Diagnóstico**  
+Foi criada uma encomenda de venda com percentagem ou montante de pré-pagamento definido, mas ainda não foi emitida a fatura de adiantamento.
+
+**Causa provável**  
+Desconhecimento do processo de emissão da fatura de pré-pagamento no Business Central.
+
+**Solução**  
+Utilizar a funcionalidade Faturação Antecipada para gerar a fatura de pré-pagamento baseada numa encomenda.
+
+**Como proceder**  
+1. Criar ou abrir uma Encomenda de Venda.
+2. No separador Faturação, preencher o campo Percentagem Pré-pagamento ou definir uma linha com Tipo de Linha = Pré-pagamento e o valor pretendido.
+3. Confirmar que o cliente e o produto estão configurados para pré-pagamentos.
+4. No separador Processo, clicar em Fatura Antecipada (ou Fatura de Pré-pagamento).
+5. Seleccionar Imprimir Fatura ou Enviar por Email se necessário.
+6. Registar a fatura; o sistema cria um documento de venda com tipo Fatura de Pré-pagamento.
+7. Após receber o pagamento, registar o recibo de pré-pagamento nos movimentos de clientes.
+
+**Validação final**  
+A fatura de pré-pagamento aparece no histórico de vendas e o saldo do cliente reflecte o adiantamento recebido.
+
+**Notas**  
+- As faturas de pré-pagamento são reconciliadas automaticamente com a fatura final no registo da encomenda.
+- Verifique a legislação fiscal sobre a necessidade de notas de crédito se o valor final for menor que o adiantamento.
+
+## BC-KB-196 — Como consulto o saldo de faturação antecipada?
+**Categoria:** Vendas / Faturação  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+O utilizador necessita saber quanto foi faturado antecipadamente e qual o saldo ainda por faturar na encomenda ou por cliente.
+
+**Diagnóstico**  
+Existem faturas de pré-pagamento registadas, mas não é claro qual o montante total de adiantamentos por encomenda ou cliente.
+
+**Causa provável**  
+Falta de consulta aos movimentos de pré-pagamento ou desconhecimento do relatório adequado.
+
+**Solução**  
+Utilizar a página Movimentos de Pré-pagamento ou relatórios de faturação para analisar o saldo de pré-pagamento.
+
+**Como proceder**  
+1. Na Encomenda de Venda, seleccionar Relatórios → Pré-pagamentos para ver o detalhe de adiantamentos aplicados e saldo por encomenda.
+2. Em alternativa, pesquisar por Movimentos Clientes e aplicar filtro em Tipo Documento = Fatura de Pré-pagamento.
+3. Consultar os campos Montante Pago e Saldo para cada documento.
+4. Para visão global, utilizar o relatório Pré-pagamentos Pendentes que lista clientes com saldos de pré-pagamento.
+5. Exportar para Excel para análise adicional, se necessário.
+
+**Validação final**  
+O utilizador identifica facilmente o valor total adiantado e o saldo por faturar.
+
+**Notas**  
+- Recomenda-se reconciliar pré-pagamentos com a fatura final assim que os serviços ou produtos são fornecidos.
+- Saldos de pré-pagamento impactam a conta corrente do cliente.
+
+## BC-KB-197 — Como anulo faturação antecipada?
+**Categoria:** Vendas / Faturação  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Foi emitida uma fatura de pré-pagamento errada ou cancelada e precisa ser anulada para efeitos fiscais e de contabilidade.
+
+**Diagnóstico**  
+A fatura de pré-pagamento está registada e afecta os saldos de cliente; é necessário revertê-la.
+
+**Causa provável**  
+Erro na emissão do documento de pré-pagamento ou cancelamento do contrato antes da entrega.
+
+**Solução**  
+Emitir uma Nota de Crédito de Pré-pagamento para anular a fatura antecipada e reconciliar com o cliente.
+
+**Como proceder**  
+1. Pesquisar por Movimentos Clientes ou abrir a fatura de pré-pagamento em questão.
+2. Seleccionar Funções → Criar Nota de Crédito Corretiva (ou Anular) sobre a fatura de pré-pagamento.
+3. O sistema cria uma nota de crédito de pré-pagamento com montante igual à fatura.
+4. Registar a nota de crédito.
+5. Aplicar a nota de crédito à fatura de pré-pagamento nos movimentos de cliente para fechar o saldo.
+6. Confirmar que o saldo da fatura e a conta do cliente foram ajustados.
+
+**Validação final**  
+A fatura de pré-pagamento deixa de impactar a conta corrente e o saldo do cliente reflecte a anulação.
+
+**Notas**  
+- A anulação de pré-pagamentos pode ter implicações fiscais; validar com a contabilidade.
+- Após anular, deve ser criada nova fatura de pré-pagamento se houver novo acordo.
+
+## BC-KB-198 — Como funciona a previsão de vendas?
+**Categoria:** Vendas / Planeamento  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+A empresa necessita prever vendas futuras para planear produção e inventário.
+
+**Diagnóstico**  
+Não existe um registo sistemático de previsões ou a funcionalidade não é utilizada.
+
+**Causa provável**  
+Desconhecimento da funcionalidade de Previsão de Vendas ou Previsão de Necessidades no Business Central.
+
+**Solução**  
+Utilizar as páginas de previsão de vendas para inserir volumes esperados por período e analisar tendências.
+
+**Como proceder**  
+1. Pesquisar por Previsão de Vendas e abrir a página.
+2. Definir a dimensão temporal (mensal, trimestral) e, se aplicável, as dimensões analíticas (cliente, produto, localização).
+3. Para cada período, inserir as quantidades previstas de venda para cada produto ou grupo de produtos.
+4. Utilizar a função Cópia Previsão para duplicar previsões de períodos anteriores e ajustar conforme necessário.
+5. Validar as previsões comparando com dados históricos através do relatório de Desvio de Previsão.
+6. Integrar a previsão no planeamento de produção ou aprovisionamento, usando a Folha de Requisição ou MRP.
+
+**Validação final**  
+As quantidades previstas ficam registadas e influenciam os cálculos de planeamento para produção e compras.
+
+**Notas**  
+- As previsões devem ser revistas regularmente para ajustar a procura real.
+- Podem ser exportadas/importadas via Excel para facilitar ajustes.
+
+## BC-KB-199 — Como corrijo uma fatura de venda registada?
+**Categoria:** Vendas / Faturas Registadas  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Foi registada uma fatura de venda com erros (ex.: produto, quantidade, preço) e é necessário corrigi-la sem anular totalmente a transação.
+
+**Diagnóstico**  
+A fatura de venda já está registada, mas ainda não foi comunicada às autoridades fiscais ou não tem movimentos de pagamento associados.
+
+**Causa provável**  
+Erro no preenchimento inicial ou alterações acordadas com o cliente após a emissão.
+
+**Solução**  
+Utilizar a funcionalidade Corrigir Fatura de Venda para gerar automaticamente uma nota de crédito e uma nova fatura correcta.
+
+**Como proceder**  
+1. Aceder à fatura de venda registada (via Faturas de Venda Registadas).
+2. No separador Processo, clicar em Corrigir ou Criar Nota de Crédito Corretiva.
+3. O sistema cria automaticamente uma nota de crédito para anular a fatura original e uma nova encomenda de venda com os mesmos dados.
+4. Rever a nova encomenda: corrigir campos como produto, quantidade ou preço.
+5. Registar a nova encomenda para gerar a fatura correcta.
+6. Aplicar a nota de crédito à fatura original nos movimentos de clientes para fechar o saldo.
+
+**Validação final**  
+A fatura original fica anulada, a nova fatura reflecte os dados correctos e o saldo do cliente está ajustado.
+
+**Notas**  
+- A correcção apenas é permitida se a fatura ainda não foi exportada para a Autoridade Tributária ou utilizada em comunicação SAF-T.
+- Caso a fatura já tenha sido comunicada, deve emitir-se uma nota de crédito em separado e nova fatura manual.
+
+## BC-KB-200 — Em que situações posso corrigir uma fatura de venda registada?
+**Categoria:** Vendas / Faturas Registadas  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+O utilizador pretende saber quando pode utilizar a funcionalidade de correcção em vez de notas de crédito independentes.
+
+**Diagnóstico**  
+Há dúvidas quanto às restrições legais e de sistema para corrigir faturas registadas.
+
+**Causa provável**  
+Confusão entre correcção imediata (antes da comunicação fiscal) e procedimentos de anulação após comunicação.
+
+**Solução**  
+Aplicar a correcção apenas se a fatura não foi comunicada ao SAF-T/AT e não possui pagamentos ou notas de crédito associadas.
+
+**Como proceder**  
+1. Verificar se a fatura foi comunicada à Autoridade Tributária (consultar o campo Status Comunicação na fatura).
+2. Confirmar se não existem pagamentos registados ou notas de crédito já aplicadas.
+3. Se ambos os requisitos forem satisfeitos, proceder à correcção conforme descrito na FAQ anterior.
+4. Caso contrário, emitir uma nota de crédito separada para anular a fatura e criar uma nova fatura manual.
+
+**Validação final**  
+A correcção é efetuada apenas em faturas elegíveis e respeita as obrigações legais.
+
+**Notas**  
+- Consulte a contabilidade ou departamento fiscal para confirmar a possibilidade de correcção.
+- Em alguns casos, pode ser necessário comunicar ambas as notas de crédito e faturas ao SAF-T.
+
+## BC-KB-201 — Como adjudico uma proposta de venda?
+**Categoria:** Vendas / Propostas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Após envio de uma proposta de venda (cotação) a um cliente, a empresa recebe aceitação parcial ou total e precisa converter a proposta numa encomenda.
+
+**Diagnóstico**  
+A proposta foi criada e enviada a partir de uma oportunidade ou directamente, mas ainda não foi adjudicada.
+
+**Causa provável**  
+O utilizador não sabe como converter a proposta numa encomenda ou adjudicar apenas linhas específicas.
+
+**Solução**  
+Utilizar a função Adjudicar Proposta para criar uma encomenda de venda a partir da proposta com as linhas aceites.
+
+**Como proceder**  
+1. Aceder à Proposta de Venda (lista de propostas).
+2. Seleccionar a proposta pretendida.
+3. No separador Processo, clicar em Converter em Encomenda ou Adjudicar.
+4. Se necessário, seleccionar apenas as linhas a adjudicar (pode marcar/desmarcar linhas).
+5. Confirmar; o sistema cria uma nova encomenda de venda com o cliente e produtos seleccionados.
+6. Revisar a encomenda e completar dados adicionais (datas, local de envio).
+7. Proceder ao registo ou aprovação conforme workflow.
+
+**Validação final**  
+Uma encomenda de venda é criada e a proposta original fica registada como Adjudicada ou Fechada.
+
+**Notas**  
+- Caso parte da proposta não seja aceite, crie uma encomenda apenas com as linhas aprovadas e feche a proposta.
+- A adjudicação mantém a traçabilidade entre proposta, oportunidade e encomenda.
+
+## BC-KB-202 — Como trabalho com encomendas abertas de venda?
+**Categoria:** Vendas / Encomendas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+A empresa utiliza Encomendas Abertas de Venda para contratos de fornecimento em que o cliente solicita quantidades gradualmente e é necessário gerir entregas parciais.
+
+**Diagnóstico**  
+É necessário criar uma encomenda aberta, indicar o total contratado e extrair encomendas parciais com base nas necessidades do cliente.
+
+**Causa provável**  
+Os utilizadores não estão familiarizados com o processo de criação e gestão de encomendas abertas.
+
+**Solução**  
+Criar uma encomenda aberta de venda e utilizar a funcionalidade Criar Encomenda para gerar encomendas de venda parciais conforme o consumo.
+
+**Como proceder**  
+1. Pesquisar por Encomendas Abertas de Venda e clicar em Novo.
+2. Preencher o cabeçalho com Cliente, Data de Início, Data de Fim e outras informações.
+3. Na secção Linhas, introduzir os produtos e as quantidades totais contratadas.
+4. Registar a encomenda aberta.
+5. Quando o cliente solicitar uma entrega parcial, abrir a encomenda aberta e seleccionar Criar Encomenda.
+6. Definir as quantidades a enviar e confirmar; o sistema cria uma nova Encomenda de Venda com essas quantidades.
+7. Repetir o processo até esgotar as quantidades contratadas.
+8. Encerrar a encomenda aberta quando todas as quantidades tiverem sido satisfeitas.
+
+**Validação final**  
+As encomendas abertas permitem rastrear o total contratado e criar múltiplas encomendas parciais de forma controlada.
+
+**Notas**  
+- As encomendas abertas são particularmente úteis para contratos de fornecimento de longo prazo.
+- Mantenha um controlo rigoroso das quantidades restantes para evitar sobre-entregas.
+
+## BC-KB-203 — Como crio uma encomenda de venda?
+**Categoria:** Vendas / Encomendas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+O utilizador precisa registar uma nova encomenda de venda para um cliente, incluindo dados de envio, produtos, quantidades e preços.
+
+**Diagnóstico**  
+Não existe encomenda para o pedido e o utilizador necessita seguir todos os passos para criação.
+
+**Causa provável**  
+Primeira utilização ou processo pontual que requer reforço de procedimentos.
+
+**Solução**  
+Criar uma Encomenda de Venda na lista de encomendas, preencher o cabeçalho e as linhas com os detalhes necessários e validar.
+
+**Como proceder**  
+1. Pesquisar por Encomendas de Venda e clicar em Novo.
+2. Preencher o campo Cliente Nº com o número do cliente; o sistema preenche dados padrão (endereço, condições de pagamento).
+3. Definir a Data de Registo, Data de Envio, Localização e outras datas relevantes.
+4. No separador Linhas, para cada produto: seleccionar Tipo = Produto, indicar Nº Produto, Quantidade e confirmar o preço sugerido.
+5. Se necessário, ajustar preços ou descontos manualmente, respeitando as políticas de margem e desconto máximos.
+6. Adicionar linhas de comentário ou encargos adicionais, se aplicável.
+7. Verificar os campos totais (montante, IVA) e corrigir eventuais mensagens de erro.
+8. a encomenda; se existir workflow, enviar para aprovação ou libertar para processamento logístico.
+
+**Validação final**  
+A encomenda de venda aparece na lista com estado Aberta ou Liberada, pronta para envio ou faturação.
+
+**Notas**  
+- Utilize funções de cópia de encomenda ou duplicação para acelerar a criação de encomendas semelhantes.
+- Verifique os limites de crédito do cliente antes de aprovar a encomenda.
+
+## BC-KB-204 — Como funciona a aprovação de encomendas a processar para logística externa?
+**Categoria:** Vendas / Encomendas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Algumas encomendas de venda são processadas por operadores logísticos externos e requerem aprovação adicional antes do envio.
+
+**Diagnóstico**  
+O workflow de aprovação para logística externa não foi accionado ou o utilizador desconhece o procedimento.
+
+**Causa provável**  
+Ausência de configuração de fluxos de aprovação para encomendas com Localização de logística externa ou falta de treino.
+
+**Solução**  
+Configurar e utilizar o workflow de aprovação específico e enviar a encomenda para aprovação antes de entregar ao operador externo.
+
+**Como proceder**  
+1. Ao criar a encomenda de venda, seleccionar uma Localização ou Fornecedor de Logística que indique processamento externo.
+2. Preencher a encomenda normalmente.
+3. No separador Pedido, clicar em Enviar Pedido de Aprovação; a encomenda muda para Pendente de Aprovação.
+4. O gestor de logística ou aprovador externo recebe uma notificação e analisa a encomenda.
+5. Após aprovação, a encomenda é marcada como Aprovada e é libertada para o parceiro logístico (via EDI ou exportação).
+6. Acompanhar o estado na página Solicitações para Aprovar e proceder ao envio físico após aprovação.
+
+**Validação final**  
+A encomenda é aprovada e enviada ao operador logístico externo apenas após passar no workflow.
+
+**Notas**  
+- Este processo minimiza envios errados para operadores externos.
+- A configuração do workflow deve prever valores limite e destinatários correctos.
+
+## BC-KB-205 — Como funciona a faturação de lares?
+**Categoria:** Vendas / Faturação  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Existem acordos específicos com instituições de solidariedade (lares) para fornecimento de produtos, e a faturação obedece a regras próprias.
+
+**Diagnóstico**  
+O processo normal de faturação não contempla a diferenciação de itens e preços para lares.
+
+**Causa provável**  
+Falta de utilização do módulo ou da configuração de Tipo de Cliente = Lar e respectivas tabelas de preços.
+
+**Solução**  
+Configurar clientes como Lar, utilizar listas de preços específicas e emitir faturas periodicamente segundo as quantidades fornecidas.
+
+**Como proceder**  
+1. Criar ou editar a ficha do cliente e definir o campo Tipo Cliente para Lar.
+2. Associar ao cliente uma lista de preços específica para lares (com preços e descontos ajustados).
+3. Criar encomendas de venda normalmente, indicando a instituição como cliente.
+4. Na factura, os preços aplicados são automaticamente retirados da lista de preços de lares.
+5. Se existirem contratos de fornecimento periódico, configurar Encomendas Abertas ou Acordos de Serviço para gerar faturas periodicamente.
+6. Registar as faturas de acordo com as regras de pagamento especiais acordadas com cada instituição.
+
+**Validação final**  
+As faturas emitidas para lares reflectem os preços e condições específicas acordadas.
+
+**Notas**  
+- Mantenha listas de preços actualizadas para estas instituições.
+- Nos relatórios fiscais, as vendas a lares podem necessitar de códigos específicos de isenção ou taxa reduzida.
+
+## BC-KB-206 — Como registo amostras?
+**Categoria:** Vendas / Amostras  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+A empresa necessita enviar amostras de produtos a clientes, contabilizando o custo e controlando o stock.
+
+**Diagnóstico**  
+Não existe um documento dedicado ou método padronizado para registar amostras; as saídas são feitas manualmente, sem rastreabilidade.
+
+**Causa provável**  
+Desconhecimento da funcionalidade de Encomenda de Amostras ou da configuração de Tipo Documento = Amostra.
+
+**Solução**  
+Criar uma encomenda de venda específica de amostras, com preços a zero, e registar a saída do stock.
+
+**Como proceder**  
+1. Pesquisar por Encomendas de Venda e clicar em Novo.
+2. Seleccionar o Cliente que vai receber a amostra (ou criar um cliente genérico Amostras).
+3. Na linha, seleccionar Tipo = Produto e indicar o Nº Produto.
+4. Introduzir a Quantidade de amostras.
+5. No campo Tipo Documento Saída, seleccionar Amostra; o preço unitário é automaticamente zero.
+6. Registar a encomenda; o stock é diminuído e o custo é registado em conta de marketing ou promoções.
+7. Imprimir ou enviar o documento ao cliente, se necessário.
+
+**Validação final**  
+O stock é actualizado e a entrega da amostra fica registada com preço zero.
+
+**Notas**  
+- Crie um relatório periódico de amostras enviadas para controlar custos.
+- Utilize contas analíticas para imputar custos de amostras a centros de marketing.
+
+## BC-KB-207 — Como registo ofertas?
+**Categoria:** Vendas / Ofertas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+A empresa oferece produtos a clientes (brindes) e precisa registá-los sem facturar o cliente, mas mantendo a movimentação de stock e registo contabilístico.
+
+**Diagnóstico**  
+Ainda não existe um procedimento para diferenciar ofertas de vendas normais ou amostras.
+
+**Causa provável**  
+Falta de configuração de tipo de documento Oferta ou de um cliente específico para ofertas.
+
+**Solução**  
+Criar uma encomenda de venda de tipo Oferta para registar os produtos oferecidos a custo zero e imputar o valor ao centro de marketing.
+
+**Como proceder**  
+1. Criar um cliente específico Ofertas ou utilizar o cliente real.
+2. Iniciar uma nova Encomenda de Venda.
+3. No cabeçalho ou nas configurações, definir Tipo Documento Saída = Oferta.
+4. Inserir as linhas de produto e quantidades; o preço unitário é automaticamente zero (pode ser necessário configurar uma lista de preços de ofertas).
+5. Verificar que a conta contabilística da linha corresponde ao centro de custo de marketing.
+6. Registar a encomenda.
+
+**Validação final**  
+A oferta é registada, o stock é reduzido e o custo é imputado à conta adequada.
+
+**Notas**  
+- Use códigos de razão para ofertas para distinguir de amostras nos relatórios.
+- As ofertas podem necessitar de aprovação dependendo do valor.
+
+## BC-KB-208 — Como registo demonstrações a clientes?
+**Categoria:** Vendas / Demonstrações  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Necessidade de emprestar produtos a clientes para demonstração temporária, com controlo de devolução e custo associado.
+
+**Diagnóstico**  
+O processo não está formalizado e pode levar a perda de inventário ou a ausência de follow-up de devoluções.
+
+**Causa provável**  
+Não utilização de um documento específico de demonstração e de um registro de saída e retorno.
+
+**Solução**  
+Criar um documento de Saída de Demonstração que regista a entrega e posterior devolução dos produtos.
+
+**Como proceder**  
+1. Pesquisar por Demonstrações a Clientes (ou utilizar Documento de Transferência adaptado).
+2. Criar um novo documento indicando o Cliente e a Data de Saída.
+3. Adicionar as linhas de produto a demonstrar e as quantidades.
+4. Registar a saída; o stock é transferido para uma localização temporária de demonstrações.
+5. Na devolução, abrir o mesmo documento e registar a Entrada de Demonstração, indicando as quantidades devolvidas.
+6. Validar que o stock regressa à localização original.
+
+**Validação final**  
+As demonstrações são rastreadas e o stock é reposto quando os produtos são devolvidos.
+
+**Notas**  
+- Controlar a data de devolução prevista e enviar lembretes ao cliente.
+- Se a demonstração se converter em venda, criar uma encomenda de venda a partir do documento de demonstração.
+
+## BC-KB-209 — Como registo demonstrações em eventos?
+**Categoria:** Vendas / Demonstrações  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+É necessário enviar produtos para feiras ou eventos para demonstração, com controlo de stock e devoluções.
+
+**Diagnóstico**  
+Não existe um processo formal de registo, levando a inconsistências de inventário após eventos.
+
+**Causa provável**  
+Ausência de documentos de transferência dedicados a eventos e de controlo de inventário temporário.
+
+**Solução**  
+Utilizar a funcionalidade de Transferência entre Localizações para eventos e registar a devolução posterior.
+
+**Como proceder**  
+1. Criar uma Localização específica para cada evento (ex.: EVENTO_FEIRA).
+2. Utilizar uma Ordem de Transferência para mover o stock da localização principal para a localização do evento.
+3. No documento, indicar as linhas dos produtos e quantidades.
+4. Processar a ordem de transferência para registar a saída.
+5. Após o evento, criar outra ordem de transferência inversa para devolver os produtos não consumidos à localização original.
+6. Se alguns produtos forem consumidos ou vendidos, registar como Amostras, Ofertas ou Vendas conforme apropriado.
+
+**Validação final**  
+O stock em eventos é controlado e reconciliado após a devolução.
+
+**Notas**  
+- Planeie a logística com antecedência para garantir disponibilidade de produtos nos eventos.
+- Utilize relatórios de inventário por localização para avaliar consumos durante eventos.
+
+## BC-KB-210 — Como registo consumos internos?
+**Categoria:** Vendas / Consumos Internos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Alguns produtos são consumidos internamente pela empresa (por exemplo, para testes, formação ou uso interno) e é necessário dar saída de stock de forma controlada.
+
+**Diagnóstico**  
+O consumo interno não está documentado, podendo gerar discrepâncias de inventário e custos não atribuídos.
+
+**Causa provável**  
+Desconhecimento do documento Consumo Interno ou falta de uso da funcionalidade de diário de produtos.
+
+**Solução**  
+Registar consumos internos através de diários de consumo ou encomendas específicas, garantindo a imputação de custos ao centro apropriado.
+
+**Como proceder**  
+1. Pesquisar por Diário de Consumo Interno (ou Diário de Saídas).
+2. Criar uma nova linha para cada produto consumido.
+3. Indicar a Localização, Nº Produto, Quantidade e, se necessário, a Dimensão ou Centro de Custo que deve suportar o custo.
+4. Verificar que o preço unitário corresponde ao custo do produto (campo Custo Unitário).
+5. Registar o diário para dar baixa no inventário e gerar o movimento contabilístico.
+6. Opcionalmente, imprimir um relatório interno de consumo para aprovação.
+
+**Validação final**  
+Os consumos internos são reflectidos no inventário e as contas de despesa são actualizadas.
+
+**Notas**  
+- Estabeleça procedimentos internos para aprovar consumos fora das quantidades normais.
+- Os diários de consumo permitem distribuir custos por departamentos ou projectos.
+
+## BC-KB-211 — Como trato vendas de psicotrópicos?
+**Categoria:** Vendas / Psicotrópicos  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+As vendas de medicamentos psicotrópicos requerem documentação adicional e registos específicos devido a legislação restritiva.
+
+**Diagnóstico**  
+É necessário garantir que a transacção cumpre os requisitos legais, incluindo prescrição médica e registo separado.
+
+**Causa provável**  
+Falta de funcionalidades activadas para artigos psicotrópicos e ausência de registo de prescrição ou autorização.
+
+**Solução**  
+Configurar os produtos como Psicotrópicos, registar a prescrição do médico e utilizar documentos específicos que reportem às autoridades.
+
+**Como proceder**  
+1. Na ficha do produto, definir o campo Categoria Terapêutica para Psicotrópico e activar qualquer opção de controlo adicional (ex.: Lote obrigatório).
+2. Ao criar uma encomenda de venda, exigir o campo Nº de Prescrição ou documento legal equivalente.
+3. Inserir as linhas do produto psicotrópico, quantidade e preço conforme regulamentado.
+4. Registar a encomenda e emitir a fatura; o sistema gera um relatório adicional para comunicação às autoridades de saúde.
+5. Arquivar cópia da prescrição e manter registo por período legal obrigatório.
+
+**Validação final**  
+A venda do psicotrópico é registada com os documentos legais necessários e comunicada às autoridades.
+
+**Notas**  
+- Consultar a legislação nacional sobre venda de psicotrópicos; alguns produtos exigem quotas e notificações prévias.
+- As penalidades por incumprimento são elevadas; documente e aprove todos os passos.
+
+## BC-KB-212 — Como emito uma declaração de antibióticos para exportação?
+**Categoria:** Vendas / Exportação  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+A exportação de antibióticos para países fora da UE exige um certificado ou declaração confirmando que o produto cumpre normas e que é destinado à exportação.
+
+**Diagnóstico**  
+Sem uma declaração de antibióticos, a carga pode ser retida na alfândega ou recusada pelas autoridades do país de destino.
+
+**Causa provável**  
+Desconhecimento do formulário a utilizar ou dos campos necessários para a declaração.
+
+**Solução**  
+Gerar a declaração de antibióticos através de um modelo oficial e preencher os dados do produto, lote, quantidades e destino.
+
+**Como proceder**  
+1. Pesquisar pelo relatório Declaração de Antibióticos no Business Central (ou aceder a documentos externos fornecidos pela autoridade sanitária).
+2. Introduzir os dados da exportação: Cliente, País de Destino, Data de Expedição.
+3. Seleccionar as linhas de produtos antibióticos, indicando Nº Lote, Quantidade e Data de Fabrico.
+4. Gerar o relatório/declaração e imprimir.
+5. Validar a declaração com o responsável técnico (farmacêutico) e assinar.
+6. Enviar a declaração juntamente com a documentação de exportação.
+
+**Validação final**  
+A declaração de antibióticos é emitida, assinada e entregue às autoridades aduaneiras.
+
+**Notas**  
+- Confirme os requisitos específicos do país de destino, pois podem variar.
+- Mantenha um arquivo das declarações emitidas para auditorias.
+
+## BC-KB-213 — Como anulo uma fatura de venda através de nota de crédito interna?
+**Categoria:** Vendas / Faturas Registadas  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Uma fatura de venda precisa ser anulada por completo devido a erro ou devolução total de produtos.
+
+**Diagnóstico**  
+A fatura está registada e já foi comunicada; é necessário emitir uma nota de crédito interna para anular a dívida do cliente.
+
+**Causa provável**  
+Erro na fatura, devolução total da mercadoria ou cancelamento do contrato de venda.
+
+**Solução**  
+Gerar uma nota de crédito de venda com referência à fatura original e aplicar aos movimentos do cliente.
+
+**Como proceder**  
+1. Aceder à lista Faturas de Venda Registadas e seleccionar a fatura a anular.
+2. Clicar em Criar Nota de Crédito (ou Anular), confirmando que deseja anular a fatura.
+3. O sistema abre uma nota de crédito com as linhas e montantes da fatura original.
+4. Verificar as linhas, ajustar se necessário (por exemplo, quantidades devolvidas).
+5. Registar a nota de crédito; o sistema emite o documento e actualiza os saldos.
+6. Aplicar a nota de crédito à fatura original nos movimentos de clientes para fechar a dívida.
+
+**Validação final**  
+A fatura original fica saldada e os relatórios mostram a nota de crédito correspondente.
+
+**Notas**  
+- A anulação completa exige que todos os produtos sejam devolvidos; caso contrário, emita nota de crédito parcial.
+- Verifique as obrigações fiscais de comunicação da nota de crédito.
+
+## BC-KB-214 — Como anulo uma nota de crédito de venda através de fatura interna?
+**Categoria:** Vendas / Faturas Registadas  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Uma nota de crédito emitida anteriormente estava errada e precisa ser anulada, emitindo-se uma fatura para restabelecer a venda original.
+
+**Diagnóstico**  
+O cliente devolveu a mercadoria parcialmente ou foi emitida uma nota de crédito indevida; é necessário restituir a dívida.
+
+**Causa provável**  
+Erro no valor ou na quantidade da nota de crédito ou reversão de um cancelamento.
+
+**Solução**  
+Emitir uma nova fatura com os itens correctos e aplicar contra a nota de crédito para anular o seu efeito.
+
+**Como proceder**  
+1. Abrir a Nota de Crédito de Venda Registada que pretende anular.
+2. Seleccionar Criar Documento de Reversão ou Gerar Fatura Corretiva.
+3. O sistema cria uma nova Encomenda de Venda com as linhas da nota de crédito; ajustar quantidades ou valores para representar a venda correcta.
+4. Registar a encomenda para emitir a fatura.
+5. Aplicar a fatura gerada à nota de crédito nos movimentos de clientes, de forma a anulá-la.
+6. Verificar o saldo do cliente após a operação.
+
+**Validação final**  
+A nota de crédito é anulada e substituída por uma fatura correcta.
+
+**Notas**  
+- Este processo deve ser usado apenas quando a nota de crédito foi emitida por engano.
+- Garanta que a nova fatura cumpre todos os requisitos fiscais.
+
+## BC-KB-215 — Como fecho encomendas de venda completamente faturadas?
+**Categoria:** Vendas / Encomendas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Encomendas de venda que já tiveram todas as quantidades facturadas permanecem em estado Aberta ou Liberada, causando confusão nos relatórios de carteira de encomendas.
+
+**Diagnóstico**  
+As encomendas não são encerradas automaticamente após a facturação, pelo que permanecem activas até serem fechadas manualmente.
+
+**Causa provável**  
+Desconhecimento da função Fechar Encomenda ou negligência em encerrar processos concluídos.
+
+**Solução**  
+Utilizar a função Fechar Encomenda para mudar o estado para Fechada quando todas as quantidades estiverem facturadas.
+
+**Como proceder**  
+1. Aceder à Encomenda de Venda que pretende encerrar.
+2. Verificar que a coluna Qtd. Faturada coincide com a Qtd. Encomendada em todas as linhas.
+3. No separador Processo, clicar em Fechar Encomenda.
+4. Confirmar o fecho; o estado passa a Fechada.
+5. A encomenda deixa de aparecer nas listas de pendentes.
+
+**Validação final**  
+A encomenda desaparece da lista de abertas e figura como Fechada.
+
+**Notas**  
+- O fecho de encomendas ajuda a manter relatórios limpos e a separar encomendas activas das concluídas.
+- Não feche encomendas com quantidades por entregar; use motivos de não fornecimento ou notas de crédito conforme o caso.
+
+## BC-KB-216 — Como funciona a criação automática de encomendas de venda para Alliance?
+**Categoria:** Pricing & Modelo Comercial / Integração  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+É necessário gerar encomendas de venda automaticamente para um parceiro comercial (Alliance) com base em informação de consumo ou stocks.
+
+**Diagnóstico**  
+O processo manual é demorado e suscetível a erros; existe uma integração que permite a criação automática mas não foi configurada.
+
+**Causa provável**  
+Falta de configuração dos parâmetros de integração ou desconhecimento da funcionalidade.
+
+**Solução**  
+Configurar a integração com a Alliance e parametrizar a criação automática de encomendas de venda.
+
+**Como proceder**  
+1. Confirmar que existe um módulo de integração com a Alliance instalado.
+2. Configurar os parâmetros: Código do Cliente Alliance, Frequência de Criação de Encomendas (diária, semanal), Códigos de Produtos elegíveis e Limites de Stock que disparam encomendas.
+3. Activar a opção de Criação Automática de Encomendas na configuração.
+4. A cada período, o sistema verifica o consumo ou stock e gera automaticamente encomendas de venda com base nos parâmetros definidos.
+5. Revisar as encomendas geradas em Encomendas de Venda, validar e, se necessário, ajustar antes de enviar ao cliente.
+
+**Validação final**  
+Encomendas de venda são criadas automaticamente de acordo com os parâmetros de integração.
+
+**Notas**  
+- Monitorize regularmente o processo para garantir que as encomendas refletem as necessidades reais.
+- Ajuste os limites de stock e produtos elegíveis conforme as condições de fornecimento.
+
+## BC-KB-217 — Como configuro margens mínimas?
+**Categoria:** Pricing & Modelo Comercial / Regras  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+É necessário garantir que os preços de venda não ficam abaixo de uma margem de lucro mínima por produto ou família.
+
+**Diagnóstico**  
+Existem propostas e encomendas que podem ser registadas com margens muito baixas, reduzindo a rentabilidade.
+
+**Causa provável**  
+Falta de configuração das regras de margem mínima no modelo comercial.
+
+**Solução**  
+Definir margens mínimas por família de produtos ou categoria no Modelo Comercial para que o sistema valide nas encomendas e propostas.
+
+**Como proceder**  
+1. Aceder à página Modelo Comercial ou Regras de Preços.
+2. Seleccionar a família ou categoria de produto que pretende configurar.
+3. Inserir a Margem Mínima (percentagem) ou valor absoluto por unidade.
+4. Em propostas de venda e encomendas, o sistema calcula a margem obtida comparando o preço de venda com o custo; se a margem calculada for inferior à definida, será apresentada uma mensagem de aviso ou bloqueio.
+5. O utilizador poderá ajustar o preço ou solicitar aprovação excepcional.
+
+**Validação final**  
+As margens mínimas são aplicadas automaticamente e impedem a criação de transacções com margens inferiores.
+
+**Notas**  
+- As margens mínimas podem variar conforme o segmento de cliente ou canal de venda.
+- Avalie periodicamente as margens em função de flutuações de custo.
+
+## BC-KB-218 — Como configuro descontos máximos?
+**Categoria:** Pricing & Modelo Comercial / Regras  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Controlar o desconto máximo que cada vendedor pode conceder nos produtos, evitando erosão de margem.
+
+**Diagnóstico**  
+Os utilizadores aplicam descontos superiores ao limite desejado porque não existe regra de sistema que impeça ou avise.
+
+**Causa provável**  
+Não foram definidas regras de Desconto Máximo por família de produtos ou utilizador.
+
+**Solução**  
+Configurar descontos máximos no modelo comercial e associar limites a perfis de utilizador ou grupos de produtos.
+
+**Como proceder**  
+1. Aceder à página Modelo Comercial ou Regras de Desconto.
+2. Definir para cada família de produtos ou produto individual o campo Desconto Máximo em percentagem.
+3. Associar essas regras aos perfis de vendedores ou grupos de clientes, se aplicável.
+4. Em propostas e encomendas, quando o desconto introduzido exceder o limite, o sistema apresenta aviso ou bloqueio, exigindo aprovação.
+
+**Validação final**  
+Os descontos aplicados nas vendas respeitam os limites configurados e qualquer excedente gera alertas.
+
+**Notas**  
+- Pode definir níveis de desconto por escalão de quantidade ou por campanha.
+- As regras devem ser revistas quando há alterações de estratégia comercial.
+
+## BC-KB-219 — Como configuro majoração máxima?
+**Categoria:** Pricing & Modelo Comercial / Regras  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Além do desconto máximo, é necessário limitar a Majoração (aumento) de preços de venda em determinadas circunstâncias.
+
+**Diagnóstico**  
+Em algumas propostas ou listas, os preços foram majorados em percentagens elevadas, tornando-os pouco competitivos.
+
+**Causa provável**  
+Falta de regra de Majoração Máxima no modelo comercial.
+
+**Solução**  
+Definir uma majoração máxima por produto ou família, impedindo que a majoração exceda a percentagem estabelecida.
+
+**Como proceder**  
+1. No Modelo Comercial, localizar a configuração de Majoração Máxima.
+2. Definir, por produto ou grupo, a percentagem máxima de majoração permitida.
+3. Ao majorar um preço (por exemplo, actualizando listas de preços ou definindo preços de venda especiais), o sistema compara com a majoração máxima; se exceder, emite aviso ou bloqueia a alteração.
+
+**Validação final**  
+As majorações de preços mantêm-se dentro dos limites definidos.
+
+**Notas**  
+- A majoração máxima evita práticas de preço abusivas.
+- Ajuste os limites conforme as margens, mercado e estratégias de posicionamento.
+
+## BC-KB-220 — Como majoro preços de venda?
+**Categoria:** Pricing & Modelo Comercial / Preços  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+É necessário actualizar os preços de venda aplicando uma majoração percentual sobre o custo ou preço base, por exemplo devido a aumento de custos de matéria-prima.
+
+**Diagnóstico**  
+As listas de preços estão desactualizadas e os utilizadores não sabem como aplicar um coeficiente de majoração a múltiplos produtos.
+
+**Causa provável**  
+Desconhecimento da funcionalidade de actualização em lote de preços com base numa percentagem de majoração.
+
+**Solução**  
+Utilizar as funções de Majorar Preços nas listas de preços ou no modelo comercial para actualizar os preços de venda.
+
+**Como proceder**  
+1. Aceder à página Listas de Preços de Venda ou ao Modelo Comercial dependendo do âmbito da majoração.
+2. Seleccionar a lista a actualizar e clicar em Majorar Preços ou Actualizar Preços.
+3. Introduzir a Percentagem de Majoração (por exemplo, 5% = 0,05).
+4. Definir se a majoração se aplica ao preço base, preço actual ou custo (conforme opções).
+5. Executar a operação; o sistema calcula o novo preço para cada linha, respeitando a majoração máxima configurada.
+6. Rever os valores e, se correcto, activar a lista.
+
+**Validação final**  
+Os preços de venda são actualizados segundo a percentagem indicada e estão prontos a ser utilizados.
+
+**Notas**  
+- Antes de majorar, faça uma cópia da lista para preservar histórico.
+- Combine majoração com actualização de custos para garantir margens adequadas.
+
+## BC-KB-221 — Como valido o modelo comercial?
+**Categoria:** Pricing & Modelo Comercial / Validação  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+O Modelo Comercial define margens, descontos e majorações; é necessário validar se todas as regras são coerentes e se os preços propostos cumprem as restrições.
+
+**Diagnóstico**  
+Após alterações no modelo, é importante verificar se nenhuma regra conflita com outra e se os preços estão correctamente calculados.
+
+**Causa provável**  
+Alterações recentes ou falta de validação periódica do modelo comercial.
+
+**Solução**  
+Executar a função de Validação do Modelo Comercial para analisar conflitos e inconsistências.
+
+**Como proceder**  
+1. Aceder à página Modelo Comercial.
+2. Clicar em Validar Modelo ou Verificar Regras.
+3. O sistema executa uma verificação das margens mínimas, descontos máximos e majorações máximas, identificando eventuais conflitos ou valores fora dos limites.
+4. Ler a lista de mensagens e corrigir as regras que provocam erro (por exemplo, desconto máximo superior à margem mínima).
+5. Repetir a validação até não existirem mensagens críticas.
+
+**Validação final**  
+O modelo comercial passa na verificação sem conflitos e pode ser aplicado.
+
+**Notas**  
+- Realize esta validação sempre que alterar margens ou descontos.
+- Utilize a validação para auditar a conformidade de regras definidas por diferentes departamentos.
+
+## BC-KB-222 — Como configuro markups no Business Central?
+**Categoria:** Pricing & Modelo Comercial / Preços  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+A empresa pretende aplicar markups (acréscimos) de preços específicos por produto, família ou canal, de forma automatizada.
+
+**Diagnóstico**  
+Os preços são calculados apenas com base em margens e custos, sem considerar um markup adicional que reflicta custos indirectos ou políticas comerciais.
+
+**Causa provável**  
+Não existe configuração de Markups nas listas de preços ou no modelo comercial.
+
+**Solução**  
+Criar regras de markup no Business Central e associá-las a produtos, grupos ou canais específicos.
+
+**Como proceder**  
+1. Aceder à página Regras de Markup ou configurar campos correspondentes no Modelo Comercial.
+2. Clicar em Novo para criar uma regra de markup.
+3. Definir o Tipo de Markup (percentual ou valor fixo), o Âmbito (produto individual, família, canal de venda) e a Percentagem ou Valor.
+4. Em listas de preços ou propostas, os markups são automaticamente aplicados aos preços base, além das margens e majorações.
+5. Revisar os preços resultantes para assegurar que respeitam margens mínimas e majorações máximas.
+
+**Validação final**  
+Os markups definidos são aplicados aos preços de venda de forma consistente, complementando as outras regras do modelo comercial
