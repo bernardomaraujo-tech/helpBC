@@ -1,3 +1,94 @@
+## BC-KB-223 — Acesso ao BC (Business Central) ?
+
+**Categoria:** Acesso / Business Central
+**Disponível para Utilizador:** Sim
+**Disponível para Agente:** Sim
+
+**Problema**
+O utilizador não consegue aceder ao Business Central.
+
+**Diagnóstico**
+O utilizador não tem o link de acesso ao Business Central ou não sabe qual o ambiente/empresa que deve utilizar.
+
+**Causa provável**
+A situação pode estar relacionada com uma das seguintes causas:
+
+* o utilizador não tem o link correto de acesso;
+* o utilizador está a tentar aceder ao ambiente ou empresa errada;
+* o utilizador ainda não tem uma licença atribuída;
+* o utilizador não tem permissões configuradas para aceder ao Business Central;
+* o acesso ainda não foi validado pela equipa responsável.
+
+**Solução**
+O utilizador deve aceder ao Business Central através do link correspondente à empresa pretendida:
+
+* **Quilaban:**
+  https://businesscentral.dynamics.com/e2c4a3c4-be46-4566-84d4-fd8050c577a3/Production?company=Quilaban
+
+* **Australpharma:**
+  https://businesscentral.dynamics.com/e2c4a3c4-be46-4566-84d4-fd8050c577a3/ProductionAO?company=AUSTRALPHARMA
+
+Se o problema persistir, deve contactar um agente de apoio para validar se existe licença atribuída e se as permissões de acesso estão corretamente configuradas.
+
+**Como proceder**
+
+### 1. Identificar a empresa a que pretende aceder
+
+1. Confirmar qual é a empresa pretendida:
+
+   * Quilaban;
+   * Australpharma.
+2. Usar o link correspondente à empresa correta.
+
+### 2. Aceder ao Business Central
+
+1. Abrir o browser.
+2. Colar o link de acesso correspondente à empresa pretendida.
+3. Iniciar sessão com a conta empresarial Microsoft.
+4. Aguardar o carregamento do Business Central.
+
+### 3. Validar se o acesso foi efetuado com sucesso
+
+1. Confirmar se o Business Central abriu corretamente.
+2. Confirmar se está na empresa correta:
+
+   * Quilaban;
+   * Australpharma.
+3. Confirmar se consegue visualizar o Centro de Perfil ou a página inicial do Business Central.
+
+### 4. Contactar o apoio se o acesso não funcionar
+
+Se não conseguir aceder, contactar um agente de apoio e indicar:
+
+1. Qual o link utilizado.
+2. Qual a empresa a que pretende aceder.
+3. Qual a mensagem de erro apresentada, se existir.
+4. Se o erro ocorre antes ou depois do início de sessão.
+5. Se já conseguiu aceder anteriormente ao Business Central.
+
+O agente deverá validar:
+
+1. Se o utilizador tem licença atribuída.
+2. Se o utilizador existe no Business Central.
+3. Se o utilizador tem permissões configuradas.
+4. Se o acesso está configurado para a empresa correta.
+
+**Validação final**
+O processo está correto quando:
+
+1. O utilizador consegue abrir o Business Central através do link correto.
+2. O utilizador consegue iniciar sessão com a sua conta empresarial.
+3. A empresa correta é apresentada.
+4. O utilizador consegue aceder ao Centro de Perfil ou à página inicial do Business Central.
+
+**Notas**
+
+* Deve ser utilizado o link correspondente à empresa pretendida.
+* Se o utilizador não tiver licença ou permissões, o acesso poderá falhar mesmo usando o link correto.
+* Em caso de erro, deve ser enviada uma captura de ecrã ao agente de apoio para facilitar o diagnóstico.
+* Pode ser consultado o artigo sobre instalação da aplicação do Business Central no PC, caso o utilizador pretenda aceder através da aplicação em vez do browser.
+
+
 ## BC-KB-001 — Criar novo produto
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
@@ -7147,93 +7238,3 @@ Criar regras de markup no Business Central e associá-las a produtos, grupos ou 
 
 **Validação final**  
 Os markups definidos são aplicados aos preços de venda de forma consistente, complementando as outras regras do modelo comercial
-
-## BC-KB-223 — Como acedo ao Business Central?
-
-**Categoria:** Acesso / Business Central
-**Disponível para Utilizador:** Sim
-**Disponível para Agente:** Sim
-
-**Problema**
-O utilizador não consegue aceder ao Business Central.
-
-**Diagnóstico**
-O utilizador não tem o link de acesso ao Business Central ou não sabe qual o ambiente/empresa que deve utilizar.
-
-**Causa provável**
-A situação pode estar relacionada com uma das seguintes causas:
-
-* o utilizador não tem o link correto de acesso;
-* o utilizador está a tentar aceder ao ambiente ou empresa errada;
-* o utilizador ainda não tem uma licença atribuída;
-* o utilizador não tem permissões configuradas para aceder ao Business Central;
-* o acesso ainda não foi validado pela equipa responsável.
-
-**Solução**
-O utilizador deve aceder ao Business Central através do link correspondente à empresa pretendida:
-
-* **Quilaban:**
-  https://businesscentral.dynamics.com/e2c4a3c4-be46-4566-84d4-fd8050c577a3/Production?company=Quilaban
-
-* **Australpharma:**
-  https://businesscentral.dynamics.com/e2c4a3c4-be46-4566-84d4-fd8050c577a3/ProductionAO?company=AUSTRALPHARMA
-
-Se o problema persistir, deve contactar um agente de apoio para validar se existe licença atribuída e se as permissões de acesso estão corretamente configuradas.
-
-**Como proceder**
-
-### 1. Identificar a empresa a que pretende aceder
-
-1. Confirmar qual é a empresa pretendida:
-
-   * Quilaban;
-   * Australpharma.
-2. Usar o link correspondente à empresa correta.
-
-### 2. Aceder ao Business Central
-
-1. Abrir o browser.
-2. Colar o link de acesso correspondente à empresa pretendida.
-3. Iniciar sessão com a conta empresarial Microsoft.
-4. Aguardar o carregamento do Business Central.
-
-### 3. Validar se o acesso foi efetuado com sucesso
-
-1. Confirmar se o Business Central abriu corretamente.
-2. Confirmar se está na empresa correta:
-
-   * Quilaban;
-   * Australpharma.
-3. Confirmar se consegue visualizar o Centro de Perfil ou a página inicial do Business Central.
-
-### 4. Contactar o apoio se o acesso não funcionar
-
-Se não conseguir aceder, contactar um agente de apoio e indicar:
-
-1. Qual o link utilizado.
-2. Qual a empresa a que pretende aceder.
-3. Qual a mensagem de erro apresentada, se existir.
-4. Se o erro ocorre antes ou depois do início de sessão.
-5. Se já conseguiu aceder anteriormente ao Business Central.
-
-O agente deverá validar:
-
-1. Se o utilizador tem licença atribuída.
-2. Se o utilizador existe no Business Central.
-3. Se o utilizador tem permissões configuradas.
-4. Se o acesso está configurado para a empresa correta.
-
-**Validação final**
-O processo está correto quando:
-
-1. O utilizador consegue abrir o Business Central através do link correto.
-2. O utilizador consegue iniciar sessão com a sua conta empresarial.
-3. A empresa correta é apresentada.
-4. O utilizador consegue aceder ao Centro de Perfil ou à página inicial do Business Central.
-
-**Notas**
-
-* Deve ser utilizado o link correspondente à empresa pretendida.
-* Se o utilizador não tiver licença ou permissões, o acesso poderá falhar mesmo usando o link correto.
-* Em caso de erro, deve ser enviada uma captura de ecrã ao agente de apoio para facilitar o diagnóstico.
-* Pode ser consultado o artigo sobre instalação da aplicação do Business Central no PC, caso o utilizador pretenda aceder através da aplicação em vez do browser.
