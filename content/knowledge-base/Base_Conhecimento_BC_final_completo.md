@@ -1,5 +1,4 @@
 ## BC-KB-001 — Acesso ao BC (Business Central) ?
-
 **Categoria:** Acesso / Business Central
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -89,7 +88,133 @@ O processo está correto quando:
 * Pode ser consultado o artigo sobre instalação da aplicação do Business Central no PC, caso o utilizador pretenda aceder através da aplicação em vez do browser.
 
 
-## BC-KB-001 — Criar novo produto
+## BC-KB-002 — Criação e configuração de novos utilizadores no Business Central
+**Categoria:** Utilizadores / Permissões  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim
+
+**Problema**  
+A criação de novos utilizadores no Business Central pode resultar em falhas de acesso, permissões incorretas, ausência de ligação ao Microsoft 365 ou configurações incompletas quando o pedido inicial não inclui toda a informação necessária.
+
+**Diagnóstico**  
+O utilizador pode estar criado no Microsoft 365, mas não sincronizado corretamente no Business Central, ou pode estar sem perfil, permissões, empresa, datas de registo, vendedor/comprador, aprovação, armazém ou mobilidade configurados.
+
+**Causa provável**  
+Falta de recolha prévia de informação funcional e falta de configuração completa após sincronização com o Office 365.
+
+**Solução**  
+Garantir que o pedido inclui licença, perfil funcional e utilizador de referência. Depois, atribuir licença no Microsoft 365, sincronizar o utilizador no Business Central e configurar todas as páginas necessárias.
+
+**Como proceder**
+
+### 1. Recolher informação do pedido
+O pedido de novo utilizador deve incluir:
+1. Tipo de licença a atribuir:
+   - Essentials
+   - Team Member
+2. Nome de um utilizador de referência com configuração semelhante; ou
+3. Descrição detalhada das funções e responsabilidades do novo colaborador.
+
+### 2. Atribuir licença no Microsoft 365
+1. Aceder à página de administração do Microsoft 365.
+2. Localizar o utilizador.
+3. Atribuir a licença do Business Central correspondente à função do colaborador.
+
+### 3. Sincronizar utilizador no Business Central
+1. No Business Central, pesquisar por "Utilizadores".
+2. Aceder à página de utilizadores.
+3. Ir a "Base" → "Atualizar utilizador a partir do Office 365".
+4. Clicar em "Seguinte".
+5. Rever as alterações apresentadas.
+6. Aceitar a atualização.
+
+### 4. Validar a página "Utilizador"
+1. Confirmar que o utilizador aparece na lista.
+2. Verificar se a licença está correta.
+3. Confirmar se os grupos de permissões base foram atribuídos corretamente.
+
+### 5. Configurar "Configurações Utilizador"
+1. Definir o perfil/função do utilizador.
+2. Definir idioma e região.
+3. Definir a empresa a que o utilizador terá acesso.
+
+### 6. Configurar "Configuração Utilizador"
+1. Definir datas de registo permitidas.
+2. Preencher o código de comprador/vendedor, quando aplicável:
+   - Compradores: usar apenas sigla do nome, por exemplo "AM".
+   - Vendedores: usar prefixo "GC-" + sigla, por exemplo "GC-PO".
+3. Definir o departamento associado.
+
+### 7. Criar dimensão de Gestor Comercial, quando aplicável
+1. Ir a "Dimensões".
+2. Aceder à dimensão "Gestor Comercial".
+3. Abrir "Valores Dimensão".
+4. Criar o novo valor de dimensão conforme o código do vendedor.
+5. Voltar à ficha do vendedor/comprador.
+6. Ir a "Vendedor" → "Dimensões".
+7. Adicionar a nova dimensão de Gestor Comercial.
+
+### 8. Configurar aprovação, quando aplicável
+1. Pesquisar por "Configuração Utilizador Aprovação".
+2. Criar uma linha para o utilizador.
+3. Preencher o "ID Aprovador".
+4. Definir limite de aprovação de vendas e/ou compras, conforme aplicável.
+5. Usar como referência outros utilizadores com funções equivalentes.
+
+### 9. Configurar empregado de armazém, quando aplicável
+1. Pesquisar por "Configuração Empregado Armazém".
+2. Adicionar o utilizador.
+3. Definir as localizações onde pode operar.
+4. Confirmar se tem acesso a recolhas, envios ou outras operações logísticas aplicáveis.
+
+### 10. Configurar acesso à mobilidade, quando aplicável
+1. Aceder à configuração de acesso da mobilidade.
+2. Adicionar o utilizador.
+3. Atribuir funcionalidades e localizações relevantes.
+
+**Validação final**
+O utilizador consegue aceder ao Business Central, entra na empresa correta, tem o perfil adequado e consegue executar as funções esperadas sem erros de permissão ou configuração.
+
+**Notas**
+Sempre que possível, usar um utilizador de referência com funções equivalentes. Isto reduz o risco de falhas de permissões e configurações esquecidas.
+
+
+## BC-KB-003 — Eliminação de e-mails automáticos enviados para utilizadores inativos
+**Categoria:** Utilizadores / Grupos de Tarefas  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Continuam a ser enviados e-mails automáticos do Business Central para colegas que já não trabalham na empresa.
+
+**Diagnóstico**  
+Os endereços de e-mail pertencem a utilizadores ainda associados a Grupos de Tarefas de Utilizador.
+
+**Causa provável**  
+Os utilizadores foram desativados ou deixaram a empresa, mas não foram removidos dos grupos de tarefas que disparam notificações automáticas.
+
+**Solução**  
+Rever os Grupos de Tarefas de Utilizador e remover os utilizadores inativos.
+
+**Como proceder**
+1. No Business Central, pesquisar por "Grupos Tarefas Utilizador".
+2. Abrir a lista de grupos existentes.
+3. Rever os grupos onde possam existir utilizadores inativos.
+4. Dar especial atenção aos grupos das empresas internacionais, por exemplo grupos com "export" no nome.
+5. Abrir cada grupo relevante.
+6. Verificar a lista de utilizadores associados.
+7. Selecionar o utilizador inativo.
+8. Clicar em "Eliminar Linha".
+9. Repetir a validação em todos os grupos aplicáveis.
+
+**Validação final**
+Os utilizadores inativos deixam de constar nos Grupos de Tarefas de Utilizador e os e-mails automáticos deixam de ser enviados para esses endereços.
+
+**Notas**
+Sempre que um colaborador sai da empresa, deve ser validado se continua associado a grupos de tarefas, aprovações ou notificações automáticas.
+
+
+## BC-KB-004 — Criar novo produto
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -181,7 +306,8 @@ O processo está correto quando:
 - Se existirem campos obrigatórios em falta, o sistema poderá impedir o envio do pedido de aprovação.
 - Apenas o utilizador que enviou o pedido e/ou os aprovadores conseguem acompanhar determinados detalhes do estado da aprovação.
 
-## BC-KB-002 — Verificar estado de criação de produtos
+
+## BC-KB-005 — Verificar estado de criação de produtos
 **Categoria:** Produtos
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -209,7 +335,8 @@ A lista mostra apenas os produtos cujo estado de workflow é "Em Progresso".
 **Notas**
 Útil para acompanhar pedidos de aprovação pendentes e evitar duplicação de produtos.
 
-## BC-KB-003 — Aprovação de novos produtos
+
+## BC-KB-006 — Aprovação de novos produtos
 **Categoria:** Produtos
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -238,7 +365,8 @@ O estado do produto muda para aprovado e já é possível utilizá-lo em documen
 **Notas**
 Confirme sempre que todos os campos obrigatórios estão preenchidos antes de enviar o pedido. Atenção, só quem solicita o pedido de aprovação e ou os elementos aprovadores é que conseguem ver o estado da aprovação.
 
-## BC-KB-004 — Criar produto a partir do catálogo
+
+## BC-KB-007 — Criar produto a partir do catálogo
 **Categoria:** Produtos
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -268,7 +396,8 @@ O produto é criado com base na informação do catálogo e surge como bloqueado
 **Notas**
 A criação a partir do catálogo evita duplicar dados e assegura consistência dos dados.
 
-## BC-KB-005 — Adicionar atributos ao produto
+
+## BC-KB-008 — Adicionar atributos ao produto
 **Categoria:** Produtos
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -297,7 +426,8 @@ Os atributos são visíveis na ficha e podem ser usados em pesquisas e análises
 **Notas**
 Os atributos permitem filtrar produtos e apresentar informação adicional em propostas ou relatórios.
 
-## BC-KB-006 — Filtrar produtos por atributos
+
+## BC-KB-009 — Filtrar produtos por atributos
 **Categoria:** Produtos
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -326,7 +456,8 @@ A lista apresenta unicamente os produtos que correspondem aos atributos selecion
 **Notas**
 É possível combinar vários atributos para refinar a pesquisa.
 
-## BC-KB-007 — Importar Dicionário ANF
+
+## BC-KB-010 — Importar Dicionário ANF
 **Categoria:** Produtos
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -355,7 +486,8 @@ Os dados importados ficam visíveis na ficha de produto e na área eANF Dico.
 **Notas**
 Certifique-se de que o ficheiro a importar está no formato correto fornecido pela ANF.
 
-## BC-KB-008 — Importar dados PVA, PIC, PMA, PVFD, PVAD
+
+## BC-KB-011 — Importar dados PVA, PIC, PMA, PVFD, PVAD
 **Categoria:** Produtos
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -384,7 +516,8 @@ Os campos de preços e margens são atualizados na ficha de produto.
 **Notas**
 Mantenha estes ficheiros atualizados para garantir preços corretos nas propostas.
 
-## BC-KB-009 — Criar novo cliente
+
+## BC-KB-012 — Criar novo cliente
 **Categoria:** Clientes
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -412,7 +545,8 @@ O cliente aparece na lista de clientes e o pedido de aprovação é criado.
 **Notas**
 Garanta que todos os campos obrigatórios estão preenchidos antes de enviar a aprovação.
 
-## BC-KB-010 — Verificar estado de criação de clientes
+
+## BC-KB-013 — Verificar estado de criação de clientes
 **Categoria:** Clientes
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -440,7 +574,8 @@ São listados apenas os clientes em processo de aprovação.
 **Notas**
 Útil para controlar pedidos de aprovação pendentes e assegurar acompanhamento.
 
-## BC-KB-011 — Aprovação de novos clientes
+
+## BC-KB-014 — Aprovação de novos clientes
 **Categoria:** Clientes
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -469,7 +604,8 @@ O cliente torna-se ativo após a aprovação e pode ser utilizado nas operaçõe
 **Notas**
 Verifique que os campos obrigatórios estão preenchidos no grupo de fluxo de aprovação correspondente.
 
-## BC-KB-012 — Configurar diferentes endereços de envio
+
+## BC-KB-015 — Configurar diferentes endereços de envio
 **Categoria:** Clientes
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -498,7 +634,8 @@ Os novos endereços ficam disponíveis para seleção em documentos de venda e l
 **Notas**
 É possível definir um endereço predefinido ou selecionar diferentes moradas conforme o tipo de documento.
 
-## BC-KB-013 — Criar novos contactos para o cliente
+
+## BC-KB-016 — Criar novos contactos para o cliente
 **Categoria:** Clientes
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -526,7 +663,8 @@ Os contactos ficam associados ao cliente e são visíveis na lista de contactos.
 **Notas**
 Os contactos podem ser editados ou eliminados através da opção de menu (três pontos) na lista de contactos.
 
-## BC-KB-014 — Criar novo fornecedor
+
+## BC-KB-017 — Criar novo fornecedor
 **Categoria:** Fornecedores
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -555,7 +693,8 @@ O fornecedor surge na lista e o pedido de aprovação é registado.
 **Notas**
 Assegure-se de que todas as informações estão corretas antes de enviar para aprovação.
 
-## BC-KB-015 — Verificar estado de criação de fornecedores
+
+## BC-KB-018 — Verificar estado de criação de fornecedores
 **Categoria:** Fornecedores
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -583,7 +722,8 @@ A lista apresenta apenas os fornecedores cujo estado de workflow está "Em Progr
 **Notas**
 Permite monitorizar pedidos de aprovação pendentes e evitar atrasos.
 
-## BC-KB-016 — Aprovação de novos fornecedores
+
+## BC-KB-019 — Aprovação de novos fornecedores
 **Categoria:** Fornecedores
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -612,7 +752,8 @@ Após a aprovação, o fornecedor torna-se ativo e pode ser utilizado.
 **Notas**
 Considere configurar um alerta para identificar fornecedores que requerem aprovação pré-encomenda.
 
-## BC-KB-017 — Criar nova oportunidade
+
+## BC-KB-020 — Criar nova oportunidade
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -640,7 +781,8 @@ A oportunidade fica registada e visível na lista.
 **Notas**
 As oportunidades podem representar concursos, ajustes diretos ou propostas simples.
 
-## BC-KB-018 — Caracterizar a oportunidade
+
+## BC-KB-021 — Caracterizar a oportunidade
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -670,7 +812,8 @@ A ficha da oportunidade contém todos os campos obrigatórios preenchidos.
 **Notas**
 Podem ser adicionados anexos, ligações e notas para documentar requisitos ou informações adicionais.
 
-## BC-KB-019 — Identificar requisitos de concurso
+
+## BC-KB-022 — Identificar requisitos de concurso
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -700,7 +843,8 @@ Todos os requisitos do concurso estão registados e prontos para constar na prop
 **Notas**
 Ignorar este passo se a oportunidade não for um concurso.
 
-## BC-KB-020 — Gerir o ciclo de vendas da oportunidade
+
+## BC-KB-023 — Gerir o ciclo de vendas da oportunidade
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -729,7 +873,8 @@ O estado da oportunidade reflete a etapa atual e as tarefas geradas são executa
 **Notas**
 O ciclo de vendas define as tarefas e responsabilidades associadas à oportunidade.
 
-## BC-KB-021 — Aceder à lista de ações a efetuar
+
+## BC-KB-024 — Aceder à lista de ações a efetuar
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -757,7 +902,8 @@ As listas mostram as ações pendentes e o respetivo responsável.
 **Notas**
 Consultar regularmente para garantir que as tarefas são cumpridas dentro dos prazos.
 
-## BC-KB-022 — Associar proposta de venda à oportunidade
+
+## BC-KB-025 — Associar proposta de venda à oportunidade
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -785,7 +931,8 @@ A proposta de venda aparece associada à oportunidade com a informação correta
 **Notas**
 Após associar, é possível ajustar linhas de produto ou condições antes de enviar ao cliente.
 
-## BC-KB-023 — Retirar associação da proposta de venda
+
+## BC-KB-026 — Retirar associação da proposta de venda
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -813,7 +960,8 @@ A nova proposta de venda está correta e associada à oportunidade.
 **Notas**
 Se preferir, pode eliminar completamente a proposta de venda e recriá-la do zero.
 
-## BC-KB-024 — Eliminar uma proposta de venda
+
+## BC-KB-027 — Eliminar uma proposta de venda
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -841,7 +989,8 @@ A proposta de venda é removida e a associação com a oportunidade desaparece a
 **Notas**
 Depois de eliminada, é necessário criar uma nova proposta se o cliente ainda estiver interessado.
 
-## BC-KB-025 — Adicionar comentários de produto à proposta de venda
+
+## BC-KB-028 — Adicionar comentários de produto à proposta de venda
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -870,7 +1019,8 @@ Os comentários aparecem na impressão da proposta de venda.
 **Notas**
 Utilize comentários para especificações técnicas, condições especiais ou qualquer informação adicional relevante.
 
-## BC-KB-026 — Imprimir uma proposta de venda para concurso
+
+## BC-KB-029 — Imprimir uma proposta de venda para concurso
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -899,7 +1049,8 @@ Usar a opção de impressão/ envio apropriada na proposta de venda.
 **Notas**
 Verifique se os anexos e requisitos do concurso estão completos antes de imprimir.
 
-## BC-KB-027 — Solicitar envio de amostras
+
+## BC-KB-030 — Solicitar envio de amostras
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -929,7 +1080,8 @@ O pedido de amostras está liberto e pronto para expedição pela logística.
 **Notas**
 Certifique-se de que as quantidades e os códigos de produto estão corretos no pedido.
 
-## BC-KB-028 — Associar informação da concorrência
+
+## BC-KB-031 — Associar informação da concorrência
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -957,7 +1109,8 @@ A ficha da oportunidade contém as linhas de concorrência preenchidas.
 **Notas**
 Pode colar dados a partir de uma folha Excel para facilitar a inserção massiva.
 
-## BC-KB-029 — Fechar uma oportunidade
+
+## BC-KB-032 — Fechar uma oportunidade
 **Categoria:** Oportunidades
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -986,7 +1139,8 @@ A oportunidade fica com estado encerrado e deixa de aparecer na lista de oportun
 **Notas**
 Pode criar códigos de fecho personalizados para melhor análise de motivos de perda ou ganho.
 
-## BC-KB-030 — Aceder à folha de requisição
+
+## BC-KB-033 — Aceder à folha de requisição
 **Categoria:** Compras
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -1015,7 +1169,8 @@ A folha correta está aberta e pronta para receber sugestões de compra.
 **Notas**
 Uma configuração adequada evita conflitos entre utilizadores ao gerar sugestões.
 
-## BC-KB-031 — Sugerir requisição de produtos
+
+## BC-KB-034 — Sugerir requisição de produtos
 **Categoria:** Compras
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -1043,7 +1198,8 @@ As linhas de sugestão são geradas na folha de requisição.
 **Notas**
 É importante que o planeamento esteja corretamente configurado nas fichas de produto antes de gerar as sugestões.
 
-## BC-KB-032 — Definir parâmetros da sugestão na folha de requisição
+
+## BC-KB-035 — Definir parâmetros da sugestão na folha de requisição
 **Categoria:** Compras
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -1073,7 +1229,8 @@ A sugestão gerada reflete corretamente os parâmetros definidos e as necessidad
 **Notas**
 Escolher um período adequado é crucial para uma sugestão assertiva, especialmente para produtos com lead time longo.
 
-## BC-KB-033 — Aplicar filtros na sugestão da folha de requisição
+
+## BC-KB-036 — Aplicar filtros na sugestão da folha de requisição
 **Categoria:** Compras
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -1102,7 +1259,8 @@ A folha de requisição apresenta apenas as linhas relativas aos filtros aplicad
 **Notas**
 Os filtros são úteis para análises focadas, como reaprovisionar apenas de determinados fornecedores.
 
-## BC-KB-034 — Editar linhas de sugestão na folha de requisição
+
+## BC-KB-037 — Editar linhas de sugestão na folha de requisição
 **Categoria:** Compras
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -1132,7 +1290,8 @@ As linhas editadas refletem as quantidades e ações corretas antes de executar 
 **Notas**
 Aceitar ou rejeitar a "Mensagem de Ação" define se a linha será processada na encomenda de compra.
 
-## BC-KB-035 — Verificar origem da sugestão
+
+## BC-KB-038 — Verificar origem da sugestão
 **Categoria:** Compras
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -1160,7 +1319,8 @@ A origem da sugestão é identificada e justificada.
 **Notas**
 Conhecer a origem ajuda a tomar decisões mais informadas sobre aceitar ou rejeitar a sugestão.
 
-## BC-KB-036 — Selecionar fornecedores alternativos
+
+## BC-KB-039 — Selecionar fornecedores alternativos
 **Categoria:** Compras
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -1189,7 +1349,8 @@ A linha reflete o fornecedor alternativo escolhido.
 **Notas**
 É importante que os fornecedores alternativos estejam previamente configurados na ficha de produto.
 
-## BC-KB-037 — Executar mensagens de ação
+
+## BC-KB-040 — Executar mensagens de ação
 **Categoria:** Compras
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -1217,7 +1378,8 @@ As encomendas de compra são geradas conforme as linhas e mensagens de ação.
 **Notas**
 Certifique-se de que todas as linhas estão corretas antes de executar, pois o processamento é automático.
 
-## BC-KB-038 — Valor mínimo de compra por encomenda
+
+## BC-KB-041 — Valor mínimo de compra por encomenda
 **Categoria:** Compras
 **Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
@@ -1246,7 +1408,8 @@ A encomenda cumpre o valor mínimo e é libertada sem alertas.
 **Notas**
 Esta configuração ajuda a cumprir acordos comerciais e a minimizar custos logísticos.
 
-## BC-KB-039 — Erro ao registar recibo em diário de cobranças
+
+## BC-KB-042 — Erro ao registar recibo em diário de cobranças
 **Categoria:** Financeiro / Cobranças  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -1279,7 +1442,8 @@ O recibo é registado sem apresentar erro relacionado com a numeração de recib
 **Notas**
 Sempre que este erro surgir no registo de recibos, validar primeiro a configuração do cliente antes de analisar a configuração geral de numeração.
 
-## BC-KB-040 — Suplemento do Excel do Business Central deixou de funcionar
+
+## BC-KB-043 — Suplemento do Excel do Business Central deixou de funcionar
 **Categoria:** Excel / Integrações  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim
@@ -1319,97 +1483,8 @@ O painel do Business Central volta a abrir no Excel e permite atualizar, publica
 **Notas**
 Caso o problema seja apenas de autenticação, pode ser suficiente terminar sessão e iniciar sessão novamente no painel do suplemento.
 
-## BC-KB-041 — Criação e configuração de novos utilizadores no Business Central
-**Categoria:** Utilizadores / Permissões  
-**Disponível para Utilizador:** Não  
-**Disponível para Agente:** Sim
 
-**Problema**  
-A criação de novos utilizadores no Business Central pode resultar em falhas de acesso, permissões incorretas, ausência de ligação ao Microsoft 365 ou configurações incompletas quando o pedido inicial não inclui toda a informação necessária.
-
-**Diagnóstico**  
-O utilizador pode estar criado no Microsoft 365, mas não sincronizado corretamente no Business Central, ou pode estar sem perfil, permissões, empresa, datas de registo, vendedor/comprador, aprovação, armazém ou mobilidade configurados.
-
-**Causa provável**  
-Falta de recolha prévia de informação funcional e falta de configuração completa após sincronização com o Office 365.
-
-**Solução**  
-Garantir que o pedido inclui licença, perfil funcional e utilizador de referência. Depois, atribuir licença no Microsoft 365, sincronizar o utilizador no Business Central e configurar todas as páginas necessárias.
-
-**Como proceder**
-
-### 1. Recolher informação do pedido
-O pedido de novo utilizador deve incluir:
-1. Tipo de licença a atribuir:
-   - Essentials
-   - Team Member
-2. Nome de um utilizador de referência com configuração semelhante; ou
-3. Descrição detalhada das funções e responsabilidades do novo colaborador.
-
-### 2. Atribuir licença no Microsoft 365
-1. Aceder à página de administração do Microsoft 365.
-2. Localizar o utilizador.
-3. Atribuir a licença do Business Central correspondente à função do colaborador.
-
-### 3. Sincronizar utilizador no Business Central
-1. No Business Central, pesquisar por "Utilizadores".
-2. Aceder à página de utilizadores.
-3. Ir a "Base" → "Atualizar utilizador a partir do Office 365".
-4. Clicar em "Seguinte".
-5. Rever as alterações apresentadas.
-6. Aceitar a atualização.
-
-### 4. Validar a página "Utilizador"
-1. Confirmar que o utilizador aparece na lista.
-2. Verificar se a licença está correta.
-3. Confirmar se os grupos de permissões base foram atribuídos corretamente.
-
-### 5. Configurar "Configurações Utilizador"
-1. Definir o perfil/função do utilizador.
-2. Definir idioma e região.
-3. Definir a empresa a que o utilizador terá acesso.
-
-### 6. Configurar "Configuração Utilizador"
-1. Definir datas de registo permitidas.
-2. Preencher o código de comprador/vendedor, quando aplicável:
-   - Compradores: usar apenas sigla do nome, por exemplo "AM".
-   - Vendedores: usar prefixo "GC-" + sigla, por exemplo "GC-PO".
-3. Definir o departamento associado.
-
-### 7. Criar dimensão de Gestor Comercial, quando aplicável
-1. Ir a "Dimensões".
-2. Aceder à dimensão "Gestor Comercial".
-3. Abrir "Valores Dimensão".
-4. Criar o novo valor de dimensão conforme o código do vendedor.
-5. Voltar à ficha do vendedor/comprador.
-6. Ir a "Vendedor" → "Dimensões".
-7. Adicionar a nova dimensão de Gestor Comercial.
-
-### 8. Configurar aprovação, quando aplicável
-1. Pesquisar por "Configuração Utilizador Aprovação".
-2. Criar uma linha para o utilizador.
-3. Preencher o "ID Aprovador".
-4. Definir limite de aprovação de vendas e/ou compras, conforme aplicável.
-5. Usar como referência outros utilizadores com funções equivalentes.
-
-### 9. Configurar empregado de armazém, quando aplicável
-1. Pesquisar por "Configuração Empregado Armazém".
-2. Adicionar o utilizador.
-3. Definir as localizações onde pode operar.
-4. Confirmar se tem acesso a recolhas, envios ou outras operações logísticas aplicáveis.
-
-### 10. Configurar acesso à mobilidade, quando aplicável
-1. Aceder à configuração de acesso da mobilidade.
-2. Adicionar o utilizador.
-3. Atribuir funcionalidades e localizações relevantes.
-
-**Validação final**
-O utilizador consegue aceder ao Business Central, entra na empresa correta, tem o perfil adequado e consegue executar as funções esperadas sem erros de permissão ou configuração.
-
-**Notas**
-Sempre que possível, usar um utilizador de referência com funções equivalentes. Isto reduz o risco de falhas de permissões e configurações esquecidas.
-
-## BC-KB-042 — Erro nas etiquetas de envio por código postal não reconhecido na delegação
+## BC-KB-044 — Erro nas etiquetas de envio por código postal não reconhecido na delegação
 **Categoria:** Logística Externa / Parcel  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -1449,7 +1524,8 @@ A etiqueta é gerada corretamente e a delegação é associada sem erro.
 **Notas**
 Em caso de dúvida sobre a delegação correta, validar o código postal junto das Operações ou com o responsável de Logística Externa.
 
-## BC-KB-043 — Erro na aprovação de encomenda por cliente sem gestor comercial para produtos de Diagnóstico
+
+## BC-KB-045 — Erro na aprovação de encomenda por cliente sem gestor comercial para produtos de Diagnóstico
 **Categoria:** Vendas / Aprovações  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -1485,41 +1561,8 @@ A encomenda é reenviada para aprovação sem erro de gestor indefinido.
 **Notas**
 Quando o erro ocorrer noutros clientes, validar se também têm apenas o filtro Farma-Amb ativo na alocação de gestores comerciais.
 
-## BC-KB-044 — Eliminação de e-mails automáticos enviados para utilizadores inativos
-**Categoria:** Utilizadores / Grupos de Tarefas  
-**Disponível para Utilizador:** Não  
-**Disponível para Agente:** Sim
 
-**Problema**  
-Continuam a ser enviados e-mails automáticos do Business Central para colegas que já não trabalham na empresa.
-
-**Diagnóstico**  
-Os endereços de e-mail pertencem a utilizadores ainda associados a Grupos de Tarefas de Utilizador.
-
-**Causa provável**  
-Os utilizadores foram desativados ou deixaram a empresa, mas não foram removidos dos grupos de tarefas que disparam notificações automáticas.
-
-**Solução**  
-Rever os Grupos de Tarefas de Utilizador e remover os utilizadores inativos.
-
-**Como proceder**
-1. No Business Central, pesquisar por "Grupos Tarefas Utilizador".
-2. Abrir a lista de grupos existentes.
-3. Rever os grupos onde possam existir utilizadores inativos.
-4. Dar especial atenção aos grupos das empresas internacionais, por exemplo grupos com "export" no nome.
-5. Abrir cada grupo relevante.
-6. Verificar a lista de utilizadores associados.
-7. Selecionar o utilizador inativo.
-8. Clicar em "Eliminar Linha".
-9. Repetir a validação em todos os grupos aplicáveis.
-
-**Validação final**
-Os utilizadores inativos deixam de constar nos Grupos de Tarefas de Utilizador e os e-mails automáticos deixam de ser enviados para esses endereços.
-
-**Notas**
-Sempre que um colaborador sai da empresa, deve ser validado se continua associado a grupos de tarefas, aprovações ou notificações automáticas.
-
-## BC-KB-045 — Erro ao enviar pedido de amostras por Código Departamento em falta
+## BC-KB-046 — Erro ao enviar pedido de amostras por Código Departamento em falta
 **Categoria:** Oportunidades / Amostras  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim
@@ -1553,7 +1596,8 @@ O pedido de amostras é enviado sem apresentar erro de Código Departamento.
 **Notas**
 Se existirem várias linhas, validar todas antes de repetir o envio. Basta uma linha sem Código Departamento para o erro persistir.
 
-## BC-KB-046 — Erro ao criar Ordem de Transferência por falta de associação de Gestor Comercial no cliente
+
+## BC-KB-047 — Erro ao criar Ordem de Transferência por falta de associação de Gestor Comercial no cliente
 **Categoria:** Transferências / Dimensões  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -1590,7 +1634,8 @@ A Ordem de Transferência deixa de apresentar erro de valor dimensão "INDEFINID
 **Notas**
 Este erro é recorrente em clientes configurados com gestor comercial genérico. Sempre que um cliente passa a ter gestor atribuído, deve ser atualizada a ficha para evitar erros em documentos futuros.
 
-## BC-KB-047 — Configurar dimensões numa Ordem de Transferência
+
+## BC-KB-048 — Configurar dimensões numa Ordem de Transferência
 **Categoria:** Transferências / Dimensões  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim
@@ -1630,7 +1675,8 @@ A Ordem de Transferência fica com as dimensões corretas no cabeçalho e nas li
 **Notas**
 Sempre que possível, configurar dimensões no cabeçalho para garantir consistência em todas as linhas. Se existirem dimensões manuais nas linhas, validar se não entram em conflito com o cabeçalho.
 
-## BC-KB-048 — Atualização mensal de preços e margens com ficheiro da Glintt
+
+## BC-KB-049 — Atualização mensal de preços e margens com ficheiro da Glintt
 **Categoria:** Produtos / Preços  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -1686,7 +1732,8 @@ O sistema aceita o ficheiro sem erros e os preços/margens ficam atualizados no 
 **Notas**
 Este caso complementa o procedimento genérico de importação PVA/PIC/PMA/PVFD/PVAD, acrescentando a preparação mensal do ficheiro e os requisitos de formato.
 
-## BC-KB-049 — Erro ao registar Fatura Antecipada por percentagem de pré-pagamento em falta
+
+## BC-KB-050 — Erro ao registar Fatura Antecipada por percentagem de pré-pagamento em falta
 **Categoria:** Vendas / Pré-pagamentos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim
@@ -1718,7 +1765,8 @@ A fatura antecipada é registada sem erro de quantidades para faturar.
 **Notas**
 Quando surgir erro de quantidades em faturas antecipadas, confirmar primeiro se o campo "% Pré-pagamento" está preenchido no documento.
 
-## BC-KB-050 — Erro na atualização automática do estado das encomendas Parcel / Order Status
+
+## BC-KB-051 — Erro na atualização automática do estado das encomendas Parcel / Order Status
 **Categoria:** Logística Externa / Parcel  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -1759,7 +1807,8 @@ Os estados das encomendas ficam atualizados e deixam de aparecer como pendentes 
 **Notas**
 A execução manual força a atualização imediata. Algumas tarefas podem processar apenas um período limitado de dias, por exemplo os últimos 10 dias.
 
-## BC-KB-051 — Comunicação de documentos à AGT
+
+## BC-KB-052 — Comunicação de documentos à AGT
 **Categoria:** AGT / Angola  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -1853,7 +1902,8 @@ A ordem correta é crítica:
 
 Recomenda-se criar vistas personalizadas para os filtros usados com maior frequência.
 
-## BC-KB-052 — Erro no plugin Business Central no Excel com msal.js timed_out
+
+## BC-KB-053 — Erro no plugin Business Central no Excel com msal.js timed_out
 **Categoria:** Excel / Integrações  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim
@@ -1891,7 +1941,8 @@ O plugin volta a comunicar corretamente com o Business Central e deixa de aprese
 Antes de reinstalar o suplemento, testar sempre primeiro:
 Terminar Sessão → Iniciar Sessão.
 
-## BC-KB-053 — Erro na Logística Externa após faturação via Mobilidade com guia refletida em vez da fatura
+
+## BC-KB-054 — Erro na Logística Externa após faturação via Mobilidade com guia refletida em vez da fatura
 **Categoria:** Mobilidade / Logística Externa  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -1965,7 +2016,8 @@ Confirmar que:
 **Notas**
 Sempre que, após faturação via Mobilidade, a Logística Externa apresentar a Guia de Remessa de Venda em vez da Fatura, deve ser validado o registo da Mobilidade e a primeira Fatura de Venda gerada no processo.
 
-## BC-KB-054 — Delegar aprovação temporária de encomenda urgente
+
+## BC-KB-055 — Delegar aprovação temporária de encomenda urgente
 **Categoria:** Aprovações / Vendas  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2001,7 +2053,8 @@ A aprovação fica atribuída ao novo utilizador e o processo pode avançar sem 
 Em períodos de ausência planeada, como férias, deve estar definido um substituto na configuração do utilizador de aprovação.  
 Se existirem conflitos, aprovações duplicadas ou funções sobrepostas, considerar passar a tarefa para outro colega direto.
 
-## BC-KB-055 — Erro ao criar lista de preços para instituições com tipo Preços e Descontos
+
+## BC-KB-056 — Erro ao criar lista de preços para instituições com tipo Preços e Descontos
 **Categoria:** Vendas / Preços  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2040,7 +2093,8 @@ A lista de preços fica ativa, com tipo correto, e permite inserir/importar pre�
 **Notas**
 A configuração do tipo da lista deve ser definida antes de inserir linhas. Alterar a estrutura depois de existirem dados pode gerar erros ou inconsistências.
 
-## BC-KB-056 — Erro ao faturar encomenda de venda por Data de Registo desatualizada
+
+## BC-KB-057 — Erro ao faturar encomenda de venda por Data de Registo desatualizada
 **Categoria:** Vendas / Faturação  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2071,7 +2125,8 @@ A encomenda de venda é faturada sem bloqueio relacionado com a Data de Registo.
 **Notas**
 Este erro pode surgir quando o utilizador ficou com uma data de trabalho anterior configurada. Validar sempre a Data de Registo antes de investigar outros bloqueios de faturação.
 
-## BC-KB-057 — Erro ao faturar encomenda de venda por envio direto sem associação à encomenda de compra
+
+## BC-KB-058 — Erro ao faturar encomenda de venda por envio direto sem associação à encomenda de compra
 **Categoria:** Vendas / Envio Direto  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2103,7 +2158,8 @@ A encomenda de venda é faturada sem erro de envio direto por falta de associaç
 **Notas**
 Este erro deve ser tratado linha a linha. Confirmar sempre se a encomenda de compra indicada corresponde ao produto e à linha correta.
 
-## BC-KB-058 — Configurar Team Approval em aprovações de venda
+
+## BC-KB-059 — Configurar Team Approval em aprovações de venda
 **Categoria:** Aprovações / Workflow  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2134,7 +2190,8 @@ Quando um elemento do grupo aprova, o pedido fica aprovado, as restantes aprova�
 **Notas**
 Utilizar a mesma sequência significa que os aprovadores têm igual importância. Basta uma aprovação para concluir o passo do workflow.
 
-## BC-KB-059 — Configurar substituto para delegações de aprovação em caso de ausência
+
+## BC-KB-060 — Configurar substituto para delegações de aprovação em caso de ausência
 **Categoria:** Aprovações / Delegações  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2167,7 +2224,8 @@ A aprovação passa a estar disponível para o substituto e o processo deixa de 
 **Notas**
 A delegação pode ser efetuada pelo utilizador que submete o pedido, pelo aprovador ou pelo gestor de aprovações, conforme permissões existentes.
 
-## BC-KB-060 — Consultar vendas por cliente e produto
+
+## BC-KB-061 — Consultar vendas por cliente e produto
 **Categoria:** Vendas / Análise  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim
@@ -2206,7 +2264,8 @@ Consultar as linhas registadas de faturas e notas de crédito, aplicando filtros
 **Notas**
 Este procedimento é útil para responder a pedidos comerciais sobre histórico de vendas por cliente e produto.
 
-## BC-KB-061 — Erro ao puxar envio na Mobilidade por e-mail em falta no Vendedor/Comprador
+
+## BC-KB-062 — Erro ao puxar envio na Mobilidade por e-mail em falta no Vendedor/Comprador
 **Categoria:** Mobilidade / Vendedores  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2239,7 +2298,8 @@ Os dados dos envios são carregados sem erro de e-mail em falta no Vendedor/Comp
 **Notas**
 Sempre que o erro indicar um código de vendedor específico, validar primeiro a respetiva ficha em Vendedores/Compradores.
 
-## BC-KB-062 — Erro ao criar pedido de amostra por dimensão AREA.GEST.PRODUTO em falta
+
+## BC-KB-063 — Erro ao criar pedido de amostra por dimensão AREA.GEST.PRODUTO em falta
 **Categoria:** Oportunidades / Amostras  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2271,7 +2331,8 @@ O pedido de amostra avança sem erro de dimensão padrão em falta.
 **Notas**
 Este erro está relacionado com configuração base do produto. Deve ser corrigido na ficha do produto e não apenas no documento.
 
-## BC-KB-063 — Produto não incluído na recolha por lotes bloqueados
+
+## BC-KB-064 — Produto não incluído na recolha por lotes bloqueados
 **Categoria:** Logística / Recolhas  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2305,7 +2366,8 @@ Validar disponibilidade, reservas, validade e bloqueio dos lotes. Se todos os lo
 **Notas**
 Não desbloquear lotes sem validação da área responsável. O bloqueio pode estar relacionado com qualidade, validade, reserva operacional ou restrição interna.
 
-## BC-KB-064 — Erro de dimensões por qualificação de fornecedor e produto em encomenda de compra
+
+## BC-KB-065 — Erro de dimensões por qualificação de fornecedor e produto em encomenda de compra
 **Categoria:** Compras / Qualidade  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2342,7 +2404,8 @@ Depois de o fornecedor ficar qualificado para o produto, a receção pode avanç
 **Notas**
 Enquanto a qualificação não for concluída, a encomenda ficará bloqueada à receção.
 
-## BC-KB-065 — Erro de múltiplos de venda por produto com restrição de quantidade
+
+## BC-KB-066 — Erro de múltiplos de venda por produto com restrição de quantidade
 **Categoria:** Vendas / Produtos  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2382,7 +2445,8 @@ O documento é registado com sucesso, respeitando a configuração aprovada para
 **Notas**
 Alterações a múltiplos de venda devem ser sempre validadas com a Gestão de Produto, porque podem impactar condições comerciais, embalagem, logística e faturação.
 
-## BC-KB-066 — Configurar impressora no Business Central com PrintNode
+
+## BC-KB-067 — Configurar impressora no Business Central com PrintNode
 **Categoria:** Impressoras / PrintNode  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2420,7 +2484,8 @@ Os documentos são impressos na impressora correta, para os utilizadores/mapas d
 **Notas**
 Validar sempre com uma impressão real/local. A impressora pode estar corretamente atribuída, mas ainda assim necessitar de afinação de largura e altura.
 
-## BC-KB-067 — Fornecedor bloqueado por aprovação rejeitada
+
+## BC-KB-068 — Fornecedor bloqueado por aprovação rejeitada
 **Categoria:** Fornecedores / Aprovações  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2457,7 +2522,8 @@ Após novo pedido de aprovação aceite, o fornecedor fica desbloqueado e passa 
 **Notas**
 Todos os novos fornecedores necessitam de aprovação concluída para estarem desbloqueados. Aprovações rejeitadas mantêm o fornecedor bloqueado.
 
-## BC-KB-068 — Erro na ficha de produto ao preencher Prazo de Entrega
+
+## BC-KB-069 — Erro na ficha de produto ao preencher Prazo de Entrega
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim
@@ -2495,7 +2561,8 @@ Unidades válidas:
 - U = Anos
 - A, C = Unidade atual baseada na data
 
-## BC-KB-069 — Erro na aprovação de proposta de venda por falta de gestor comercial FARMA-AMB
+
+## BC-KB-070 — Erro na aprovação de proposta de venda por falta de gestor comercial FARMA-AMB
 **Categoria:** Vendas / Aprovações  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2526,7 +2593,8 @@ A proposta de venda é enviada para aprovação sem erro relacionado com gestor 
 **Notas**
 Este caso é semelhante a erros de aprovação por ausência de gestor comercial, mas aplica-se especificamente a propostas de venda com produtos FARMA-AMB.
 
-## BC-KB-070 — Expandir Kit
+
+## BC-KB-071 — Expandir Kit
 **Categoria:** Transferências / Kits  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim
@@ -2559,7 +2627,8 @@ O kit é expandido e os artigos componentes ficam visíveis na Ordem de Transfer
 **Notas**
 Validar sempre as quantidades após a explosão do kit, antes de avançar com o envio ou movimentação.
 
-## BC-KB-071 — Corrigir Nº Documento Externo em fatura de venda já emitida
+
+## BC-KB-072 — Corrigir Nº Documento Externo em fatura de venda já emitida
 **Categoria:** Vendas / Faturas Registadas  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2590,7 +2659,8 @@ A fatura registada passa a apresentar o Nº Documento Externo correto.
 **Notas**
 A atualização será comunicada apenas no envio eletrónico diário, normalmente ao fim da tarde.
 
-## BC-KB-072 — Erro ao criar arrumação de produto em folha de armazém
+
+## BC-KB-073 — Erro ao criar arrumação de produto em folha de armazém
 **Categoria:** Armazém / Arrumação  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim
@@ -2624,7 +2694,8 @@ O documento de arrumação é criado corretamente e o produto deixa de desaparec
 **Notas**
 Validar sempre a posição correta antes de marcar como Fixo e Padrão, para evitar impacto em processos de armazém futuros.
 
-## BC-KB-073 — Como crio um novo produto no Business Central?
+
+## BC-KB-074 — Como crio um novo produto no Business Central?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -2659,7 +2730,8 @@ O produto aparece na lista de produtos, a ficha está preenchida e o pedido de a
 - A aplicação de modelos acelera o preenchimento mas não dispensa a verificação manual dos campos obrigatórios.
 - Acompanhe o estado da aprovação para saber quando o produto fica disponível.
 
-## BC-KB-074 — Que campos obrigatórios devo preencher numa nova Ficha de Produto?
+
+## BC-KB-075 — Que campos obrigatórios devo preencher numa nova Ficha de Produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -2691,7 +2763,8 @@ Todos os campos assinalados na eInfo Obrigatória estão completos, permitindo o
 - Os campos obrigatórios podem variar consoante o tipo de produto e o modelo aplicado.
 - Utilize a função de filtro na lista de produtos para identificar produtos com campos em falta.
 
-## BC-KB-075 — Para que serve a opção “Aplicar Modelo” na criação de um produto?
+
+## BC-KB-076 — Para que serve a opção “Aplicar Modelo” na criação de um produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -2722,7 +2795,8 @@ Os campos da ficha exibem os valores do modelo e o utilizador ajustou eventuais 
 - O modelo é um atalho para preencher campos estruturais; não substitui a validação manual dos dados.
 - Caso não exista um modelo adequado, é preferível deixar a opção em branco e preencher tudo manualmente.
 
-## BC-KB-076 — Como envio um novo produto para aprovação?
+
+## BC-KB-077 — Como envio um novo produto para aprovação?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -2754,7 +2828,8 @@ O pedido surge na lista de solicitações para aprovar e o produto fica bloquead
 - Se surgirem erros de campos em falta, completar esses campos antes de reenviar.
 - Apenas os utilizadores com permissões adequadas podem enviar pedidos de aprovação.
 
-## BC-KB-077 — Onde posso consultar o estado de aprovação de um produto?
+
+## BC-KB-078 — Onde posso consultar o estado de aprovação de um produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -2785,7 +2860,8 @@ O estado de aprovação e o aprovador são visíveis e atualizados em tempo real
 - Pode receber notificações de aprovação por email caso o workflow esteja configurado para tal.
 - Utilize filtros na lista de produtos com estado de workflow "Em Progresso" para visualizar rapidamente os produtos pendentes de aprovação.
 
-## BC-KB-078 — Como vejo quem são os responsáveis pela aprovação de um produto?
+
+## BC-KB-079 — Como vejo quem são os responsáveis pela aprovação de um produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -2815,7 +2891,8 @@ O utilizador conhece o(s) aprovador(es) atribuídos ao pedido de aprovação do 
 - Os aprovadores podem ser definidos por grupo ou por função.
 - Em workflows complexos, podem existir múltiplos aprovadores sequenciais; acompanhe as diferentes etapas.
 
-## BC-KB-079 — Como filtro produtos que ainda estão em criação ou aprovação?
+
+## BC-KB-080 — Como filtro produtos que ainda estão em criação ou aprovação?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -2845,7 +2922,8 @@ A lista exibe exclusivamente produtos cujo estado de workflow é "Em Progresso",
 - Pode criar uma vista personalizada com esse filtro para uso futuro.
 - Utilize filtros adicionais (por exemplo, Data de Criação) para refinar a pesquisa.
 
-## BC-KB-080 — Como aprovo ou rejeito um novo produto?
+
+## BC-KB-081 — Como aprovo ou rejeito um novo produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -2877,7 +2955,8 @@ O pedido desaparece da lista de pendentes e o produto passa para o estado de apr
 - Apenas aprovadores designados podem realizar esta operação.
 - Ao rejeitar, indique sempre o motivo para que o autor possa corrigir a ficha e reenviar.
 
-## BC-KB-081 — Como abro o registo de um produto pendente de aprovação?
+
+## BC-KB-082 — Como abro o registo de um produto pendente de aprovação?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -2908,7 +2987,8 @@ O utilizador consegue aceder à ficha para análise e correção antes da decis�
 - A opção Abrir Registo é útil para avaliar rapidamente o conteúdo do pedido sem navegar pela lista de produtos.
 - Utilize esta funcionalidade para corrigir erros e evitar rejeições desnecessárias.
 
-## BC-KB-082 — Como adiciono comentários a uma aprovação de produto?
+
+## BC-KB-083 — Como adiciono comentários a uma aprovação de produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -2938,7 +3018,8 @@ O comentário é visível na solicitação e pode ser lido pelo aprovador antes 
 - Utilize comentários de forma clara e objetiva; evite informação irrelevante.
 - Pode adicionar mais do que um comentário durante o processo de aprovação.
 
-## BC-KB-083 — Como crio um produto a partir do Catálogo de Produtos?
+
+## BC-KB-084 — Como crio um produto a partir do Catálogo de Produtos?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -2970,7 +3051,8 @@ O produto criado a partir do catálogo aparece na lista de produtos e o pedido d
 - O produto é criado inicialmente com estado Bloqueado; só após aprovação fica ativo.
 - Este processo é útil para itens padronizados que já existem no catálogo corporativo.
 
-## BC-KB-084 — Que informação tenho de preencher na Ficha Produto Catálogo antes de criar o produto?
+
+## BC-KB-085 — Que informação tenho de preencher na Ficha Produto Catálogo antes de criar o produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3001,7 +3083,8 @@ O produto é criado sem erros e encontra se pronto para preenchimento dos restan
 - O campo Nº Fornecedor é essencial para estabelecer a relação de fornecimento inicial.
 - Caso o fornecedor não exista, crie primeiro o fornecedor antes de associá lo ao produto.
 
-## BC-KB-085 — O que acontece ao produto quando é criado a partir do Catálogo de Produtos?
+
+## BC-KB-086 — O que acontece ao produto quando é criado a partir do Catálogo de Produtos?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3032,7 +3115,8 @@ O produto criado a partir do catálogo cumpre os mesmos requisitos de um produto
 - O estado Bloqueado impede a utilização em documentos enquanto a ficha não estiver completa.
 - Use esta funcionalidade para acelerar a criação de produtos recorrentes.
 
-## BC-KB-086 — Como adiciono atributos a uma Ficha de Produto?
+
+## BC-KB-087 — Como adiciono atributos a uma Ficha de Produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3063,7 +3147,8 @@ Os atributos e os seus valores aparecem listados na ficha e podem ser usados em 
 - Os atributos têm de estar previamente definidos a nível de empresa antes de serem atribuídos.
 - Podem ser utilizados para segmentar produtos em relatórios e listas.
 
-## BC-KB-087 — Para que servem os atributos de produto?
+
+## BC-KB-088 — Para que servem os atributos de produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3093,7 +3178,8 @@ Os atributos estão definidos e são visíveis nas listagens, permitindo filtrar
 - Os atributos também podem ser usados para gerar etiquetas ou documentos personalizados.
 - Mantenha a lista de atributos organizada e consistente para evitar redundâncias.
 
-## BC-KB-088 — Onde posso consultar os atributos associados a um produto?
+
+## BC-KB-089 — Onde posso consultar os atributos associados a um produto?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3124,7 +3210,8 @@ A lista de atributos e valores do produto é apresentada corretamente.
 - Pode exportar a lista de atributos para Excel se necessitar de partilhar ou analisar externamente.
 - Apenas atributos previamente definidos podem ser adicionados ou editados.
 
-## BC-KB-089 — Como filtro a lista de produtos por atributos?
+
+## BC-KB-090 — Como filtro a lista de produtos por atributos?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3155,7 +3242,8 @@ A lista exibe unicamente os produtos que correspondem aos atributos escolhidos
 - Criar vistas com filtros de atributos facilita pesquisas futuras.
 - Filtros combinados (atributos + campos tradicionais) proporcionam maior precisão.
 
-## BC-KB-090 — Como limpo um filtro de atributos aplicado à lista de produtos?
+
+## BC-KB-091 — Como limpo um filtro de atributos aplicado à lista de produtos?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3185,7 +3273,8 @@ A lista de produtos deixa de ter filtros e apresenta todos os registos.
 - Pode alternar rapidamente entre vistas filtradas e não filtradas através de favoritos.
 - Limpar os filtros garante que novos produtos não são escondidos.
 
-## BC-KB-091 — Que atributos de produto são usados em oportunidades e propostas?
+
+## BC-KB-092 — Que atributos de produto são usados em oportunidades e propostas?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3215,7 +3304,8 @@ Os produtos selecionados na proposta correspondem às características solicitad
 - Os atributos são particularmente úteis em oportunidades complexas com muitos requisitos técnicos.
 - Garanta que todos os produtos têm atributos atualizados para que os filtros sejam eficazes.
 
-## BC-KB-092 — Como importo o Dicionário ANF?
+
+## BC-KB-093 — Como importo o Dicionário ANF?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -3247,7 +3337,8 @@ As substâncias e grupos ANF são atualizados e disponíveis para utilização e
 - Esta operação deve ser executada por um administrador ou utilizador com permissões de importação.
 - Mantenha um backup antes de realizar importações massivas.
 
-## BC-KB-093 — Onde são atualizados os dados importados do Dicionário ANF?
+
+## BC-KB-094 — Onde são atualizados os dados importados do Dicionário ANF?
 **Categoria:** Produtos  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -3277,7 +3368,8 @@ Os campos de substância e grupo terapêutico nas fichas de produto refletem as 
 - Caso algum dado não tenha sido importado, consulte o log de importação para identificar erros.
 - A atualização pode afetar relatórios regulatórios; confirme se estão a utilizar a informação correta.
 
-## BC-KB-094 — Como importo dados de PVA, PIC, PMA, PVFD e PVAD?
+
+## BC-KB-095 — Como importo dados de PVA, PIC, PMA, PVFD e PVAD?
 **Categoria:** Produtos / Preços  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -3310,7 +3402,8 @@ As tabelas de PVA, PIC, PMA, PVFD e PVAD estão atualizadas e os preços reflete
 - As importações devem ser realizadas em ambiente de testes antes de passar a produção.
 - Mantenha os ficheiros de importação como registo e para efeitos de auditoria.
 
-## BC-KB-095 — Onde posso consultar a informação de PVA, PIC, PMA, PVFD e PVAD na ficha do produto?
+
+## BC-KB-096 — Onde posso consultar a informação de PVA, PIC, PMA, PVFD e PVAD na ficha do produto?
 **Categoria:** Produtos / Preços  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3341,7 +3434,8 @@ Os valores de PVA, PIC, PMA, PVFD e PVAD apresentados correspondem aos dados imp
 - Os preços podem estar sujeitos a arredondamentos e impostos; confirme se os valores se aplicam ao contexto correto.
 - Utilize relatórios de preços para comparar os diferentes valores entre produtos.
 
-## BC-KB-096 — Como crio um novo cliente?
+
+## BC-KB-097 — Como crio um novo cliente?
 **Categoria:** Clientes  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3373,7 +3467,8 @@ O cliente aparece na lista de clientes com o pedido de aprovação pendente ou a
 - Utilize modelos de cliente para acelerar a criação.
 - Verifique se o NIF e dados de faturação estão corretos para evitar rejeições.
 
-## BC-KB-097 — Que campos obrigatórios devo preencher antes de pedir aprovação de um cliente?
+
+## BC-KB-098 — Que campos obrigatórios devo preencher antes de pedir aprovação de um cliente?
 **Categoria:** Clientes  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3404,7 +3499,8 @@ A ficha exibe todos os campos obrigatórios preenchidos, permitindo o envio do p
 **Notas**
 - Alguns campos (como limite de crédito) podem ser exigidos apenas em certos workflows; confirme com a sua organização.
 
-## BC-KB-098 — Como envio um novo cliente para aprovação?
+
+## BC-KB-099 — Como envio um novo cliente para aprovação?
 **Categoria:** Clientes  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3435,7 +3531,8 @@ O pedido de aprovação é criado e aparece na lista de solicitações para apro
 - Caso a opção não esteja visível, verifique se o workflow está ativo para clientes.
 - Depois de enviado, algumas alterações na ficha podem ficar bloqueadas.
 
-## BC-KB-099 — Onde consulto o estado de aprovação de um cliente?
+
+## BC-KB-100 — Onde consulto o estado de aprovação de um cliente?
 **Categoria:** Clientes  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3465,7 +3562,8 @@ O utilizador identifica com clareza o estado da aprovação e o responsável pel
 - Em workflows multietapa, podem existir vários níveis de aprovação; acompanhe cada etapa na página de solicitações.
 - Utilize notificações automáticas para ser informado quando o cliente for aprovado.
 
-## BC-KB-100 — Como filtro clientes com workflow em progresso?
+
+## BC-KB-101 — Como filtro clientes com workflow em progresso?
 **Categoria:** Clientes  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3495,7 +3593,8 @@ A lista apresenta unicamente os clientes em processo de aprovação, facilitando
 - Pode combinar este filtro com outros (por exemplo, por vendedor) para análises mais específicas.
 - Limpar o filtro após a análise devolve a lista completa.
 
-## BC-KB-101 — Como aprovo ou rejeito um novo cliente?
+
+## BC-KB-102 — Como aprovo ou rejeito um novo cliente?
 **Categoria:** Clientes  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -3527,7 +3626,8 @@ O pedido desaparece da lista de pendentes e o cliente passa a ativo ou rejeitado
 - Apenas utilizadores designados como aprovadores podem realizar esta operação.
 - Registar o motivo da rejeição ajuda o criador a corrigir e reenviar o pedido.
 
-## BC-KB-102 — Como crio diferentes endereços de envio para um cliente?
+
+## BC-KB-103 — Como crio diferentes endereços de envio para um cliente?
 **Categoria:** Clientes  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3558,7 +3658,8 @@ As moradas estão disponíveis para seleção nos documentos de venda e logísti
 - Pode eliminar ou editar moradas de envio a partir da mesma janela.
 - Certifique se de que a morada de envio corresponde ao local de entrega real para evitar devoluções.
 
-## BC-KB-103 — Como crio um novo contacto a partir do Outlook?
+
+## BC-KB-104 — Como crio um novo contacto a partir do Outlook?
 **Categoria:** Clientes / Contactos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3589,7 +3690,8 @@ O novo contacto aparece na lista de contactos no Business Central e está relaci
 - Esta funcionalidade requer que o add in do Business Central esteja configurado no Outlook.
 - Os contactos criados no Outlook podem ser editados posteriormente na ficha de cliente.
 
-## BC-KB-104 — Como crio um contacto a partir da Ficha de Cliente?
+
+## BC-KB-105 — Como crio um contacto a partir da Ficha de Cliente?
 **Categoria:** Clientes / Contactos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3621,7 +3723,8 @@ Os contactos estão listados na ficha do cliente e podem ser utilizados em oport
 - Os contactos criados podem ser editados ou eliminados posteriormente através da lista de contactos.
 - É possível definir um contacto predefinido para faturação ou envio.
 
-## BC-KB-105 — Como edito ou elimino um contacto associado a um cliente?
+
+## BC-KB-106 — Como edito ou elimino um contacto associado a um cliente?
 **Categoria:** Clientes / Contactos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3652,7 +3755,8 @@ As alterações estão refletidas na lista de contactos e o contacto eliminado d
 - A eliminação é permanente; garanta que o contacto não é usado noutros registos antes de o eliminar.
 - Os contactos editados mantêm o histórico de transações associadas ao cliente.
 
-## BC-KB-106 — Como crio um novo fornecedor?
+
+## BC-KB-107 — Como crio um novo fornecedor?
 **Categoria:** Fornecedores  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3682,7 +3786,8 @@ O fornecedor surge na lista de fornecedores com a informação completa e o pedi
 - Utilize a numeração automática para uniformidade.
 - Confirme se o fornecedor já existe para evitar duplicados.
 
-## BC-KB-107 — O número de fornecedor é manual ou automático?
+
+## BC-KB-108 — O número de fornecedor é manual ou automático?
 **Categoria:** Fornecedores  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3711,7 +3816,8 @@ O número do fornecedor é gerado corretamente ou introduzido manualmente confor
 - A numeração automática previne duplicação e garante rastreabilidade.
 - Alterar a série de numeração requer permissões de administrador.
 
-## BC-KB-108 — Que campos obrigatórios devo preencher numa nova Ficha de Fornecedor?
+
+## BC-KB-109 — Que campos obrigatórios devo preencher numa nova Ficha de Fornecedor?
 **Categoria:** Fornecedores  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3743,7 +3849,8 @@ Todos os campos da secção obrigatória estão preenchidos, permitindo o envio 
 - Campos adicionais podem ser obrigatórios consoante o workflow configurado.
 - Revise as informações de banco e envio se forem necessárias para pagamentos e logística.
 
-## BC-KB-109 — Como envio um fornecedor para aprovação?
+
+## BC-KB-110 — Como envio um fornecedor para aprovação?
 **Categoria:** Fornecedores  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3774,7 +3881,8 @@ O pedido de aprovação aparece na lista de solicitações pendentes e o fornece
 - Verifique se o workflow de aprovação está configurado para fornecedores; caso contrário, a opção pode não estar disponível.
 - Após envio, algumas edições podem ficar bloqueadas até à decisão.
 
-## BC-KB-110 — Onde verifico o estado de aprovação de um fornecedor?
+
+## BC-KB-111 — Onde verifico o estado de aprovação de um fornecedor?
 **Categoria:** Fornecedores  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3805,7 +3913,8 @@ O estado da aprovação é conhecido e pode ser acompanhado até à decisão fin
 - Utilize notificações ou alertas para receber informação de novas aprovações.
 - Em workflows multilivelo, acompanhe cada etapa da aprovação separadamente.
 
-## BC-KB-111 — Como filtro fornecedores com workflow em progresso?
+
+## BC-KB-112 — Como filtro fornecedores com workflow em progresso?
 **Categoria:** Fornecedores  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3835,7 +3944,8 @@ A lista apresenta apenas fornecedores cujo estado de workflow está em progresso
 - Pode combinar este filtro com outros (por exemplo, por comprador) para análises específicas.
 - Limpar o filtro volta a apresentar todos os fornecedores.
 
-## BC-KB-112 — Como aprovo ou rejeito um novo fornecedor?
+
+## BC-KB-113 — Como aprovo ou rejeito um novo fornecedor?
 **Categoria:** Fornecedores  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -3866,7 +3976,8 @@ O fornecedor é aprovado e passa a ativo ou é rejeitado e removido do fluxo, co
 - Apenas os utilizadores com permissão de aprovador podem executar esta ação.
 - Indicar as razões da rejeição evita erros recorrentes na criação de fornecedores.
 
-## BC-KB-113 — Como identifico fornecedores que requerem aprovação de Packaging ou Artworks?
+
+## BC-KB-114 — Como identifico fornecedores que requerem aprovação de Packaging ou Artworks?
 **Categoria:** Fornecedores  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -3896,7 +4007,8 @@ Fornecedores identificados requerem aprovação extra, e o processo de aprovaç�
 - Se os campos não existirem, consulte a equipa de sistemas para configurar esta funcionalidade.
 - Este procedimento reduz o risco de erros nos materiais de embalagem e cumprimento de normas.
 
-## BC-KB-114 — Onde configuro a aprovação pré encomenda para fornecedores?
+
+## BC-KB-115 — Onde configuro a aprovação pré encomenda para fornecedores?
 **Categoria:** Fornecedores / Compras  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -3927,7 +4039,8 @@ As encomendas de compra para fornecedores configurados ou valores acima do limia
 - Esta configuração requer permissões de administrador.
 - Ajuste os parâmetros do workflow conforme a política interna da empresa.
 
-## BC-KB-115 — Como consulto as solicitações pendentes para aprovar?
+
+## BC-KB-116 — Como consulto as solicitações pendentes para aprovar?
 **Categoria:** Aprovações  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -3957,7 +4070,8 @@ Todas as solicitações pendentes são visíveis e organizadas, permitindo ao ap
 - É possível adicionar colunas adicionais à vista para facilitar a análise (por exemplo, valor da encomenda).
 - Crie vistas personalizadas para diferentes tipos de aprovações.
 
-## BC-KB-116 — Que opções existem numa linha de aprovação pendente?
+
+## BC-KB-117 — Que opções existem numa linha de aprovação pendente?
 **Categoria:** Aprovações  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -3990,7 +4104,8 @@ O aprovador conhece e utiliza as opções corretamente, conduzindo o pedido ao e
 - Uma vez aprovada ou rejeitada, a solicitação desaparece da lista pendente.
 - Os comentários ficam registados para consulta futura.
 
-## BC-KB-117 — Quando devo usar a opção “Abrir Registo” numa aprovação?
+
+## BC-KB-118 — Quando devo usar a opção “Abrir Registo” numa aprovação?
 **Categoria:** Aprovações  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -4020,7 +4135,8 @@ O aprovador tomou uma decisão informada após analisar o conteúdo completo do 
 - Esta opção é recomendada quando há dúvidas sobre a completude ou exatidão da informação.
 - Evita aprovações erradas que poderiam comprometer processos futuros.
 
-## BC-KB-118 — Como crio uma nova oportunidade?
+
+## BC-KB-119 — Como crio uma nova oportunidade?
 **Categoria:** Oportunidades  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4049,7 +4165,8 @@ A oportunidade fica registada e visível na lista de oportunidades
 - O tipo de oportunidade (concurso, ajuste, proposta) pode ser indicado na ficha mais tarde.
 - É possível associar anexos, ligações e notas após a criação.
 
-## BC-KB-119 — Que informação devo preencher na tab Geral de uma oportunidade?
+
+## BC-KB-120 — Que informação devo preencher na tab Geral de uma oportunidade?
 **Categoria:** Oportunidades  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4082,7 +4199,8 @@ A tab Geral fica completa e a oportunidade pode avançar para as próximas fases
 - Estes campos são obrigatórios para que o workflow de oportunidade funcione corretamente.
 - Pode adicionar mais detalhes (origem, categoria) conforme a configuração.
 
-## BC-KB-120 — Como identifico o contacto associado a uma oportunidade?
+
+## BC-KB-121 — Como identifico o contacto associado a uma oportunidade?
 **Categoria:** Oportunidades  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4112,7 +4230,8 @@ O contacto associado reflete a pessoa certa para acompanhamento da oportunidade.
 - Se o contacto não existir, crie-o previamente na ficha de cliente.
 - O contacto pode ser alterado a qualquer momento, antes de fechar a oportunidade.
 
-## BC-KB-121 — Como defino a prioridade de uma oportunidade?
+
+## BC-KB-122 — Como defino a prioridade de uma oportunidade?
 **Categoria:** Oportunidades  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4141,7 +4260,8 @@ A oportunidade fica marcada com a prioridade adequada, refletindo a urgência do
 - A prioridade pode ser alterada a qualquer momento se a importância se modificar.
 - Algumas organizações podem configurar prioridades personalizadas; verifique com o administrador.
 
-## BC-KB-122 — Como escolho o ciclo de vendas de uma oportunidade?
+
+## BC-KB-123 — Como escolho o ciclo de vendas de uma oportunidade?
 **Categoria:** Oportunidades  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4172,7 +4292,8 @@ O ciclo de vendas está selecionado corretamente e orienta o processo de acompan
 - Pode consultar a descrição de cada ciclo na tabela de ciclos de vendas.
 - A alteração do ciclo após iniciar etapas pode não ser recomendada; verifique com o administrador.
 
-## BC-KB-123 — Como adiciono anexos a uma oportunidade?
+
+## BC-KB-124 — Como adiciono anexos a uma oportunidade?
 **Categoria:** Oportunidades / Documentação  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4204,7 +4325,8 @@ Os anexos aparecem listados na ficha da oportunidade e podem ser abertos ou desc
 - Use nomes claros nos anexos para fácil identificação.
 - O tamanho máximo de ficheiro depende da configuração do Business Central ou do SharePoint.
 
-## BC-KB-124 — Que tipo de anexos devo associar a uma oportunidade de concurso?
+
+## BC-KB-125 — Que tipo de anexos devo associar a uma oportunidade de concurso?
 **Categoria:** Oportunidades / Documentação  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4234,7 +4356,8 @@ Todos os documentos pertinentes estão anexados à oportunidade e servem de base
 - Mantenha a ordem e a nomenclatura dos ficheiros para facilitar a consulta.
 - Verifique se existem anexos obrigatórios específicos do setor (licenças, certificados).
 
-## BC-KB-125 — Como adiciono ligações externas a uma oportunidade?
+
+## BC-KB-126 — Como adiciono ligações externas a uma oportunidade?
 **Categoria:** Oportunidades / Ligações  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4264,7 +4387,8 @@ As ligações externas ficam acessíveis através da ficha da oportunidade e per
 - Verifique regularmente se as ligações ainda são válidas e atualizadas.
 - Pode atribuir permissões no SharePoint para controlar acesso a pastas ligadas.
 
-## BC-KB-126 — Que cuidados devo ter ao associar uma pasta SharePoint a uma oportunidade?
+
+## BC-KB-127 — Que cuidados devo ter ao associar uma pasta SharePoint a uma oportunidade?
 **Categoria:** Oportunidades / Ligações  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4295,7 +4419,8 @@ A pasta está ligada e os utilizadores autorizados conseguem aceder e colaborar 
 - Evite associar a biblioteca raiz do SharePoint; crie uma pasta específica por oportunidade.
 - Documentos sensíveis devem ter permissão restrita.
 
-## BC-KB-127 — Que tipo de notas posso colocar numa oportunidade?
+
+## BC-KB-128 — Que tipo de notas posso colocar numa oportunidade?
 **Categoria:** Oportunidades / Notas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4325,7 +4450,8 @@ As notas ficam visíveis na ficha e servem de histórico para todos os interveni
 - Utilize uma linguagem objetiva e registe apenas informação relevante.
 - As notas não substituem anexos ou campos estruturados; use-as como complemento.
 
-## BC-KB-128 — Como registo requisitos do cliente numa oportunidade?
+
+## BC-KB-129 — Como registo requisitos do cliente numa oportunidade?
 **Categoria:** Oportunidades / Concursos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4355,7 +4481,8 @@ Todos os requisitos estão registados e serão considerados no documento final.
 - Se a oportunidade não for um concurso, estes campos podem ficar em branco.
 - Recolher todos os requisitos antes de iniciar a elaboração da proposta evita atrasos.
 
-## BC-KB-129 — Quando devo preencher os requisitos de concurso?
+
+## BC-KB-130 — Quando devo preencher os requisitos de concurso?
 **Categoria:** Oportunidades / Concursos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4385,7 +4512,8 @@ Os requisitos estão completos antes da elaboração da proposta, evitando omiss
 - Um registo atempado permite planear o ciclo de vendas de forma mais eficiente.
 - Actualize os requisitos se forem recebidos adendos ou esclarecimentos do concurso.
 
-## BC-KB-130 — Que campos devo preencher quando a oportunidade é um concurso?
+
+## BC-KB-131 — Que campos devo preencher quando a oportunidade é um concurso?
 **Categoria:** Oportunidades / Concursos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4416,7 +4544,8 @@ Todos os campos específicos do concurso estão preenchidos, permitindo a geraç
 - Se algum campo não se aplicar, pode deixar em branco, mas confirme se não é obrigatório pelo cliente.
 - Utilize notas para explicar campos não padronizados.
 
-## BC-KB-131 — Como identifico o número do procedimento de concurso?
+
+## BC-KB-132 — Como identifico o número do procedimento de concurso?
 **Categoria:** Oportunidades / Concursos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4445,7 +4574,8 @@ O número do procedimento está corretamente registado na oportunidade e será u
 - Verifique que o número coincide com o indicado nos documentos do cliente para evitar erros.
 - Se houver vários procedimentos, crie oportunidades separadas para cada um.
 
-## BC-KB-132 — Como identifico o título do procedimento que será impresso na proposta?
+
+## BC-KB-133 — Como identifico o título do procedimento que será impresso na proposta?
 **Categoria:** Oportunidades / Concursos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4475,7 +4605,8 @@ O título está registado e aparece corretamente na proposta de venda e document
 - Certifique se de que o título corresponde exatamente ao indicado nos documentos oficiais para evitar impugnações.
 - Pode utilizar notas para incluir versões abreviadas ou traduções, se necessário.
 
-## BC-KB-133 — Como defino a data e hora limite de entrega da proposta?
+
+## BC-KB-134 — Como defino a data e hora limite de entrega da proposta?
 **Categoria:** Oportunidades / Concursos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4505,7 +4636,8 @@ A data e hora limite aparecem preenchidas no separador de requisitos e serão im
 - Verifique sempre as especificações do concurso para não introduzir datas erradas.
 - Ajuste a hora de acordo com o fuso horário do cliente quando aplicável.
 
-## BC-KB-134 — Para que servem os campos de requisitos do concurso?
+
+## BC-KB-135 — Para que servem os campos de requisitos do concurso?
 **Categoria:** Oportunidades / Concursos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4535,7 +4667,8 @@ Os campos de requisitos estão preenchidos e a informação será incluída na p
 - Estes campos são opcionais em oportunidades normais, mas obrigatórios quando especificados no concurso.
 - Informações incorrectas podem invalidar a proposta; valide com a documentação oficial.
 
-## BC-KB-135 — O que é o ciclo de vendas da oportunidade?
+
+## BC-KB-136 — O que é o ciclo de vendas da oportunidade?
 **Categoria:** Oportunidades  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4565,7 +4698,8 @@ O ciclo de vendas está seleccionado e a oportunidade mostra o estado de etapa e
 - Os ciclos podem ser configurados pela administração para reflectir processos internos.
 - Se nenhum ciclo for aplicado, não serão geradas tarefas automáticas.
 
-## BC-KB-136 — Como activo a primeira etapa do ciclo de vendas?
+
+## BC-KB-137 — Como activo a primeira etapa do ciclo de vendas?
 **Categoria:** Oportunidades  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4594,7 +4728,8 @@ A etapa inicial está activa e as tarefas correspondentes são criadas.
 - Este passo só precisa de ser executado uma vez, no início da oportunidade.
 - Se a etapa já estiver activa, a opção fica indisponível.
 
-## BC-KB-137 — O que acontece quando activo a primeira etapa do ciclo de vendas?
+
+## BC-KB-138 — O que acontece quando activo a primeira etapa do ciclo de vendas?
 **Categoria:** Oportunidades  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4623,7 +4758,8 @@ O estado da oportunidade é “Em curso”, e as tarefas geradas podem ser vista
 - As tarefas guiam o utilizador através das actividades necessárias, como contacto com cliente, envio de proposta, etc.
 - A falta de conclusão das tarefas pode bloquear a progressão para etapas seguintes.
 
-## BC-KB-138 — Como passo para a etapa seguinte do ciclo de vendas?
+
+## BC-KB-139 — Como passo para a etapa seguinte do ciclo de vendas?
 **Categoria:** Oportunidades  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4653,7 +4789,8 @@ O ciclo avança para a nova etapa e as tarefas associadas são geradas.
 - Se não aparecer a opção para actualizar, verifique se existem tarefas por concluir.
 - Apenas utilizadores com permissões adequadas podem avançar etapas.
 
-## BC-KB-139 — Como acedo às ações a efetuar de uma oportunidade?
+
+## BC-KB-140 — Como acedo às ações a efetuar de uma oportunidade?
 **Categoria:** Oportunidades  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4682,7 +4819,8 @@ A lista de acções mostra as tarefas activas e concluídas da oportunidade.
 - Use filtros por estado (Por Iniciar, Em Curso, Concluído) para organizar o trabalho.
 - A lista permite abrir cada acção para editar ou concluir.
 
-## BC-KB-140 — Como vejo as minhas ações pendentes no Centro de Perfil?
+
+## BC-KB-141 — Como vejo as minhas ações pendentes no Centro de Perfil?
 **Categoria:** Oportunidades / Gestão de Tarefas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4711,7 +4849,8 @@ O utilizador vê todas as suas acções pendentes num único painel.
 - Pode ordenar por data de vencimento para priorizar tarefas urgentes.
 - As acções da equipa não aparecem aqui; para isso use o separador de equipa.
 
-## BC-KB-141 — Como vejo as ações pendentes da minha equipa?
+
+## BC-KB-142 — Como vejo as ações pendentes da minha equipa?
 **Categoria:** Oportunidades / Gestão de Tarefas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4741,7 +4880,8 @@ O responsável consegue ver e monitorizar as acções pendentes dos membros da s
 - Para visualizar acções da equipa é necessário ter permissões de supervisor ou gestor.
 - Esta visão ajuda a equilibrar cargas de trabalho e a identificar atrasos.
 
-## BC-KB-142 — Qual é a diferença entre tarefas minhas e tarefas de equipa?
+
+## BC-KB-143 — Qual é a diferença entre tarefas minhas e tarefas de equipa?
 **Categoria:** Oportunidades / Gestão de Tarefas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4771,7 +4911,8 @@ As tarefas são filtradas correctamente, distinguindo as que são da sua respons
 - Saber diferenciar permite gerir melhor o tempo e monitorizar a equipa sem confusão.
 - Reatribuir uma acção muda o código e, portanto, altera a lista em que aparece.
 
-## BC-KB-143 — Como configuro equipas no Business Central?
+
+## BC-KB-144 — Como configuro equipas no Business Central?
 **Categoria:** Oportunidades / Configuração  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -4801,7 +4942,8 @@ A equipa fica disponível na lista e pode ser seleccionada em oportunidades e ac
 - A criação e edição de equipas requer permissão de administrador ou de configuração.
 - Actualize as equipas periodicamente para reflectir alterações na organização.
 
-## BC-KB-144 — Como adiciono vendedores a uma equipa?
+
+## BC-KB-145 — Como adiciono vendedores a uma equipa?
 **Categoria:** Oportunidades / Configuração  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -4831,7 +4973,8 @@ Os vendedores aparecem como membros da equipa seleccionada.
 - Se o vendedor não estiver disponível na lista, verifique se está criado como utilizador/vendedor no sistema.
 - Uma equipa pode ter vários vendedores; um vendedor pode pertencer a várias equipas.
 
-## BC-KB-145 — Como removo vendedores de uma equipa?
+
+## BC-KB-146 — Como removo vendedores de uma equipa?
 **Categoria:** Oportunidades / Configuração  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -4861,7 +5004,8 @@ O vendedor deixa de constar na lista de membros da equipa.
 - A remoção não elimina o vendedor do sistema, apenas retira a associação à equipa.
 - Reatribua as tarefas pendentes do vendedor removido, se necessário.
 
-## BC-KB-146 — Como edito uma ação a efetuar?
+
+## BC-KB-147 — Como edito uma ação a efetuar?
 **Categoria:** Oportunidades / Gestão de Tarefas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4891,7 +5035,8 @@ Os campos alterados reflectem a nova informação e a acção aparece actualizad
 - Tenha cuidado ao alterar o código de vendedor; isso transfere a tarefa para outro colaborador.
 - Algumas alterações podem exigir permissões específicas.
 
-## BC-KB-147 — Como altero o responsável de uma ação?
+
+## BC-KB-148 — Como altero o responsável de uma ação?
 **Categoria:** Oportunidades / Gestão de Tarefas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4921,7 +5066,8 @@ A acção passa a aparecer na lista do novo responsável e deixa de constar na l
 - Ao alterar o responsável, as datas e outras definições mantêm-se.
 - Confirme com a pessoa antes de transferir tarefas críticas.
 
-## BC-KB-148 — O que acontece quando altero o código de vendedor de uma ação?
+
+## BC-KB-149 — O que acontece quando altero o código de vendedor de uma ação?
 **Categoria:** Oportunidades / Gestão de Tarefas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4949,7 +5095,8 @@ A reatribuição é visível na lista de acções de ambos os vendedores e a ac�
 - Utilize esta funcionalidade para redistribuir trabalho em períodos de férias ou reestruturação.
 - O histórico de alterações fica registado na ficha da acção.
 
-## BC-KB-149 — Como altero o estado de uma ação para “Em Curso”?
+
+## BC-KB-150 — Como altero o estado de uma ação para “Em Curso”?
 **Categoria:** Oportunidades / Gestão de Tarefas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -4977,7 +5124,8 @@ O estado da acção passa a Em Curso e o centro de perfil reflecte a mudança.
 - O estado Em Curso permite diferenciar tarefas iniciadas das que ainda aguardam início.
 - Este campo pode ser filtrado para priorização.
 
-## BC-KB-150 — Como concluo uma ação?
+
+## BC-KB-151 — Como concluo uma ação?
 **Categoria:** Oportunidades / Gestão de Tarefas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5006,7 +5154,8 @@ A acção deixa de aparecer nas listas de pendentes e passa a constar no histór
 - Concluir atempadamente as acções permite avançar etapas no ciclo de vendas.
 - O registo de interacção ajuda a documentar o que foi feito.
 
-## BC-KB-151 — O que devo fazer se não quiser registar uma nova interação ao concluir uma ação?
+
+## BC-KB-152 — O que devo fazer se não quiser registar uma nova interação ao concluir uma ação?
 **Categoria:** Oportunidades / Gestão de Tarefas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5035,7 +5184,8 @@ A acção fica concluída sem registo de nova interacção.
 - Documente a conclusão em notas se necessário; não é obrigatório abrir uma nova interacção.
 - Esta opção pode não estar disponível em todas as versões; fale com o administrador se tiver dúvidas.
 
-## BC-KB-152 — Como crio manualmente uma nova ação a efetuar?
+
+## BC-KB-153 — Como crio manualmente uma nova ação a efetuar?
 **Categoria:** Oportunidades / Gestão de Tarefas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5064,7 +5214,8 @@ A nova acção fica visível na lista associada à oportunidade.
 - Manualmente pode criar tarefas para follow-up, esclarecimento ou actividades internas.
 - Garanta que a pessoa responsável foi informada da nova tarefa.
 
-## BC-KB-153 — Como atribuo uma ação manual a outro colaborador?
+
+## BC-KB-154 — Como atribuo uma ação manual a outro colaborador?
 **Categoria:** Oportunidades / Gestão de Tarefas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5082,7 +5233,7 @@ O campo Código Vendedor foi preenchido com o utilizador corrente.
 Ao criar a acção, definir o responsável correcto ou editá-la posteriormente.
 
 **Como proceder**  
-1. Ao criar a nova acção (BC-KB-152), definir o Código Vendedor para o colaborador pretendido.
+1. Ao criar a nova acção (BC-KB-153), definir o Código Vendedor para o colaborador pretendido.
 2. Se já estiver criada, abrir a acção na lista.
 3. Alterar o campo Código Vendedor para o responsável pretendido.
 
@@ -5093,7 +5244,8 @@ A acção aparece na lista do colaborador designado.
 - Use a lista de vendedores para seleccionar correctamente.
 - Isto simplifica a distribuição de tarefas sem recorrer a administradores.
 
-## BC-KB-154 — Como identifico o pedido do cliente numa oportunidade?
+
+## BC-KB-155 — Como identifico o pedido do cliente numa oportunidade?
 **Categoria:** Oportunidades  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5122,7 +5274,8 @@ O número de pedido do cliente fica associado à oportunidade e será transferid
 - Esta referência ajuda a identificar rapidamente a transação no lado do cliente.
 - Use o mesmo valor em todos os documentos relacionados com a oportunidade.
 
-## BC-KB-155 — Onde acedo aos produtos solicitados pelo cliente?
+
+## BC-KB-156 — Onde acedo aos produtos solicitados pelo cliente?
 **Categoria:** Oportunidades / Propostas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5143,16 +5296,17 @@ Aceder ao separador Produtos da oportunidade ou abrir a proposta associada.
 1. Na ficha da oportunidade, seleccionar o separador Produtos (ou eProdutos).
 2. Aqui pode adicionar, editar ou consultar as linhas de produto solicitadas pelo cliente.
 3. Se a lista estiver vazia, clique em Inserir e seleccione os produtos a partir do catálogo.
-4. Alternativamente, abra a Proposta de Venda associada (BC-KB-158) para ver as linhas de produto já compiladas.
+4. Alternativamente, abra a Proposta de Venda associada (BC-KB-159) para ver as linhas de produto já compiladas.
 
 **Validação final**  
 A lista de produtos solicitados pelo cliente está visível na ficha da oportunidade ou na proposta.
 
 **Notas**  
 - Garanta que as quantidades e unidades de medida reflectem o pedido do cliente.
-- Use atributos (BC-KB-156) para filtrar produtos adequados durante a selecção.
+- Use atributos (BC-KB-157) para filtrar produtos adequados durante a selecção.
 
-## BC-KB-156 — Como uso a informação de atributos de produto numa proposta?
+
+## BC-KB-157 — Como uso a informação de atributos de produto numa proposta?
 **Categoria:** Oportunidades / Produtos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5180,10 +5334,11 @@ Utilizar a pesquisa por atributos ao adicionar produtos e apresentar esses atrib
 Os produtos inseridos correspondem aos atributos seleccionados, garantindo aderência às especificações do cliente.
 
 **Notas**  
-- Os atributos devem estar previamente definidos nas fichas de produto (ver BC-KB-086).
+- Os atributos devem estar previamente definidos nas fichas de produto (ver BC-KB-087).
 - Este método reduz o risco de oferecer produtos fora das especificações.
 
-## BC-KB-157 — Que informações de apoio à decisão posso consultar numa oportunidade?
+
+## BC-KB-158 — Que informações de apoio à decisão posso consultar numa oportunidade?
 **Categoria:** Oportunidades  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5216,7 +5371,8 @@ O utilizador tem acesso a dados detalhados para tomar uma decisão informada sob
 - A interpretação destas informações ajuda a priorizar oportunidades com maior probabilidade de sucesso.
 - Para análises mais avançadas, considere exportar dados para Excel ou Power BI.
 
-## BC-KB-158 — Como associo uma proposta de venda a uma oportunidade?
+
+## BC-KB-159 — Como associo uma proposta de venda a uma oportunidade?
 **Categoria:** Oportunidades / Propostas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5244,9 +5400,10 @@ A nova proposta de venda fica associada à oportunidade e visível nos campos de
 
 **Notas**  
 - Esta associação facilita a passagem de informação sem duplicação manual.
-- Após associar, pode enviar a proposta para aprovação (BC-KB-188).
+- Após associar, pode enviar a proposta para aprovação (BC-KB-189).
 
-## BC-KB-159 — Como retiro a associação de uma proposta de venda à oportunidade?
+
+## BC-KB-160 — Como retiro a associação de uma proposta de venda à oportunidade?
 **Categoria:** Oportunidades / Propostas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5272,10 +5429,11 @@ Remover a associação e criar nova proposta.
 A nova proposta está correcta e associada; a anterior deixou de estar ligada à oportunidade.
 
 **Notas**  
-- Esta operação não elimina a proposta antiga; para isso, consulte a BC-KB-160.
+- Esta operação não elimina a proposta antiga; para isso, consulte a BC-KB-161.
 - Garanta que todas as informações necessárias estão corrigidas antes de associar novamente.
 
-## BC-KB-160 — Como elimino uma proposta de venda?
+
+## BC-KB-161 — Como elimino uma proposta de venda?
 **Categoria:** Oportunidades / Propostas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5304,7 +5462,8 @@ A proposta desaparece da lista e deixa de estar associada à oportunidade.
 - A eliminação não pode ser desfeita; crie nova proposta se necessário.
 - Certifique-se de que a proposta não foi enviada antes de a apagar.
 
-## BC-KB-161 — Como adiciono comentários de produto numa proposta de venda?
+
+## BC-KB-162 — Como adiciono comentários de produto numa proposta de venda?
 **Categoria:** Oportunidades / Propostas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5334,7 +5493,8 @@ Os comentários são impressos na proposta de venda sob a respectiva linha.
 - Use comentários para indicar condições especiais, esclarecimentos técnicos ou prazos de entrega.
 - Os comentários não alteram o preço ou as quantidades da linha.
 
-## BC-KB-162 — Como imprimo uma proposta de venda para concurso?
+
+## BC-KB-163 — Como imprimo uma proposta de venda para concurso?
 **Categoria:** Oportunidades / Propostas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5364,7 +5524,8 @@ O sistema gera um documento formatado para concursos, incluindo os requisitos e 
 - Verifique que todos os campos obrigatórios e anexos estão preenchidos antes de imprimir.
 - Utilize a mesma funcionalidade para enviar o documento por email.
 
-## BC-KB-163 — Como configuro o planeamento na Ficha de Produto?
+
+## BC-KB-164 — Como configuro o planeamento na Ficha de Produto?
 **Categoria:** Compras / Planeamento  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5390,7 +5551,7 @@ Preencher os campos de planeamento na ficha de produto para que o MRP (planeador
 6. Nenhum – não gera propostas automáticas.
 7. Preencher Ponto de Encomenda (quantidade mínima de stock).
 8. Definir Qtde. Reposição (quantidade de encomenda padrão).
-9. Indicar Qtde. Múltiplo Encomenda se as encomendas tiverem de ser múltiplos (ver BC-KB-167).
+9. Indicar Qtde. Múltiplo Encomenda se as encomendas tiverem de ser múltiplos (ver BC-KB-168).
 10. Preencher Qtde. Máxima de Encomenda se pretender limitar o stock.
 
 **Validação final**  
@@ -5398,9 +5559,10 @@ O separador de planeamento está preenchido e o planeador gera sugestões correc
 
 **Notas**  
 - Ajuste estes valores periodicamente com base na procura real.
-- Os campos de planeamento interagem com as previsões (BC-KB-180) e com a folha de requisição.
+- Os campos de planeamento interagem com as previsões (BC-KB-181) e com a folha de requisição.
 
-## BC-KB-164 — Como configuro o planeamento na Unidade de Armazenamento?
+
+## BC-KB-165 — Como configuro o planeamento na Unidade de Armazenamento?
 **Categoria:** Compras / Planeamento  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5430,7 +5592,8 @@ Cada unidade de armazenamento tem os seus próprios parâmetros de planeamento e
 - Esta configuração é útil quando um produto é armazenado em vários armazéns ou com U/M distintas.
 - Se não for definido, os valores da ficha principal são utilizados por defeito.
 
-## BC-KB-165 — Que políticas de aprovisionamento existem no Business Central?
+
+## BC-KB-166 — Que políticas de aprovisionamento existem no Business Central?
 **Categoria:** Compras / Planeamento  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5463,7 +5626,8 @@ A política de aprovisionamento escolhida está configurada e as sugestões de c
 - A escolha errada da política pode gerar stocks em excesso ou rupturas.
 - Revise periodicamente a política à medida que a procura evolui.
 
-## BC-KB-166 — Como configuro quantidades mínimas de encomenda por produto?
+
+## BC-KB-167 — Como configuro quantidades mínimas de encomenda por produto?
 **Categoria:** Compras / Planeamento  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5492,7 +5656,8 @@ As sugestões de compra obedecem à quantidade mínima definida.
 - Ajustar este valor se o fornecedor alterar o requisito.
 - Em conjunto com o Ponto de Encomenda, determina a frequência e o tamanho das encomendas.
 
-## BC-KB-167 — Como configuro múltiplos de encomenda por produto?
+
+## BC-KB-168 — Como configuro múltiplos de encomenda por produto?
 **Categoria:** Compras / Planeamento  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5521,7 +5686,8 @@ As sugestões de compra são arredondadas ao múltiplo configurado.
 - Em conjunto com a Qtde. Reposição, determina o tamanho das encomendas.
 - Se o múltiplo não for definido, o sistema sugere quantidades exactas, podendo originar quantidades fraccionadas.
 
-## BC-KB-168 — Como aciono a não atualização das linhas de encomenda de compra?
+
+## BC-KB-169 — Como aciono a não atualização das linhas de encomenda de compra?
 **Categoria:** Compras / Encomendas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5550,7 +5716,8 @@ Ao receber ou facturar, as quantidades originais não são alteradas.
 - Utilize esta opção quando pretende manter controlo manual sobre a recepção e faturação.
 - Recorde-se de ajustar manualmente as quantidades quando necessário.
 
-## BC-KB-169 — Como acedo à Folha de Requisição?
+
+## BC-KB-170 — Como acedo à Folha de Requisição?
 **Categoria:** Compras / Planeamento  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5579,7 +5746,8 @@ A folha de requisição correcta está aberta e pronta para gerar sugestões.
 **Notas**  
 - Trabalhar numa folha própria evita conflitos com as sugestões de outros utilizadores.
 
-## BC-KB-170 — Que parâmetros devo preencher para gerar sugestões de compra?
+
+## BC-KB-171 — Que parâmetros devo preencher para gerar sugestões de compra?
 **Categoria:** Compras / Planeamento  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5600,7 +5768,7 @@ Preencher os parâmetros de período e de utilização de previsão antes de ger
 1. Na folha de requisição, clicar em Processar → Sugerir Requisição Produtos.
 2. Na janela que surge, definir:
 3. Data Inicial e Data Final – intervalo de tempo para o planeamento.
-4. Utilizar Previsão – activar se existir previsão de vendas (BC-KB-180).
+4. Utilizar Previsão – activar se existir previsão de vendas (BC-KB-181).
 5. Excluir Previsão Anterior a – introduzir uma data para ignorar previsões antigas.
 6. Respeitar Parâmetros Planeamento – marcar para considerar pontos de encomenda, quantidades mínimas/máximas.
 7. Opcionalmente, aplicar filtros como Nº (produto específico) ou Nº Fornecedor.
@@ -5613,7 +5781,8 @@ As linhas de sugestão geradas reflectem o período e parâmetros definidos.
 - Se gerar sugestões para muitos produtos, inicie com um intervalo curto para validar resultados.
 - Ajuste os parâmetros sempre que existirem alterações significativas no consumo.
 
-## BC-KB-171 — Como edito linhas de sugestão na Folha de Requisição?
+
+## BC-KB-172 — Como edito linhas de sugestão na Folha de Requisição?
 **Categoria:** Compras / Planeamento  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5634,7 +5803,7 @@ Rever e editar manualmente as linhas de sugestão.
 1. Na folha de requisição, analisar cada linha gerada.
 2. Eliminar linhas desnecessárias ou adicionar linhas manualmente.
 3. Verificar e ajustar os campos Nº (produto), Mensagem de Acção (Novo, Alterar Qtde., Reagendar), Código Localização, Quantidade Original e Quantidade.
-4. Seleccionar fornecedores alternativos, se necessário, ajustando o campo Nº Fornecedor (ver BC-KB-173).
+4. Seleccionar fornecedores alternativos, se necessário, ajustando o campo Nº Fornecedor (ver BC-KB-174).
 5. Ajustar a Data Vencimento se o planeamento assim o exigir.
 
 **Validação final**  
@@ -5644,7 +5813,8 @@ As linhas de sugestão editadas correspondem às quantidades e fornecedores corr
 - Aceitar ou alterar a Mensagem de Acção determina se a linha será convertida em encomenda.
 - Registe notas ou justificação se tiver de excluir uma sugestão.
 
-## BC-KB-172 — Como verifico a origem de uma sugestão de compra?
+
+## BC-KB-173 — Como verifico a origem de uma sugestão de compra?
 **Categoria:** Compras / Planeamento  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5674,7 +5844,8 @@ A origem da sugestão é claramente identificada e documentada.
 - Saber a origem ajuda a priorizar e a justificar a aceitação ou rejeição da sugestão.
 - Use esta função antes de questionar o planeador sobre quantidades inesperadas.
 
-## BC-KB-173 — Como seleciono fornecedores alternativos de um produto?
+
+## BC-KB-174 — Como seleciono fornecedores alternativos de um produto?
 **Categoria:** Compras / Planeamento  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5704,7 +5875,8 @@ A linha reflecte o fornecedor alternativo escolhido.
 - Os fornecedores alternativos devem ser configurados previamente na ficha do produto.
 - Comparar preços e prazos de entrega antes de seleccionar um fornecedor alternativo.
 
-## BC-KB-174 — Que ações posso executar a partir da Folha de Requisição?
+
+## BC-KB-175 — Que ações posso executar a partir da Folha de Requisição?
 **Categoria:** Compras / Planeamento  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5738,7 +5910,8 @@ As encomendas são geradas e as linhas de requisição são processadas.
 - Certifique-se de que os dados estão correctos antes de executar; o processo é automático.
 - Após execução, as linhas desaparecem da folha de requisição.
 
-## BC-KB-175 — Como funciona a validação do valor mínimo de compra por encomenda?
+
+## BC-KB-176 — Como funciona a validação do valor mínimo de compra por encomenda?
 **Categoria:** Compras / Encomendas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5769,7 +5942,8 @@ A encomenda cumpre o valor mínimo e o sistema não apresenta alertas.
 - Esta validação ajuda a cumprir acordos comerciais e a economizar custos de transporte.
 - Ajuste o valor mínimo na ficha do fornecedor sempre que necessário.
 
-## BC-KB-176 — Em que momento é validado o valor mínimo de compra?
+
+## BC-KB-177 — Em que momento é validado o valor mínimo de compra?
 **Categoria:** Compras / Encomendas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5799,7 +5973,8 @@ O alerta surge apenas no acto de libertação; após corrigir, a encomenda é li
 - Antes de libertar, pode consultar o total da encomenda para antever se cumpre o mínimo.
 - A validação não ocorre no registo da recepção nem da factura.
 
-## BC-KB-177 — Como registo compras a farmácias no Business Central?
+
+## BC-KB-178 — Como registo compras a farmácias no Business Central?
 **Categoria:** Compras / Gestão de Farmácia  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5830,7 +6005,8 @@ A compra à farmácia está registada como compra e aparece nos relatórios de f
 - Se a mesma entidade vender produtos à farmácia, mantenha as fichas de cliente e fornecedor separadas.
 - Use dimensões ou categorias para distinguir compras a farmácias de outros fornecedores.
 
-## BC-KB-178 — Onde devo aceder para criar uma nova compra à farmácia?
+
+## BC-KB-179 — Onde devo aceder para criar uma nova compra à farmácia?
 **Categoria:** Compras / Gestão de Farmácia  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5850,7 +6026,7 @@ Aceder ao menu Encomendas de Compra e seleccionar a farmácia como fornecedor.
 **Como proceder**  
 1. No menu principal ou no campo de pesquisa, escrever Encomendas de Compra e abrir a página.
 2. Clicar em Novo para criar uma nova encomenda.
-3. Seleccionar a farmácia como fornecedor (ver BC-KB-177).
+3. Seleccionar a farmácia como fornecedor (ver BC-KB-178).
 4. Inserir as linhas de produtos e seguir o fluxo normal de compra.
 
 **Validação final**  
@@ -5860,7 +6036,8 @@ Uma nova encomenda de compra à farmácia é criada correctamente.
 - As compras a farmácias não diferem das restantes compras em termos de processo; a diferença está na categoria do fornecedor.
 - Considere criar uma folha de aprovação específica se existir controlo adicional.
 
-## BC-KB-179 — Como acedo à previsão de necessidades?
+
+## BC-KB-180 — Como acedo à previsão de necessidades?
 **Categoria:** Compras / Planeamento  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5887,10 +6064,11 @@ Utilizar a página de previsão para visualizar e gerir dados de previsão.
 A previsão de necessidades é apresentada com valores por período.
 
 **Notas**  
-- A previsão deve ser carregada previamente (ver BC-KB-180).
+- A previsão deve ser carregada previamente (ver BC-KB-181).
 - Use estes dados em conjunto com o planeador para ajustar reaprovisionamento.
 
-## BC-KB-180 — Como insiro ou edito dados de previsão de necessidades?
+
+## BC-KB-181 — Como insiro ou edito dados de previsão de necessidades?
 **Categoria:** Compras / Planeamento  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5908,7 +6086,7 @@ As previsões não foram introduzidas manualmente nem importadas de ficheiros ex
 Inserir ou editar valores de previsão em cada período na página Previsão de Necessidades.
 
 **Como proceder**  
-1. Aceder à página Previsão de Necessidades (BC-KB-179).
+1. Aceder à página Previsão de Necessidades (BC-KB-180).
 2. Seleccionar o produto e período pretendido.
 3. Introduzir a quantidade prevista em cada célula para os períodos futuros (ex.: 100 unidades para Maio 2026).
 4. Repetir para todos os produtos e períodos relevantes.
@@ -5919,9 +6097,10 @@ Os valores de previsão estão registados na base de dados e podem ser utilizado
 
 **Notas**  
 - Actualize as previsões regularmente com base em dados de vendas e tendências de mercado.
-- A previsão afecta as sugestões de compra quando a opção Utilizar Previsão é activada (BC-KB-170).
+- A previsão afecta as sugestões de compra quando a opção Utilizar Previsão é activada (BC-KB-171).
 
-## BC-KB-181 — Para que serve o repositório SGNCL de previsão de necessidades?
+
+## BC-KB-182 — Para que serve o repositório SGNCL de previsão de necessidades?
 **Categoria:** Compras / Planeamento  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -5950,7 +6129,8 @@ Os dados de previsão são partilhados com o repositório e utilizados para plan
 - Utilizadores comuns não precisam de interagir directamente com o SGNCL.
 - As políticas de actualização são definidas pela direcção de logística.
 
-## BC-KB-182 — Como crio uma lista de preços de compra?
+
+## BC-KB-183 — Como crio uma lista de preços de compra?
 **Categoria:** Compras / Preços  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -5981,7 +6161,8 @@ A lista de preços de compra está activa e os preços são automaticamente suge
 - Actualize ou expire a lista quando os preços mudarem.
 - Para importar muitas linhas, utilize a função de importação de Excel com colunas correspondentes.
 
-## BC-KB-183 — Como edito uma lista de preços de compra?
+
+## BC-KB-184 — Como edito uma lista de preços de compra?
 **Categoria:** Compras / Preços  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6014,7 +6195,8 @@ A lista de preços apresenta o estado Activa e as linhas reflectem os valores ac
 - Apenas listas desactivadas podem ser editadas.
 - As listas activas com datas expiradas devem ser duplicadas para criar uma nova versão.
 
-## BC-KB-184 — Como activo uma lista de preços de compra?
+
+## BC-KB-185 — Como activo uma lista de preços de compra?
 **Categoria:** Compras / Preços  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6046,7 +6228,8 @@ O campo Estado da lista apresenta Activa e a lista é considerada na determinaç
 - As listas activadas ficam bloqueadas para edição; para efectuar alterações é necessário desactivar.
 - Mantenha apenas uma lista activa por fornecedor e período para evitar conflitos.
 
-## BC-KB-185 — Como inactivo uma lista de preços de compra?
+
+## BC-KB-186 — Como inactivo uma lista de preços de compra?
 **Categoria:** Compras / Preços  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6077,7 +6260,8 @@ O campo Estado da lista apresenta Desactivada e os preços deixam de ser sugerid
 - Manter listas antigas desactivadas ajuda a preservar histórico sem afectar o cálculo de preços.
 - É recomendado expirar listas usando datas para manter o registo temporal.
 
-## BC-KB-186 — Como configuro preços por contacto de fornecedor?
+
+## BC-KB-187 — Como configuro preços por contacto de fornecedor?
 **Categoria:** Compras / Preços  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6108,7 +6292,8 @@ Ao criar uma encomenda de compra e seleccionar o mesmo contacto do fornecedor, o
 - Certifique-se de que os contactos estão previamente criados na ficha do fornecedor.
 - Se não for indicado contacto na encomenda, o sistema aplica o preço sem contacto ou o preço genérico do fornecedor.
 
-## BC-KB-187 — Como configuro fornecedores alternativos do produto?
+
+## BC-KB-188 — Como configuro fornecedores alternativos do produto?
 **Categoria:** Compras / Planeamento  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6139,7 +6324,8 @@ Na Folha de Requisição, as sugestões de compra incluem fornecedores alternati
 - Os fornecedores alternativos não substituem automaticamente o fornecedor principal; dependem das configurações de planeamento e quantidades.
 - Revise periodicamente prazos e preços para manter dados actualizados.
 
-## BC-KB-188 — Como peço aprovação de uma encomenda de compra?
+
+## BC-KB-189 — Como peço aprovação de uma encomenda de compra?
 **Categoria:** Compras / Encomendas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6170,7 +6356,8 @@ A encomenda aparece em Solicitações para Aprovar com estado Pendente, indicand
 - Se for necessário alterar a encomenda após enviar o pedido, esta deve ser reaberta ou rejeitada pelo aprovador.
 - Os fluxos de aprovação variam conforme as permissões e valores limite definidos pela organização.
 
-## BC-KB-189 — Onde verifico o estado de aprovação de uma encomenda de compra?
+
+## BC-KB-190 — Onde verifico o estado de aprovação de uma encomenda de compra?
 **Categoria:** Compras / Encomendas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6201,7 +6388,8 @@ O utilizador consegue ver se a encomenda está pendente, aprovada ou rejeitada e
 - Os registos de aprovação apresentam detalhes como data, hora e comentário de aprovação.
 - As notificações por email podem ser configuradas para informar o requisitante automaticamente.
 
-## BC-KB-190 — Como aprovo uma encomenda de compra?
+
+## BC-KB-191 — Como aprovo uma encomenda de compra?
 **Categoria:** Compras / Encomendas  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -6232,7 +6420,8 @@ A encomenda de compra fica com estado Aprovado e pode ser registada ou enviada a
 - Os aprovadores devem validar preços, quantidades e impacto orçamental antes de aprovar.
 - Após aprovação, quaisquer alterações na encomenda podem exigir nova aprovação.
 
-## BC-KB-191 — Como fecho encomendas de compra completamente faturadas?
+
+## BC-KB-192 — Como fecho encomendas de compra completamente faturadas?
 **Categoria:** Compras / Encomendas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6262,7 +6451,8 @@ A encomenda desaparece da lista de abertas e fica marcada como Fechada, não con
 - Apenas feche encomendas completamente recebidas e faturadas; caso contrário surgirão discrepâncias.
 - O fecho não afecta o histórico de movimentação nem os documentos registados.
 
-## BC-KB-192 — Como atribuo motivos de não fornecimento numa encomenda de compra?
+
+## BC-KB-193 — Como atribuo motivos de não fornecimento numa encomenda de compra?
 **Categoria:** Compras / Encomendas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6292,7 +6482,8 @@ O campo Motivo Não Fornecimento fica preenchido na linha e pode ser utilizado p
 - Definir previamente a lista de motivos na configuração para garantir consistência.
 - Este campo não altera o valor recepcionado mas auxilia no acompanhamento de performance do fornecedor.
 
-## BC-KB-193 — Como valido encomendas de venda?
+
+## BC-KB-194 — Como valido encomendas de venda?
 **Categoria:** Vendas / Encomendas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6323,7 +6514,8 @@ A encomenda de venda é validada sem erros e está apta a ser registada ou envia
 - A validação não regista a encomenda; serve apenas para detecção precoce de problemas.
 - Correções de crédito podem exigir intervenção do departamento financeiro.
 
-## BC-KB-194 — Como registo motivos de não fornecimento em vendas?
+
+## BC-KB-195 — Como registo motivos de não fornecimento em vendas?
 **Categoria:** Vendas / Encomendas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6354,7 +6546,8 @@ O campo Motivo Não Fornecimento está preenchido nas linhas com falta de entreg
 - A lista de motivos é comum às compras e vendas; configure-a para uniformizar relatórios.
 - Os motivos registados alimentam indicadores de serviço ao cliente.
 
-## BC-KB-195 — Como faço faturação antecipada?
+
+## BC-KB-196 — Como faço faturação antecipada?
 **Categoria:** Vendas / Faturação  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6387,7 +6580,8 @@ A fatura de pré-pagamento aparece no histórico de vendas e o saldo do cliente 
 - As faturas de pré-pagamento são reconciliadas automaticamente com a fatura final no registo da encomenda.
 - Verifique a legislação fiscal sobre a necessidade de notas de crédito se o valor final for menor que o adiantamento.
 
-## BC-KB-196 — Como consulto o saldo de faturação antecipada?
+
+## BC-KB-197 — Como consulto o saldo de faturação antecipada?
 **Categoria:** Vendas / Faturação  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6418,7 +6612,8 @@ O utilizador identifica facilmente o valor total adiantado e o saldo por faturar
 - Recomenda-se reconciliar pré-pagamentos com a fatura final assim que os serviços ou produtos são fornecidos.
 - Saldos de pré-pagamento impactam a conta corrente do cliente.
 
-## BC-KB-197 — Como anulo faturação antecipada?
+
+## BC-KB-198 — Como anulo faturação antecipada?
 **Categoria:** Vendas / Faturação  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -6450,7 +6645,8 @@ A fatura de pré-pagamento deixa de impactar a conta corrente e o saldo do clien
 - A anulação de pré-pagamentos pode ter implicações fiscais; validar com a contabilidade.
 - Após anular, deve ser criada nova fatura de pré-pagamento se houver novo acordo.
 
-## BC-KB-198 — Como funciona a previsão de vendas?
+
+## BC-KB-199 — Como funciona a previsão de vendas?
 **Categoria:** Vendas / Planeamento  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6482,7 +6678,8 @@ As quantidades previstas ficam registadas e influenciam os cálculos de planeame
 - As previsões devem ser revistas regularmente para ajustar a procura real.
 - Podem ser exportadas/importadas via Excel para facilitar ajustes.
 
-## BC-KB-199 — Como corrijo uma fatura de venda registada?
+
+## BC-KB-200 — Como corrijo uma fatura de venda registada?
 **Categoria:** Vendas / Faturas Registadas  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -6514,7 +6711,8 @@ A fatura original fica anulada, a nova fatura reflecte os dados correctos e o sa
 - A correcção apenas é permitida se a fatura ainda não foi exportada para a Autoridade Tributária ou utilizada em comunicação SAF-T.
 - Caso a fatura já tenha sido comunicada, deve emitir-se uma nota de crédito em separado e nova fatura manual.
 
-## BC-KB-200 — Em que situações posso corrigir uma fatura de venda registada?
+
+## BC-KB-201 — Em que situações posso corrigir uma fatura de venda registada?
 **Categoria:** Vendas / Faturas Registadas  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -6544,7 +6742,8 @@ A correcção é efetuada apenas em faturas elegíveis e respeita as obrigaçõe
 - Consulte a contabilidade ou departamento fiscal para confirmar a possibilidade de correcção.
 - Em alguns casos, pode ser necessário comunicar ambas as notas de crédito e faturas ao SAF-T.
 
-## BC-KB-201 — Como adjudico uma proposta de venda?
+
+## BC-KB-202 — Como adjudico uma proposta de venda?
 **Categoria:** Vendas / Propostas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6577,7 +6776,8 @@ Uma encomenda de venda é criada e a proposta original fica registada como Adjud
 - Caso parte da proposta não seja aceite, crie uma encomenda apenas com as linhas aprovadas e feche a proposta.
 - A adjudicação mantém a traçabilidade entre proposta, oportunidade e encomenda.
 
-## BC-KB-202 — Como trabalho com encomendas abertas de venda?
+
+## BC-KB-203 — Como trabalho com encomendas abertas de venda?
 **Categoria:** Vendas / Encomendas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6611,7 +6811,8 @@ As encomendas abertas permitem rastrear o total contratado e criar múltiplas en
 - As encomendas abertas são particularmente úteis para contratos de fornecimento de longo prazo.
 - Mantenha um controlo rigoroso das quantidades restantes para evitar sobre-entregas.
 
-## BC-KB-203 — Como crio uma encomenda de venda?
+
+## BC-KB-204 — Como crio uma encomenda de venda?
 **Categoria:** Vendas / Encomendas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6645,7 +6846,8 @@ A encomenda de venda aparece na lista com estado Aberta ou Liberada, pronta para
 - Utilize funções de cópia de encomenda ou duplicação para acelerar a criação de encomendas semelhantes.
 - Verifique os limites de crédito do cliente antes de aprovar a encomenda.
 
-## BC-KB-204 — Como funciona a aprovação de encomendas a processar para logística externa?
+
+## BC-KB-205 — Como funciona a aprovação de encomendas a processar para logística externa?
 **Categoria:** Vendas / Encomendas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6677,7 +6879,8 @@ A encomenda é aprovada e enviada ao operador logístico externo apenas após pa
 - Este processo minimiza envios errados para operadores externos.
 - A configuração do workflow deve prever valores limite e destinatários correctos.
 
-## BC-KB-205 — Como funciona a faturação de lares?
+
+## BC-KB-206 — Como funciona a faturação de lares?
 **Categoria:** Vendas / Faturação  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6709,7 +6912,8 @@ As faturas emitidas para lares reflectem os preços e condições específicas a
 - Mantenha listas de preços actualizadas para estas instituições.
 - Nos relatórios fiscais, as vendas a lares podem necessitar de códigos específicos de isenção ou taxa reduzida.
 
-## BC-KB-206 — Como registo amostras?
+
+## BC-KB-207 — Como registo amostras?
 **Categoria:** Vendas / Amostras  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6742,7 +6946,8 @@ O stock é actualizado e a entrega da amostra fica registada com preço zero.
 - Crie um relatório periódico de amostras enviadas para controlar custos.
 - Utilize contas analíticas para imputar custos de amostras a centros de marketing.
 
-## BC-KB-207 — Como registo ofertas?
+
+## BC-KB-208 — Como registo ofertas?
 **Categoria:** Vendas / Ofertas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6774,7 +6979,8 @@ A oferta é registada, o stock é reduzido e o custo é imputado à conta adequa
 - Use códigos de razão para ofertas para distinguir de amostras nos relatórios.
 - As ofertas podem necessitar de aprovação dependendo do valor.
 
-## BC-KB-208 — Como registo demonstrações a clientes?
+
+## BC-KB-209 — Como registo demonstrações a clientes?
 **Categoria:** Vendas / Demonstrações  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6806,7 +7012,8 @@ As demonstrações são rastreadas e o stock é reposto quando os produtos são 
 - Controlar a data de devolução prevista e enviar lembretes ao cliente.
 - Se a demonstração se converter em venda, criar uma encomenda de venda a partir do documento de demonstração.
 
-## BC-KB-209 — Como registo demonstrações em eventos?
+
+## BC-KB-210 — Como registo demonstrações em eventos?
 **Categoria:** Vendas / Demonstrações  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6838,7 +7045,8 @@ O stock em eventos é controlado e reconciliado após a devolução.
 - Planeie a logística com antecedência para garantir disponibilidade de produtos nos eventos.
 - Utilize relatórios de inventário por localização para avaliar consumos durante eventos.
 
-## BC-KB-210 — Como registo consumos internos?
+
+## BC-KB-211 — Como registo consumos internos?
 **Categoria:** Vendas / Consumos Internos  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -6870,7 +7078,8 @@ Os consumos internos são reflectidos no inventário e as contas de despesa são
 - Estabeleça procedimentos internos para aprovar consumos fora das quantidades normais.
 - Os diários de consumo permitem distribuir custos por departamentos ou projectos.
 
-## BC-KB-211 — Como trato vendas de psicotrópicos?
+
+## BC-KB-212 — Como trato vendas de psicotrópicos?
 **Categoria:** Vendas / Psicotrópicos  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -6901,7 +7110,8 @@ A venda do psicotrópico é registada com os documentos legais necessários e co
 - Consultar a legislação nacional sobre venda de psicotrópicos; alguns produtos exigem quotas e notificações prévias.
 - As penalidades por incumprimento são elevadas; documente e aprove todos os passos.
 
-## BC-KB-212 — Como emito uma declaração de antibióticos para exportação?
+
+## BC-KB-213 — Como emito uma declaração de antibióticos para exportação?
 **Categoria:** Vendas / Exportação  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -6933,7 +7143,8 @@ A declaração de antibióticos é emitida, assinada e entregue às autoridades 
 - Confirme os requisitos específicos do país de destino, pois podem variar.
 - Mantenha um arquivo das declarações emitidas para auditorias.
 
-## BC-KB-213 — Como anulo uma fatura de venda através de nota de crédito interna?
+
+## BC-KB-214 — Como anulo uma fatura de venda através de nota de crédito interna?
 **Categoria:** Vendas / Faturas Registadas  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -6965,7 +7176,8 @@ A fatura original fica saldada e os relatórios mostram a nota de crédito corre
 - A anulação completa exige que todos os produtos sejam devolvidos; caso contrário, emita nota de crédito parcial.
 - Verifique as obrigações fiscais de comunicação da nota de crédito.
 
-## BC-KB-214 — Como anulo uma nota de crédito de venda através de fatura interna?
+
+## BC-KB-215 — Como anulo uma nota de crédito de venda através de fatura interna?
 **Categoria:** Vendas / Faturas Registadas  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -6997,7 +7209,8 @@ A nota de crédito é anulada e substituída por uma fatura correcta.
 - Este processo deve ser usado apenas quando a nota de crédito foi emitida por engano.
 - Garanta que a nova fatura cumpre todos os requisitos fiscais.
 
-## BC-KB-215 — Como fecho encomendas de venda completamente faturadas?
+
+## BC-KB-216 — Como fecho encomendas de venda completamente faturadas?
 **Categoria:** Vendas / Encomendas  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim  
@@ -7028,7 +7241,8 @@ A encomenda desaparece da lista de abertas e figura como Fechada.
 - O fecho de encomendas ajuda a manter relatórios limpos e a separar encomendas activas das concluídas.
 - Não feche encomendas com quantidades por entregar; use motivos de não fornecimento ou notas de crédito conforme o caso.
 
-## BC-KB-216 — Como funciona a criação automática de encomendas de venda para Alliance?
+
+## BC-KB-217 — Como funciona a criação automática de encomendas de venda para Alliance?
 **Categoria:** Pricing & Modelo Comercial / Integração  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -7059,7 +7273,8 @@ Encomendas de venda são criadas automaticamente de acordo com os parâmetros de
 - Monitorize regularmente o processo para garantir que as encomendas refletem as necessidades reais.
 - Ajuste os limites de stock e produtos elegíveis conforme as condições de fornecimento.
 
-## BC-KB-217 — Como configuro margens mínimas?
+
+## BC-KB-218 — Como configuro margens mínimas?
 **Categoria:** Pricing & Modelo Comercial / Regras  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -7090,7 +7305,8 @@ As margens mínimas são aplicadas automaticamente e impedem a criação de tran
 - As margens mínimas podem variar conforme o segmento de cliente ou canal de venda.
 - Avalie periodicamente as margens em função de flutuações de custo.
 
-## BC-KB-218 — Como configuro descontos máximos?
+
+## BC-KB-219 — Como configuro descontos máximos?
 **Categoria:** Pricing & Modelo Comercial / Regras  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -7120,7 +7336,8 @@ Os descontos aplicados nas vendas respeitam os limites configurados e qualquer e
 - Pode definir níveis de desconto por escalão de quantidade ou por campanha.
 - As regras devem ser revistas quando há alterações de estratégia comercial.
 
-## BC-KB-219 — Como configuro majoração máxima?
+
+## BC-KB-220 — Como configuro majoração máxima?
 **Categoria:** Pricing & Modelo Comercial / Regras  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -7149,7 +7366,8 @@ As majorações de preços mantêm-se dentro dos limites definidos.
 - A majoração máxima evita práticas de preço abusivas.
 - Ajuste os limites conforme as margens, mercado e estratégias de posicionamento.
 
-## BC-KB-220 — Como majoro preços de venda?
+
+## BC-KB-221 — Como majoro preços de venda?
 **Categoria:** Pricing & Modelo Comercial / Preços  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -7181,7 +7399,8 @@ Os preços de venda são actualizados segundo a percentagem indicada e estão pr
 - Antes de majorar, faça uma cópia da lista para preservar histórico.
 - Combine majoração com actualização de custos para garantir margens adequadas.
 
-## BC-KB-221 — Como valido o modelo comercial?
+
+## BC-KB-222 — Como valido o modelo comercial?
 **Categoria:** Pricing & Modelo Comercial / Validação  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
@@ -7212,7 +7431,8 @@ O modelo comercial passa na verificação sem conflitos e pode ser aplicado.
 - Realize esta validação sempre que alterar margens ou descontos.
 - Utilize a validação para auditar a conformidade de regras definidas por diferentes departamentos.
 
-## BC-KB-222 — Como configuro markups no Business Central?
+
+## BC-KB-223 — Como configuro markups no Business Central?
 **Categoria:** Pricing & Modelo Comercial / Preços  
 **Disponível para Utilizador:** Não  
 **Disponível para Agente:** Sim  
