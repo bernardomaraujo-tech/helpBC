@@ -1,4 +1,4 @@
-## BC-KB-223 — Acesso ao BC (Business Central) ?
+## BC-KB-001a — Acesso ao BC (Business Central) ?
 
 **Categoria:** Acesso / Business Central
 **Disponível para Utilizador:** Sim
