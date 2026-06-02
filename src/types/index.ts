@@ -23,6 +23,16 @@ export interface Article {
   rawMarkdown: string;
 }
 
+export type SearchMode = 'user' | 'agent';
+export type SearchRelevance = 'Alta' | 'Média' | 'Baixa';
+
+export interface ArticleSearchResult {
+  article: Article;
+  score: number;
+  relevance: SearchRelevance;
+  matchedFields: string[];
+}
+
 export type TicketStatus = 'Aberto' | 'Em espera' | 'Resolvido';
 export type TicketPriority = 'Baixa' | 'Média' | 'Alta';
 export type ConversationAuthor = 'user' | 'assistant' | 'agent';
