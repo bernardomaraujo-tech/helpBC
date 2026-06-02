@@ -7455,3 +7455,55 @@ Criar regras de markup no Business Central e associá-las a produtos, grupos ou 
 3. Definir o Tipo de Markup (percentual ou valor fixo), o Âmbito (produto individual, família, canal de venda) e a Percentagem ou Valor.
 4. Em listas de preços ou propostas, os markups são automaticamente aplicados aos preços base, além das margens e majorações.
 5. Revisar os preços resultantes para assegurar que respeitam margens mínimas e majorações máximas.
+
+**Validação final**  
+Os markups definidos são aplicados aos preços de venda de forma consistente, complementando as outras regras do modelo comercial.
+
+
+
+## BC-KB-224 — Como verifico o estado de aprovação de um produto?
+**Categoria:** Produtos / Aprovações  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+É necessário verificar o estado de aprovação de um produto, mas o utilizador não sabe onde consultar se o pedido está pendente, quem é o aprovador ou se o pedido de aprovação já foi criado.
+
+**Diagnóstico**  
+O estado de aprovação do produto pode ser consultado diretamente na ficha do produto, através dos movimentos de aprovação associados.
+
+**Causa provável**  
+O utilizador desconhece onde consultar os movimentos de aprovação do produto ou não tem acesso aos mesmos, por não ser o utilizador que solicitou a aprovação nem um dos aprovadores.
+
+**Solução**  
+Aceder à ficha do produto e consultar a opção **Produto → Aprovações** para verificar se existem movimentos de aprovação pendentes e identificar o aprovador responsável.
+
+**Como proceder**
+1. Abrir a ficha do produto em questão.
+2. Na ficha do produto, aceder ao menu **Produto → Aprovações**.
+3. Será aberta a página com os movimentos de aprovação do produto.
+4. Verificar se existem linhas de aprovação associadas ao produto.
+5. Caso existam linhas pendentes, confirmar:
+   - o estado da aprovação;
+   - quem é o aprovador;
+   - se o pedido ainda se encontra por tratar.
+6. Se a página estiver vazia, podem existir duas razões:
+   - **O utilizador não tem acesso aos movimentos de aprovação:** por uma questão de privacidade implementada pela Microsoft, apenas o utilizador que solicitou a aprovação e/ou os aprovadores conseguem visualizar os movimentos de aprovação.
+   - **Ninguém solicitou a aprovação do produto:** neste caso, é necessário pedir aprovação do produto.
+7. Se for necessário pedir aprovação, deve ser contactado o gestor de produto ou o utilizador responsável pela criação do produto.
+8. O pedido de aprovação não deve ser criado pelo próprio aprovador.
+
+**Validação final**  
+A validação está concluída quando é possível confirmar uma das seguintes situações:
+
+1. Existem movimentos de aprovação e foi identificado o estado do pedido.
+2. Existem linhas pendentes e foi identificado o aprovador responsável.
+3. A página está vazia porque o utilizador não tem acesso aos movimentos.
+4. A página está vazia porque o pedido de aprovação ainda não foi solicitado.
+
+**Notas**  
+Apenas o utilizador que solicitou o pedido de aprovação e/ou os elementos aprovadores conseguem visualizar os movimentos de aprovação do produto.
+
+Se a página de aprovações estiver vazia, isso não significa obrigatoriamente que não existe pedido de aprovação. Pode significar apenas que o utilizador atual não tem permissões para visualizar esses movimentos.
+
+Caso se confirme que ainda não existe pedido de aprovação, deve ser contactado o gestor de produto para solicitar a aprovação do produto.
