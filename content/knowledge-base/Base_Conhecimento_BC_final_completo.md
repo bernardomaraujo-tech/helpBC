@@ -7507,3 +7507,1195 @@ Apenas o utilizador que solicitou o pedido de aprovação e/ou os elementos apro
 Se a página de aprovações estiver vazia, isso não significa obrigatoriamente que não existe pedido de aprovação. Pode significar apenas que o utilizador atual não tem permissões para visualizar esses movimentos.
 
 Caso se confirme que ainda não existe pedido de aprovação, deve ser contactado o gestor de produto para solicitar a aprovação do produto.
+
+---
+
+# Artigos adicionados a partir das comunicações TIC i9
+
+## BC-KB-225 — Consultar Pedidos Pendentes de Envio
+**Categoria:** Logística / Envios Pendentes  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador precisa de acompanhar os pedidos de envio de mercadoria, distinguindo pedidos libertos para armazém, pedidos futuros e pedidos ainda em preparação pela área.
+
+**Diagnóstico**  
+A informação dos pedidos pendentes está centralizada numa área própria que resume encomendas, amostras, ofertas, demonstrações, consumos internos e outras transferências logísticas.
+
+**Causa provável**  
+Desconhecimento da nova área de consulta e dos indicadores disponíveis para análise dos pedidos pendentes.
+
+**Solução**  
+Aceder à área eArmazéns/eEnvios Pendentes e utilizar os indicadores de cabeçalho e detalhe para acompanhar o estado dos pedidos de envio.
+
+**Como proceder**
+1. Aceder ao Business Central com um perfil autorizado, como Diretor Área, Comercial, Apoio ao Cliente ou Logística.
+2. No menu, abrir a opção eArmazéns/eEnvios Pendentes.
+3. No cabeçalho, analisar os indicadores disponíveis.
+4. Validar os pedidos libertos para envio com data até hoje.
+5. Validar os pedidos libertos para envio com data a partir de amanhã.
+6. Validar os pedidos em preparação pela área, ainda não libertos.
+7. No indicador de pedidos até hoje, confirmar se existem pedidos já em preparação no armazém, em recolha ou recolhidos.
+8. No detalhe, analisar o documento, cliente, estado, data de envio, armazém, produto, quantidades requisitadas, enviadas e pendentes.
+9. Validar também o inventário disponível na localização indicada e o inventário total do produto.
+10. Usar a informação para priorizar desbloqueios, libertações ou contactos com a logística.
+
+**Validação final**  
+1. O utilizador consegue consultar os pedidos pendentes numa única área.
+2. Os pedidos estão agrupados por estado e data de envio.
+3. É possível distinguir pedidos libertos, futuros, em preparação e já em recolha/armazém.
+4. A informação permite acompanhar quantidades pendentes e inventário disponível.
+
+**Notas**  
+* Esta área aproxima as áreas comerciais, apoio ao cliente e logística, reduzindo a necessidade de pedidos manuais de estado.
+* Fonte: Comunicação TIC i9 de 15/05/2024.
+
+
+## BC-KB-226 — Integração Logista Pharma para recolha de pedidos de envio
+**Categoria:** Logística Externa / Logista Pharma  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim
+
+**Problema**  
+A logística necessita de preparar e enviar pedidos de expedição para a Logista Pharma, garantindo que os pedidos pendentes ficam tratados e monitorizados.
+
+**Diagnóstico**  
+Foi disponibilizada uma área de integração automática de recolha de pedidos para envio à Logista Pharma. Numa fase inicial, a recolha é automática, mas o envio à Logista Pharma é efetuado manualmente através de template Excel.
+
+**Causa provável**  
+A integração automática completa dependia da preparação técnica da Logista Pharma, sendo necessário suportar temporariamente o envio manual com base em ficheiro gerado pelo Business Central.
+
+**Solução**  
+Utilizar a área de integração Logista Pharma para recolher automaticamente os pedidos e gerar o template Excel de envio.
+
+**Como proceder**
+1. Aceder à área de integração Logista Pharma no Business Central.
+2. Confirmar os pedidos pendentes disponíveis para envio.
+3. Executar a recolha automática dos pedidos, quando aplicável.
+4. Gerar o template Excel disponibilizado pelo sistema para apoio ao envio.
+5. Validar a informação constante no template antes de envio à Logista Pharma.
+6. Enviar manualmente o template à Logista Pharma, enquanto a integração automática de envio não estiver ativa.
+7. Confirmar posteriormente, na área de monitorização, o estado dos pedidos pendentes.
+
+**Validação final**  
+1. Os pedidos pendentes são recolhidos pelo sistema.
+2. O template Excel é gerado com a informação necessária.
+3. Os pedidos enviados à Logista Pharma ficam tratados e monitorizáveis pelas áreas envolvidas.
+
+**Notas**  
+* Funcionalidade orientada sobretudo à logística e à equipa de suporte.
+* Fonte: Comunicação TIC i9 de 24/05/2024.
+
+
+## BC-KB-227 — Ler DataMatrix Touch Care na aplicação de Mobilidade
+**Categoria:** Mobilidade / Rastreabilidade  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Ao rececionar produto Touch Care no armazém, é necessário ler um DataMatrix com standard específico para recolher automaticamente GTIN e números de série.
+
+**Diagnóstico**  
+A aplicação de mobilidade de armazéns foi atualizada para reconhecer um novo tipo de DataMatrix associado ao produto Touch Care.
+
+**Causa provável**  
+O DataMatrix do produto Touch Care seguia um standard específico que não era interpretado corretamente pela aplicação antes da alteração.
+
+**Solução**  
+Utilizar a aplicação de mobilidade atualizada para efetuar a leitura do DataMatrix durante a entrada, garantindo recolha automática de GTIN e números de série.
+
+**Como proceder**
+1. Na receção do produto Touch Care, iniciar o processo normal de entrada na aplicação de mobilidade.
+2. Quando for solicitado o código, ler o DataMatrix do produto/equipamento.
+3. Confirmar que o sistema recolhe automaticamente o GTIN.
+4. Confirmar que os números de série são também recolhidos automaticamente.
+5. Prosseguir com a entrada do produto em armazém.
+6. Validar que a informação de rastreabilidade fica associada ao movimento de entrada.
+7. Em movimentos posteriores de saída ou movimentação interna, confirmar que os equipamentos mantêm rastreabilidade.
+
+**Validação final**  
+1. O DataMatrix é lido sem erro.
+2. O GTIN e os números de série ficam preenchidos automaticamente.
+3. A rastreabilidade fica garantida na entrada, saída e movimentação interna.
+
+**Notas**  
+* A alteração foi motivada pela receção do produto Touch Care no armazém Sta Isabel.
+* Fonte: Comunicação TIC i9 de 28/05/2024.
+
+
+## BC-KB-228 — Garantir custo específico da compra na venda em Envios Diretos
+**Categoria:** Compras / Vendas / Envios Diretos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+É necessário garantir que o custo específico de uma compra fica associado à venda quando a mercadoria é enviada diretamente pelo fornecedor ao cliente.
+
+**Diagnóstico**  
+A funcionalidade de Envios Diretos permite ligar o processo de compra ao processo de venda quando a mercadoria não passa pela logística interna.
+
+**Causa provável**  
+Sem ligação entre compra e venda, pode não ficar assegurado que o custo real da compra é refletido corretamente no processo de venda.
+
+**Solução**  
+Utilizar o processo de Envio Direto para associar a encomenda de venda à encomenda de compra e garantir o custo específico, a receção, o envio automático e o rastreio.
+
+**Como proceder**
+1. Confirmar que a mercadoria será enviada diretamente pelo fornecedor ao cliente, sem passagem pela logística interna.
+2. Criar ou validar a encomenda de venda com as linhas pretendidas.
+3. Marcar as linhas aplicáveis como envio direto, conforme o processo interno definido.
+4. Gerar ou associar a encomenda de compra correspondente ao fornecedor.
+5. Confirmar que a linha de venda fica ligada à linha de compra.
+6. Registar a receção da compra quando o fornecedor confirmar o envio/entrega.
+7. Confirmar que o sistema gera automaticamente o envio da mercadoria na venda, quando aplicável.
+8. Validar que o rastreio é atribuído automaticamente e que o custo da compra fica refletido na venda.
+
+**Validação final**  
+1. A venda está associada à compra correspondente.
+2. O custo específico da compra é usado no processo de venda.
+3. A receção da compra desencadeia o comportamento esperado no envio da venda.
+4. O rastreio fica associado ao processo.
+
+**Notas**  
+* Aplicável quando existe envio direto fornecedor-cliente.
+* Fonte: Comunicação TIC i9 de 04/06/2024.
+
+
+## BC-KB-229 — Enviar para aprovação documentos de Demonstrações e Ofertas a Clientes
+**Categoria:** Aprovações / Vendas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Documentos de demonstrações e ofertas a clientes necessitam de aprovação antes de avançarem no processo.
+
+**Diagnóstico**  
+Foram disponibilizados workflows de aprovação para documentos de Demonstrações e Ofertas a Clientes.
+
+**Causa provável**  
+Necessidade de controlo formal sobre documentos que originam movimentos sem venda direta ou com impacto comercial/logístico.
+
+**Solução**  
+No documento, utilizar a opção de pedido de aprovação para enviar o documento ao aprovador designado.
+
+**Como proceder**
+1. Abrir o documento de Demonstração ou Oferta a Cliente.
+2. Validar se as linhas, cliente, quantidades e demais informação estão corretas.
+3. No topo do documento, selecionar Base.
+4. Selecionar Request Approval.
+5. Clicar em Send Approval Request.
+6. Confirmar o envio do pedido, se o sistema apresentar mensagem de confirmação.
+7. Aguardar a decisão do aprovador designado.
+8. Após aprovação, prosseguir com o processo normal do documento.
+
+**Validação final**  
+1. O pedido de aprovação é criado no Business Central.
+2. O documento fica pendente de aprovação.
+3. O aprovador definido recebe a solicitação.
+4. Após aprovação, o documento pode avançar conforme o processo.
+
+**Notas**  
+* Na comunicação original, o aprovador designado era o Diretor de cada Área de Negócio.
+* Fonte: Comunicação TIC i9 de 04/06/2024.
+
+
+## BC-KB-230 — Justificar ajustes de stock
+**Categoria:** Stock / Ajustes  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Ao efetuar ajustes de stock, é necessário registar uma justificação para garantir rastreabilidade e controlo do motivo do ajuste.
+
+**Diagnóstico**  
+Foi disponibilizado um desenvolvimento para suportar a justificação dos ajustes de stock em Business Central.
+
+**Causa provável**  
+Os ajustes de stock sem justificação dificultam a auditoria, a análise posterior e a identificação da causa da correção.
+
+**Solução**  
+Sempre que for efetuado um ajuste de stock, preencher a justificação solicitada pelo sistema antes de concluir o registo.
+
+**Como proceder**
+1. Identificar o ajuste de stock a realizar.
+2. Aceder ao documento, diário ou funcionalidade de ajuste aplicável.
+3. Preencher a referência, localização, quantidade e demais informação operacional necessária.
+4. Preencher o campo de justificação do ajuste, quando disponibilizado/solicitado pelo sistema.
+5. Usar uma descrição objetiva, indicando o motivo do ajuste.
+6. Validar se a justificação está coerente com o tipo de movimento.
+7. Registar o ajuste apenas depois de a informação estar completa.
+8. Em caso de dúvida sobre a justificação adequada, validar com a equipa responsável antes de registar.
+
+**Validação final**  
+1. O ajuste de stock fica registado com justificação associada.
+2. A informação permite compreender o motivo do movimento.
+3. O registo fica mais rastreável para análise posterior ou auditoria.
+
+**Notas**  
+* A comunicação original confirma a disponibilização do desenvolvimento, mas não detalha todos os campos/ecrãs. Ajustar este artigo caso existam nomes específicos de campos no ambiente produtivo.
+* Fonte: Comunicação TIC i9 de 04/06/2024.
+
+
+## BC-KB-231 — Gerar Template Logista Pharma com localidade, cidade e limite de linhas
+**Categoria:** Logística Externa / Logista Pharma  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim
+
+**Problema**  
+É necessário gerar pedidos para a Logista Pharma com template atualizado, garantindo informação correta de localidade/cidade e limite máximo de linhas.
+
+**Diagnóstico**  
+O template de criação de pedidos da Logista foi alterado para rever a informação de localidade e cidade e limitar o número de linhas do pedido a 40.
+
+**Causa provável**  
+O template anterior podia não apresentar corretamente localidade/cidade ou ultrapassar o limite de linhas aceite no processo.
+
+**Solução**  
+Usar o template atualizado gerado pelo Business Central e validar que cada pedido respeita o máximo de 40 linhas.
+
+**Como proceder**
+1. Aceder à funcionalidade de geração de pedidos/template Logista Pharma.
+2. Gerar o template Excel atualizado.
+3. Validar se a informação de localidade e cidade está corretamente preenchida.
+4. Confirmar o número de linhas do pedido.
+5. Se o pedido tiver mais de 40 linhas, dividir ou tratar conforme o procedimento logístico definido.
+6. Enviar o template apenas depois de validar os dados principais do pedido.
+7. Guardar evidência do template enviado, se aplicável.
+
+**Validação final**  
+1. O template contém localidade e cidade corretamente preenchidas.
+2. O pedido não ultrapassa 40 linhas.
+3. O ficheiro fica pronto para envio à Logista Pharma.
+
+**Notas**  
+* Alteração com efeitos a partir de 25/06/2024.
+* Fonte: Comunicação TIC i9 de 24/06/2024.
+
+
+## BC-KB-232 — Usar produtos não aprovados em Propostas e ENCAV e criar fichas de produto de forma massiva
+**Categoria:** Produtos / Oportunidades / Encomendas Abertas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+A área de resposta a concursos precisa de utilizar produtos ainda não aprovados em propostas e encomendas abertas de venda, bem como criar fichas de produto de forma massiva.
+
+**Diagnóstico**  
+Os produtos passam a poder ser criados desbloqueados para utilização limitada em propostas de venda, resposta a concursos e ENCAV, ficando disponíveis para todos os documentos apenas após conclusão do ciclo de aprovação.
+
+**Causa provável**  
+O ciclo de aprovação de produtos pode não estar concluído no momento em que é necessário preparar propostas ou documentos de concurso.
+
+**Solução**  
+Criar ou importar fichas de produto conforme o processo massivo e utilizar os produtos em propostas/ENCAV apenas dentro do âmbito permitido até à aprovação final.
+
+**Como proceder**
+1. Criar a ficha do produto ou carregar as fichas de forma massiva, conforme procedimento disponível.
+2. Confirmar que o produto fica desbloqueado para utilização limitada.
+3. Utilizar o produto apenas em áreas permitidas: resposta a concursos, propostas de venda e encomendas abertas de venda.
+4. Não utilizar o produto em outros documentos operacionais enquanto o ciclo de aprovação não estiver concluído.
+5. Completar a informação obrigatória da ficha de produto.
+6. Enviar o produto para aprovação, seguindo o processo normal.
+7. Após aprovação, confirmar que o produto fica disponível para utilização em todos os documentos aplicáveis.
+
+**Validação final**  
+1. O produto pode ser usado em propostas e ENCAV antes da aprovação final.
+2. O produto não é usado indevidamente em documentos fora do âmbito permitido.
+3. Após aprovação, o produto fica disponível de forma completa.
+
+**Notas**  
+* Este comportamento foi criado para dar agilidade à resposta a concursos sem dispensar a aprovação final do produto.
+* Fonte: Comunicação TIC i9 de 22/07/2024.
+
+
+## BC-KB-233 — Pesquisar clientes por endereço, cidade, distrito ou Nº Contribuinte
+**Categoria:** Clientes / Pesquisa  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Na criação de documentos de venda ou consulta da lista de clientes, o utilizador precisa de encontrar clientes por dados adicionais além do número ou nome.
+
+**Diagnóstico**  
+Foram adicionados campos visíveis e pesquisáveis na lista de clientes e na criação de documentos de venda.
+
+**Causa provável**  
+A pesquisa anterior podia dificultar a identificação rápida do cliente correto, especialmente em clientes com nomes semelhantes.
+
+**Solução**  
+Utilizar os novos campos visíveis e pesquisáveis: Endereço, Cidade, Distrito e Nº Contribuinte.
+
+**Como proceder**
+1. Aceder à lista de Clientes ou iniciar a criação de um documento de venda.
+2. Na pesquisa do cliente, escrever parte do endereço, cidade, distrito ou Nº Contribuinte.
+3. Analisar os resultados apresentados.
+4. Confirmar se o cliente selecionado corresponde ao NIF/morada pretendidos.
+5. Selecionar o cliente correto para consulta ou criação do documento.
+6. Caso o cliente não seja encontrado, confirmar se os dados pesquisados estão corretos ou se o cliente existe no Business Central.
+
+**Validação final**  
+1. O utilizador consegue pesquisar clientes por Endereço, Cidade, Distrito ou Nº Contribuinte.
+2. O cliente correto é identificado com maior rapidez.
+3. A criação de documentos de venda fica menos sujeita a seleção incorreta de cliente.
+
+**Notas**  
+* Campos adicionados para aumentar produtividade na pesquisa e seleção de clientes.
+* Fonte: Comunicação TIC i9 de 24/07/2024.
+
+
+## BC-KB-234 — Registar Data/Hora Limite para submissão de Erros e Omissões na Oportunidade
+**Categoria:** Oportunidades / Concursos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Nos procedimentos concursais, é necessário registar o prazo limite para submissão de esclarecimentos sobre erros e omissões.
+
+**Diagnóstico**  
+Foi adicionada na ficha da oportunidade uma informação específica para Data/Hora Limite de submissão de Erros e Omissões.
+
+**Causa provável**  
+A ausência desta data na oportunidade reduz visibilidade e pode provocar falhas no acompanhamento dos prazos de concurso.
+
+**Solução**  
+Preencher o campo de Data/Hora Limite para submissão de Erros e Omissões na ficha da oportunidade sempre que aplicável.
+
+**Como proceder**
+1. Abrir a ficha da Oportunidade associada ao concurso.
+2. Confirmar se o procedimento tem prazo definido para submissão de erros e omissões.
+3. Localizar o campo de Data/Hora Limite para submissão de Erros e Omissões.
+4. Preencher a data e hora conforme indicado nos documentos oficiais do concurso.
+5. Guardar a ficha da oportunidade.
+6. Confirmar que a informação fica visível para os utilizadores intervenientes no processo.
+7. Atualizar a data/hora caso exista esclarecimento, prorrogação ou alteração oficial do prazo.
+
+**Validação final**  
+1. A oportunidade apresenta a Data/Hora Limite de Erros e Omissões preenchida.
+2. Os intervenientes conseguem consultar o prazo na ficha.
+3. O risco de falha de prazo é reduzido.
+
+**Notas**  
+* Campo criado na sequência de auditoria à área de resposta a concursos.
+* Fonte: Comunicação TIC i9 de 30/07/2024.
+
+
+## BC-KB-235 — Consultar Nº de PO do cliente nas etiquetas de faturação da Mobilidade
+**Categoria:** Mobilidade / Etiquetas / Faturação  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Alguns clientes não recebem fatura a acompanhar a mercadoria e precisam de ter a sua referência interna visível nos volumes expedidos.
+
+**Diagnóstico**  
+Foi adicionada à etiqueta de faturação a indicação do número da(s) PO(s) do cliente.
+
+**Causa provável**  
+Com a conversão para fatura eletrónica, a mercadoria pode seguir sem fatura física, tornando necessário reforçar a identificação do pedido do cliente na etiqueta.
+
+**Solução**  
+Usar as etiquetas de faturação geradas pela Mobilidade, que passam a incluir o Nº da(s) PO(s) do cliente.
+
+**Como proceder**
+1. Preparar o envio/faturação através do processo normal de mobilidade.
+2. Gerar a etiqueta de faturação associada ao volume.
+3. Confirmar que a etiqueta apresenta o Nº da(s) PO(s) do cliente, quando a informação exista no documento.
+4. Validar se a etiqueta acompanha corretamente os volumes expedidos.
+5. Em caso de ausência da PO na etiqueta, confirmar se o documento de origem tem a referência do cliente preenchida.
+6. Se a referência estiver em falta ou incorreta, corrigir o documento conforme permissões/processo interno antes de nova impressão.
+
+**Validação final**  
+1. A etiqueta apresenta o Nº da(s) PO(s) do cliente.
+2. O cliente consegue identificar a sua referência interna nos volumes.
+3. O processo suporta clientes sem fatura física a acompanhar mercadoria.
+
+**Notas**  
+* Alteração criada para apoiar o processo de fatura eletrónica.
+* Fonte: Comunicação TIC i9 de 30/07/2024.
+
+
+## BC-KB-236 — Interpretar indicadores de Encomendas de Venda Lançadas Não Enviadas no Centro de Perfil
+**Categoria:** Centro de Perfil / Vendas / Envios  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador precisa de interpretar os indicadores de encomendas de venda lançadas que ainda não foram enviadas.
+
+**Diagnóstico**  
+Os indicadores foram revistos e estão disponíveis em diferentes Centros de Perfil, com filtros ajustados ao perfil do utilizador.
+
+**Causa provável**  
+Sem interpretação correta dos indicadores, pode existir dificuldade em priorizar encomendas pendentes, parcialmente enviadas ou atrasadas.
+
+**Solução**  
+Consultar os indicadores no Centro de Perfil e interpretar cada métrica: Prontas para Envio, Parcialmente Enviado, Atrasadas e Média Dias Atraso.
+
+**Como proceder**
+1. Aceder ao Business Central com o Centro de Perfil aplicável.
+2. Localizar os indicadores de Encomendas de Venda Lançadas Não Enviadas.
+3. Interpretar Prontas para Envio como o número de encomendas de venda pendentes de envio.
+4. Interpretar Parcialmente Enviado como o número de encomendas de venda parcialmente enviadas.
+5. Interpretar Atrasadas como o número de encomendas atrasadas dentro das pendentes de envio.
+6. Interpretar Média Dias Atraso como a média da soma do atraso de todas as linhas pendentes.
+7. Clicar no indicador, quando aplicável, para abrir a lista filtrada e analisar detalhe.
+8. Priorizar ações com base nas encomendas atrasadas e parcialmente enviadas.
+
+**Validação final**  
+1. O utilizador compreende o significado de cada indicador.
+2. A lista filtrada permite analisar as encomendas por estado.
+3. As encomendas atrasadas são identificadas para tratamento.
+
+**Notas**  
+* Perfis referidos na comunicação: eDireção Comercial, eApoio Cliente, eDireção Departamento e eGestor Comercial.
+* Fonte: Comunicação TIC i9 de 01/08/2024.
+
+
+## BC-KB-237 — Cancelar ou alterar encomendas pendentes com pedido ao armazém
+**Categoria:** Vendas / Encomendas Pendentes / Logística  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador precisa de cancelar ou alterar uma encomenda de venda que já tem pedido de envio efetuado ao armazém.
+
+**Diagnóstico**  
+O Business Central passou a permitir cancelamento automático do pedido ao armazém em determinadas situações, e foi criada a ação eCancelar pedido ao Armazém para permitir alterações.
+
+**Causa provável**  
+Antes da melhoria, existia um alerta impeditivo e era necessário contactar a logística para cancelar manualmente o pedido de envio.
+
+**Solução**  
+Usar o cancelamento automático ou a ação eCancelar pedido ao Armazém, respeitando a regra de que encomendas em aviamento continuam a exigir contacto com a logística.
+
+**Como proceder**
+1. Identificar a encomenda de venda pendente que necessita de cancelamento ou alteração.
+2. Confirmar se a encomenda está parcialmente enviada ou ainda nada enviada.
+3. Caso pretenda cancelar a encomenda, executar a remoção/cancelamento conforme o processo normal.
+4. Se existir pedido ao armazém e a encomenda não estiver em aviamento, o sistema cancela automaticamente o pedido ao armazém.
+5. Se a encomenda estiver em aviamento, não prosseguir apenas pelo sistema; contactar a logística.
+6. Caso pretenda alterar a encomenda, abrir a encomenda e selecionar a ação eCancelar pedido ao Armazém.
+7. Confirmar que o pedido ao armazém foi cancelado.
+8. Reabrir a encomenda.
+9. Efetuar as alterações necessárias.
+10. Submeter novamente a encomenda para aprovação, quando aplicável.
+
+**Validação final**  
+1. O pedido ao armazém é cancelado automaticamente quando permitido.
+2. A encomenda pode ser alterada após reabertura.
+3. Encomendas em aviamento não são canceladas automaticamente e são tratadas com a logística.
+4. A encomenda alterada volta a seguir o processo correto de aprovação/libertação.
+
+**Notas**  
+* Após cancelar o pedido ao armazém, a encomenda deve ser reaberta; caso contrário, o pedido pode voltar a ser gerado quando a logística solicitar encomendas pendentes.
+* Fonte: Comunicação TIC i9 de 23/08/2024.
+
+
+## BC-KB-238 — Restrições em Notas de Crédito de Venda para faturas de Débito Direto
+**Categoria:** Financeiro / Notas de Crédito / Débito Direto  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim
+
+**Problema**  
+É necessário impedir que notas de crédito de venda liquidem indevidamente faturas de débito direto.
+
+**Diagnóstico**  
+Foram incluídas restrições na emissão e liquidação de notas de crédito referentes a faturas de DDireto.
+
+**Causa provável**  
+Ao copiar uma fatura de DDireto para nota de crédito, a liquidação podia ser inicializada automaticamente, gerando risco de liquidação incorreta.
+
+**Solução**  
+Permitir a cópia da fatura para aproveitar informação, mas impedir o registo ou liquidação quando se mantém liquidação associada a fatura de DDireto.
+
+**Como proceder**
+1. Criar a nota de crédito, se necessário, através de cópia da fatura original.
+2. Confirmar se a fatura copiada é de Débito Direto.
+3. Validar se a nota de crédito ficou com liquidação inicializada automaticamente.
+4. Se existir liquidação associada à fatura de DDireto, remover/regularizar a liquidação conforme procedimento financeiro antes de registar.
+5. Tentar registar a nota de crédito apenas depois de validar que não existe liquidação indevida.
+6. Na liquidação manual, não tentar liquidar faturas de DDireto com nota de crédito.
+7. Se o sistema apresentar alerta impeditivo, rever a liquidação antes de prosseguir.
+
+**Validação final**  
+1. O sistema impede o registo de notas de crédito com liquidação indevida de fatura DDireto.
+2. O sistema impede a liquidação de fatura DDireto por nota de crédito.
+3. A área financeira mantém controlo sobre este tipo de regularização.
+
+**Notas**  
+* A cópia da fatura continua disponível para reutilizar informação; a restrição incide sobre a liquidação/registo indevido.
+* Fonte: Comunicação TIC i9, comunicação financeira sem data explícita no ficheiro.
+
+
+## BC-KB-239 — Validar layout de Propostas de Venda Concurso com lotes e quantidades
+**Categoria:** Oportunidades / Propostas de Venda Concurso  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Na impressão de Propostas de Venda Concurso, é necessário garantir uma apresentação clara da informação de lotes e quantidades propostas.
+
+**Diagnóstico**  
+Foram atualizados dois pontos no layout: remoção da repetição do lote quando existe mais do que uma posição por lote e alteração da apresentação da quantidade proposta.
+
+**Causa provável**  
+A repetição de informação de lote e a apresentação anterior das quantidades dificultavam a leitura por parte do cliente.
+
+**Solução**  
+Gerar a Proposta de Venda Concurso com o layout atualizado e validar a apresentação de lotes e quantidades antes de envio ao cliente.
+
+**Como proceder**
+1. Abrir a Proposta de Venda associada ao concurso.
+2. Confirmar que as linhas, lotes e quantidades estão corretamente preenchidos.
+3. Selecionar a opção de impressão de Proposta de Venda Concurso.
+4. Gerar a pré-visualização ou o documento final.
+5. Validar se a informação de lote não é repetida indevidamente quando há mais de uma posição por lote.
+6. Validar se a quantidade proposta está apresentada de forma clara para o cliente.
+7. Se existir incoerência de dados, voltar à proposta/oportunidade e corrigir antes de enviar.
+
+**Validação final**  
+1. O lote não surge repetido desnecessariamente.
+2. A quantidade proposta é apresentada de forma legível.
+3. A proposta está pronta para envio ao cliente ou submissão em concurso.
+
+**Notas**  
+* Artigo complementar aos procedimentos de impressão de propostas de concurso.
+* Fonte: Comunicação TIC i9 de 24/09/2024.
+
+
+## BC-KB-240 — Utilizar o módulo de Inventário no Business Central e Mobilidade
+**Categoria:** Inventário / Mobilidade  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+É necessário suportar as contagens de inventário através do novo módulo disponibilizado no Business Central e na aplicação de mobilidade de armazéns.
+
+**Diagnóstico**  
+Foi disponibilizado um novo módulo de inventário no Microsoft Business Central e na aplicação de mobilidade de armazéns.
+
+**Causa provável**  
+As contagens de inventário requerem suporte estruturado para organização, recolha e validação de contagens.
+
+**Solução**  
+Utilizar o módulo de inventário no Business Central em conjunto com a mobilidade para execução das contagens.
+
+**Como proceder**
+1. Aceder ao módulo de inventário no Business Central.
+2. Validar o inventário/contagem a executar, conforme planeamento definido.
+3. Confirmar as localizações, produtos ou áreas incluídas na contagem.
+4. Utilizar a aplicação de mobilidade de armazéns para apoiar a recolha física, quando aplicável.
+5. Registar as contagens conforme o processo definido para o inventário.
+6. Validar diferenças entre stock esperado e contado.
+7. Encaminhar diferenças para validação antes de registar ajustes finais.
+8. Concluir o processo de inventário após validação das contagens.
+
+**Validação final**  
+1. As contagens são suportadas no Business Central e/ou mobilidade.
+2. As diferenças de inventário são identificadas.
+3. O processo fica preparado para suportar a atividade anual de contagem.
+
+**Notas**  
+* A comunicação original informa a disponibilização do módulo, mas não detalha o procedimento completo de inventário.
+* Fonte: Comunicação TIC i9 de 27/09/2024.
+
+
+## BC-KB-241 — Identificar Gestor Comercial de acompanhamento na Oportunidade
+**Categoria:** Oportunidades / Gestão Comercial  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+É necessário identificar o gestor comercial responsável pelo acompanhamento de uma oportunidade.
+
+**Diagnóstico**  
+Foi disponibilizado um campo no cabeçalho da oportunidade para caracterizar o Gestor Comercial de acompanhamento, ficando também disponível na lista de oportunidades.
+
+**Causa provável**  
+Sem esta informação, a responsabilidade de acompanhamento comercial podia não ficar clara para os intervenientes.
+
+**Solução**  
+Preencher o Gestor Comercial de acompanhamento no cabeçalho da oportunidade e usar a lista de oportunidades para consulta/controlo.
+
+**Como proceder**
+1. Abrir a ficha da Oportunidade.
+2. No cabeçalho, localizar o campo relativo ao Gestor Comercial de acompanhamento.
+3. Selecionar o gestor comercial responsável.
+4. Guardar a oportunidade.
+5. Voltar à lista de Oportunidades.
+6. Confirmar que a informação do gestor comercial está visível na lista.
+7. Usar esta informação para filtrar, acompanhar ou distribuir oportunidades.
+
+**Validação final**  
+1. A ficha da oportunidade tem o Gestor Comercial de acompanhamento preenchido.
+2. A lista de oportunidades mostra esta informação.
+3. Os intervenientes conseguem identificar o responsável pelo acompanhamento.
+
+**Notas**  
+* Esta informação complementa o Cód. Vendedor e melhora a rastreabilidade comercial da oportunidade.
+* Fonte: Comunicação TIC i9 de 02/10/2024.
+
+
+## BC-KB-242 — Corrigir Nº Documento Externo em Fatura de Venda Registada
+**Categoria:** Vendas / Faturas Registadas  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Foi registada uma fatura de venda com o Nº Documento Externo incorreto, normalmente associado ao número de pedido do cliente.
+
+**Diagnóstico**  
+Está disponível no cabeçalho da Fatura de Venda Registada a possibilidade de editar o Nº Documento Externo através da opção Atualizar Documento.
+
+**Causa provável**  
+Antes desta funcionalidade, a correção deste campo podia exigir emissão de nota de crédito e nova fatura.
+
+**Solução**  
+Solicitar a correção à área financeira autorizada e atualizar o documento através da função Atualizar Documento.
+
+**Como proceder**
+1. Aceder à Fatura de Venda Registada afetada.
+2. Confirmar que o erro está apenas no campo Nº Documento Externo.
+3. Validar qual é o número correto do pedido/documento externo do cliente.
+4. No separador Base, selecionar Atualizar Documento.
+5. Atualizar o campo Nº Documento Externo com o valor correto.
+6. Confirmar a alteração.
+7. Validar se o valor atualizado fica visível no cabeçalho da fatura.
+
+**Validação final**  
+1. O Nº Documento Externo fica corrigido na fatura registada.
+2. Não é necessário emitir nota de crédito apenas para esta retificação.
+3. A correção é efetuada por utilizadores com permissão adequada.
+
+**Notas**  
+* A permissão para esta alteração foi indicada como disponível apenas para elementos da área financeira, devendo o pedido ser comunicado ao colega Ricardo Arnaut.
+* Existe artigo semelhante na KB atual; este artigo mantém a origem TIC i9 como versão estruturada/complementar.
+* Fonte: Comunicação TIC i9 de 29/11/2024.
+
+
+## BC-KB-243 — Identificar clientes públicos e privados na ficha de cliente
+**Categoria:** Clientes / Faturação / Grupo de Registo  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+É necessário distinguir clientes públicos e privados no Business Central de forma rápida e consistente.
+
+**Diagnóstico**  
+A informação foi atualizada com apoio do Departamento Financeiro e passou a estar disponível na ficha do cliente, no separador Faturação, através do Grupo de Registo Cliente.
+
+**Causa provável**  
+A identificação manual ou pouco visível de clientes públicos/privados dificultava a análise e o tratamento operacional/comercial.
+
+**Solução**  
+Consultar o Grupo de Registo Cliente na ficha do cliente para identificar se o cliente está classificado como público ou privado.
+
+**Como proceder**
+1. Aceder à lista de Clientes.
+2. Pesquisar e abrir a ficha do cliente pretendido.
+3. Ir ao separador Faturação.
+4. Localizar o campo Grupo de Registo Cliente.
+5. Confirmar se o cliente está classificado como CC-PRIVADOS ou CC-PUBLICOS.
+6. Usar esta informação no tratamento financeiro, comercial ou operacional aplicável.
+7. Caso a classificação pareça incorreta, encaminhar para validação da área financeira.
+
+**Validação final**  
+1. O cliente apresenta classificação pública ou privada na ficha.
+2. A informação é consultável diretamente no Business Central.
+3. A classificação está alinhada com os critérios definidos pelo Departamento Financeiro.
+
+**Notas**  
+* Na atualização comunicada, foram revistos 4201 clientes: 3930 privados e 271 públicos.
+* Fonte: Comunicação TIC i9 de 02/01/2025.
+
+
+## BC-KB-244 — Preencher descrição do motivo de exclusão na Análise Concorrencial
+**Categoria:** Oportunidades / Análise Concorrencial  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Na análise concorrencial, é necessário complementar o motivo de exclusão do concurso com uma descrição mais detalhada.
+
+**Diagnóstico**  
+Foi adicionada a possibilidade de preencher uma descrição do motivo de exclusão, como complemento aos motivos pré-definidos.
+
+**Causa provável**  
+Os motivos de exclusão pré-definidos agregam a informação, mas podem não ser suficientes para explicar o contexto específico de cada concurso.
+
+**Solução**  
+Selecionar o motivo de exclusão pré-definido e preencher a descrição complementar com a informação relevante.
+
+**Como proceder**
+1. Abrir a oportunidade ou área de análise concorrencial associada ao concurso.
+2. Identificar a linha/registo onde é necessário indicar exclusão.
+3. Selecionar o motivo de exclusão pré-definido aplicável.
+4. Preencher o campo de descrição do motivo de exclusão com detalhe objetivo.
+5. Garantir que a descrição complementa o motivo selecionado, sem substituir a categorização.
+6. Guardar a informação.
+7. Usar esta descrição em análises futuras de perdas/exclusões.
+
+**Validação final**  
+1. O motivo de exclusão está selecionado.
+2. A descrição complementar está preenchida.
+3. A análise concorrencial contém detalhe suficiente para interpretação posterior.
+
+**Notas**  
+* A descrição serve como complemento aos motivos de exclusão pré-definidos, que continuam a funcionar como agregadores de informação.
+* Fonte: Comunicação TIC i9 de 29/01/2025.
+
+
+## BC-KB-245 — Preencher Preço Base do Procedimento na Oportunidade
+**Categoria:** Oportunidades / Concursos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Nos procedimentos concursais, é necessário dar visibilidade ao preço base do procedimento diretamente na ficha da oportunidade.
+
+**Diagnóstico**  
+Foi adicionado no cabeçalho da oportunidade um campo para identificação do Preço Base do Procedimento.
+
+**Causa provável**  
+A ausência desta informação no cabeçalho da oportunidade dificultava a análise rápida do enquadramento financeiro do concurso.
+
+**Solução**  
+Preencher o campo Preço Base do Procedimento na ficha da oportunidade sempre que essa informação exista nos documentos do concurso.
+
+**Como proceder**
+1. Abrir a ficha da Oportunidade.
+2. Consultar os documentos do procedimento para identificar o preço base oficial.
+3. No cabeçalho da oportunidade, localizar o campo Preço Base do Procedimento.
+4. Preencher o valor indicado no procedimento.
+5. Confirmar se o valor está na moeda correta e sem erros de casas decimais.
+6. Guardar a oportunidade.
+7. Usar esta informação para análise comercial, margem, risco e preparação de proposta.
+
+**Validação final**  
+1. O preço base do procedimento está preenchido na oportunidade.
+2. A informação fica visível no cabeçalho para consulta rápida.
+3. A equipa consegue avaliar o concurso com base no valor de referência.
+
+**Notas**  
+* Campo criado para maior visibilidade financeira nos procedimentos concursais.
+* Fonte: Comunicação TIC i9 de 29/01/2025.
+
+
+## BC-KB-246 — Duplicar Oportunidades
+**Categoria:** Oportunidades / Produtividade  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+A área de resposta a concursos precisa de criar oportunidades semelhantes com pequenas diferenças, sem repetir manualmente toda a configuração.
+
+**Diagnóstico**  
+Foi disponibilizada a ação eDuplicar Oportunidade, que cria uma nova oportunidade com cópia da configuração, eProdutos e proposta de venda associada, caso exista.
+
+**Causa provável**  
+O aumento de pedidos semelhantes gera trabalho repetitivo e maior risco de erro na criação manual de oportunidades.
+
+**Solução**  
+Utilizar a ação eDuplicar Oportunidade a partir da oportunidade original.
+
+**Como proceder**
+1. Abrir a oportunidade original que pretende copiar.
+2. Confirmar que a oportunidade contém a configuração, eProdutos e proposta de venda que devem servir de base.
+3. No menu, aceder a Ações.
+4. Clicar em eDuplicar Oportunidade.
+5. Confirmar a mensagem apresentada pelo sistema, clicando em Sim.
+6. Aguardar a confirmação de criação da nova oportunidade.
+7. Abrir a nova oportunidade criada.
+8. Rever e ajustar os dados que devem ser diferentes da oportunidade original.
+9. Validar especialmente cliente/contacto, datas, requisitos, linhas e proposta associada, quando aplicável.
+
+**Validação final**  
+1. É criada uma nova oportunidade com base na original.
+2. A configuração e os eProdutos são copiados.
+3. A proposta de venda é copiada quando existe na oportunidade original.
+4. A nova oportunidade pode ser ajustada sem alterar a original.
+
+**Notas**  
+* É possível copiar também oportunidades fechadas.
+* Fonte: Comunicação TIC i9 de 31/01/2025.
+
+
+## BC-KB-247 — Indicar atributos AIM e CHNM na Oportunidade
+**Categoria:** Oportunidades / Medicamentos / Atributos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Em concursos de medicamentos, pode ser necessário indicar ou imprimir os atributos AIM e CHNM na proposta.
+
+**Diagnóstico**  
+Foram adicionados à oportunidade os atributos AIM e CHNM, permitindo identificar se o cliente solicita esta informação e garantindo impressão quando os atributos estão preenchidos na ficha do produto.
+
+**Causa provável**  
+O crescimento da resposta a concursos de medicamentos aumentou a necessidade de gerir estes atributos de forma estruturada.
+
+**Solução**  
+Na oportunidade, indicar se AIM e/ou CHNM são requeridos e garantir que os produtos têm esses atributos preenchidos na ficha de produto.
+
+**Como proceder**
+1. Abrir a ficha da Oportunidade associada ao concurso.
+2. Confirmar nos documentos do cliente se é solicitado AIM e/ou CHNM.
+3. Na oportunidade, preencher ou ativar a indicação correspondente ao pedido destes atributos.
+4. Validar os produtos incluídos na oportunidade/proposta.
+5. Abrir a ficha dos produtos, se necessário, e confirmar se os atributos AIM e CHNM estão devidamente preenchidos.
+6. Gerar a proposta de venda de concurso.
+7. Confirmar se os atributos são impressos quando aplicáveis e preenchidos.
+
+**Validação final**  
+1. A oportunidade identifica corretamente o pedido de AIM e/ou CHNM.
+2. Os produtos têm os atributos preenchidos na ficha.
+3. A proposta imprime os atributos quando aplicável.
+
+**Notas**  
+* A impressão depende de os atributos estarem devidamente preenchidos na ficha do produto.
+* Fonte: Comunicação TIC i9 de 03/02/2025.
+
+
+## BC-KB-248 — Exportar Comunicação Trimestral de Medicamentos Exportados ao Infarmed
+**Categoria:** DTQAR / Infarmed / Exportação  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim
+
+**Problema**  
+É necessário comunicar trimestralmente ao Infarmed os medicamentos exportados, incluindo quantidades e país de destino.
+
+**Diagnóstico**  
+Foi criada uma área específica para DTQAR no Business Central, com acesso por email automático no início de cada trimestre ou via eDTQAR > eInfarmed Medicamentos Exportados.
+
+**Causa provável**  
+A Deliberação n.º 233/2025 do Infarmed exige comunicação trimestral até ao dia 15 do mês seguinte ao final de cada trimestre.
+
+**Solução**  
+Aceder à área eInfarmed Medicamentos Exportados e usar a opção Exportar Template Infarmed para obter o Excel de suporte à validação, tratamento e comunicação.
+
+**Como proceder**
+1. Aguardar o email automático enviado no início de cada novo trimestre para os elementos da DTQAR ou aceder diretamente ao Business Central.
+2. No Business Central, navegar para eDTQAR > eInfarmed Medicamentos Exportados.
+3. Validar o período trimestral a comunicar.
+4. Executar a opção Exportar Template Infarmed.
+5. Descarregar o ficheiro Excel gerado.
+6. Validar as quantidades e países de destino constantes no ficheiro.
+7. Efetuar o tratamento necessário antes da submissão ao Infarmed.
+8. Garantir que a comunicação é efetuada até ao dia 15 do mês seguinte ao final do trimestre.
+
+**Validação final**  
+1. O ficheiro Excel é exportado com os dados de medicamentos exportados.
+2. As quantidades e países de destino são validados pela DTQAR.
+3. A comunicação ao Infarmed é preparada dentro do prazo regulamentar.
+
+**Notas**  
+* Prazos de referência: 15 de janeiro, 15 de abril, 15 de julho e 15 de outubro.
+* Fonte: Comunicação TIC i9 de 08/04/2025.
+
+
+## BC-KB-249 — Configurar cliente para envio de mercadoria apenas com Guia de Remessa
+**Categoria:** Clientes / Expedição / Faturação  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Alguns clientes não devem receber a fatura de venda a acompanhar a mercadoria, devendo o envio seguir apenas com Guia de Transporte/Remessa.
+
+**Diagnóstico**  
+Foi estendida à ficha de cliente uma funcionalidade já existente em encomendas de venda, permitindo indicar que os envios para esse cliente devem seguir apenas com guia.
+
+**Causa provável**  
+Necessidade de impedir que a fatura acompanhe fisicamente a mercadoria em clientes específicos.
+
+**Solução**  
+Na ficha do cliente, ativar a opção que indica envio apenas com Guia de Transporte/Remessa, garantindo que a fatura será enviada posteriormente conforme o método definido para o cliente.
+
+**Como proceder**
+1. Abrir a ficha do cliente pretendido.
+2. Localizar a opção relacionada com envio apenas com Guia de Transporte/Remessa.
+3. Ativar a opção para o cliente, quando aplicável.
+4. Confirmar o método de envio posterior da fatura definido para esse cliente.
+5. Guardar a ficha do cliente.
+6. Criar ou processar uma encomenda de venda para esse cliente.
+7. Validar que a mercadoria segue acompanhada apenas pela guia.
+8. Confirmar que a fatura não acompanha fisicamente a mercadoria e é enviada posteriormente pelo método definido.
+
+**Validação final**  
+1. O cliente está configurado para envio apenas com guia.
+2. Os envios do cliente deixam de incluir fatura física com a mercadoria.
+3. A fatura continua a ser enviada posteriormente conforme o método definido.
+
+**Notas**  
+* Funcionalidade aplicável a clientes específicos, não devendo ser ativada de forma indiscriminada.
+* Fonte: Comunicação TIC i9 de 20/05/2025.
+
+
+## BC-KB-250 — Aplicação automática de portes no Modelo Comercial ePricing
+**Categoria:** Pricing / Portes / Modelo Comercial  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+É necessário aplicar portes de forma automática e consistente, considerando regras comerciais, segmentos de cliente, concursos, código postal e valor mínimo da encomenda.
+
+**Diagnóstico**  
+A nova política de atribuição de portes passou a estar centralizada no Modelo Comercial ePricing, com avaliação sequencial de condições.
+
+**Causa provável**  
+A aplicação manual ou pouco estruturada de portes pode gerar inconsistências, omissões ou aplicação indevida em clientes/segmentos excluídos.
+
+**Solução**  
+Configurar e validar as regras no Modelo Comercial ePricing, permitindo que o sistema aplique ou recalcule portes automaticamente ao validar o modelo comercial ou submeter a encomenda para aprovação.
+
+**Como proceder**
+1. Validar se a aplicação global de portes está ativa ou inativa no Modelo Comercial ePricing.
+2. Confirmar se existem exclusões por segmento de cliente, como farmácias ou concursos.
+3. Confirmar se encomendas provenientes de Procedimentos Concursais estão excluídas, quando aplicável.
+4. Validar as regras por código postal e valor mínimo de encomenda.
+5. Criar ou rever a encomenda de venda.
+6. Validar o modelo comercial ou submeter a encomenda para aprovação.
+7. Confirmar se os portes são aplicados automaticamente quando as regras assim o determinam.
+8. Se houver alterações posteriores à encomenda, confirmar se o sistema recalcula os portes.
+9. Validar se o produto de portes aplicado respeita a nomenclatura e dimensões da encomenda.
+
+**Validação final**  
+1. Os portes são aplicados automaticamente apenas quando as regras determinam.
+2. As exclusões por segmento ou procedimento concursal são respeitadas.
+3. Alterações posteriores recalculam os portes.
+4. O produto de portes aplicado está correto.
+
+**Notas**  
+* A política tem efeitos a partir de 1 de setembro, segundo a comunicação original.
+* Fonte: Comunicação TIC i9 de 08/08/2025.
+
+
+## BC-KB-251 — Monitorizar Garantias Bancárias, Cauções, Contratos Escritos e Tribunal de Contas na Oportunidade
+**Categoria:** Oportunidades / Concursos Públicos / Garantias  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+É necessário centralizar no Business Central a gestão de garantias bancárias, cauções, contratos escritos e submissões ao Tribunal de Contas associadas a oportunidades.
+
+**Diagnóstico**  
+Foram criados novos campos no cabeçalho da Oportunidade para monitorizar garantias/cauções e formalidades legais associadas ao processo concursal.
+
+**Causa provável**  
+O controlo manual em Excel aumenta o risco de perda de prazos, custos desnecessários e baixa rastreabilidade legal/financeira.
+
+**Solução**  
+Preencher os campos de garantias, cauções, contratos escritos, Tribunal de Contas e valor contratual diretamente na ficha da Oportunidade.
+
+**Como proceder**
+1. Abrir a ficha da Oportunidade associada ao concurso.
+2. Validar se o procedimento exige garantia bancária ou caução.
+3. Preencher os campos relativos à existência de garantia/caução.
+4. Preencher as datas de início e término da garantia/caução.
+5. Validar se o procedimento implica contrato escrito.
+6. Validar se existe submissão ao Tribunal de Contas.
+7. Preencher o valor contratual associado, quando aplicável.
+8. Guardar a oportunidade.
+9. Usar estes campos para monitorizar prazos, custos, formalidades e planeamento antes da execução/faturação.
+
+**Validação final**  
+1. A oportunidade contém informação de garantias/cauções quando aplicável.
+2. As datas de início e fim estão registadas.
+3. Contrato escrito, Tribunal de Contas e valor contratual estão identificados.
+4. O controlo fica centralizado no Business Central.
+
+**Notas**  
+* Objetivo: substituir controlo manual em Excel, aumentar rastreabilidade e melhorar planeamento financeiro e operacional.
+* Fonte: Comunicação TIC i9 de 29/10/2025.
+
+
+## BC-KB-252 — Selecionar o ambiente correto no acesso ao Business Central
+**Categoria:** Acesso / Business Central / Ambientes  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Ao aceder ao Business Central, pode ser apresentada uma mensagem de seleção de ambiente, causando dúvida sobre qual opção escolher.
+
+**Diagnóstico**  
+Para a Quilaban, os utilizadores devem selecionar sempre a primeira opção: Production.
+
+**Causa provável**  
+A seleção de ambiente incorreto pode levar o utilizador para um ambiente que não corresponde ao ambiente normal de trabalho.
+
+**Solução**  
+Quando surgir a seleção de ambiente, escolher sempre Production para acesso à Quilaban e não selecionar ProductionAO.
+
+**Como proceder**
+1. Aceder ao Business Central pelo link habitual.
+2. Caso surja a mensagem de seleção de ambiente, não avançar sem validar a opção.
+3. Selecionar a primeira opção: Production.
+4. Não selecionar ProductionAO para acesso à Quilaban.
+5. Aguardar o carregamento do Business Central.
+6. Confirmar que a empresa e o ambiente apresentados correspondem ao ambiente correto de trabalho.
+7. Em caso de acesso incorreto, terminar a sessão ou voltar atrás e repetir a seleção.
+
+**Validação final**  
+1. O utilizador entra no ambiente Production.
+2. A empresa/ambiente de trabalho está correto.
+3. O risco de operação em ambiente errado é eliminado.
+
+**Notas**  
+* Artigo complementar ao artigo geral de acesso ao Business Central.
+* Fonte: Comunicação TIC i9 de 22/12/2025.
+
+
+## BC-KB-253 — Rever encomenda de venda antes de solicitar Nota de Crédito de Retificação
+**Categoria:** Vendas / Devoluções / Notas de Crédito  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Ao emitir nota de crédito associada a devolução, pode ocorrer duplicação de envio e faturação se a encomenda de venda original continuar ativa/liberta.
+
+**Diagnóstico**  
+Quando é registada uma devolução com crédito, o Business Central repõe automaticamente a quantidade na encomenda de venda original. Se a encomenda estiver liberta, a logística poderá gerar novo envio automaticamente.
+
+**Causa provável**  
+A encomenda original não foi revista antes da solicitação do crédito, mantendo quantidades prontas para novo envio.
+
+**Solução**  
+Antes de solicitar crédito à logística, rever a encomenda de venda original e ajustar/remover linhas conforme a intenção real do cliente.
+
+**Como proceder**
+1. Antes de solicitar o crédito à logística, identificar a encomenda de venda de origem.
+2. Confirmar se a encomenda existe e se está ativa/liberta.
+3. Validar o motivo do crédito e a intenção do cliente.
+4. Se o cliente não pretende receber o produto, remover as linhas da encomenda que deram origem ao crédito.
+5. Se o cliente pretende produto com validade diferente, remover as linhas que originam crédito e criar/ajustar novas linhas com lote/validade correto.
+6. Se o cliente pretende envio noutra data, remover as linhas que originam crédito e criar/ajustar novas linhas com a nova data de envio.
+7. Confirmar que a encomenda fica correta e sem quantidades indevidas prontas para envio.
+8. Só depois solicitar o crédito à logística.
+
+**Validação final**  
+1. A encomenda original foi revista antes da solicitação do crédito.
+2. Não existem linhas indevidas prontas para novo envio.
+3. O crédito não origina duplicação de envio/faturação.
+4. O processo fica alinhado com a intenção real do cliente.
+
+**Notas**  
+* Procedimento com efeito imediato na comunicação original.
+* Fonte: Comunicação TIC i9 de 15/04.
+
+
+## BC-KB-254 — Exportar Comunicação Mensal LNP - Lista de Notificação Prévia
+**Categoria:** DTQAR / Infarmed / SIEXP / LNP  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim
+
+**Problema**  
+É necessário comunicar mensalmente as vendas de medicamentos incluídos na LNP - Lista de Notificação Prévia, com base na lista SIEXP.
+
+**Diagnóstico**  
+O Business Central disponibiliza uma área específica para extrair a informação mensal das vendas de medicamentos incluídos na lista SIEXP.
+
+**Causa provável**  
+Existe requisito regulatório de comunicação mensal ao Infarmed, aplicável a vendas nacionais e internacionais, considerando valores líquidos.
+
+**Solução**  
+Aceder a eDtqar > eSiexp > eSiexp LNP, preencher mês e ano e gerar a lista em Excel.
+
+**Como proceder**
+1. Aceder ao Business Central.
+2. Navegar para eDtqar > eSiexp > eSiexp LNP.
+3. Preencher o período correspondente ao mês anterior.
+4. Indicar o mês e o ano pretendidos.
+5. Clicar em OK.
+6. Aguardar a geração do resultado.
+7. Descarregar/abrir a lista em Excel.
+8. Validar que a listagem inclui vendas de medicamentos da lista SIEXP, para qualquer país.
+9. Confirmar que os valores são líquidos, considerando vendas menos notas de crédito.
+10. Preparar a comunicação até dia 15 de cada mês.
+
+**Validação final**  
+1. O Excel é gerado para o mês/ano selecionado.
+2. A listagem considera medicamentos incluídos na lista SIEXP.
+3. Os valores apresentados são líquidos.
+4. A informação fica pronta para validação e comunicação regulatória.
+
+**Notas**  
+* A lista SIEXP define os produtos a incluir.
+* Prazo: até dia 15 de cada mês.
+* Fonte: Comunicação TIC i9 de 16/04.
+
+
+## BC-KB-255 — Identificar Psicotrópicos em Encomendas de Compra
+**Categoria:** Compras / Psicotrópicos / Compliance  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Durante a criação ou validação de encomendas de compra, é necessário identificar se algum produto está associado a uma Tabela de Psicotrópicos.
+
+**Diagnóstico**  
+Nas linhas da encomenda de compra passou a estar disponível a coluna Produto-Cód. Tabela Psicotrópico, apresentando valores como TAB IV quando aplicável.
+
+**Causa provável**  
+Em compras a fornecedores armazenistas, os produtos podem ser inseridos manualmente em plataformas externas e a encomenda pode não ser impressa, aumentando o risco de compra indevida de psicotrópicos a fornecedores sem certificados necessários.
+
+**Solução**  
+Verificar a coluna Produto-Cód. Tabela Psicotrópico nas linhas da encomenda de compra e analisar com atenção qualquer linha preenchida antes de avançar com o fornecedor.
+
+**Como proceder**
+1. Abrir ou criar a Encomenda de Compra.
+2. Nas linhas do documento, localizar a coluna Produto-Cód. Tabela Psicotrópico.
+3. Validar cada linha da encomenda.
+4. Confirmar se alguma linha tem o campo preenchido, por exemplo TAB IV.
+5. Quando o campo estiver preenchido, analisar a compra com atenção antes de avançar.
+6. Validar se o fornecedor garante os certificados necessários para venda/fornecimento do produto.
+7. Em caso de dúvida, não avançar com a compra sem validação da área responsável.
+8. Após validação, prosseguir com o processo normal de compra.
+
+**Validação final**  
+1. As linhas com produtos psicotrópicos são identificadas antes do avanço da compra.
+2. O comprador consegue sinalizar risco operacional e de incumprimento.
+3. A encomenda só avança após análise adequada quando o campo está preenchido.
+
+**Notas**  
+* A alteração reforça o controlo no processo de compras, sobretudo em encomendas a fornecedores armazenistas.
+* Fonte: Comunicação TIC i9 de 18/05.
+
+
+## BC-KB-256 — Imprimir Código Pautal em Propostas de Venda a Concurso
+**Categoria:** Oportunidades / Propostas / Internacional  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Em propostas de venda a concurso para processos internacionais, pode ser necessário apresentar o Código Pautal para apoiar processos de licenciamento de importação nos países de destino.
+
+**Diagnóstico**  
+Foi criado na ficha da oportunidade o seletor Requer Cód. Pautal. Quando ativado, o Código Pautal associado ao produto é apresentado na impressão da Proposta de Venda a Concurso.
+
+**Causa provável**  
+A ausência do Código Pautal na proposta obrigava a tratamento manual ou pedidos adicionais de informação, criando risco de inconsistência e atraso.
+
+**Solução**  
+Na ficha da oportunidade, ativar o seletor Requer Cód. Pautal quando aplicável e confirmar que os produtos têm Código Pautal preenchido na respetiva ficha.
+
+**Como proceder**
+1. Aceder à ficha da Oportunidade associada à Proposta de Venda a Concurso.
+2. Validar se o processo requer apresentação do Código Pautal.
+3. Validar a informação da oportunidade e dos produtos associados.
+4. Ativar o seletor Requer Cód. Pautal, quando aplicável.
+5. Confirmar se os produtos têm Código Pautal preenchido na ficha do produto.
+6. Gerar ou imprimir a Proposta de Venda a Concurso.
+7. Confirmar que o Código Pautal é apresentado abaixo da respetiva linha de produto.
+8. Se o código não aparecer, validar se o produto tem Código Pautal preenchido.
+
+**Validação final**  
+1. O seletor Requer Cód. Pautal está ativo quando necessário.
+2. A proposta apresenta o Código Pautal abaixo da linha do produto.
+3. O código apresentado corresponde ao preenchido na ficha do produto.
+4. A proposta fica preparada para apoiar processos internacionais de importação.
+
+**Notas**  
+* Funcionalidade disponível apenas para impressão de Propostas de Venda a Concurso.
+* Se o produto não tiver Código Pautal preenchido na ficha, a informação não será apresentada na proposta.
+* Fonte: Comunicação TIC i9 de 02/06/2026 ou comunicação identificada como Ontem 09:38 no ficheiro.
+
