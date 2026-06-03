@@ -8836,7 +8836,7 @@ Nestes casos, o cliente não deverá tentar criar novo acesso sem validação pr
 ## BC-KB-258 — Como configurar o acesso de um cliente ao Portal Cliente no Business Central?
 
 **Categoria:** Portal Cliente / Configuração
-**Disponível para Utilizador:** Não
+**Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
 
 **Problema**
