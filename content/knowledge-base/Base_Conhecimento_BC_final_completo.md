@@ -8697,5 +8697,219 @@ Na ficha da oportunidade, ativar o seletor Requer Cód. Pautal quando aplicável
 **Notas**  
 * Funcionalidade disponível apenas para impressão de Propostas de Venda a Concurso.
 * Se o produto não tiver Código Pautal preenchido na ficha, a informação não será apresentada na proposta.
-* Fonte: Comunicação TIC i9 de 02/06/2026 ou comunicação identificada como Ontem 09:38 no ficheiro.
 
+## BC-KB-257 — Como aceder ao Portal Cliente Quilaban?
+
+**Categoria:** Portal Cliente / Acessos
+**Disponível para Utilizador:** Sim
+**Disponível para Agente:** Sim
+
+**Problema**
+O cliente pretende aceder ao Portal Cliente Quilaban, mas não sabe como aceitar o convite inicial, iniciar sessão ou resolver situações em que o acesso deixa de estar autorizado.
+
+**Diagnóstico**
+O acesso ao Portal Cliente é efetuado através de um convite enviado por email pela organização Quilaban, via Office365.
+
+Após aceitar o convite, o cliente deve validar o acesso através de um código de verificação enviado para o email utilizado na autenticação. Depois da adesão inicial, o acesso passa a poder ser feito através do site da Quilaban, no menu **Portal Cliente**.
+
+**Causa provável**
+A dificuldade de acesso pode estar relacionada com uma das seguintes situações:
+
+* o cliente ainda não aceitou o convite inicial;
+* o convite foi aceite, mas o código de verificação não foi introduzido;
+* o código de verificação expirou;
+* as permissões solicitadas não foram aceites;
+* o cliente está a tentar aceder com um email diferente do email autorizado;
+* o acesso ao Portal Cliente deixou de estar autorizado;
+* a conta encontra-se bloqueada, desativada ou sem permissão ativa.
+
+**Solução**
+O cliente deve aceitar o convite recebido por email, solicitar o código de verificação, introduzir o código recebido, aceitar as permissões solicitadas e aceder ao Portal Cliente através do site da Quilaban.
+
+Se o acesso estiver bloqueado ou deixar de estar autorizado, o cliente deve contactar o respetivo gestor comercial.
+
+**Como proceder**
+
+### 1. Aceitar o convite de adesão ao Portal Cliente
+
+1. Aceder à caixa de email associada ao cliente.
+2. Localizar o email de convite enviado pelo Office365 da organização Quilaban.
+3. Confirmar que o convite identifica a organização **Quilaban**.
+4. Clicar em **Aceitar Convite**.
+5. Será aberta uma página de autenticação associada ao Portal Cliente.
+
+### 2. Solicitar o código de acesso
+
+1. Na página de autenticação, confirmar o email apresentado.
+2. Clicar em **Send code** / **Enviar código**.
+3. Aguardar o envio do código para o email utilizado na autenticação.
+4. Abrir novamente a caixa de email.
+5. Localizar o email com o código de verificação da conta.
+
+**Nota:**
+O código de verificação tem validade de **30 minutos**.
+
+### 3. Introduzir o código de verificação
+
+1. Copiar o código recebido por email.
+2. Voltar à página de autenticação.
+3. Introduzir o código no campo indicado.
+4. Clicar em **Sign in** / **Iniciar sessão**.
+5. Aguardar a validação do acesso.
+
+### 4. Aceitar as permissões solicitadas
+
+1. Após a validação do código, será apresentada uma página com permissões solicitadas pela organização Quilaban.
+2. Rever a informação apresentada.
+3. Clicar em **Accept** / **Aceitar**.
+4. Após aceitar as permissões, o utilizador será encaminhado para o Portal Cliente.
+
+### 5. Aceder posteriormente ao Portal Cliente
+
+1. Aceder ao site da Quilaban:
+
+   * [www.quilaban.pt](http://www.quilaban.pt)
+2. Clicar no menu **Portal Cliente**.
+3. Será aberta a página do Portal Cliente.
+4. Clicar em **Log in**, no canto superior direito.
+5. Introduzir o email de acesso autorizado.
+6. Clicar em **Seguinte**.
+7. Consultar a caixa de email e copiar o código de verificação recebido.
+8. Introduzir o código no portal.
+9. Clicar em **Iniciar sessão**.
+
+### 6. Validar acesso ao portal
+
+Após login com sucesso, o cliente deverá conseguir visualizar a área principal do Portal Cliente, incluindo informação como:
+
+* dashboard;
+* encomendas;
+* documentos;
+* informação de cliente;
+* indicadores ou áreas disponíveis no portal.
+
+**Validação final**
+O processo está correto quando:
+
+1. O convite foi aceite com sucesso.
+2. O código de verificação foi introduzido dentro do prazo de validade.
+3. As permissões solicitadas foram aceites.
+4. O cliente consegue iniciar sessão no Portal Cliente.
+5. O portal apresenta a área principal com as opções disponíveis ao cliente.
+
+**Casos de erro**
+
+### Acesso deixou de estar autorizado
+
+Se o acesso ao Portal Cliente deixar de estar autorizado, poderão surgir mensagens indicando que:
+
+* o utilizador foi desabilitado;
+* a conta está bloqueada;
+* a sessão foi encerrada;
+* é necessário contactar o suporte ou o responsável.
+
+Nestes casos, o cliente não deverá tentar criar novo acesso sem validação prévia.
+
+**Como proceder em caso de erro**
+
+1. Confirmar se está a utilizar o email correto.
+2. Validar se o código de verificação ainda está dentro do prazo de 30 minutos.
+3. Se o código expirou, solicitar novo código.
+4. Se a conta aparecer bloqueada, desativada ou sem autorização, contactar o gestor comercial.
+5. Indicar ao gestor comercial:
+
+   * email utilizado no acesso;
+   * mensagem de erro apresentada;
+   * momento em que o erro ocorre;
+   * se já tinha conseguido aceder anteriormente;
+   * captura de ecrã do erro, se possível.
+
+**Notas**
+
+* O código de verificação enviado por email tem validade de 30 minutos.
+* O acesso deve ser feito com o email previamente autorizado.
+* As permissões solicitadas devem ser aceites para concluir o acesso ao Portal Cliente.
+* Se o cliente usar outro email, poderá não conseguir entrar.
+* Em caso de conta bloqueada, desativada ou acesso removido, o cliente deve contactar o gestor comercial.
+* O gestor comercial deverá validar internamente se o cliente continua autorizado a aceder ao Portal Cliente.
+
+## BC-KB-258 — Como configurar o acesso de um cliente ao Portal Cliente no Business Central?
+
+**Categoria:** Portal Cliente / Configuração
+**Disponível para Utilizador:** Não
+**Disponível para Agente:** Sim
+
+**Problema**
+É necessário configurar o acesso de um cliente ao Portal Cliente Quilaban através do Business Central.
+
+**Diagnóstico**
+O cliente só receberá o email de configuração do Portal Cliente depois de a respetiva ficha de cliente estar corretamente configurada no Business Central.
+
+Para isso, é necessário ativar o acesso no separador **ePortal de cliente** e indicar o email do cliente que deverá receber o convite/configuração de acesso.
+
+**Causa provável**
+O cliente ainda não recebeu o email de configuração ou não consegue aceder ao Portal Cliente porque:
+
+* o campo **Acesso ao portal de cliente** ainda não foi ativado;
+* o email do cliente não foi preenchido;
+* o email preenchido está incorreto;
+* a alteração ainda não foi processada pelo envio automático noturno;
+* o utilizador que está a tratar o pedido não tem permissão para editar a ficha do cliente.
+
+**Solução**
+Editar a ficha do cliente no Business Central, aceder ao separador **ePortal de cliente**, ativar o campo **Acesso ao portal de cliente** e preencher o email do cliente que deverá receber o acesso.
+
+**Como proceder**
+
+### 1. Aceder à ficha do cliente
+
+1. No Business Central, pesquisar por **Clientes**.
+2. Abrir a lista de clientes.
+3. Procurar o cliente que se pretende ativar para acesso ao Portal Cliente.
+4. Abrir a respetiva **Ficha de Cliente**.
+
+### 2. Editar a ficha do cliente
+
+1. Na ficha do cliente, clicar em **Editar**.
+2. Confirmar que tem permissões para alterar a ficha do cliente.
+3. Caso não tenha permissões para editar a ficha, solicitar a alteração ao **Departamento Financeiro**.
+
+### 3. Ativar o acesso ao Portal Cliente
+
+1. Na ficha do cliente, aceder ao separador **ePortal de cliente**.
+2. Ativar o botão/campo **Acesso ao portal de cliente**.
+3. Confirmar que o campo ficou ativo.
+
+### 4. Preencher o email do cliente
+
+1. Ainda no separador **ePortal de cliente**, preencher o campo **Email**.
+2. Indicar o email do cliente ao qual se pretende dar acesso ao Portal Cliente.
+3. Confirmar cuidadosamente que o email está correto.
+4. Gravar/fechar a ficha do cliente.
+
+### 5. Aguardar o envio automático do email
+
+1. Após a edição da ficha do cliente, o email de configuração não é enviado de imediato.
+2. O envio do email de configuração é efetuado durante a noite seguinte à alteração da ficha.
+3. O cliente só deverá receber o email na caixa de correio no dia seguinte à edição.
+
+**Validação final**
+A configuração está correta quando:
+
+1. A ficha do cliente foi editada com sucesso.
+2. O campo **Acesso ao portal de cliente** está ativo.
+3. O campo **Email** está preenchido no separador **ePortal de cliente**.
+4. O email preenchido corresponde ao email do cliente que deverá aceder ao portal.
+5. A alteração foi gravada.
+6. O cliente recebe o email de configuração no dia seguinte.
+7. O cliente consegue seguir o processo de adesão/acesso ao Portal Cliente.
+
+**Notas**
+
+* Se o utilizador não tiver permissão para editar a ficha do cliente, deve solicitar a alteração ao **Departamento Financeiro**.
+* O email de configuração não é enviado imediatamente após a alteração.
+* O envio é feito durante a noite seguinte à edição da ficha do cliente.
+* O cliente deverá verificar a caixa de correio no dia seguinte à alteração.
+* O email configurado deve ser o email que o cliente irá utilizar para aceder ao Portal Cliente.
+* Se o email estiver incorreto, o cliente poderá não receber o convite ou não conseguir concluir o acesso.
+* Antes de indicar ao cliente que o acesso está disponível, confirmar se já passou o processamento noturno.
