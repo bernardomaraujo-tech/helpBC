@@ -1,4 +1,4 @@
-import { Search, ShieldCheck, UserRound } from 'lucide-react';
+import { Search, UserRound } from 'lucide-react';
 import { EntryCard } from '../components/EntryCard';
 import type { Role } from '../types';
 
@@ -40,17 +40,6 @@ export function EntryPage({ onSelectRole }: Props) {
             description="Pesquisa, consulta e mantém a base de conhecimento interna."
             onClick={() => onSelectRole('agent')}
           />
-        </div>
-
-        <div className="microsoft-strip">
-          <ShieldCheck size={18} />
-          <span>Acesso seguro com Microsoft</span>
-          <span className="microsoft-logo" aria-hidden="true">
-            <i />
-            <i />
-            <i />
-            <i />
-          </span>
         </div>
       </section>
     </main>
