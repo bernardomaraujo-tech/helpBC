@@ -8913,3 +8913,79 @@ A configuração está correta quando:
 * O email configurado deve ser o email que o cliente irá utilizar para aceder ao Portal Cliente.
 * Se o email estiver incorreto, o cliente poderá não receber o convite ou não conseguir concluir o acesso.
 * Antes de indicar ao cliente que o acesso está disponível, confirmar se já passou o processamento noturno.
+
+## BC-KB-259 — Como efetuar personalização de páginas no Business Central?
+**Categoria:** Business Central / Personalização  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador pretende adaptar uma página do Business Central ao seu trabalho diário, mas não sabe como adicionar, mover ou ocultar campos.
+
+**Diagnóstico**  
+As páginas do Business Central podem apresentar informação que não é relevante para todos os utilizadores ou, em alternativa, podem ter campos úteis que estão disponíveis mas não visíveis por defeito.
+
+**Causa provável**  
+A página está a ser utilizada com a configuração standard ou com uma disposição que não está ajustada às necessidades do utilizador.
+
+**Solução**  
+Utilizar a funcionalidade de personalização do Business Central para ajustar a página, permitindo adicionar campos disponíveis, mudar campos de posição ou ocultar informação que não seja necessária. Esta personalização ajuda a tornar o trabalho mais simples, rápido e eficaz.
+
+**Como proceder**
+
+### 1. Abrir a página que pretende personalizar
+1. Aceder ao Business Central.
+2. Abrir a página onde pretende efetuar a personalização.
+3. Confirmar que está na página correta antes de iniciar a alteração.
+
+### 2. Ativar o modo de personalização
+1. Clicar na roda dentada no canto superior direito do ecrã.
+2. Selecionar a opção **Personalizar**.
+3. O Business Central passa a apresentar a barra/opções de personalização da página.
+
+### 3. Mostrar as opções adicionais, se necessário
+1. Se apenas aparecerem as opções **Concluído** e **Mais**, clicar em **Mais**.
+2. Validar se passa a estar disponível a opção **+ Campo**.
+3. Se a opção **+ Campo** já estiver visível, avançar diretamente para o passo seguinte.
+
+### 4. Adicionar campos à página
+1. Clicar em **+ Campo** no canto superior esquerdo.
+2. Será aberta a lista de campos disponíveis para essa página.
+3. Localizar o campo que pretende adicionar.
+4. Clicar no campo com o botão esquerdo do rato, manter pressionado e arrastar para a posição pretendida na página.
+5. Soltar o botão do rato quando o campo estiver no local desejado.
+6. Confirmar visualmente se o campo ficou na posição correta.
+7. Repetir o processo para todos os campos que pretende adicionar.
+
+### 5. Reorganizar campos existentes
+1. Selecionar o campo que pretende mover.
+2. Clicar com o botão esquerdo do rato, manter pressionado e arrastar para a nova posição.
+3. Soltar o campo no local pretendido.
+4. Confirmar se a nova posição facilita a leitura e utilização da página.
+
+### 6. Ocultar campos que não são necessários
+1. No modo de personalização, selecionar o campo que pretende ocultar.
+2. Utilizar a opção disponível para ocultar/remover da vista.
+3. Confirmar que o campo deixa de aparecer na página.
+4. Repetir para outros campos que não sejam úteis para o trabalho diário.
+
+### 7. Concluir a personalização
+1. Depois de adicionar, mover ou ocultar os campos necessários, clicar em **Concluído**.
+2. Confirmar que a página fica apresentada com a nova organização.
+3. Atualizar ou voltar a abrir a página, se necessário, para validar que a personalização ficou gravada.
+
+**Validação final**  
+A personalização está correta quando:
+1. Os campos adicionados ficam visíveis na página.
+2. Os campos reorganizados aparecem na posição pretendida.
+3. Os campos ocultados deixam de aparecer.
+4. A página fica mais ajustada ao trabalho diário do utilizador.
+5. A configuração permanece disponível após sair e voltar a entrar na página.
+
+**Notas**  
+- A personalização é feita ao nível do utilizador, ou seja, altera a forma como esse utilizador vê a página.
+- A personalização não altera os dados existentes no Business Central.
+- Nem todos os campos podem estar disponíveis para adicionar em todas as páginas.
+- Se um campo necessário não aparecer na lista de campos disponíveis, poderá ser necessária validação com a equipa de suporte ou desenvolvimento.
+- Evitar ocultar campos importantes para validação, controlo ou processos obrigatórios.
+- Antes de personalizar páginas críticas, recomenda-se confirmar com a equipa responsável quais os campos essenciais para o processo.
