@@ -8989,3 +8989,503 @@ A personalização está correta quando:
 - Se um campo necessário não aparecer na lista de campos disponíveis, poderá ser necessária validação com a equipa de suporte ou desenvolvimento.
 - Evitar ocultar campos importantes para validação, controlo ou processos obrigatórios.
 - Antes de personalizar páginas críticas, recomenda-se confirmar com a equipa responsável quais os campos essenciais para o processo.
+
+## BC-KB-259 — Como aceder ao Portal de Aprovações do Continia?
+**Categoria:** Continia / Portal de Aprovações  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador precisa de aceder ao Portal de Aprovações do Continia para consultar ou decidir pedidos de aprovação pendentes.
+
+**Diagnóstico**  
+O acesso pode ser feito através do link recebido por email quando existe um pedido pendente ou através do link direto disponibilizado internamente.
+
+**Causa provável**  
+O utilizador recebeu uma notificação de aprovação ou pretende consultar os pedidos em aberto diretamente no portal.
+
+**Solução**  
+Aceder ao Portal de Aprovações do Continia através do link recebido na notificação de email ou através do link direto do portal, usando as credenciais habituais.
+
+**Como proceder**
+1. Abrir o email de notificação recebido do Continia.
+2. Confirmar que o email está relacionado com um pedido de aprovação pendente.
+3. Clicar no link disponível na mensagem para abrir o Portal de Aprovações.
+4. Em alternativa, abrir diretamente o link do portal disponibilizado internamente.
+5. Iniciar sessão, se solicitado.
+6. Aceder à área de aprovações em aberto.
+7. Confirmar se existem pedidos pendentes para análise.
+
+**Validação final**  
+O utilizador consegue entrar no Portal de Aprovações do Continia e visualizar os pedidos que aguardam a sua decisão.
+
+**Notas**
+- O email de notificação apresenta um resumo da informação principal do pedido.
+- O link do email permite aceder diretamente ao portal.
+- Também é possível aceder ao portal sem email, usando o link direto disponibilizado internamente.
+- O utilizador apenas deve decidir pedidos depois de validar a informação necessária.
+
+
+## BC-KB-260 — Como consultar pedidos pendentes no Portal de Aprovações do Continia?
+**Categoria:** Continia / Aprovações Pendentes  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador pretende saber que documentos aguardam a sua decisão no Portal de Aprovações do Continia.
+
+**Diagnóstico**  
+Os pedidos pendentes ficam disponíveis na área de aprovações em aberto do portal.
+
+**Causa provável**  
+Existem documentos enviados para aprovação que ainda não foram aprovados, rejeitados ou reencaminhados pelo validador.
+
+**Solução**  
+Aceder ao Portal de Aprovações e consultar a lista de pedidos em aberto, validando a informação essencial apresentada em cada linha.
+
+**Como proceder**
+1. Aceder ao Portal de Aprovações do Continia.
+2. Entrar na área de aprovações em aberto.
+3. Consultar a lista de documentos pendentes.
+4. Rever a informação apresentada em cada linha, como:
+   - tipo de documento;
+   - data;
+   - fornecedor;
+   - valor;
+   - descrição;
+   - comentários associados.
+5. Selecionar o pedido pretendido para análise.
+6. Caso a informação da lista seja suficiente, decidir diretamente a partir da lista, se aplicável.
+7. Caso seja necessário mais detalhe, abrir o pedido antes de tomar decisão.
+
+**Validação final**  
+A lista apresenta os pedidos pendentes do utilizador e permite identificar quais necessitam de aprovação, rejeição ou reencaminhamento.
+
+**Notas**
+- A lista centraliza os pedidos em aberto do validador.
+- Antes de aprovar ou rejeitar, deve ser validado se a informação apresentada é suficiente.
+- Se existirem dúvidas, o pedido deve ser aberto para consulta detalhada.
+
+
+## BC-KB-261 — Como abrir e analisar um pedido de aprovação no Continia?
+**Categoria:** Continia / Análise de Pedidos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador precisa de analisar o detalhe de um pedido antes de tomar uma decisão no Portal de Aprovações do Continia.
+
+**Diagnóstico**  
+A lista de aprovações apresenta apenas a informação essencial. Para validar o pedido de forma completa, é necessário abrir o detalhe do documento.
+
+**Causa provável**  
+O pedido requer validação adicional antes de ser aprovado, rejeitado ou reencaminhado.
+
+**Solução**  
+Abrir o pedido de aprovação e analisar os dados principais, comentários, documento digitalizado e informação capturada automaticamente.
+
+**Como proceder**
+1. Aceder ao Portal de Aprovações do Continia.
+2. Abrir a área de aprovações em aberto.
+3. Selecionar o pedido que pretende analisar.
+4. Abrir o detalhe do pedido.
+5. Validar a informação geral apresentada no portal.
+6. Confirmar os dados principais do pedido, nomeadamente:
+   - fornecedor;
+   - descrição;
+   - valor;
+   - data;
+   - comentários associados.
+7. Consultar o detalhe do documento.
+8. Analisar o documento digitalizado, se disponível.
+9. Validar a informação capturada automaticamente.
+10. Depois da análise, decidir se o pedido deve ser aprovado, rejeitado ou reencaminhado.
+
+**Validação final**  
+O pedido foi aberto e a informação necessária foi analisada antes da decisão.
+
+**Notas**
+- A abertura do pedido permite uma validação mais completa do que a análise pela lista.
+- A decisão deve ser tomada apenas depois de confirmar que os dados do documento estão corretos.
+- Os comentários existentes devem ser considerados antes da decisão final.
+
+
+## BC-KB-262 — Como validar o documento digitalizado e a captura automática de dados no Continia?
+**Categoria:** Continia / Validação Documental  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador precisa de confirmar se o documento digitalizado e os dados capturados automaticamente estão corretos antes de aprovar.
+
+**Diagnóstico**  
+O Continia apresenta o documento digitalizado e o resultado da captura automática de dados, permitindo comparar a informação reconhecida com o documento original.
+
+**Causa provável**  
+A aprovação deve garantir que os dados principais do documento estão corretos e coerentes com a informação capturada.
+
+**Solução**  
+Abrir o pedido de aprovação, consultar o documento digitalizado e validar se os dados capturados correspondem à informação do documento.
+
+**Como proceder**
+1. Abrir o pedido de aprovação no Portal de Aprovações do Continia.
+2. Aceder à área de detalhe do documento.
+3. Consultar o documento digitalizado.
+4. Validar se os dados capturados automaticamente estão corretos.
+5. Confirmar se os dados principais coincidem com o documento, incluindo:
+   - fornecedor;
+   - data;
+   - valor;
+   - descrição;
+   - dados de aprovação;
+   - informação relevante para decisão.
+6. Se a informação estiver correta, prosseguir com a aprovação, se aplicável.
+7. Se existirem erros, acrescentar comentário e rejeitar ou reencaminhar o pedido, conforme o caso.
+
+**Validação final**  
+O documento digitalizado foi consultado e os dados capturados automaticamente foram confirmados antes da decisão.
+
+**Notas**
+- A validação da captura automática reduz o risco de aprovar documentos com informação incorreta.
+- Se a informação capturada não estiver correta, o pedido não deve ser aprovado sem correção.
+- A decisão deve ficar suportada por comentário sempre que exista erro ou dúvida.
+
+
+## BC-KB-263 — Como aprovar um pedido no Portal de Aprovações do Continia?
+**Categoria:** Continia / Aprovação de Documentos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador precisa de aprovar um documento pendente no Portal de Aprovações do Continia.
+
+**Diagnóstico**  
+O pedido encontra-se pendente e aguarda decisão do validador.
+
+**Causa provável**  
+O documento foi encaminhado para aprovação no fluxo definido e reúne condições para avançar.
+
+**Solução**  
+Validar o pedido e selecionar a opção de aprovação no portal.
+
+**Como proceder**
+1. Aceder ao Portal de Aprovações do Continia.
+2. Abrir a área de aprovações em aberto.
+3. Selecionar o pedido pendente.
+4. Validar os dados principais do documento.
+5. Abrir o pedido, se for necessário consultar mais detalhe.
+6. Confirmar que a informação está correta.
+7. Selecionar a opção de aprovação.
+8. Confirmar a decisão, se solicitado.
+9. Verificar que o pedido deixa de estar pendente para o utilizador.
+
+**Validação final**  
+O pedido fica aprovado no portal e segue automaticamente para a próxima etapa do fluxo ou fica concluído, conforme a configuração do processo.
+
+**Notas**
+- A aprovação fica registada no histórico do circuito de aprovação.
+- O pedido só deve ser aprovado se a informação estiver correta e o documento reunir condições para avançar.
+- Se for necessária validação adicional por outra pessoa, deve ser usada uma opção de reencaminhamento em vez da aprovação simples.
+
+
+## BC-KB-264 — Como rejeitar um pedido no Portal de Aprovações do Continia?
+**Categoria:** Continia / Rejeição de Documentos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador identificou que o pedido não está correto ou não reúne condições para aprovação.
+
+**Diagnóstico**  
+Durante a análise, foram detetados dados incorretos, informação em falta, documento incompleto ou outra situação que impede a aprovação.
+
+**Causa provável**  
+O documento pode ter sido capturado com erro, registado com informação incorreta ou estar incompleto para decisão.
+
+**Solução**  
+Rejeitar o pedido no Portal de Aprovações do Continia, indicando o motivo de forma clara e objetiva através de comentário.
+
+**Como proceder**
+1. Aceder ao Portal de Aprovações do Continia.
+2. Abrir a área de aprovações em aberto.
+3. Selecionar o pedido que pretende rejeitar.
+4. Abrir o detalhe do pedido, se necessário.
+5. Confirmar qual é o erro ou motivo que impede a aprovação.
+6. Adicionar um comentário com a justificação da rejeição.
+7. Selecionar a opção de rejeição.
+8. Confirmar a rejeição.
+9. Verificar que o pedido deixa de estar pendente para o utilizador.
+
+**Validação final**  
+O pedido fica rejeitado e o processo não avança no fluxo de aprovação.
+
+**Notas**
+- O comentário de rejeição deve indicar o que deve ser corrigido.
+- A área responsável pela gestão do documento fica com indicação do motivo da rejeição.
+- A rejeição evita aprovações indevidas e facilita a correção do documento.
+
+
+## BC-KB-265 — Que motivo devo indicar ao rejeitar um pedido no Continia?
+**Categoria:** Continia / Rejeição de Documentos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador precisa de rejeitar um pedido, mas não sabe que informação deve colocar no comentário de rejeição.
+
+**Diagnóstico**  
+A rejeição deve ser acompanhada de um motivo claro para que a área responsável consiga corrigir o documento.
+
+**Causa provável**  
+Sem comentário objetivo, a correção do documento pode ficar atrasada ou ser feita de forma incompleta.
+
+**Solução**  
+Indicar no comentário o motivo concreto da rejeição, identificando o ponto a corrigir.
+
+**Como proceder**
+1. Antes de rejeitar, identificar o motivo exato da rejeição.
+2. Aceder à área de comentários do pedido.
+3. Escrever uma justificação clara, curta e objetiva.
+4. Exemplos de motivos:
+   - centro de custo incorreto;
+   - valor incorreto;
+   - documento incompleto;
+   - informação em falta;
+   - fornecedor incorreto;
+   - dados capturados não coincidem com o documento;
+   - falta de documentação de suporte.
+5. Confirmar o comentário.
+6. Rejeitar o pedido.
+
+**Validação final**  
+O pedido fica rejeitado com uma justificação suficiente para permitir a correção.
+
+**Notas**
+- Evitar comentários genéricos como “não está correto”.
+- O comentário deve indicar o problema e, sempre que possível, o que deve ser corrigido.
+- Um bom motivo de rejeição reduz trocas adicionais de email e acelera a correção.
+
+
+## BC-KB-266 — Como reencaminhar um pedido de aprovação no Continia?
+**Categoria:** Continia / Reencaminhamento  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O aprovador percebe que não é a pessoa indicada para decidir ou que é necessária validação de outra pessoa antes da decisão final.
+
+**Diagnóstico**  
+O pedido está pendente no portal, mas deve ser encaminhado para outro utilizador por motivo de validação, aprovação adicional ou correção de destinatário.
+
+**Causa provável**  
+A decisão depende de outra área, outro responsável ou validação prévia antes da decisão final.
+
+**Solução**  
+Usar as opções de reencaminhamento disponíveis no Portal de Aprovações do Continia.
+
+**Como proceder**
+1. Aceder ao Portal de Aprovações do Continia.
+2. Selecionar o pedido de aprovação.
+3. Escolher a opção de reencaminhamento adequada ao caso.
+4. Selecionar a pessoa para quem pretende encaminhar o pedido.
+5. Adicionar um comentário a explicar o motivo do reencaminhamento.
+6. Confirmar o reencaminhamento.
+7. Validar que o pedido foi encaminhado e deixou de estar apenas dependente da ação inicial.
+
+**Validação final**  
+O pedido fica encaminhado para a pessoa selecionada e mantém-se dentro do circuito digital de aprovação.
+
+**Notas**
+- O reencaminhamento evita trocas paralelas por email.
+- O comentário ajuda o destinatário a compreender o motivo do encaminhamento.
+- O histórico do pedido fica registado no portal.
+
+
+## BC-KB-267 — Qual a diferença entre Aprovar e enviar, Reencaminhar sem aprovação e Reencaminhar e devolver para mim?
+**Categoria:** Continia / Reencaminhamento  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador não sabe qual opção de reencaminhamento deve escolher no Portal de Aprovações do Continia.
+
+**Diagnóstico**  
+Existem várias opções de encaminhamento, cada uma com impacto diferente no fluxo de aprovação.
+
+**Causa provável**  
+As opções disponíveis podem parecer semelhantes, mas representam decisões diferentes no processo.
+
+**Solução**  
+Selecionar a opção correta de acordo com o objetivo pretendido: aprovar e pedir validação adicional, reencaminhar sem decidir ou pedir validação e receber novamente o pedido.
+
+**Como proceder**
+
+### 1. Usar “Aprovar e enviar”
+1. Selecionar esta opção quando concorda com o pedido.
+2. Usar quando o documento também deve ser validado ou aprovado por outra pessoa.
+3. O pedido segue para o destinatário indicado depois da sua aprovação.
+
+### 2. Usar “Reencaminhar sem aprovação”
+1. Selecionar esta opção quando não pretende aprovar o pedido.
+2. Usar quando considera que não é o aprovador correto.
+3. Usar quando outra área ou pessoa deve tomar a decisão.
+
+### 3. Usar “Reencaminhar e devolver para mim”
+1. Selecionar esta opção quando é necessária validação prévia por outra pessoa.
+2. Usar quando a decisão final deve voltar ao aprovador inicial.
+3. Indicar claramente no comentário que informação ou validação é necessária.
+
+**Validação final**  
+A opção escolhida corresponde ao objetivo pretendido e o pedido segue o fluxo correto.
+
+**Notas**
+- Antes de confirmar, validar sempre quem será o destinatário do reencaminhamento.
+- Sempre que reencaminhar, adicionar comentário explicativo.
+- A escolha incorreta pode atrasar o processo de aprovação.
+
+
+## BC-KB-268 — Como adicionar comentários a um pedido de aprovação no Continia?
+**Categoria:** Continia / Comentários  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador pretende deixar contexto, observações ou justificações num pedido de aprovação.
+
+**Diagnóstico**  
+O Portal de Aprovações permite adicionar comentários ao pedido antes de tomar uma decisão.
+
+**Causa provável**  
+Pode ser necessário justificar uma decisão, pedir contexto adicional ou sinalizar um ponto relevante para outros intervenientes.
+
+**Solução**  
+Adicionar o comentário diretamente na área de comentários do pedido.
+
+**Como proceder**
+1. Abrir o pedido de aprovação no Portal de Aprovações do Continia.
+2. Aceder à área de comentários.
+3. Escrever a observação ou justificação pretendida.
+4. Confirmar/gravar o comentário.
+5. Tomar a decisão aplicável:
+   - aprovar;
+   - rejeitar;
+   - reencaminhar;
+   - aguardar validação adicional, se necessário.
+
+**Validação final**  
+O comentário fica associado ao pedido e passa a fazer parte do histórico do processo.
+
+**Notas**
+- Os comentários devem ser claros, objetivos e úteis para quem consulta o pedido.
+- Podem ser usados para justificar decisões, pedir contexto adicional ou sinalizar alertas.
+- Em caso de rejeição, o comentário deve indicar claramente o motivo.
+
+
+## BC-KB-269 — Como adicionar anexos a um pedido de aprovação no Continia?
+**Categoria:** Continia / Anexos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador precisa de complementar a análise de um pedido com documentação adicional.
+
+**Diagnóstico**  
+O Portal de Aprovações permite adicionar anexos ao pedido, associando documentação de suporte ao processo.
+
+**Causa provável**  
+A decisão pode depender de evidências, documentos complementares ou informação adicional que não está incluída no pedido original.
+
+**Solução**  
+Adicionar o ficheiro de suporte diretamente no pedido de aprovação.
+
+**Como proceder**
+1. Abrir o pedido de aprovação no Portal de Aprovações do Continia.
+2. Aceder à área de anexos.
+3. Adicionar o ficheiro relevante.
+4. Confirmar que o anexo ficou associado ao pedido.
+5. Se necessário, adicionar um comentário a explicar o motivo do anexo.
+6. Prosseguir com a decisão aplicável.
+
+**Validação final**  
+O anexo fica associado ao pedido e passa a fazer parte do histórico do processo.
+
+**Notas**
+- Os anexos devem ser usados para documentação adicional, evidências ou informação de suporte.
+- Sempre que o anexo seja essencial para a decisão, recomenda-se adicionar comentário explicativo.
+- A documentação anexada ajuda a manter o processo completo e rastreável.
+
+
+## BC-KB-270 — Como alterar o idioma no Portal de Aprovações do Continia?
+**Categoria:** Continia / Preferências  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador pretende alterar o idioma do Portal de Aprovações do Continia para tornar a navegação mais clara.
+
+**Diagnóstico**  
+O portal permite ajustar preferências pessoais através da roldana disponível no canto superior direito.
+
+**Causa provável**  
+O idioma atual do portal não está adequado ao utilizador ou não facilita a análise dos pedidos.
+
+**Solução**  
+Alterar o idioma nas preferências pessoais do Portal de Aprovações e guardar as alterações.
+
+**Como proceder**
+1. Aceder ao Portal de Aprovações do Continia.
+2. Clicar na roldana no canto superior direito.
+3. Abrir a área de preferências.
+4. Selecionar o idioma pretendido.
+5. Guardar as alterações.
+6. Confirmar que o portal passa a apresentar o idioma selecionado.
+
+**Validação final**  
+O idioma do portal fica alterado e a configuração permanece aplicada ao utilizador.
+
+**Notas**
+- É importante guardar as alterações no final.
+- A configuração é pessoal e adapta a navegação ao validador.
+- Se o idioma não alterar de imediato, atualizar a página ou voltar a entrar no portal.
+
+
+## BC-KB-271 — Que informação devo validar antes de aprovar um documento no Continia?
+**Categoria:** Continia / Boas Práticas de Aprovação  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador quer garantir que valida a informação correta antes de aprovar um documento no Portal de Aprovações do Continia.
+
+**Diagnóstico**  
+A aprovação deve ser baseada na análise dos dados principais do pedido, documento digitalizado, captura automática de dados e comentários associados.
+
+**Causa provável**  
+A aprovação sem validação suficiente pode permitir que documentos incorretos avancem no processo.
+
+**Solução**  
+Antes de aprovar, validar os dados principais, o detalhe do documento e qualquer informação complementar existente.
+
+**Como proceder**
+1. Abrir o pedido de aprovação.
+2. Validar os dados principais:
+   - fornecedor;
+   - descrição;
+   - valor;
+   - data;
+   - dados de aprovação;
+   - comentários associados.
+3. Abrir o detalhe do documento.
+4. Consultar o documento digitalizado.
+5. Confirmar se a captura automática de dados está correta.
+6. Verificar se existem comentários ou anexos relevantes.
+7. Se a informação estiver correta, aprovar.
+8. Se existir dúvida, erro ou informação em falta, comentar, rejeitar ou reencaminhar.
+
+**Validação final**  
+A decisão de aprovação é tomada com base na análise completa da informação disponível no pedido.
+
+**Notas**
+- A aprovação deve ser feita apenas quando o documento reunir condições para avançar.
+- Em caso de dúvida, não aprovar sem validação adicional.
+- Comentários e anexos ajudam a contextualizar a decisão.
