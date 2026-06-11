@@ -8931,6 +8931,8 @@ A página está a ser utilizada com a configuração standard ou com uma disposi
 **Solução**  
 Utilizar a funcionalidade de personalização do Business Central para ajustar a página, permitindo adicionar campos disponíveis, mudar campos de posição ou ocultar informação que não seja necessária. Esta personalização ajuda a tornar o trabalho mais simples, rápido e eficaz.
 
+https://quilaban-my.sharepoint.com/personal/baraujo_quilaban_pt/_layouts/15/stream.aspx?id=%2Fpersonal%2Fbaraujo%5Fquilaban%5Fpt%2FDocuments%2FProjeto%20Forma%C3%A7%C3%A3o%20Inicial%2FBC07%20%2D%20Personaliza%C3%A7%C3%A3o%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E33b6f9c4%2Df8b7%2D4e91%2Da66a%2D0601abbb0552 
+
 **Como proceder**
 
 ### 1. Abrir a página que pretende personalizar
