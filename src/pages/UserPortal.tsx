@@ -1,8 +1,10 @@
 import { BookOpen, Search } from 'lucide-react';
 import { useMemo, useState } from 'react';
+import { KnowledgeBaseIndex } from '../components/KnowledgeBaseIndex';
 import { KnowledgeSearch } from '../components/KnowledgeSearch';
 import { Tabs } from '../components/Tabs';
 import { articles } from '../data/articles';
+import { getArticleGroups, getArticleGroupName, sortArticlesByGroupAndTitle } from '../utils/articleGroups';
 
 interface Props {
   onOpenArticle: (articleId: string) => void;
@@ -10,8 +12,17 @@ interface Props {
 
 export function UserPortal({ onOpenArticle }: Props) {
   const [tab, setTab] = useState('search');
+  const [selectedGroup, setSelectedGroup] = useState('');
 
-  const userArticles = useMemo(() => articles.filter((article) => article.availableForUser), []);
+  const userArticles = useMemo(
+    () => articles.filter((article) => article.availableForUser).sort(sortArticlesByGroupAndTitle),
+    []
+  );
+  const articleGroups = useMemo(() => getArticleGroups(userArticles), [userArticles]);
+  const visibleArticles = useMemo(
+    () => userArticles.filter((article) => !selectedGroup || getArticleGroupName(article) === selectedGroup),
+    [selectedGroup, userArticles]
+  );
 
   return (
     <main className="page">
@@ -41,15 +52,27 @@ export function UserPortal({ onOpenArticle }: Props) {
             <div className="section-header kb-section-header">
               <div>
                 <h2>Base de conhecimento</h2>
-                <span>{userArticles.length} artigos disponíveis para utilizador</span>
+                <span>
+                  {selectedGroup
+                    ? `${visibleArticles.length} de ${userArticles.length} artigos disponíveis para utilizador · ${selectedGroup}`
+                    : `${userArticles.length} artigos disponíveis para utilizador`}
+                </span>
               </div>
               <BookOpen size={22} />
             </div>
 
+            <KnowledgeBaseIndex
+              groups={articleGroups}
+              totalArticles={userArticles.length}
+              selectedGroup={selectedGroup}
+              tone="teal"
+              onSelectGroup={setSelectedGroup}
+            />
+
             <div className="kb-grid">
-              {userArticles.map((article) => (
+              {visibleArticles.map((article) => (
                 <article key={article.id} className="kb-card" onClick={() => onOpenArticle(article.id)}>
-                  <span>{article.category}</span>
+                  <span>{getArticleGroupName(article)} / {article.category}</span>
                   <h2>{article.title}</h2>
                   <p>{article.problem}</p>
                 </article>
