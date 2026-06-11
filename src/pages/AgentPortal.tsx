@@ -1,9 +1,11 @@
 import { BookOpen, Database, FileSearch } from 'lucide-react';
 import { useMemo, useState } from 'react';
+import { KnowledgeBaseIndex } from '../components/KnowledgeBaseIndex';
 import { KnowledgeSearch } from '../components/KnowledgeSearch';
 import { KpiCard } from '../components/KpiCard';
 import { Tabs } from '../components/Tabs';
 import { articles } from '../data/articles';
+import { getArticleGroups, getArticleGroupName, sortArticlesByGroupAndTitle } from '../utils/articleGroups';
 import { KnowledgeBaseEditor } from './KnowledgeBaseEditor';
 
 interface Props {
@@ -12,10 +14,19 @@ interface Props {
 
 export function AgentPortal({ onOpenArticle }: Props) {
   const [tab, setTab] = useState('search');
+  const [selectedGroup, setSelectedGroup] = useState('');
 
-  const agentArticles = useMemo(() => articles.filter((article) => article.availableForAgent), []);
+  const agentArticles = useMemo(
+    () => articles.filter((article) => article.availableForAgent).sort(sortArticlesByGroupAndTitle),
+    []
+  );
   const userVisibleArticles = useMemo(() => articles.filter((article) => article.availableForUser), []);
   const categories = useMemo(() => new Set(articles.map((article) => article.category)).size, []);
+  const articleGroups = useMemo(() => getArticleGroups(agentArticles), [agentArticles]);
+  const visibleArticles = useMemo(
+    () => agentArticles.filter((article) => !selectedGroup || getArticleGroupName(article) === selectedGroup),
+    [agentArticles, selectedGroup]
+  );
 
   return (
     <main className="page">
@@ -52,15 +63,27 @@ export function AgentPortal({ onOpenArticle }: Props) {
             <div className="section-header kb-section-header">
               <div>
                 <h2>Base de conhecimento interna</h2>
-                <span>{agentArticles.length} artigos disponíveis para agente</span>
+                <span>
+                  {selectedGroup
+                    ? `${visibleArticles.length} de ${agentArticles.length} artigos disponíveis para agente · ${selectedGroup}`
+                    : `${agentArticles.length} artigos disponíveis para agente`}
+                </span>
               </div>
               <BookOpen size={22} />
             </div>
 
+            <KnowledgeBaseIndex
+              groups={articleGroups}
+              totalArticles={agentArticles.length}
+              selectedGroup={selectedGroup}
+              tone="purple"
+              onSelectGroup={setSelectedGroup}
+            />
+
             <div className="kb-grid">
-              {agentArticles.map((article) => (
+              {visibleArticles.map((article) => (
                 <article key={article.id} className="kb-card" onClick={() => onOpenArticle(article.id)}>
-                  <span>{article.category}</span>
+                  <span>{getArticleGroupName(article)} / {article.category}</span>
                   <h2>{article.title}</h2>
                   <p>{article.problem}</p>
                   <div className="availability compact-availability">
