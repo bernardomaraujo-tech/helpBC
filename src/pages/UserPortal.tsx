@@ -1,6 +1,6 @@
 import { BookOpen, Search } from 'lucide-react';
 import { useMemo, useState } from 'react';
-import { KnowledgeBaseIndex } from '../components/KnowledgeBaseIndex';
+import { ALL_ARTICLES_KEY, KnowledgeBaseIndex } from '../components/KnowledgeBaseIndex';
 import { KnowledgeSearch } from '../components/KnowledgeSearch';
 import { Tabs } from '../components/Tabs';
 import { articles } from '../data/articles';
@@ -20,7 +20,11 @@ export function UserPortal({ onOpenArticle }: Props) {
   );
   const articleGroups = useMemo(() => getArticleGroups(userArticles), [userArticles]);
   const visibleArticles = useMemo(
-    () => userArticles.filter((article) => !selectedGroup || getArticleGroupName(article) === selectedGroup),
+    () => selectedGroup === ALL_ARTICLES_KEY
+      ? userArticles
+      : selectedGroup
+        ? userArticles.filter((article) => getArticleGroupName(article) === selectedGroup)
+        : [],
     [selectedGroup, userArticles]
   );
 
@@ -54,8 +58,10 @@ export function UserPortal({ onOpenArticle }: Props) {
                 <h2>Base de conhecimento</h2>
                 <span>
                   {selectedGroup
-                    ? `${visibleArticles.length} de ${userArticles.length} artigos disponíveis para utilizador · ${selectedGroup}`
-                    : `${userArticles.length} artigos disponíveis para utilizador`}
+                    ? selectedGroup === ALL_ARTICLES_KEY
+                      ? `${userArticles.length} artigos disponíveis para utilizador`
+                      : `${visibleArticles.length} de ${userArticles.length} artigos disponíveis para utilizador · ${selectedGroup}`
+                    : `${userArticles.length} artigos disponíveis para utilizador · seleciona um grupo`}
                 </span>
               </div>
               <BookOpen size={22} />
@@ -69,8 +75,9 @@ export function UserPortal({ onOpenArticle }: Props) {
               onSelectGroup={setSelectedGroup}
             />
 
-            <div className="kb-grid">
-              {visibleArticles.map((article) => (
+            {selectedGroup && (
+              <div className="kb-grid">
+                {visibleArticles.map((article) => (
                 <article key={article.id} className="kb-card" onClick={() => onOpenArticle(article.id)}>
                   <span>{getArticleGroupName(article)} / {article.category}</span>
                   <h2>{article.title}</h2>
@@ -78,14 +85,15 @@ export function UserPortal({ onOpenArticle }: Props) {
                 </article>
               ))}
 
-              {userArticles.length === 0 && (
-                <div className="empty-search-state full-width-state">
-                  <Search size={28} />
-                  <strong>Ainda não existem artigos disponíveis para utilizador.</strong>
-                  <p>Os artigos ficam visíveis aqui quando estiverem marcados como disponíveis para utilizador.</p>
-                </div>
-              )}
-            </div>
+                {userArticles.length === 0 && (
+                  <div className="empty-search-state full-width-state">
+                    <Search size={28} />
+                    <strong>Ainda não existem artigos disponíveis para utilizador.</strong>
+                    <p>Os artigos ficam visíveis aqui quando estiverem marcados como disponíveis para utilizador.</p>
+                  </div>
+                )}
+              </div>
+            )}
           </>
         )}
       </section>
