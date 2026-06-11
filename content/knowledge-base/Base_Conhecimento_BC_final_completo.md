@@ -9299,7 +9299,7 @@ O pedido fica encaminhado para a pessoa selecionada e mantém-se dentro do circu
 - O reencaminhamento evita trocas paralelas por email.
 - O comentário ajuda o destinatário a compreender o motivo do encaminhamento.
 - O histórico do pedido fica registado no portal.
-
+  
 
 ## BC-KB-267 — Qual a diferença entre Aprovar e enviar, Reencaminhar sem aprovação e Reencaminhar e devolver para mim?
 **Categoria:** Continia / Reencaminhamento  
