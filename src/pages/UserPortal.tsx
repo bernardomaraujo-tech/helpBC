@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react';
 import { ALL_ARTICLES_KEY, KnowledgeBaseIndex } from '../components/KnowledgeBaseIndex';
 import { KnowledgeSearch } from '../components/KnowledgeSearch';
 import { Tabs } from '../components/Tabs';
+import { TrainingVideos } from '../components/TrainingVideos';
 import { articles } from '../data/articles';
 import { getArticleGroups, getArticleGroupName, sortArticlesByGroupAndTitle } from '../utils/articleGroups';
 
@@ -45,12 +46,15 @@ export function UserPortal({ onOpenArticle }: Props) {
           tone="teal"
           tabs={[
             { key: 'search', label: 'Pesquisa' },
-            { key: 'kb', label: 'Base de conhecimento' }
+            { key: 'kb', label: 'Base de conhecimento' },
+            { key: 'videos', label: 'Vídeos formativos' }
           ]}
         />
 
         {tab === 'search' ? (
           <KnowledgeSearch mode="user" onOpenArticle={onOpenArticle} />
+        ) : tab === 'videos' ? (
+          <TrainingVideos />
         ) : (
           <>
             <div className="section-header kb-section-header">
