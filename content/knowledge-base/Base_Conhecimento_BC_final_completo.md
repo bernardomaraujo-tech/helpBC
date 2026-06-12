@@ -9602,3 +9602,1301 @@ A decisão de aprovação é tomada com base na análise completa da informaçã
 - A aprovação deve ser feita apenas quando o documento reunir condições para avançar.
 - Em caso de dúvida, não aprovar sem validação adicional.
 - Comentários e anexos ajudam a contextualizar a decisão.
+
+## BC-KB-272 — Aceder à aplicação de Mobilidade e retomar uma atividade em curso
+**Categoria:** Mobilidade / Acesso  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador precisa de aceder à aplicação de Mobilidade de armazém, mas não sabe qual a variante correta ou é redirecionado automaticamente para uma atividade.
+
+**Diagnóstico**  
+A aplicação de Mobilidade tem variantes diferentes por dispositivo e atividade. Ao entrar, se existir uma recolha ou conferência de expedição em curso, o sistema pode redirecionar automaticamente o utilizador para essa atividade.
+
+**Causa provável**  
+O utilizador está a iniciar sessão num dispositivo sem conhecer a finalidade da variante instalada, ou deixou uma atividade de recolha/conferência em aberto.
+
+**Solução**  
+Entrar com as credenciais próprias e confirmar se a aplicação abre a área principal de atividades ou se redireciona para uma atividade já iniciada.
+
+**Como proceder**
+
+### 1. Validar o dispositivo utilizado
+1. Usar a variante PDA para atividades de entrada: receção, conferência e arrumação.
+2. Usar a variante PDA também para faturação na saída.
+3. Usar a variante tablet para recolha.
+4. Usar a variante PC para conferência de expedição.
+
+### 2. Entrar na aplicação
+1. Abrir o ícone da aplicação no dispositivo.
+2. Introduzir o utilizador e password próprios.
+3. Confirmar a entrada na área principal de atividades.
+
+### 3. Confirmar redirecionamento automático
+1. Se surgir uma mensagem de atividade em progresso, confirmar a informação apresentada.
+2. Prosseguir para a atividade apresentada pelo sistema.
+3. Concluir ou regularizar a atividade antes de iniciar nova operação.
+
+**Validação final**  
+O utilizador entra na aplicação com as suas credenciais e fica posicionado na área correta: lista de atividades ou atividade em curso.
+
+**Notas**  
+Não é permitida a utilização de dados de acesso de outros colaboradores. Se o redirecionamento impedir o início de outra tarefa, deve ser validado se existe recolha ou conferência em curso associada ao utilizador.
+
+---
+
+## BC-KB-273 — Interpretar indicadores, selecionar armazém e consultar mensagens na Mobilidade
+**Categoria:** Mobilidade / Área de Trabalho  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador vê números nas atividades da Mobilidade, mas não sabe o que representam ou porque variam consoante o armazém.
+
+**Diagnóstico**  
+Os indicadores da área principal mostram documentos pendentes por atividade, com base nos armazéns a que o utilizador tem acesso.
+
+**Causa provável**  
+O utilizador pode estar com o armazém errado selecionado, com acesso limitado a determinados armazéns ou a interpretar incorretamente os indicadores das recolhas.
+
+**Solução**  
+Confirmar o armazém selecionado, rever os indicadores apresentados e consultar a área de mensagens para validar alertas e notas da operação.
+
+**Como proceder**
+
+### 1. Confirmar o armazém
+1. Entrar na aplicação de Mobilidade.
+2. Na área principal, abrir a seleção de armazém.
+3. Escolher um armazém específico ou a opção "Todos".
+4. Confirmar se os indicadores das atividades foram atualizados.
+
+### 2. Interpretar os indicadores
+1. Em regra, o número apresentado representa documentos pendentes nessa atividade.
+2. Nos envios, a leitura pode ser diferente, pois a atividade não segue exatamente o mesmo indicador das restantes.
+3. Nas recolhas, validar os dois indicadores: recolhas pendentes e recolhas que o utilizador pode executar.
+
+### 3. Consultar mensagens
+1. Abrir a área de mensagens da aplicação.
+2. Rever alertas, erros ou notas informativas.
+3. Usar as mensagens como apoio ao diagnóstico antes de reportar uma anomalia.
+
+**Validação final**  
+O utilizador confirma que está no armazém correto, interpreta os indicadores apresentados e consegue consultar mensagens de apoio à operação.
+
+**Notas**  
+Os armazéns disponíveis dependem da configuração do utilizador como empregado de armazém no Business Central/NAV.
+
+---
+
+## BC-KB-274 — Receber mercadoria na Mobilidade através da atividade E1: Receber
+**Categoria:** Mobilidade / Entrada / Receção  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Chegou mercadoria ao armazém e o utilizador precisa de iniciar a receção na aplicação de Mobilidade.
+
+**Diagnóstico**  
+A atividade E1: Receber deve ser usada quando chega mercadoria ao armazém por encomenda de compra, devolução ou transferência.
+
+**Causa provável**  
+A mercadoria chegou fisicamente, mas ainda não foi criada a receção operacional na Mobilidade.
+
+**Solução**  
+Criar a receção na atividade E1: Receber, selecionando o tipo de documento e a origem correta.
+
+**Como proceder**
+
+### 1. Iniciar a receção
+1. Entrar na aplicação de Mobilidade.
+2. Confirmar o armazém correto.
+3. Selecionar a atividade "Receber".
+
+### 2. Identificar o tipo de documento
+1. Escolher o tipo de documento recebido:
+   - Encomenda de Compra;
+   - Devolução;
+   - Transferência.
+2. Selecionar o fornecedor, cliente ou armazém, conforme o tipo de documento.
+
+### 3. Submeter a receção
+1. Confirmar os dados introduzidos.
+2. Submeter a receção.
+3. Aguardar a criação dos processos de receção no Business Central/NAV.
+
+**Validação final**  
+A aplicação apresenta a mensagem com o número de receções criadas e os armazéns envolvidos.
+
+**Notas**  
+Só é possível receber documentos que tenham sido previamente criados no Business Central/NAV.
+
+---
+
+## BC-KB-275 — Selecionar documento, guia, paletes e volumes na receção de mercadoria
+**Categoria:** Mobilidade / Entrada / Receção  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Durante a receção, o utilizador não sabe se deve preencher o número do documento de origem nem como registar guia, paletes e volumes.
+
+**Diagnóstico**  
+Na receção, o documento de origem pode ser selecionado quando a guia/documentação do fornecedor identifica o nosso número de documento. Caso contrário, o documento pode ficar em branco.
+
+**Causa provável**  
+A mercadoria chegou com documentação incompleta ou sem referência clara ao nosso documento interno.
+
+**Solução**  
+Preencher sempre o tipo de documento e a origem. Selecionar o documento apenas quando existir correspondência clara com a documentação recebida.
+
+**Como proceder**
+
+### 1. Validar a documentação física
+1. Confirmar se a guia do fornecedor acompanha a mercadoria.
+2. Verificar se a guia menciona o nosso número de encomenda, devolução ou transferência.
+3. Confirmar o número de paletes e volumes recebidos.
+
+### 2. Preencher a receção na Mobilidade
+1. Selecionar o tipo de documento.
+2. Selecionar fornecedor, cliente ou armazém.
+3. Se a documentação indicar o nosso número de documento, selecionar esse documento.
+4. Se não for possível identificar o documento, deixar o campo de documento em branco.
+5. Preencher o número da guia do fornecedor.
+6. Preencher número de paletes e volumes.
+
+### 3. Submeter
+1. Rever os dados introduzidos.
+2. Submeter a receção.
+3. Confirmar a mensagem de receções geradas.
+
+**Validação final**  
+A receção é criada com a guia, paletes e volumes corretos, sem associação indevida a documento errado.
+
+**Notas**  
+Se existir dúvida sobre o documento de origem, é preferível deixar o documento em branco e permitir tratamento posterior, em vez de associar a receção a um documento incorreto.
+
+---
+
+## BC-KB-276 — Reimprimir etiqueta de receção ou identificar manualmente a palete
+**Categoria:** Mobilidade / Entrada / Etiquetas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+A etiqueta de receção não imprimiu automaticamente ou ficou inutilizada.
+
+**Diagnóstico**  
+Após a criação da receção, a impressão da etiqueta deve ser automática. A etiqueta identifica o processo, origem, data/hora, utilizador, armazém, paletes e volumes.
+
+**Causa provável**  
+Falha temporária de impressão, impressora indisponível, erro de comunicação ou etiqueta danificada.
+
+**Solução**  
+Tentar a reimpressão através da opção "Imprimir". Se a impressão não for possível, identificar manualmente a palete com o número do processo.
+
+**Como proceder**
+
+### 1. Confirmar a falha de impressão
+1. Validar se a etiqueta saiu na impressora correta.
+2. Confirmar se a etiqueta corresponde ao processo correto.
+3. Se não imprimiu, voltar ao ecrã da receção.
+
+### 2. Reimprimir etiqueta
+1. Selecionar a opção "Imprimir".
+2. Aguardar nova impressão.
+3. Confirmar se a etiqueta está legível.
+4. Colar a etiqueta na palete ou volume correspondente.
+
+### 3. Identificação manual, se necessário
+1. Se não for possível imprimir, identificar a palete manualmente.
+2. Escrever de forma legível o número do processo.
+3. Garantir que a palete não avança para conferência sem identificação.
+
+**Validação final**  
+A palete fica identificada com etiqueta ou, em alternativa, com o número do processo escrito manualmente.
+
+**Notas**  
+A etiqueta é crítica para a leitura posterior na conferência. Sem identificação, a operação pode ficar bloqueada ou ser conferida no processo errado.
+
+---
+
+## BC-KB-277 — Receção já em aberto para o mesmo fornecedor e documento
+**Categoria:** Mobilidade / Entrada / Receção  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Ao tentar iniciar uma nova receção, a Mobilidade indica que já existe uma receção em curso para o mesmo documento ou conjunto de documentos.
+
+**Diagnóstico**  
+Quando existe uma receção aberta para o mesmo fornecedor e documento, a aplicação não permite iniciar uma nova receção separada.
+
+**Causa provável**  
+Chegou nova mercadoria associada a um processo de receção que ainda não foi concluído.
+
+**Solução**  
+Utilizar o processo já existente, reimprimir a etiqueta e juntar a nova mercadoria à mercadoria anteriormente rececionada.
+
+**Como proceder**
+
+### 1. Confirmar a mensagem
+1. Ler a mensagem apresentada pela Mobilidade.
+2. Identificar o número do processo em curso.
+3. Confirmar que a mercadoria pertence ao mesmo documento ou conjunto de documentos.
+
+### 2. Reimprimir a etiqueta
+1. Selecionar a opção de impressão da etiqueta do processo existente.
+2. Colar a etiqueta na nova palete ou volume recebido.
+3. Juntar a mercadoria ao processo já em curso.
+
+### 3. Prosseguir com o fluxo normal
+1. Encaminhar a mercadoria para a zona E1.
+2. Manter o mesmo número de processo para conferência posterior.
+
+**Validação final**  
+A nova mercadoria fica integrada no processo de receção já existente e não é criada uma receção duplicada.
+
+**Notas**  
+Não forçar nova receção quando a aplicação indica processo aberto. Isso evita duplicação de processos e divergências na conferência.
+
+---
+
+## BC-KB-278 — Iniciar conferência de mercadoria na entrada através da atividade E2: Conferir
+**Categoria:** Mobilidade / Entrada / Conferência  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Existe mercadoria na zona de receção e é necessário iniciar a conferência na Mobilidade.
+
+**Diagnóstico**  
+A atividade E2: Conferir deve ser usada quando existem paletes ou volumes na zona E1 com etiqueta e número de processo.
+
+**Causa provável**  
+A receção foi criada, mas a mercadoria ainda não foi conferida fisicamente por produto, lote, validade e quantidade.
+
+**Solução**  
+Mover a mercadoria para a zona E2, ler a etiqueta do processo e iniciar a conferência dos produtos.
+
+**Como proceder**
+
+### 1. Preparar a mercadoria
+1. Confirmar que a palete/volume tem etiqueta de receção.
+2. Movimentar a mercadoria da zona E1 para a zona E2.
+3. Confirmar que o número de processo está legível.
+
+### 2. Iniciar conferência
+1. Selecionar a atividade "Conferir".
+2. Ler o código de barras da etiqueta da palete/volume.
+3. Em alternativa, introduzir manualmente o número do processo.
+4. Submeter a leitura.
+
+### 3. Confirmar receções envolvidas
+1. Ler a mensagem apresentada no dispositivo.
+2. Validar quantas receções e armazéns estão envolvidos.
+3. Prosseguir apenas se a informação estiver coerente com a mercadoria física.
+
+**Validação final**  
+A conferência fica iniciada e a aplicação apresenta os armazéns envolvidos no processo.
+
+**Notas**  
+Antes de conferir, a mercadoria deve estar fisicamente na zona E2. A etiqueta é o elo entre a mercadoria física e o processo criado no sistema.
+
+---
+
+## BC-KB-279 — Priorizar armazéns durante a conferência de entrada
+**Categoria:** Mobilidade / Entrada / Conferência  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Durante a conferência, a aplicação pede a priorização dos armazéns e o utilizador não sabe como decidir a ordem.
+
+**Diagnóstico**  
+Quando uma conferência envolve mais do que um armazém, é necessário indicar qual deve ser abastecido primeiro ou qual fica com o produto se a quantidade disponível for insuficiente.
+
+**Causa provável**  
+A mesma receção/processo pode envolver vários armazéns e o sistema precisa de uma regra operacional para distribuir quantidades.
+
+**Solução**  
+Definir a prioridade dos armazéns antes de iniciar a conferência dos produtos.
+
+**Como proceder**
+
+### 1. Preparar paletes por armazém
+1. Identificar os armazéns envolvidos na conferência.
+2. Preparar uma palete por armazém, quando aplicável.
+3. Garantir que os operadores colocam os produtos conferidos nas paletes correspondentes.
+
+### 2. Definir prioridade
+1. No ecrã de priorização, ordenar os armazéns conforme a prioridade operacional.
+2. Colocar em primeiro lugar o armazém que deve ser abastecido primeiro.
+3. Confirmar a ordem antes de avançar para leitura de produtos.
+
+### 3. Validar durante a conferência
+1. Ler cada produto normalmente.
+2. Confirmar a indicação da aplicação sobre onde colocar as quantidades.
+3. Seguir a distribuição indicada pelo sistema.
+
+**Validação final**  
+A conferência avança com uma prioridade definida e a distribuição dos produtos fica coerente com a regra escolhida.
+
+**Notas**  
+A priorização é especialmente importante quando a quantidade recebida não chega para satisfazer todos os armazéns envolvidos.
+
+---
+
+## BC-KB-280 — Registar produto, lote, validade e quantidade na conferência de entrada
+**Categoria:** Mobilidade / Entrada / Conferência  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador precisa de conferir produtos recebidos e não sabe como registar corretamente lote, validade e quantidade.
+
+**Diagnóstico**  
+Na conferência, cada produto deve ser identificado por leitura de código de barras, EAN, código 2D ou introdução manual. O lote, validade e quantidade devem ficar associados à conferência.
+
+**Causa provável**  
+A mercadoria está rececionada, mas ainda não foi validada ao detalhe físico necessário para entrada em stock.
+
+**Solução**  
+Ler o produto e preencher os dados de lote, validade e quantidade conforme a informação física do produto.
+
+**Como proceder**
+
+### 1. Ler o produto
+1. Selecionar o campo de produto na Mobilidade.
+2. Ler o código de barras, EAN ou 2D.
+3. Se não for possível ler, introduzir o produto manualmente.
+
+### 2. Confirmar lote e validade
+1. Se a leitura 2D preencher lote e validade automaticamente, confirmar se os dados estão corretos.
+2. Se não preencher automaticamente, introduzir lote e validade manualmente.
+3. Validar a informação contra a embalagem física.
+
+### 3. Indicar quantidade
+1. Introduzir a quantidade conferida.
+2. Submeter a linha.
+3. Seguir a indicação da aplicação sobre onde colocar o produto.
+
+**Validação final**  
+O produto fica conferido com lote, validade e quantidade corretos, pronto para distribuição por armazém/palete.
+
+**Notas**  
+A leitura 2D reduz erros manuais, mas deve ser sempre validada quando a informação apresentada não parece coerente com o produto físico.
+
+---
+
+## BC-KB-281 — Interpretar a distribuição de quantidades por armazém na conferência
+**Categoria:** Mobilidade / Entrada / Conferência  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Depois de submeter a quantidade conferida, a aplicação indica vários armazéns/paletes e o utilizador não sabe como distribuir fisicamente o produto.
+
+**Diagnóstico**  
+A aplicação distribui a quantidade conferida de acordo com as necessidades dos armazéns envolvidos e com as prioridades definidas no início da conferência.
+
+**Causa provável**  
+O produto existe em várias receções/armazéns e a quantidade recebida pode não cobrir todas as necessidades.
+
+**Solução**  
+Seguir a indicação apresentada pela Mobilidade para colocar as quantidades nas paletes/localizações corretas.
+
+**Como proceder**
+
+### 1. Confirmar a mensagem de distribuição
+1. Após ler produto, lote, validade e quantidade, submeter a linha.
+2. Ler a mensagem apresentada pela aplicação.
+3. Identificar os armazéns/paletes indicados.
+
+### 2. Separar fisicamente a quantidade
+1. Colocar a quantidade indicada em cada palete/armazém.
+2. Não alterar manualmente a distribuição física sem corrigir a informação no sistema.
+3. Se a quantidade física não coincidir, validar antes de prosseguir.
+
+### 3. Continuar conferência
+1. Voltar à leitura do próximo produto.
+2. Repetir o processo para todos os produtos recebidos.
+
+**Validação final**  
+As quantidades ficam fisicamente separadas conforme a distribuição indicada pela Mobilidade.
+
+**Notas**  
+A distribuição depende da prioridade dos armazéns. Se a prioridade foi definida incorretamente, a distribuição também poderá ficar operacionalmente incorreta.
+
+---
+
+## BC-KB-282 — Fechar palete na conferência e gerar documento de arrumação
+**Categoria:** Mobilidade / Entrada / Conferência  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+A palete já está completa ou não existe mais produto para conferir, mas o utilizador não sabe como avançar para a arrumação.
+
+**Diagnóstico**  
+Quando a palete está completa, é necessário fechar a palete. Ao fechar, são registadas as quantidades recebidas e é gerado o documento de arrumação para a localização selecionada.
+
+**Causa provável**  
+A conferência da palete terminou, mas ainda não foi criado o passo seguinte do fluxo de entrada.
+
+**Solução**  
+Fechar a palete na Mobilidade e imprimir/colar a etiqueta de arrumação.
+
+**Como proceder**
+
+### 1. Confirmar que a palete pode ser fechada
+1. Validar se a palete está completa.
+2. Confirmar que não existe mais produto a colocar nessa palete.
+3. Rever se os produtos conferidos estão na palete correta.
+
+### 2. Fechar a palete
+1. Selecionar a opção "Fechar Palete".
+2. Escolher a localização/palete a fechar.
+3. Confirmar a ação.
+4. Aguardar a geração do documento de arrumação.
+
+### 3. Imprimir e colar etiqueta
+1. Imprimir a etiqueta de arrumação.
+2. Colar a etiqueta na palete conferida.
+3. Se não for possível imprimir, colocar uma etiqueta manual com o número da arrumação.
+4. Movimentar a mercadoria da zona E2 para a zona E3.
+
+**Validação final**  
+A palete fica fechada, o produto entra em stock na posição REC e é gerado o documento de arrumação quando aplicável.
+
+**Notas**  
+A etiqueta de arrumação deve acompanhar a palete até à zona E3. Sem esta identificação, a arrumação poderá falhar.
+
+---
+
+## BC-KB-283 — Terminar conferência de entrada e validar paletes fechadas
+**Categoria:** Mobilidade / Entrada / Conferência  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador tenta terminar a conferência, mas o sistema não permite concluir o processo.
+
+**Diagnóstico**  
+A conferência só pode ser terminada quando todas as paletes estão fechadas, exceto situações específicas relacionadas com produtos sujeitos a verificação NMVS.
+
+**Causa provável**  
+Ainda existe pelo menos uma palete aberta ou produto pendente de verificação/tratamento.
+
+**Solução**  
+Validar todas as paletes da conferência, fechar as que estiverem abertas e só depois selecionar a opção de terminar.
+
+**Como proceder**
+
+### 1. Rever paletes abertas
+1. Na conferência, verificar a lista de paletes/localizações.
+2. Confirmar se todas as paletes necessárias foram fechadas.
+3. Identificar eventuais paletes ainda em aberto.
+
+### 2. Regularizar pendências
+1. Fechar as paletes ainda abertas.
+2. Confirmar se existem produtos sujeitos a NMVS.
+3. Se existirem produtos NMVS, seguir o fluxo de verificação antes de concluir.
+
+### 3. Terminar conferência
+1. Selecionar a opção "Terminar Conferência".
+2. Confirmar a conclusão.
+3. Validar se a conferência desaparece das pendências.
+
+**Validação final**  
+A conferência fica terminada e não existem paletes abertas no processo.
+
+**Notas**  
+Quando todas as paletes são fechadas, o sistema pode fechar automaticamente a conferência, salvo exceções como produtos que necessitam de verificação NMVS.
+
+---
+
+## BC-KB-284 — Reservar produto por excesso de quantidade ou validade não comportada
+**Categoria:** Mobilidade / Entrada / Conferência  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Durante a conferência, a Mobilidade indica que o produto deve ser reservado devido a quantidade em excesso ou validade não comportada.
+
+**Diagnóstico**  
+O sistema valida se as quantidades recebidas e as validades são comportadas pelos armazéns envolvidos, nomeadamente PRAXIS e GROSS.LX.
+
+**Causa provável**  
+A quantidade recebida excede a necessária ou a validade do produto é inferior aos limites aceites pelo armazém.
+
+**Solução**  
+Seguir a indicação da aplicação e reservar o produto para tratamento no fluxo de excedentes.
+
+**Como proceder**
+
+### 1. Ler a mensagem da aplicação
+1. Confirmar qual o produto indicado.
+2. Confirmar quantidade, lote e validade.
+3. Validar se a mensagem refere excesso ou validade não comportada.
+
+### 2. Aplicar critério de validade
+1. Para medicamento, validar se a validade é inferior a 7 meses.
+2. Para outro produto, validar se a validade é inferior a 13 meses.
+3. Se a aplicação indicar reserva, não colocar o produto nas paletes normais de arrumação.
+
+### 3. Encaminhar produto
+1. Reservar o produto fisicamente.
+2. Seguir o fluxo interno de excedentes.
+3. Registar/comunicar a situação conforme procedimento operacional.
+
+**Validação final**  
+O produto não segue para arrumação normal e fica reservado para tratamento adequado.
+
+**Notas**  
+Não ignorar mensagens de validade ou excesso. Estes alertas evitam entrada indevida de stock em armazéns que não comportam o produto.
+
+---
+
+## BC-KB-285 — Tratar produtos sujeitos a verificação NMVS na conferência de entrada
+**Categoria:** Mobilidade / Entrada / NMVS  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Durante a conferência, a aplicação alerta que o produto necessita de verificação NMVS.
+
+**Diagnóstico**  
+Alguns produtos exigem verificação NMVS antes de concluir a receção e gerar a etiqueta de arrumação.
+
+**Causa provável**  
+O produto está parametrizado como sujeito a verificação, pelo que não pode seguir o fluxo normal sem validação.
+
+**Solução**  
+Colocar o produto no armazém/zona indicada para produtos sujeitos a verificação e aguardar a validação no Checkmed.
+
+**Como proceder**
+
+### 1. Confirmar alerta NMVS
+1. Ler a mensagem apresentada no dispositivo.
+2. Confirmar o produto, lote e quantidade.
+3. Confirmar se a aplicação indica colocação em armazém de produtos sujeitos a verificação.
+
+### 2. Separar produto
+1. Colocar o produto na zona indicada para verificação NMVS.
+2. Não misturar com produtos já aprovados para arrumação.
+3. Garantir que a identificação do processo se mantém visível.
+
+### 3. Concluir após verificação
+1. Aguardar a verificação no Checkmed.
+2. Após verificação, o registo da receção e a impressão da etiqueta de arrumação são automáticos.
+3. Voltar à Mobilidade apenas para terminar a conferência, quando aplicável.
+
+**Validação final**  
+O produto sujeito a NMVS fica verificado e a conferência pode ser terminada corretamente.
+
+**Notas**  
+Não forçar a conclusão do processo antes da verificação. A rastreabilidade e a conformidade dependem deste passo.
+
+---
+
+## BC-KB-286 — Tratar armazéns que não requerem arrumação na conferência de entrada
+**Categoria:** Mobilidade / Entrada / Conferência  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Após a conferência, não foi gerado documento de arrumação para determinado armazém.
+
+**Diagnóstico**  
+Alguns armazéns, como EXPORTACAO e PRAXIS, não requerem documento de arrumação. Nestes casos, os produtos entram diretamente em inventário.
+
+**Causa provável**  
+O armazém do processo está configurado para não exigir arrumação posterior.
+
+**Solução**  
+Confirmar se o armazém está dentro dos casos sem arrumação e seguir o fluxo operacional específico.
+
+**Como proceder**
+
+### 1. Confirmar o armazém
+1. Verificar o armazém associado à palete/produto conferido.
+2. Confirmar se se trata de EXPORTACAO, PRAXIS ou outro armazém sem arrumação.
+3. Validar se o produto entrou em inventário após conferência.
+
+### 2. Tratar caso PRAXIS
+1. Confirmar se a palete é PRAXIS.
+2. Após verificação da fatura, colocar a marca necessária na palete.
+3. Só após essa verificação a palete pode ser arrumada conforme fluxo PRAXIS.
+
+### 3. Comunicar anomalia, se aplicável
+1. Se o armazém deveria gerar arrumação e não gerou, contactar o apoio.
+2. Indicar processo, armazém e produto.
+
+**Validação final**  
+O utilizador confirma se a ausência de arrumação é esperada para o armazém ou se existe anomalia a analisar.
+
+**Notas**  
+A ausência de documento de arrumação nem sempre é erro. Depende da configuração e do fluxo do armazém.
+
+---
+
+## BC-KB-287 — Arrumar mercadoria na entrada através da atividade E3: Arrumar
+**Categoria:** Mobilidade / Entrada / Arrumação  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Existe mercadoria conferida na zona de pré-arrumação e é necessário arrumá-la nas posições indicadas.
+
+**Diagnóstico**  
+A atividade E3: Arrumar deve ser usada quando existem paletes ou volumes na zona E3 com etiqueta de arrumação.
+
+**Causa provável**  
+A conferência foi concluída e a palete já tem documento/etiqueta de arrumação.
+
+**Solução**  
+Ler a etiqueta de arrumação, selecionar os produtos e colocá-los nas posições indicadas pela aplicação.
+
+**Como proceder**
+
+### 1. Iniciar arrumação
+1. Selecionar a atividade "Arrumar".
+2. Ler o código de barras da etiqueta de arrumação.
+3. Em alternativa, introduzir o número manualmente.
+
+### 2. Selecionar produtos
+1. Selecionar o conjunto de produtos a arrumar.
+2. Ler o código de barras, EAN ou 2D do produto.
+3. Confirmar lote e validade apresentados pelo sistema.
+
+### 3. Colocar na posição indicada
+1. Deslocar-se para a posição indicada.
+2. Ler o código de barras da posição.
+3. Introduzir a quantidade a arrumar.
+4. Arrumar fisicamente o produto.
+5. Confirmar a operação.
+
+**Validação final**  
+O produto fica arrumado na posição indicada e a aplicação pede a leitura do próximo produto até terminar a arrumação.
+
+**Notas**  
+Um produto pode ser arrumado em mais do que uma posição, dependendo da capacidade da posição e do lote.
+
+---
+
+## BC-KB-288 — Validar fatura/marca antes de arrumar mercadoria PRAXIS
+**Categoria:** Mobilidade / Entrada / Arrumação PRAXIS  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Ao arrumar uma palete PRAXIS, a Mobilidade pergunta se a arrumação já foi verificada.
+
+**Diagnóstico**  
+Para PRAXIS, é necessário confirmar que a fatura foi verificada e que a marca foi colocada na etiqueta antes de avançar com a arrumação.
+
+**Causa provável**  
+A arrumação pertence ao armazém PRAXIS, que tem uma validação operacional adicional.
+
+**Solução**  
+Só confirmar a arrumação se a fatura tiver sido verificada e a palete estiver marcada conforme o procedimento.
+
+**Como proceder**
+
+### 1. Validar antes de responder
+1. Confirmar que a palete é PRAXIS.
+2. Verificar se a fatura foi validada.
+3. Confirmar se a marca foi colocada na etiqueta/palete.
+
+### 2. Responder na Mobilidade
+1. Se a verificação estiver concluída, confirmar na aplicação.
+2. Se a verificação não estiver concluída, não avançar com a arrumação.
+3. Encaminhar a palete para validação antes de retomar.
+
+### 3. Arrumar após validação
+1. Ler o produto.
+2. Deslocar-se para a posição indicada.
+3. Ler posição e confirmar quantidade.
+4. Concluir a arrumação.
+
+**Validação final**  
+A palete PRAXIS só é arrumada após validação da fatura e marcação correta.
+
+**Notas**  
+Confirmar indevidamente este passo pode permitir a arrumação de mercadoria PRAXIS sem validação documental.
+
+---
+
+## BC-KB-289 — Resolver erro de arrumação inexistente ou falta de acesso ao armazém
+**Categoria:** Mobilidade / Entrada / Arrumação  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Ao tentar iniciar uma arrumação, a aplicação indica que a arrumação não existe ou que o utilizador não tem acesso ao armazém.
+
+**Diagnóstico**  
+A mensagem surge quando o documento de arrumação não existe no Business Central/NAV ou quando o utilizador não está configurado com acesso ao armazém da arrumação.
+
+**Causa provável**  
+A etiqueta pode estar incorreta, o documento pode ter sido eliminado/fechado ou o utilizador não tem permissões de empregado de armazém para aquele armazém.
+
+**Solução**  
+Validar o número de arrumação, confirmar se existe no sistema e rever acessos do utilizador ao armazém.
+
+**Como proceder**
+
+### 1. Validar a leitura
+1. Confirmar se a etiqueta lida corresponde à arrumação correta.
+2. Tentar nova leitura do código de barras.
+3. Se necessário, introduzir o número manualmente.
+
+### 2. Validar existência do documento
+1. Pesquisar a arrumação no Business Central/NAV.
+2. Confirmar se está aberta e pendente.
+3. Validar se já foi concluída por outro operador.
+
+### 3. Validar permissões
+1. Confirmar o armazém associado à arrumação.
+2. Verificar se o utilizador tem acesso a esse armazém como empregado de armazém.
+3. Se não tiver acesso, solicitar correção ao agente de suporte.
+
+**Validação final**  
+A arrumação fica acessível para o utilizador correto ou é identificado o motivo pelo qual não pode ser executada.
+
+**Notas**  
+Este caso pode exigir intervenção de agente, sobretudo quando envolve configuração de acessos por armazém.
+
+---
+
+## BC-KB-290 — Preparar envios na Mobilidade através da atividade S1: Preparar Envios
+**Categoria:** Mobilidade / Saída / Preparação de Envios  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+É necessário gerar envios para preparar a saída de mercadoria, mas o utilizador não sabe quando usar a atividade S1.
+
+**Diagnóstico**  
+A atividade S1: Preparar Envios é usada em armazéns que requerem envio e cria envios no Business Central/NAV para o armazém selecionado.
+
+**Causa provável**  
+Existem encomendas libertas, transferências ou devoluções a fornecedor que ainda não foram convertidas em envios operacionais.
+
+**Solução**  
+Selecionar o armazém correto e executar a atividade de preparação de envios.
+
+**Como proceder**
+
+### 1. Validar âmbito
+1. Confirmar que o armazém requer envio.
+2. Confirmar que existem documentos libertos a processar.
+3. Confirmar que não se trata de encomendas de venda da série Consumo ou Ofertas, que estão excluídas dos envios.
+
+### 2. Executar preparação
+1. Entrar na aplicação de Mobilidade.
+2. Selecionar o armazém obrigatório.
+3. Escolher a atividade "Envios" ou "Preparar Envios".
+4. Aguardar a geração automática dos envios no Business Central/NAV.
+
+### 3. Confirmar conclusão
+1. Validar a mensagem final "Concluído".
+2. Confirmar se foram criados envios e recolhas para o armazém selecionado.
+
+**Validação final**  
+Os envios são criados no sistema e ficam disponíveis para as atividades seguintes, nomeadamente recolha.
+
+**Notas**  
+Esta atividade é essencial para desbloquear os passos seguintes do fluxo de saída.
+
+---
+
+## BC-KB-291 — Compreender os critérios de criação automática de envios e recolhas
+**Categoria:** Mobilidade / Saída / Preparação de Envios  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Após preparar envios, o utilizador quer perceber porque foram criados um ou vários envios/recolhas.
+
+**Diagnóstico**  
+A Mobilidade/Business Central cria envios e recolhas automaticamente com critérios específicos por armazém, cliente, encomenda e número de posições.
+
+**Causa provável**  
+O processo agrupa ou separa documentos conforme regras automáticas, o que pode gerar resultados diferentes dos esperados pelo utilizador.
+
+**Solução**  
+Validar os critérios aplicados para perceber a criação dos envios e recolhas.
+
+**Como proceder**
+
+### 1. Validar critérios de envios
+1. Para PRAXIS, é criado um único envio.
+2. Para encomendas libertas com apenas um produto, pode ser criado um envio por cliente.
+3. Para encomendas B2C, é criado um envio por encomenda.
+4. Para restantes encomendas libertas com mais de um produto, transferências e devoluções a fornecedor, é criado um envio por encomenda/documento.
+
+### 2. Validar critérios de recolhas
+1. Para PRAXIS, é criada uma única recolha por envio.
+2. Para restantes armazéns, cada recolha tem no máximo 20 posições.
+3. Se o envio tiver até 23 posições, pode ser criada apenas uma recolha.
+4. Se tiver mais de 23 posições, podem ser criadas várias recolhas.
+
+### 3. Confirmar resultado
+1. Abrir a lista de envios/recolhas no sistema.
+2. Comparar os documentos criados com os critérios acima.
+3. Reportar apenas se existir divergência face às regras.
+
+**Validação final**  
+O utilizador compreende o motivo pelo qual o sistema criou determinado número de envios e recolhas.
+
+**Notas**  
+Nem sempre uma encomenda corresponde a uma única recolha. A divisão por posições é uma regra operacional para facilitar a execução no armazém.
+
+---
+
+## BC-KB-292 — Iniciar uma recolha na Mobilidade e interpretar os indicadores
+**Categoria:** Mobilidade / Saída / Recolha  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador precisa de iniciar uma recolha, mas não sabe interpretar os dois indicadores apresentados na atividade.
+
+**Diagnóstico**  
+Na atividade S2: Recolha, o sistema apresenta o total de recolhas pendentes e o número de recolhas que o utilizador pode iniciar.
+
+**Causa provável**  
+Existem recolhas pendentes no armazém, mas nem todas estão disponíveis para aquele utilizador.
+
+**Solução**  
+Selecionar a atividade Recolha, validar os indicadores e escolher uma recolha disponível.
+
+**Como proceder**
+
+### 1. Ler indicadores
+1. Confirmar o armazém selecionado.
+2. Identificar o indicador de recolhas pendentes do armazém.
+3. Identificar o indicador de recolhas que o utilizador pode iniciar.
+
+### 2. Confirmar disponibilidade
+1. Se o utilizador tiver recolha em curso, o indicador disponível pode mostrar apenas essa recolha.
+2. Se tiver recolhas atribuídas, o indicador mostra as recolhas atribuídas.
+3. Se não houver atribuição nem recolha em curso, são apresentadas recolhas pendentes por atribuir.
+
+### 3. Iniciar recolha
+1. Selecionar a atividade "Recolha".
+2. Escolher uma recolha da lista.
+3. Seguir para a posição indicada pela aplicação.
+
+**Validação final**  
+A recolha é iniciada e a aplicação apresenta a primeira posição, produto, lote e quantidade a recolher.
+
+**Notas**  
+A gestão das recolhas pode ser feita centralmente no Business Central/NAV, incluindo cancelamento, atribuição a operadores e alteração de posições ou lotes sugeridos.
+
+---
+
+## BC-KB-293 — Adicionar banheira a uma recolha
+**Categoria:** Mobilidade / Saída / Recolha  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O operador vai iniciar uma recolha ou precisa de associar uma nova banheira, mas não sabe como o fazer.
+
+**Diagnóstico**  
+Antes de recolher produtos, a recolha deve ter uma banheira associada. A banheira fica bloqueada para essa recolha até ser libertada na conferência.
+
+**Causa provável**  
+A recolha ainda não tem recipiente físico associado ou a banheira em uso ficou cheia.
+
+**Solução**  
+Usar a opção "Adicionar Banheira", ler uma banheira liberta e associá-la à recolha.
+
+**Como proceder**
+
+### 1. Obter banheira disponível
+1. Ir à zona de banheiras libertas.
+2. Selecionar uma banheira identificada.
+3. Confirmar que a banheira não está em uso noutra atividade.
+
+### 2. Associar à recolha
+1. Na recolha, selecionar "Adicionar Banheira".
+2. Ler a identificação da banheira.
+3. Confirmar a associação.
+
+### 3. Usar na recolha
+1. Iniciar ou continuar a recolha dos produtos.
+2. Colocar os produtos recolhidos na banheira associada.
+3. Se a banheira encher, adicionar outra banheira ou depositar a atual na zona de conferência.
+
+**Validação final**  
+A banheira fica associada à recolha e não pode ser usada noutra atividade até ser libertada.
+
+**Notas**  
+Só podem ser usadas banheiras identificadas e libertas. Se a banheira não estiver liberta, a aplicação apresenta erro.
+
+---
+
+## BC-KB-294 — Recolher produto, lote e quantidade para a banheira indicada
+**Categoria:** Mobilidade / Saída / Recolha  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador iniciou uma recolha e precisa de executar corretamente a leitura da posição, produto, quantidade e banheira.
+
+**Diagnóstico**  
+A recolha exige confirmação física da posição, produto, quantidade recolhida e banheira onde o produto é colocado.
+
+**Causa provável**  
+O processo de recolha está em curso e a aplicação orienta o operador posição a posição.
+
+**Solução**  
+Seguir a sequência indicada pela Mobilidade para garantir que o produto certo é recolhido do local certo e colocado na banheira correta.
+
+**Como proceder**
+
+### 1. Ir à posição indicada
+1. Ler a posição apresentada pela aplicação.
+2. Confirmar que está fisicamente na posição correta.
+
+### 2. Ler produto e quantidade
+1. Ler o código do produto.
+2. Confirmar lote indicado.
+3. Introduzir a quantidade recolhida.
+4. Se a quantidade for inferior à pedida, registar apenas a quantidade efetivamente recolhida.
+
+### 3. Confirmar banheira
+1. Ler a identificação da banheira.
+2. Colocar fisicamente o produto na banheira lida.
+3. Avançar para o próximo produto apresentado.
+
+**Validação final**  
+A quantidade recolhida fica associada à posição, produto, lote e banheira corretos.
+
+**Notas**  
+A lateral da aplicação apresenta indicadores de quantidade não encontrada, quantidade recolhida e quantidade total da recolha.
+
+---
+
+## BC-KB-295 — Registar produto não encontrado durante uma recolha
+**Categoria:** Mobilidade / Saída / Recolha  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+A aplicação pede a recolha de um produto, mas o operador não encontra o produto na posição indicada.
+
+**Diagnóstico**  
+Durante a recolha, pode existir divergência entre o stock esperado e o stock físico disponível na posição.
+
+**Causa provável**  
+O produto pode ter sido movimentado, estar numa posição diferente, estar esgotado fisicamente ou existir divergência de stock/localização.
+
+**Solução**  
+Usar a opção "Não encontrei o produto" para registar a falha de recolha e permitir o tratamento correto do processo.
+
+**Como proceder**
+
+### 1. Validar fisicamente a posição
+1. Confirmar se está na posição indicada.
+2. Rever se o produto/lote indicado está presente.
+3. Confirmar se a leitura da posição foi feita corretamente.
+
+### 2. Registar não encontrado
+1. Se o produto não existir fisicamente, selecionar "Não encontrei o produto".
+2. Confirmar a quantidade não encontrada.
+3. Avançar conforme indicação da aplicação.
+
+### 3. Prosseguir a recolha
+1. Continuar para o próximo produto ou posição.
+2. No final, validar se existem quantidades não encontradas.
+3. Comunicar divergências conforme procedimento interno.
+
+**Validação final**  
+A quantidade não encontrada fica registada na recolha e o processo pode prosseguir sem forçar recolha inexistente.
+
+**Notas**  
+Não substituir o produto por outro lote ou posição sem alteração validada no sistema.
+
+---
+
+## BC-KB-296 — Colocar banheira na zona de conferência e terminar recolha
+**Categoria:** Mobilidade / Saída / Recolha  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+A recolha está concluída ou a banheira está cheia, mas o utilizador não sabe como depositar a banheira e terminar a recolha.
+
+**Diagnóstico**  
+Todas as banheiras usadas na recolha devem ser colocadas na zona de conferência antes de a recolha ser concluída.
+
+**Causa provável**  
+A recolha utilizou uma ou várias banheiras que ainda estão associadas ao operador/recolha.
+
+**Solução**  
+Usar a opção "Colocar Banheira", ler a banheira e a posição de depósito na zona de conferência.
+
+**Como proceder**
+
+### 1. Levar banheira para conferência
+1. Deslocar-se para a zona de conferência.
+2. Garantir que a banheira contém apenas produtos da recolha correta.
+3. Selecionar a opção "Colocar Banheira".
+
+### 2. Confirmar depósito
+1. Ler o código de barras da banheira.
+2. Ler o código de barras da posição de depósito.
+3. Colocar fisicamente a banheira nessa posição.
+
+### 3. Terminar recolha
+1. Repetir o processo para todas as banheiras associadas à recolha.
+2. Confirmar a mensagem "Não existem banheiras por colocar".
+3. Concluir a recolha.
+
+**Validação final**  
+Todas as banheiras ficam colocadas na zona de conferência e a recolha fica pronta para conferência.
+
+**Notas**  
+A recolha não deve ser considerada concluída enquanto existirem banheiras por colocar.
+
+---
+
+## BC-KB-297 — Resolver casos particulares da recolha: reatribuição, banheira não liberta e recolha manual PRAXIS
+**Categoria:** Mobilidade / Saída / Recolha  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+A recolha não pode ser concluída pelo operador, a banheira não está liberta ou a recolha PRAXIS não é sugerida automaticamente.
+
+**Diagnóstico**  
+A recolha pode exigir intervenção de gestão no Business Central/NAV ou execução manual, conforme o caso.
+
+**Causa provável**  
+A recolha foi atribuída ao operador errado, a banheira está presa noutra atividade ou trata-se de uma recolha PRAXIS com funcionamento manual.
+
+**Solução**  
+Tratar conforme o cenário: reatribuir a recolha, usar uma banheira liberta ou ativar o modo manual na recolha PRAXIS.
+
+**Como proceder**
+
+### Cenário 1 — Recolha atribuída a operador que não a consegue concluir
+1. Identificar a recolha.
+2. Validar o operador atualmente atribuído.
+3. No Business Central/NAV, reatribuir a recolha a outro operador.
+4. Confirmar que o novo operador consegue iniciar ou continuar a recolha.
+
+### Cenário 2 — Banheira não liberta
+1. Ler a mensagem de erro apresentada.
+2. Confirmar se a banheira está associada a outra atividade.
+3. Selecionar outra banheira identificada e liberta.
+4. Se necessário, pedir análise para libertação/correção da banheira.
+
+### Cenário 3 — Recolha manual PRAXIS
+1. Selecionar a recolha PRAXIS.
+2. Ativar a opção "Manual".
+3. Informar manualmente o produto que está a recolher.
+4. Confirmar quantidades conforme a recolha física.
+
+**Validação final**  
+A recolha fica novamente executável, com operador, banheira e modo de recolha corretos.
+
+**Notas**  
+Na recolha PRAXIS, a aplicação não sugere automaticamente o produto; o operador informa o produto que está a recolher.
+
+---
+
+## BC-KB-298 — Conferir banheira na expedição através da atividade S2A: Conferência
+**Categoria:** Mobilidade / Saída / Conferência de Expedição  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Existem banheiras recolhidas para conferência e o utilizador precisa de confirmar os produtos antes da faturação.
+
+**Diagnóstico**  
+A atividade S2A: Conferência é executada na variante PC da aplicação e inicia quando existem banheiras para conferir.
+
+**Causa provável**  
+A recolha foi concluída e as banheiras foram colocadas na zona de conferência.
+
+**Solução**  
+Selecionar uma banheira de depósito, escolher a banheira a conferir e validar produto a produto.
+
+**Como proceder**
+
+### 1. Iniciar conferência
+1. Abrir a variante PC da Mobilidade.
+2. Selecionar a atividade "Conferir Banheira".
+3. Escolher uma banheira livre para depósito dos produtos conferidos.
+
+### 2. Ler banheiras
+1. Selecionar a banheira que pretende conferir.
+2. Ler o código de barras da banheira de conferência.
+3. Ler o código de barras da banheira de depósito/conferidos.
+
+### 3. Conferir produtos
+1. Para cada produto da banheira, ler o código de barras do produto.
+2. Introduzir a quantidade conferida.
+3. Colocar o produto na banheira dos conferidos.
+4. Acompanhar o indicador de quantidade por conferir.
+
+### 4. Colocar banheira conferida
+1. Quando a banheira estiver cheia ou a conferência terminar, colocar a banheira na zona S4.
+2. Ler a posição de depósito.
+3. Confirmar a colocação.
+
+**Validação final**  
+A banheira fica conferida e colocada na zona de pré-faturação para embalamento e faturação.
+
+**Notas**  
+Após todas as banheiras de recolha serem conferidas e colocadas, o sistema regista automaticamente a recolha no Business Central/NAV com as quantidades conferidas.
+
+---
+
+## BC-KB-299 — Resolver diferenças ou produto extra na conferência da banheira
+**Categoria:** Mobilidade / Saída / Conferência de Expedição  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+Durante a conferência da banheira existem diferenças entre a quantidade recolhida e a quantidade conferida, ou surge produto que não consta do pedido de recolha.
+
+**Diagnóstico**  
+A conferência pode identificar produto em falta, produto a mais ou produto trocado. A área de mensagens pode apoiar a análise.
+
+**Causa provável**  
+Erro na recolha, produto colocado na banheira errada, quantidade recolhida incorreta ou divergência física.
+
+**Solução**  
+Validar a diferença, confirmar qual quantidade está correta e reservar produto extra ou não previsto para análise.
+
+**Como proceder**
+
+### 1. Validar diferença de quantidade
+1. Confirmar produto, lote e quantidade indicada como recolhida.
+2. Confirmar quantidade efetivamente conferida.
+3. Consultar a área de mensagens para apoio à análise.
+4. Confirmar se a quantidade correta é a recolhida ou a conferida.
+
+### 2. Quando não existe mais produto na banheira
+1. Se a quantidade conferida estiver correta, selecionar "Não existe mais produto".
+2. Confirmar o término da conferência quando solicitado.
+3. Garantir que não fica produto por conferir fisicamente.
+
+### 3. Produto não pedido ou a mais
+1. Se for detetado produto que não consta da recolha, reservar o produto para análise.
+2. Se existir produto a mais, não forçar quantidade superior à pedida.
+3. Reservar o excedente para posterior reposição ou tratamento.
+
+**Validação final**  
+A conferência fica regularizada com quantidades corretas e produtos extra/reservados separados para análise.
+
+**Notas**  
+No caso particular PRAXIS não existe conferência; após recolha, a mercadoria passa diretamente para a zona S4 para faturação.
+
+---
+
+## BC-KB-300 — Faturar envio na Mobilidade através da atividade S3: Enviar e Faturar
+**Categoria:** Mobilidade / Saída / Faturação  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O envio está pronto e o utilizador precisa de faturar e imprimir os documentos/etiquetas através da Mobilidade.
+
+**Diagnóstico**  
+A atividade S3: Faturação inicia quando existem envios prontos para faturar: com produtos recolhidos, todas as banheiras conferidas e sem recolhas pendentes.
+
+**Causa provável**  
+O processo de recolha e conferência terminou e o envio está na zona de pré-faturação.
+
+**Solução**  
+Selecionar o envio, confirmar banheiras/volumes, submeter para criar guias e fatura, e imprimir etiquetas/documentos.
+
+**Como proceder**
+
+### 1. Selecionar envio
+1. Na Mobilidade, selecionar "Enviar e Faturar".
+2. Validar a lista de envios disponíveis.
+3. Confirmar posição S4, número do envio, banheiras conferidas, recolhas não conferidas, armazém e estado de satisfação.
+4. Selecionar o envio pretendido.
+
+### 2. Confirmar mercadoria
+1. Ler o código de barras da posição onde se encontram as banheiras.
+2. Ler todas as banheiras associadas ao envio.
+3. Indicar o número de volumes.
+4. Se as banheiras seguirem para o cliente, indicar o número de banheiras como volumes.
+5. Se houver embalamento em caixas, indicar o número de volumes após embalamento.
+
+### 3. Submeter faturação
+1. Selecionar "Submeter".
+2. Aguardar a criação automática das guias de remessa de venda.
+3. Aguardar a emissão da fatura ao cliente.
+
+### 4. Imprimir
+1. Selecionar "Imprimir".
+2. Confirmar impressão das etiquetas de volumes.
+3. Confirmar geração/impressão da fatura.
+4. Confirmar impressão de declaração de psicotrópicos ou carta de não satisfação, quando aplicável.
+
+### 5. Colocar volumes na zona correta
+1. Colar etiquetas nos volumes.
+2. Fechar volumes.
+3. Para rotas, colocar no móvel da respetiva rota, incluindo B2C.
+4. Para transportadoras, colocar na palete/chão identificado com a transportadora.
+
+**Validação final**  
+O envio fica faturado, etiquetado e colocado na zona correta para expedição.
+
+**Notas**  
+As caixas mantêm-se abertas até ser confirmada eventual necessidade de desativação de produtos na NMVS.
+
+---
+
+## BC-KB-301 — Resolver bloqueios na faturação da Mobilidade: motivo de não satisfação, PRAXIS e fatura não emitida
+**Categoria:** Mobilidade / Saída / Faturação  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+A faturação na Mobilidade não avança ou exige tratamento específico antes de emitir a fatura.
+
+**Diagnóstico**  
+Os casos particulares de faturação incluem faturação PRAXIS em zona específica, envios parciais sem motivo de não satisfação e situações em que a fatura não é emitida pela Mobilidade.
+
+**Causa provável**  
+O envio está parcial sem motivo de não satisfação atribuído, pertence a PRAXIS ou ocorreu falha de emissão automática da fatura.
+
+**Solução**  
+Tratar o bloqueio conforme o cenário apresentado pela aplicação.
+
+**Como proceder**
+
+### Cenário 1 — Faturação PRAXIS
+1. Confirmar que o envio é PRAXIS.
+2. Executar a faturação na zona S4 específica para PRAXIS.
+3. Seguir o fluxo próprio de PRAXIS até à emissão/colocação para expedição.
+
+### Cenário 2 — Motivo de não satisfação em envio parcial
+1. Validar se o envio está parcialmente satisfeito.
+2. Confirmar se o motivo de não envio foi atribuído automaticamente.
+3. Se não existir motivo, atribuir o motivo de não satisfação antes de faturar.
+4. Voltar à Mobilidade e repetir a faturação.
+
+### Cenário 3 — Fatura não emitida pela Mobilidade
+1. Ler a mensagem apresentada pela aplicação.
+2. Confirmar quais as guias de remessa de venda indicadas.
+3. Emitir a fatura no Business Central/NAV a partir das guias de remessa de venda indicadas.
+4. Confirmar se o envio fica corretamente faturado.
+
+**Validação final**  
+O bloqueio fica resolvido, a fatura é emitida pela Mobilidade ou pelo Business Central/NAV, e o envio fica pronto para expedição.
+
+**Notas**  
+Nos envios parciais, a ausência de motivo de não satisfação impede a emissão da fatura. Não contornar este passo, porque o motivo documenta a razão da não satisfação total.
