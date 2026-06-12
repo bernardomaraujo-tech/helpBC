@@ -8437,37 +8437,190 @@ Na ficha do cliente, ativar a opção que indica envio apenas com Guia de Transp
 **Disponível para Agente:** Sim
 
 **Problema**  
-É necessário aplicar portes de forma automática e consistente, considerando regras comerciais, segmentos de cliente, concursos, código postal e valor mínimo da encomenda.
+É necessário compreender quando os portes são aplicados automaticamente numa encomenda de venda e em que situações o sistema exclui essa aplicação.
 
 **Diagnóstico**  
-A nova política de atribuição de portes passou a estar centralizada no Modelo Comercial ePricing, com avaliação sequencial de condições.
+A aplicação de portes está centralizada no Modelo Comercial ePricing e é avaliada automaticamente pelo Business Central com base em regras previamente definidas.
+
+O sistema considera, entre outros critérios:
+
+- se a aplicação de portes está ativa;
+- o segmento do cliente;
+- a existência de procedimento concursal;
+- o código postal da encomenda;
+- o valor mínimo da encomenda sem IVA;
+- o produto de portes aplicável.
 
 **Causa provável**  
-A aplicação manual ou pouco estruturada de portes pode gerar inconsistências, omissões ou aplicação indevida em clientes/segmentos excluídos.
+A dúvida pode surgir quando:
+
+- os portes são aplicados automaticamente numa encomenda;
+- os portes não são aplicados numa encomenda onde eram esperados;
+- o cliente pertence a um segmento excluído;
+- a encomenda tem origem numa oportunidade/procedimento concursal;
+- o valor da encomenda está abaixo do mínimo definido para o código postal;
+- a encomenda foi alterada e o sistema recalculou os portes.
 
 **Solução**  
-Configurar e validar as regras no Modelo Comercial ePricing, permitindo que o sistema aplique ou recalcule portes automaticamente ao validar o modelo comercial ou submeter a encomenda para aprovação.
+O utilizador deve validar a encomenda através do Modelo Comercial ou submeter a encomenda para aprovação. Nesse momento, o sistema avalia automaticamente as regras de portes e aplica, exclui ou recalcula os portes conforme as condições existentes.
+
+A configuração das regras pode ser consultada no **Modelo Comercial**, na área **Transport Fee**, mas a alteração dessas regras não deve ser efetuada pelo utilizador final.
+
+**Como funciona a aplicação automática de portes**
+
+### 1. Avaliação inicial das regras
+
+Ao validar o Modelo Comercial ou ao submeter a encomenda para aprovação, o sistema avalia as condições por ordem:
+
+1. Verifica se a aplicação de portes está ativa no Modelo Comercial.
+2. Verifica se o cliente pertence a um segmento excluído.
+3. Verifica se a encomenda tem origem numa oportunidade com **Número de Procedimento** preenchido.
+4. Verifica o código postal da encomenda.
+5. Verifica o valor da encomenda sem IVA.
+6. Se o valor da encomenda estiver abaixo do mínimo definido para o código postal, aplica os portes correspondentes.
+
+### 2. Segmentos atualmente excluídos
+
+Atualmente, os seguintes segmentos de cliente estão excluídos da aplicação automática de portes:
+
+| Código Segmento | Aplica portes | Descrição |
+|---|---:|---|
+| SC06 | Não | Distribuidores |
+| SC10 | Não | ERPI - Estruturas Residenciais para Pessoas Idosas |
+| SC11 | Não | Farmácias |
+
+Se o cliente pertencer a um destes segmentos, os portes não são aplicados automaticamente, mesmo que a encomenda cumpra outras condições.
+
+### 3. Exclusão de concursos
+
+Se a encomenda tiver origem numa oportunidade com o campo **Número de Procedimento** preenchido, o sistema considera que se trata de um processo concursal.
+
+Nestes casos, os portes não são aplicados automaticamente.
+
+### 4. Código postal e valor mínimo da encomenda
+
+A aplicação de portes também depende da combinação entre:
+
+- código postal da encomenda;
+- intervalo de códigos postais configurado;
+- valor mínimo de encomenda sem IVA;
+- valor de portes definido para esse intervalo.
+
+Se a encomenda estiver abaixo do valor mínimo definido para o código postal aplicável, o sistema poderá aplicar automaticamente o valor de portes correspondente.
+
+### 5. Produto de portes aplicado
+
+Quando existem condições para aplicar portes, o sistema adiciona automaticamente uma linha de produto de portes.
+
+O produto de portes aplicado deve respeitar as regras internas do sistema, nomeadamente:
+
+- o nome do produto deve começar por **“Porte”**;
+- a dimensão do produto de portes deve ser compatível com a dimensão da encomenda.
+
+Se o sistema não encontrar um produto de portes adequado, poderá apresentar erro.
+
+### 6. Quando os portes são aplicados
+
+A aplicação dos portes pode ocorrer em dois momentos:
+
+1. Quando o utilizador clica em **eValidar Modelo Comercial** na encomenda.
+2. Quando a encomenda é submetida para aprovação.
+
+Se os portes forem aplicados, o sistema acrescenta a linha de portes à encomenda e apresenta uma mensagem de confirmação.
+
+### 7. Alterações posteriores à encomenda
+
+Depois de os portes serem aplicados, a encomenda pode ser alterada, por exemplo:
+
+- adição de novas linhas;
+- remoção de linhas;
+- alteração de quantidades;
+- alteração de produtos;
+- alteração de valores.
+
+Se forem feitas alterações relevantes, o sistema poderá recalcular automaticamente os portes quando:
+
+- for feita nova validação do Modelo Comercial;
+- ou a encomenda for novamente submetida para aprovação.
+
+### 8. Regras sobre a linha de portes
+
+Depois de aplicada a linha de portes:
+
+- o preço unitário do produto de portes não deve ser alterado manualmente;
+- é possível aplicar descontos sobre o valor dos portes, por exemplo 50% ou 100%, quando aplicável.
 
 **Como proceder**
-1. Validar se a aplicação global de portes está ativa ou inativa no Modelo Comercial ePricing.
-2. Confirmar se existem exclusões por segmento de cliente, como farmácias ou concursos.
-3. Confirmar se encomendas provenientes de Procedimentos Concursais estão excluídas, quando aplicável.
-4. Validar as regras por código postal e valor mínimo de encomenda.
-5. Criar ou rever a encomenda de venda.
-6. Validar o modelo comercial ou submeter a encomenda para aprovação.
-7. Confirmar se os portes são aplicados automaticamente quando as regras assim o determinam.
-8. Se houver alterações posteriores à encomenda, confirmar se o sistema recalcula os portes.
-9. Validar se o produto de portes aplicado respeita a nomenclatura e dimensões da encomenda.
+
+### 1. Validar se os portes foram aplicados
+
+1. Abrir a encomenda de venda.
+2. Validar o Modelo Comercial através da opção **eValidar Modelo Comercial**, ou submeter a encomenda para aprovação.
+3. Confirmar se foi adicionada uma linha de portes à encomenda.
+4. Verificar se o valor dos portes corresponde ao esperado.
+
+### 2. Confirmar se a encomenda está excluída
+
+Se os portes não forem aplicados, validar primeiro se existe uma exclusão aplicável:
+
+1. Confirmar se o cliente pertence a um dos segmentos excluídos:
+   - SC06 — Distribuidores;
+   - SC10 — ERPI - Estruturas Residenciais para Pessoas Idosas;
+   - SC11 — Farmácias.
+2. Confirmar se a encomenda tem origem numa oportunidade com **Número de Procedimento** preenchido.
+3. Confirmar se o valor da encomenda sem IVA está acima ou abaixo do mínimo aplicável.
+4. Confirmar se o código postal da encomenda está abrangido pelas regras existentes.
+
+### 3. Consultar as regras existentes
+
+Para visualização das regras, pode ser consultada a área:
+
+**Configuração → Modelo Comercial → Transport Fee**
+
+Nesta área é possível visualizar informação como:
+
+- se a aplicação de portes está ativa;
+- se existem concursos excluídos;
+- segmentos excluídos;
+- regras por código postal;
+- valor mínimo de encomenda;
+- valor de portes aplicável.
+
+**Nota:**  
+Esta área deve ser usada apenas para consulta por utilizadores sem responsabilidade de configuração. Alterações às regras devem ser tratadas pelos responsáveis do Modelo Comercial/ePricing.
+
+### 4. Verificar impacto de alterações à encomenda
+
+Se a encomenda for alterada depois de os portes terem sido aplicados:
+
+1. Rever as alterações efetuadas à encomenda.
+2. Validar novamente o Modelo Comercial.
+3. Confirmar se a linha de portes foi mantida, removida ou recalculada.
+4. Se a encomenda for submetida novamente para aprovação, confirmar se o sistema voltou a avaliar as regras de portes.
 
 **Validação final**  
-1. Os portes são aplicados automaticamente apenas quando as regras determinam.
-2. As exclusões por segmento ou procedimento concursal são respeitadas.
-3. Alterações posteriores recalculam os portes.
-4. O produto de portes aplicado está correto.
+O processo está correto quando:
 
-**Notas**  
-* A política tem efeitos a partir de 1 de setembro, segundo a comunicação original.
-* Fonte: Comunicação TIC i9 de 08/08/2025.
+1. Os portes são aplicados automaticamente apenas quando existem condições para tal.
+2. Os segmentos excluídos não recebem aplicação automática de portes.
+3. Encomendas associadas a procedimento concursal não recebem portes automáticos.
+4. O valor dos portes respeita o código postal e o valor mínimo definido.
+5. Alterações posteriores à encomenda originam nova avaliação quando o Modelo Comercial é validado ou a encomenda é submetida para aprovação.
+6. A linha de portes aparece corretamente na encomenda quando aplicável.
+
+**Notas**
+
+- A aplicação automática de portes depende das regras existentes no Modelo Comercial ePricing.
+- A configuração pode ser consultada em **Configuração → Modelo Comercial → Transport Fee**, mas não deve ser alterada pelo utilizador final.
+- Os segmentos atualmente excluídos são:
+  - **SC06 — Distribuidores**;
+  - **SC10 — ERPI - Estruturas Residenciais para Pessoas Idosas**;
+  - **SC11 — Farmácias**.
+- Se a encomenda estiver associada a uma oportunidade com **Número de Procedimento** preenchido, os portes não são aplicados automaticamente.
+- Se a encomenda for alterada, os portes podem ser recalculados.
+- O preço unitário da linha de portes não deve ser alterado manualmente.
+- Quando aplicável, podem ser usados descontos sobre os portes.
+- Em caso de dúvida sobre regras ou valores aplicados, o utilizador deve contactar o responsável pelo Modelo Comercial/ePricing.
 
 
 ## BC-KB-251 — Monitorizar Garantias Bancárias, Cauções, Contratos Escritos e Tribunal de Contas na Oportunidade
