@@ -1986,3 +1986,11 @@ button {
     flex-direction: column;
   }
 }
+
+.share-status {
+  align-self: center;
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
