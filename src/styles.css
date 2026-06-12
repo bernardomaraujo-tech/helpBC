@@ -1816,19 +1816,11 @@ button {
   line-height: 1.4;
 }
 
-.video-training-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
-  gap: 20px;
-  align-items: start;
-}
-
-.video-list-panel,
-.video-preview-panel {
+.video-library-panel {
   border: 1px solid var(--line);
   border-radius: 24px;
   background: #fff;
-  padding: 18px;
+  padding: 20px;
   box-shadow: 0 18px 50px rgba(16, 24, 40, 0.06);
 }
 
@@ -1837,7 +1829,7 @@ button {
   justify-content: space-between;
   gap: 14px;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 .video-list-heading h3 {
@@ -1858,46 +1850,57 @@ button {
   white-space: nowrap;
 }
 
+.video-library-note {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
 .video-card-grid {
   display: grid;
-  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
 }
 
 .training-video-card {
   position: relative;
-  width: 100%;
   border: 1px solid var(--line);
-  border-radius: 20px;
+  border-radius: 22px;
   background: #fff;
   color: var(--black);
-  padding: 16px;
-  min-height: 104px;
+  padding: 18px;
+  min-height: 128px;
   display: grid;
-  grid-template-columns: 42px 50px 1fr auto;
-  gap: 12px;
+  grid-template-columns: 42px 54px 1fr;
+  grid-template-areas:
+    "number icon copy"
+    "number icon action";
+  gap: 10px 14px;
   align-items: center;
   text-align: left;
+  text-decoration: none;
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease, background 160ms ease;
 }
 
-.training-video-card:hover,
-.training-video-card.active {
+.training-video-card:hover {
   transform: translateY(-2px);
   border-color: rgba(0, 155, 154, 0.48);
   background: linear-gradient(135deg, rgba(0, 155, 154, 0.08), #fff 68%);
   box-shadow: 0 18px 42px rgba(16, 24, 40, 0.08);
 }
 
-.training-video-card.active::before {
+.training-video-card::before {
   content: '';
   position: absolute;
-  inset: 14px auto 14px 0;
+  inset: 16px auto 16px 0;
   width: 5px;
   border-radius: 0 999px 999px 0;
-  background: var(--teal);
+  background: rgba(0, 155, 154, 0.32);
 }
 
 .training-video-number {
+  grid-area: number;
   color: #98a2b3;
   font-weight: 950;
   font-size: 13px;
@@ -1905,9 +1908,10 @@ button {
 }
 
 .training-video-icon {
-  width: 46px;
-  height: 46px;
-  border-radius: 16px;
+  grid-area: icon;
+  width: 50px;
+  height: 50px;
+  border-radius: 17px;
   display: grid;
   place-items: center;
   color: var(--teal);
@@ -1915,13 +1919,14 @@ button {
 }
 
 .training-video-copy {
+  grid-area: copy;
   display: grid;
   gap: 5px;
   min-width: 0;
 }
 
 .training-video-copy strong {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.25;
   font-weight: 950;
 }
@@ -1932,119 +1937,24 @@ button {
 }
 
 .training-video-action {
+  grid-area: action;
+  width: fit-content;
   border-radius: 999px;
-  padding: 8px 11px;
+  padding: 9px 12px;
   background: var(--teal);
   color: #fff;
-  font-size: 12px;
-  font-weight: 950;
-  white-space: nowrap;
-}
-
-.video-preview-panel {
-  position: sticky;
-  top: 24px;
-}
-
-.video-preview-title {
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  margin-bottom: 16px;
-}
-
-.video-preview-title span {
-  color: var(--teal);
-  font-size: 12px;
-  font-weight: 950;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
-
-.video-preview-title h3 {
-  margin: 5px 0 0;
-  font-size: clamp(22px, 3vw, 34px);
-  line-height: 1.05;
-  letter-spacing: -0.04em;
-}
-
-.video-preview-icon {
-  width: 58px;
-  height: 58px;
-  border-radius: 20px;
-  display: grid;
-  place-items: center;
-  color: #fff;
-  background: var(--teal);
-  flex: 0 0 auto;
-  box-shadow: 0 16px 36px rgba(0, 155, 154, 0.22);
-}
-
-.video-preview-frame {
-  position: relative;
-  overflow: hidden;
-  border-radius: 22px;
-  background: #101828;
-  min-height: 360px;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
-}
-
-.video-preview-frame::before {
-  content: '';
-  display: block;
-  padding-top: 56.25%;
-}
-
-.video-preview-frame iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  background: #101828;
-}
-
-.video-preview-footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  align-items: center;
-  margin-top: 16px;
-}
-
-.video-preview-footer p {
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.45;
-  font-size: 14px;
-}
-
-.video-open-link {
-  border: 0;
-  border-radius: 14px;
-  background: var(--teal);
-  color: #fff;
-  padding: 12px 14px;
   display: inline-flex;
-  gap: 8px;
+  gap: 7px;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
+  font-size: 12px;
   font-weight: 950;
   white-space: nowrap;
-}
-
-.video-open-link:hover {
-  filter: brightness(0.95);
 }
 
 @media (max-width: 1180px) {
-  .video-training-layout {
+  .video-card-grid {
     grid-template-columns: 1fr;
-  }
-
-  .video-preview-panel {
-    position: static;
   }
 }
 
@@ -2058,17 +1968,21 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .training-video-card {
+    grid-template-areas:
+      "number"
+      "icon"
+      "copy"
+      "action";
+  }
+
   .training-video-action,
   .video-list-badge {
     width: fit-content;
   }
 
-  .video-preview-frame {
-    min-height: 240px;
-  }
-
-  .video-preview-footer {
-    flex-direction: column;
+  .video-list-heading {
     align-items: flex-start;
+    flex-direction: column;
   }
 }
