@@ -8483,11 +8483,9 @@ Ao validar o Modelo Comercial ou ao submeter a encomenda para aprovação, o sis
 
 Atualmente, os seguintes segmentos de cliente estão excluídos da aplicação automática de portes:
 
-| Código Segmento | Aplica portes | Descrição |
-|---|---:|---|
-| SC06 | Não | Distribuidores |
-| SC10 | Não | ERPI - Estruturas Residenciais para Pessoas Idosas |
-| SC11 | Não | Farmácias |
+SC06 - Distribuidores 
+SC10 - ERPI - Estruturas Residenciais para Pessoas Idosas 
+SC11 - Farmácias 
 
 Se o cliente pertencer a um destes segmentos, os portes não são aplicados automaticamente, mesmo que a encomenda cumpra outras condições.
 
