@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { useState } from 'react';
 import { ArrowLeft, Printer, Share2, ThumbsDown, ThumbsUp } from 'lucide-react';
 import { articles } from '../data/articles';
 
@@ -106,6 +107,19 @@ function MarkdownContent({ content }: { content: string }) {
 
 export function ArticlePage({ articleId, onBack }: Props) {
   const article = articles.find((item) => item.id === articleId) ?? articles[0];
+  const [copied, setCopied] = useState(false);
+
+  async function copyArticleLink() {
+    const articleUrl = window.location.href;
+
+    try {
+      await navigator.clipboard.writeText(articleUrl);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2500);
+    } catch {
+      window.prompt('Copiar link do artigo:', articleUrl);
+    }
+  }
 
   return (
     <main className="page article-page">
@@ -133,8 +147,13 @@ export function ArticlePage({ articleId, onBack }: Props) {
             </div>
           </div>
           <div className="article-actions">
-            <button><Printer size={18} /></button>
-            <button><Share2 size={18} /></button>
+            <button type="button" aria-label="Imprimir artigo" title="Imprimir artigo" onClick={() => window.print()}>
+              <Printer size={18} />
+            </button>
+            <button type="button" aria-label="Copiar link do artigo" title="Copiar link do artigo" onClick={copyArticleLink}>
+              <Share2 size={18} />
+            </button>
+            {copied && <span className="share-status">Link copiado</span>}
           </div>
         </div>
 
