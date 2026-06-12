@@ -15,32 +15,23 @@ function getVideoCountLabel(count: number) {
 
 export function TrainingVideos() {
   const [selectedCategory, setSelectedCategory] = useState<TrainingVideo['category']>('Formação Inicial');
-  const [selectedVideoId, setSelectedVideoId] = useState(trainingVideos[0]?.id ?? '');
 
   const categorySummaries = useMemo(
     () =>
       orderedCategories.map((category) => ({
         category,
-        count: trainingVideos.filter((video) => video.category === category).length,
+        count: trainingVideos.filter((video: TrainingVideo) => video.category === category).length,
         description: categoryCopy[category]
       })),
     []
   );
 
   const visibleVideos = useMemo(
-    () => trainingVideos.filter((video) => video.category === selectedCategory),
+    () => trainingVideos.filter((video: TrainingVideo) => video.category === selectedCategory),
     [selectedCategory]
   );
 
-  const selectedVideo = visibleVideos.find((video) => video.id === selectedVideoId) ?? visibleVideos[0];
-
-  function selectCategory(category: TrainingVideo['category']) {
-    const firstVideo = trainingVideos.find((video) => video.category === category);
-    setSelectedCategory(category);
-    setSelectedVideoId(firstVideo?.id ?? '');
-  }
-
-  if (!selectedVideo) {
+  if (trainingVideos.length === 0) {
     return (
       <div className="empty-search-state full-width-state">
         <Video size={28} />
@@ -55,7 +46,7 @@ export function TrainingVideos() {
       <div className="section-header video-section-header">
         <div>
           <h2>Vídeos formativos</h2>
-          <span>{trainingVideos.length} vídeos disponíveis · organizados por tema</span>
+          <span>{trainingVideos.length} vídeos disponíveis · abertura direta no SharePoint</span>
         </div>
         <Video size={24} />
       </div>
@@ -66,7 +57,7 @@ export function TrainingVideos() {
             key={summary.category}
             type="button"
             className={selectedCategory === summary.category ? 'video-topic-card active' : 'video-topic-card'}
-            onClick={() => selectCategory(summary.category)}
+            onClick={() => setSelectedCategory(summary.category)}
           >
             <span className="video-topic-icon" aria-hidden="true">
               <PlayCircle size={34} strokeWidth={2.2} />
@@ -80,70 +71,37 @@ export function TrainingVideos() {
         ))}
       </div>
 
-      <div className="video-training-layout">
-        <div className="video-list-panel">
-          <div className="video-list-heading">
-            <div>
-              <span className="eyebrow compact-eyebrow">{selectedCategory}</span>
-              <h3>{getVideoCountLabel(visibleVideos.length)}</h3>
-            </div>
-            <span className="video-list-badge">Seleciona um vídeo</span>
+      <div className="video-library-panel">
+        <div className="video-list-heading">
+          <div>
+            <span className="eyebrow compact-eyebrow">{selectedCategory}</span>
+            <h3>{getVideoCountLabel(visibleVideos.length)}</h3>
           </div>
-
-          <div className="video-card-grid">
-            {visibleVideos.map((video, index) => (
-              <button
-                key={video.id}
-                type="button"
-                className={selectedVideo.id === video.id ? 'training-video-card active' : 'training-video-card'}
-                onClick={() => setSelectedVideoId(video.id)}
-              >
-                <span className="training-video-number">{String(index + 1).padStart(2, '0')}</span>
-                <span className="training-video-icon" aria-hidden="true">
-                  <PlayCircle size={28} />
-                </span>
-                <span className="training-video-copy">
-                  <strong>{video.title}</strong>
-                  <small>{video.category}</small>
-                </span>
-                <span className="training-video-action">Ver vídeo</span>
-              </button>
-            ))}
-          </div>
+          <span className="video-list-badge">Abre no SharePoint</span>
         </div>
 
-        <aside className="video-preview-panel" aria-label="Pré-visualização do vídeo selecionado">
-          <div className="video-preview-title">
-            <span className="video-preview-icon" aria-hidden="true">
-              <PlayCircle size={32} />
-            </span>
-            <div>
-              <span>{selectedVideo.category}</span>
-              <h3>{selectedVideo.title}</h3>
-            </div>
-          </div>
+        <p className="video-library-note">
+          Os vídeos abrem numa nova janela para garantir a autenticação Microsoft e evitar bloqueios de visualização incorporada.
+        </p>
 
-          <div className="video-preview-frame">
-            <iframe
-              key={selectedVideo.id}
-              title={selectedVideo.title}
-              src={selectedVideo.url}
-              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-              allowFullScreen
-            />
-          </div>
-
-          <div className="video-preview-footer">
-            <p>
-              O vídeo abre diretamente nesta área quando o SharePoint permitir visualização incorporada. Caso não carregue,
-              usa a opção de nova janela.
-            </p>
-            <a href={selectedVideo.url} target="_blank" rel="noreferrer" className="video-open-link">
-              Abrir em nova janela
-              <ExternalLink size={17} />
+        <div className="video-card-grid">
+          {visibleVideos.map((video: TrainingVideo, index: number) => (
+            <a key={video.id} href={video.url} target="_blank" rel="noreferrer" className="training-video-card">
+              <span className="training-video-number">{String(index + 1).padStart(2, '0')}</span>
+              <span className="training-video-icon" aria-hidden="true">
+                <PlayCircle size={30} />
+              </span>
+              <span className="training-video-copy">
+                <strong>{video.title}</strong>
+                <small>{video.category}</small>
+              </span>
+              <span className="training-video-action">
+                Abrir vídeo
+                <ExternalLink size={16} />
+              </span>
             </a>
-          </div>
-        </aside>
+          ))}
+        </div>
       </div>
     </section>
   );
