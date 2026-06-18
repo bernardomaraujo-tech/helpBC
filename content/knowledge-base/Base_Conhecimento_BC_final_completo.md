@@ -9566,3 +9566,114 @@ A configuração está correta quando:
 - Antes de gravar a configuração, confirmar sempre se o utilizador substituto selecionado é o correto.
 - A delegação aplica-se aos pedidos de aprovação que entrem dentro do período indicado.
 
+
+## BC-KB-273 — Erro ao faturar por divergência no Grupo Registo Cliente
+**Categoria:** Vendas / Faturação  
+**Disponível para Utilizador:** Não  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Ao tentar faturar uma encomenda de venda, seja através da Mobilidade ou diretamente no Business Central, surge uma mensagem de erro relacionada com o cliente.
+
+Exemplo de erro:
+
+> "Permitir vários grupos de registo tem de ter um valor em Cliente: Nº=3357. Não pode ser igual a zero nem estar vazio."
+
+**Diagnóstico**  
+O erro ocorre no momento da faturação e está relacionado com uma divergência entre a informação de **Grupo Registo Cliente** existente na encomenda e a informação existente na ficha do cliente.
+
+A situação pode ocorrer quando a encomenda apresenta um determinado **Grupo Registo Cliente** no separador **Detalhes Faturação**, mas a ficha do cliente apresenta informação diferente no separador **Faturação**.
+
+**Causa provável**  
+Existe uma inconsistência entre:
+
+- o **Grupo Registo Cliente** indicado na encomenda;
+- o **Grupo Registo Cliente** definido na ficha do cliente;
+- ou a informação relacionada com a possibilidade de o cliente permitir vários grupos de registo.
+
+Esta divergência impede o Business Central de validar corretamente o registo da fatura.
+
+**Solução**  
+Validar qual é a informação correta e corrigir o registo que está incorreto.
+
+A correção pode ter de ser feita:
+
+- na encomenda de venda, se o valor incorreto estiver no separador **Detalhes Faturação**;
+- ou na ficha do cliente, se o valor incorreto estiver no separador **Faturação**.
+
+A alteração deve ser feita com cuidado, porque o **Grupo Registo Cliente** tem impacto contabilístico no registo da fatura.
+
+**Como proceder**
+
+### 1. Identificar o cliente indicado no erro
+
+1. Ler a mensagem de erro apresentada.
+2. Identificar o número do cliente indicado na mensagem.
+3. No exemplo apresentado, o cliente indicado é:
+   - **3357**
+
+### 2. Validar a encomenda de venda
+
+1. Abrir a encomenda de venda que está a ser faturada.
+2. Aceder ao separador **Detalhes Faturação**.
+3. Validar o campo **Grupo Registo Cliente**.
+4. Confirmar se o valor apresentado corresponde ao tipo de cliente e ao enquadramento correto da encomenda.
+
+### 3. Validar a ficha do cliente
+
+1. Abrir a ficha do cliente indicado no erro.
+2. Aceder ao separador **Faturação**.
+3. Validar o campo **Grupo Registo Cliente**.
+4. Comparar o valor da ficha do cliente com o valor existente na encomenda.
+5. Confirmar se existe divergência entre os dois registos.
+
+### 4. Confirmar qual é a informação correta
+
+Antes de alterar qualquer informação, confirmar qual deve ser o **Grupo Registo Cliente** correto.
+
+A validação pode depender de fatores como:
+
+- tipo de cliente;
+- empresa;
+- enquadramento contabilístico;
+- tipo de faturação;
+- histórico de faturação do cliente;
+- orientação do departamento financeiro.
+
+### 5. Corrigir a informação incorreta
+
+Depois de validado o valor correto:
+
+1. Se o erro estiver na encomenda:
+   - corrigir o **Grupo Registo Cliente** no separador **Detalhes Faturação** da encomenda.
+2. Se o erro estiver na ficha do cliente:
+   - corrigir o **Grupo Registo Cliente** no separador **Faturação** da ficha do cliente.
+3. Gravar a alteração.
+4. Voltar à encomenda.
+5. Tentar faturar novamente.
+
+### 6. Testar novamente a faturação
+
+1. Se o processo estiver a ser feito na Mobilidade, voltar a tentar faturar pela Mobilidade.
+2. Se o processo estiver a ser feito diretamente no Business Central, repetir o registo da fatura.
+3. Confirmar que a mensagem de erro deixou de aparecer.
+
+**Validação final**  
+O erro fica resolvido quando:
+
+1. O **Grupo Registo Cliente** da encomenda foi validado.
+2. O **Grupo Registo Cliente** da ficha do cliente foi validado.
+3. A divergência foi corrigida.
+4. A encomenda consegue ser faturada com sucesso.
+5. A fatura é registada sem erro relacionado com **Permitir vários grupos de registo**.
+
+**Notas**
+
+- Este erro pode surgir tanto na faturação via **Mobilidade** como na faturação diretamente no **Business Central**.
+- A correção deve ser feita apenas depois de confirmar qual é o **Grupo Registo Cliente** correto.
+- O **Grupo Registo Cliente** tem impacto contabilístico, pelo que alterações na ficha do cliente devem ser validadas com o departamento financeiro quando existir dúvida.
+- Não deve ser alterada a ficha do cliente apenas para ultrapassar o erro sem validação prévia.
+- Se a encomenda tiver um grupo de registo diferente do cliente por motivo válido, deve ser confirmado se essa exceção é permitida para o cliente.
+- Sempre que o erro indicar um cliente específico, começar a análise pela comparação entre:
+  - **Encomenda → Detalhes Faturação → Grupo Registo Cliente**;
+  - **Ficha Cliente → Faturação → Grupo Registo Cliente**.
