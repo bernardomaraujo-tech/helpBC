@@ -6483,38 +6483,6 @@ O campo Motivo Não Fornecimento fica preenchido na linha e pode ser utilizado p
 - Este campo não altera o valor recepcionado mas auxilia no acompanhamento de performance do fornecedor.
 
 
-## BC-KB-194 — Como valido encomendas de venda?
-**Categoria:** Vendas / Encomendas  
-**Disponível para Utilizador:** Sim  
-**Disponível para Agente:** Sim  
-
-**Problema**  
-Antes de registar ou enviar uma encomenda de venda, o utilizador pretende garantir que todos os dados estão correctos e que a encomenda passa nas validações do sistema.
-
-**Diagnóstico**  
-A encomenda contém linhas de produtos e dados do cliente, mas podem existir campos incompletos ou erros de crédito, preços e disponibilidades.
-
-**Causa provável**  
-Falta de revisão dos campos obrigatórios ou ausência de verificação prévia de crédito e stock.
-
-**Solução**  
-Utilizar a funcionalidade de Validar encomendas de venda para identificar e corrigir erros antes de registar.
-
-**Como proceder**  
-1. Aceder à Encomenda de Venda que pretende validar.
-2. No separador Processo, clicar em Validar (ou Verificar Documento).
-3. O sistema verifica: existência de produto, disponibilidade em stock, restrições de crédito do cliente, preços e descontos, e campos obrigatórios.
-4. Se existirem erros ou avisos, o sistema apresenta mensagens; ler cada mensagem, corrigir os campos indicados e executar novamente a validação.
-5. Quando não existirem mensagens de erro, a encomenda está pronta para registo ou envio.
-
-**Validação final**  
-A encomenda de venda é validada sem erros e está apta a ser registada ou enviada.
-
-**Notas**  
-- A validação não regista a encomenda; serve apenas para detecção precoce de problemas.
-- Correções de crédito podem exigir intervenção do departamento financeiro.
-
-
 ## BC-KB-195 — Como registo motivos de não fornecimento em vendas?
 **Categoria:** Vendas / Encomendas  
 **Disponível para Utilizador:** Sim  
