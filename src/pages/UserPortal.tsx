@@ -7,10 +7,10 @@ import { buildAnswer, searchArticles } from '../utils/kbSearch';
 import { getArticlePreview } from '../utils/kbVisibility';
 
 interface Props {
-  tickets: Ticket[];
-  onEscalate: (ticket: Ticket) => void;
   onOpenArticle: (articleId: string) => void;
-  onAddTicketMessage: (ticketId: string, text: string) => void;
+  tickets?: Ticket[];
+  onEscalate?: (ticket: Ticket) => void;
+  onAddTicketMessage?: (ticketId: string, text: string) => void;
 }
 
 const initialMessages: ChatMessage[] = [
@@ -26,7 +26,7 @@ function nowLabel() {
   return new Date().toLocaleTimeString('pt-PT', { hour: '2-digit', minute: '2-digit' });
 }
 
-export function UserPortal({ tickets, onEscalate, onOpenArticle, onAddTicketMessage }: Props) {
+export function UserPortal({ tickets = [], onEscalate, onOpenArticle, onAddTicketMessage }: Props) {
   const [tab, setTab] = useState('chat');
   const [query, setQuery] = useState('');
   const [messages, setMessages] = useState<ChatMessage[]>(initialMessages);
@@ -38,10 +38,12 @@ export function UserPortal({ tickets, onEscalate, onOpenArticle, onAddTicketMess
 
   const userArticles = useMemo(() => articles.filter((article) => article.availableForUser), []);
 
-  const suggestedArticles = useMemo(
+  const suggestedResults = useMemo(
     () => searchArticles(lastQuery || query, articles, { audience: 'user', limit: 10 }),
     [lastQuery, query]
   );
+
+  const suggestedArticles = suggestedResults.map((result) => result.article);
 
   function submitQuestion() {
     if (!query.trim()) return;
@@ -72,6 +74,8 @@ export function UserPortal({ tickets, onEscalate, onOpenArticle, onAddTicketMess
   }
 
   function escalate() {
+    if (!onEscalate) return;
+
     const ticketId = `TCK-${Math.floor(Math.random() * 900 + 100)}`;
     const createdAt = nowLabel();
     const subject = lastQuery || query || 'Pedido enviado pelo utilizador';
@@ -109,7 +113,7 @@ export function UserPortal({ tickets, onEscalate, onOpenArticle, onAddTicketMess
   }
 
   function sendTicketReply() {
-    if (!selectedTicket || !ticketReply.trim()) return;
+    if (!selectedTicket || !ticketReply.trim() || !onAddTicketMessage) return;
     onAddTicketMessage(selectedTicket.id, ticketReply.trim());
     setTicketReply('');
   }
@@ -191,7 +195,7 @@ export function UserPortal({ tickets, onEscalate, onOpenArticle, onAddTicketMess
                 <AlertTriangle size={20} />
                 <strong>Sem artigo correspondente?</strong>
                 <p>Envia o pedido para agente para análise.</p>
-                <button onClick={escalate}>Enviar para agente</button>
+                <button onClick={escalate} disabled={!onEscalate}>Enviar para agente</button>
               </div>
             </aside>
           </div>
@@ -214,21 +218,25 @@ export function UserPortal({ tickets, onEscalate, onOpenArticle, onAddTicketMess
         ) : (
           <div className="requests-chat-layout">
             <div className="requests-list request-selector">
-              {tickets.map((ticket) => (
-                <button
-                  key={ticket.id}
-                  className={`ticket-card ticket-selector-card ${ticket.id === selectedTicket?.id ? 'selected' : ''}`}
-                  onClick={() => setSelectedTicketId(ticket.id)}
-                >
-                  <div>
-                    <strong>{ticket.subject}</strong>
-                    <p>{ticket.message}</p>
-                  </div>
-                  <span className={`status status-${ticket.status.replace(' ', '-').toLowerCase()}`}>
-                    {ticket.status}
-                  </span>
-                </button>
-              ))}
+              {tickets.length > 0 ? (
+                tickets.map((ticket) => (
+                  <button
+                    key={ticket.id}
+                    className={`ticket-card ticket-selector-card ${ticket.id === selectedTicket?.id ? 'selected' : ''}`}
+                    onClick={() => setSelectedTicketId(ticket.id)}
+                  >
+                    <div>
+                      <strong>{ticket.subject}</strong>
+                      <p>{ticket.message}</p>
+                    </div>
+                    <span className={`status status-${ticket.status.replace(' ', '-').toLowerCase()}`}>
+                      {ticket.status}
+                    </span>
+                  </button>
+                ))
+              ) : (
+                <p className="muted">Ainda não existem pedidos.</p>
+              )}
             </div>
 
             <div className="chat-card ticket-chat-card">
@@ -260,8 +268,9 @@ export function UserPortal({ tickets, onEscalate, onOpenArticle, onAddTicketMess
                         onChange={(event) => setTicketReply(event.target.value)}
                         onKeyDown={(event) => event.key === 'Enter' && sendTicketReply()}
                         placeholder="Responder ao agente..."
+                        disabled={!onAddTicketMessage}
                       />
-                      <button onClick={sendTicketReply} aria-label="Enviar resposta ao agente">
+                      <button onClick={sendTicketReply} aria-label="Enviar resposta ao agente" disabled={!onAddTicketMessage}>
                         <Send size={18} />
                       </button>
                     </div>
