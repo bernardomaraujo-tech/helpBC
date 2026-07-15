@@ -6,9 +6,19 @@ import {
   getArticleSearchText
 } from './kbVisibility';
 
-interface SearchOptions {
+export interface SearchOptions {
   audience?: ArticleAudience;
   limit?: number;
+  /**
+   * Mantido por compatibilidade com componentes existentes.
+   * A ordenação principal continua a ser por relevância.
+   */
+  sort?: 'relevance' | 'title' | 'category' | string;
+}
+
+export interface ArticleSearchResult {
+  article: Article;
+  score: number;
 }
 
 function normalize(value: string) {
@@ -56,21 +66,47 @@ function scoreArticle(query: string, article: Article, audience: ArticleAudience
   return score;
 }
 
-export function searchArticles(query: string, allArticles: Article[], options: SearchOptions = {}) {
+function sortResults(results: ArticleSearchResult[], sort: SearchOptions['sort']) {
+  if (sort === 'title') {
+    return [...results].sort((a, b) => a.article.title.localeCompare(b.article.title, 'pt-PT'));
+  }
+
+  if (sort === 'category') {
+    return [...results].sort(
+      (a, b) =>
+        a.article.category.localeCompare(b.article.category, 'pt-PT') ||
+        b.score - a.score ||
+        a.article.title.localeCompare(b.article.title, 'pt-PT')
+    );
+  }
+
+  return [...results].sort(
+    (a, b) => b.score - a.score || a.article.title.localeCompare(b.article.title, 'pt-PT')
+  );
+}
+
+export function searchArticles(
+  query: string,
+  allArticles: Article[],
+  options: SearchOptions = {}
+): ArticleSearchResult[] {
   const audience = options.audience ?? 'agent';
   const limit = options.limit ?? 10;
 
   if (!normalize(query)) return [];
 
-  return allArticles
+  const results = allArticles
     .filter((article) => canViewArticle(article, audience))
     .map((article) => ({ article, score: scoreArticle(query, article, audience) }))
-    .filter((result) => result.score > 0)
-    .sort((a, b) => b.score - a.score || a.article.title.localeCompare(b.article.title, 'pt-PT'))
-    .slice(0, limit)
-    .map((result) => result.article);
+    .filter((result) => result.score > 0);
+
+  return sortResults(results, options.sort).slice(0, limit);
 }
 
-export function buildAnswer(article: Article, options: SearchOptions = {}) {
-  return getArticleAnswerText(article, options.audience ?? 'agent');
+function unwrapArticle(input: Article | ArticleSearchResult) {
+  return 'article' in input ? input.article : input;
+}
+
+export function buildAnswer(input: Article | ArticleSearchResult, options: SearchOptions = {}) {
+  return getArticleAnswerText(unwrapArticle(input), options.audience ?? 'agent');
 }
