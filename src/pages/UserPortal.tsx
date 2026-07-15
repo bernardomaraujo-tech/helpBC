@@ -1,41 +1,125 @@
-import { BookOpen, Search } from 'lucide-react';
+import { AlertTriangle, Bot, FileText, MessageCircle, Paperclip, Send } from 'lucide-react';
 import { useMemo, useState } from 'react';
-import { ALL_ARTICLES_KEY, KnowledgeBaseIndex } from '../components/KnowledgeBaseIndex';
-import { KnowledgeSearch } from '../components/KnowledgeSearch';
 import { Tabs } from '../components/Tabs';
-import { TrainingVideos } from '../components/TrainingVideos';
 import { articles } from '../data/articles';
-import { getArticleGroups, getArticleGroupName, sortArticlesByGroupAndTitle } from '../utils/articleGroups';
+import type { ChatMessage, Ticket } from '../types';
+import { buildAnswer, searchArticles } from '../utils/kbSearch';
+import { getArticlePreview } from '../utils/kbVisibility';
 
 interface Props {
+  tickets: Ticket[];
+  onEscalate: (ticket: Ticket) => void;
   onOpenArticle: (articleId: string) => void;
+  onAddTicketMessage: (ticketId: string, text: string) => void;
 }
 
-export function UserPortal({ onOpenArticle }: Props) {
-  const [tab, setTab] = useState('search');
-  const [selectedGroup, setSelectedGroup] = useState('');
+const initialMessages: ChatMessage[] = [
+  {
+    id: 'm1',
+    author: 'assistant',
+    text: 'Escreve a tua dúvida sobre Business Central. A pesquisa consulta apenas a informação disponível para utilizador.',
+    createdAt: 'Agora'
+  }
+];
 
-  const userArticles = useMemo(
-    () => articles.filter((article) => article.availableForUser).sort(sortArticlesByGroupAndTitle),
-    []
+function nowLabel() {
+  return new Date().toLocaleTimeString('pt-PT', { hour: '2-digit', minute: '2-digit' });
+}
+
+export function UserPortal({ tickets, onEscalate, onOpenArticle, onAddTicketMessage }: Props) {
+  const [tab, setTab] = useState('chat');
+  const [query, setQuery] = useState('');
+  const [messages, setMessages] = useState<ChatMessage[]>(initialMessages);
+  const [lastQuery, setLastQuery] = useState('');
+  const [selectedTicketId, setSelectedTicketId] = useState(tickets[0]?.id ?? '');
+  const [ticketReply, setTicketReply] = useState('');
+
+  const selectedTicket = tickets.find((ticket) => ticket.id === selectedTicketId) ?? tickets[0];
+
+  const userArticles = useMemo(() => articles.filter((article) => article.availableForUser), []);
+
+  const suggestedArticles = useMemo(
+    () => searchArticles(lastQuery || query, articles, { audience: 'user', limit: 10 }),
+    [lastQuery, query]
   );
-  const articleGroups = useMemo(() => getArticleGroups(userArticles), [userArticles]);
-  const visibleArticles = useMemo(
-    () => selectedGroup === ALL_ARTICLES_KEY
-      ? userArticles
-      : selectedGroup
-        ? userArticles.filter((article) => getArticleGroupName(article) === selectedGroup)
-        : [],
-    [selectedGroup, userArticles]
-  );
+
+  function submitQuestion() {
+    if (!query.trim()) return;
+
+    const results = searchArticles(query, articles, { audience: 'user', limit: 10 });
+    const response = results[0]
+      ? buildAnswer(results[0], { audience: 'user' })
+      : 'Não encontrei um artigo suficientemente claro para responder com segurança. Podes enviar este pedido para um agente.';
+
+    setMessages((current) => [
+      ...current,
+      {
+        id: crypto.randomUUID(),
+        author: 'user',
+        text: query,
+        createdAt: nowLabel()
+      },
+      {
+        id: crypto.randomUUID(),
+        author: 'assistant',
+        text: response,
+        createdAt: nowLabel()
+      }
+    ]);
+
+    setLastQuery(query);
+    setQuery('');
+  }
+
+  function escalate() {
+    const ticketId = `TCK-${Math.floor(Math.random() * 900 + 100)}`;
+    const createdAt = nowLabel();
+    const subject = lastQuery || query || 'Pedido enviado pelo utilizador';
+
+    const ticket: Ticket = {
+      id: ticketId,
+      subject,
+      requester: 'Utilizador Demo',
+      area: suggestedArticles[0]?.category ?? 'Configuração',
+      status: 'Aberto',
+      priority: 'Média',
+      createdAt,
+      updatedAt: createdAt,
+      message: subject,
+      suggestedArticleId: suggestedArticles[0]?.id,
+      messages: [
+        {
+          id: `${ticketId}-M1`,
+          author: 'user',
+          text: subject,
+          createdAt
+        },
+        {
+          id: `${ticketId}-M2`,
+          author: 'assistant',
+          text: 'Pedido enviado para análise por agente.',
+          createdAt
+        }
+      ]
+    };
+
+    onEscalate(ticket);
+    setSelectedTicketId(ticketId);
+    setTab('requests');
+  }
+
+  function sendTicketReply() {
+    if (!selectedTicket || !ticketReply.trim()) return;
+    onAddTicketMessage(selectedTicket.id, ticketReply.trim());
+    setTicketReply('');
+  }
 
   return (
     <main className="page">
-      <section className="portal-title portal-title-row">
+      <section className="portal-title">
         <div>
           <span className="eyebrow">Portal Utilizador</span>
-          <h1>Como podemos ajudar?</h1>
-          <p>Pesquisa e consulta artigos disponíveis para utilizadores.</p>
+          <h1>Pesquisa na base de conhecimento</h1>
         </div>
       </section>
 
@@ -45,60 +129,151 @@ export function UserPortal({ onOpenArticle }: Props) {
           onChange={setTab}
           tone="teal"
           tabs={[
-            { key: 'search', label: 'Pesquisa' },
+            { key: 'chat', label: 'Pesquisa' },
             { key: 'kb', label: 'Base de conhecimento' },
-            { key: 'videos', label: 'Vídeos formativos' }
+            { key: 'requests', label: 'Os meus pedidos' }
           ]}
         />
 
-        {tab === 'search' ? (
-          <KnowledgeSearch mode="user" onOpenArticle={onOpenArticle} />
-        ) : tab === 'videos' ? (
-          <TrainingVideos />
-        ) : (
-          <>
-            <div className="section-header kb-section-header">
-              <div>
-                <h2>Base de conhecimento</h2>
-                <span>
-                  {selectedGroup
-                    ? selectedGroup === ALL_ARTICLES_KEY
-                      ? `${userArticles.length} artigos disponíveis para utilizador`
-                      : `${visibleArticles.length} de ${userArticles.length} artigos disponíveis para utilizador · ${selectedGroup}`
-                    : `${userArticles.length} artigos disponíveis para utilizador · seleciona um grupo`}
-                </span>
+        {tab === 'chat' ? (
+          <div className="user-layout">
+            <div className="chat-card">
+              <div className="chat-stream">
+                {messages.map((message) => (
+                  <div key={message.id} className={`chat-row ${message.author}`}>
+                    {message.author === 'assistant' && (
+                      <span className="bot-avatar">
+                        <Bot size={18} />
+                      </span>
+                    )}
+                    <div className="chat-bubble">
+                      <p>{message.text}</p>
+                      <small>{message.createdAt}</small>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <BookOpen size={22} />
+
+              <div className="chat-input">
+                <Paperclip size={18} />
+                <input
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
+                  onKeyDown={(event) => event.key === 'Enter' && submitQuestion()}
+                  placeholder="Pesquisar na base de conhecimento..."
+                />
+                <button onClick={submitQuestion} aria-label="Enviar pergunta">
+                  <Send size={18} />
+                </button>
+              </div>
             </div>
 
-            <KnowledgeBaseIndex
-              groups={articleGroups}
-              totalArticles={userArticles.length}
-              selectedGroup={selectedGroup}
-              tone="teal"
-              onSelectGroup={setSelectedGroup}
-            />
-
-            {selectedGroup && (
-              <div className="kb-grid">
-                {visibleArticles.map((article) => (
-                <article key={article.id} className="kb-card" onClick={() => onOpenArticle(article.id)}>
-                  <span>{getArticleGroupName(article)} / {article.category}</span>
-                  <h2>{article.title}</h2>
-                  <p>{article.problem}</p>
-                </article>
-              ))}
-
-                {userArticles.length === 0 && (
-                  <div className="empty-search-state full-width-state">
-                    <Search size={28} />
-                    <strong>Ainda não existem artigos disponíveis para utilizador.</strong>
-                    <p>Os artigos ficam visíveis aqui quando estiverem marcados como disponíveis para utilizador.</p>
-                  </div>
+            <aside className="side-card">
+              <h2>10 principais propostas</h2>
+              <div className="article-list">
+                {query.trim() || lastQuery.trim() ? (
+                  suggestedArticles.length > 0 ? (
+                    suggestedArticles.map((article, index) => (
+                      <button key={article.id} onClick={() => onOpenArticle(article.id)}>
+                        <FileText size={17} />
+                        <span>{index + 1}. {article.title}</span>
+                      </button>
+                    ))
+                  ) : (
+                    <p className="muted">Sem artigos sugeridos.</p>
+                  )
+                ) : (
+                  <p className="muted">As sugestões aparecem depois de escrever uma pesquisa.</p>
                 )}
               </div>
+
+              <div className="warning-box">
+                <AlertTriangle size={20} />
+                <strong>Sem artigo correspondente?</strong>
+                <p>Envia o pedido para agente para análise.</p>
+                <button onClick={escalate}>Enviar para agente</button>
+              </div>
+            </aside>
+          </div>
+        ) : tab === 'kb' ? (
+          <div className="kb-grid">
+            {userArticles.map((article) => (
+              <article key={article.id} className="kb-card" onClick={() => onOpenArticle(article.id)}>
+                <span>{article.category}</span>
+                <h2>{article.title}</h2>
+                <p>{getArticlePreview(article, 'user')}</p>
+              </article>
+            ))}
+
+            {userArticles.length === 0 && (
+              <div className="chat-card">
+                <p className="muted">Ainda não existem artigos disponíveis para utilizador.</p>
+              </div>
             )}
-          </>
+          </div>
+        ) : (
+          <div className="requests-chat-layout">
+            <div className="requests-list request-selector">
+              {tickets.map((ticket) => (
+                <button
+                  key={ticket.id}
+                  className={`ticket-card ticket-selector-card ${ticket.id === selectedTicket?.id ? 'selected' : ''}`}
+                  onClick={() => setSelectedTicketId(ticket.id)}
+                >
+                  <div>
+                    <strong>{ticket.subject}</strong>
+                    <p>{ticket.message}</p>
+                  </div>
+                  <span className={`status status-${ticket.status.replace(' ', '-').toLowerCase()}`}>
+                    {ticket.status}
+                  </span>
+                </button>
+              ))}
+            </div>
+
+            <div className="chat-card ticket-chat-card">
+              {selectedTicket ? (
+                <>
+                  <div className="section-header">
+                    <div>
+                      <h2>{selectedTicket.subject}</h2>
+                      <span>Conversa com o agente</span>
+                    </div>
+                    <MessageCircle size={20} />
+                  </div>
+
+                  <div className="ticket-thread user-ticket-thread">
+                    {(selectedTicket.messages ?? []).map((message) => (
+                      <div key={message.id} className={`ticket-message ticket-message-${message.author}`}>
+                        <span>{message.author === 'agent' ? 'Agente' : message.author === 'assistant' ? 'Assistente' : 'Tu'}</span>
+                        <p>{message.text}</p>
+                        <small>{message.createdAt}</small>
+                      </div>
+                    ))}
+                  </div>
+
+                  {selectedTicket.status !== 'Resolvido' ? (
+                    <div className="chat-input ticket-reply-input">
+                      <Paperclip size={18} />
+                      <input
+                        value={ticketReply}
+                        onChange={(event) => setTicketReply(event.target.value)}
+                        onKeyDown={(event) => event.key === 'Enter' && sendTicketReply()}
+                        placeholder="Responder ao agente..."
+                      />
+                      <button onClick={sendTicketReply} aria-label="Enviar resposta ao agente">
+                        <Send size={18} />
+                      </button>
+                    </div>
+                  ) : (
+                    <p className="resolved-note">Este pedido está resolvido.</p>
+                  )}
+                </>
+              ) : (
+                <p className="muted">Ainda não existem pedidos.</p>
+              )}
+            </div>
+          </div>
         )}
       </section>
     </main>
