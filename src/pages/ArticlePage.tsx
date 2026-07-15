@@ -2,9 +2,11 @@ import type { ReactNode } from 'react';
 import { useState } from 'react';
 import { ArrowLeft, Printer, Share2, ThumbsDown, ThumbsUp } from 'lucide-react';
 import { articles } from '../data/articles';
+import type { SearchMode } from '../types';
 
 interface Props {
   articleId: string;
+  audience: SearchMode;
   onBack: () => void;
 }
 
@@ -105,8 +107,9 @@ function MarkdownContent({ content }: { content: string }) {
   return <>{blocks}</>;
 }
 
-export function ArticlePage({ articleId, onBack }: Props) {
+export function ArticlePage({ articleId, audience, onBack }: Props) {
   const article = articles.find((item) => item.id === articleId) ?? articles[0];
+  const isUserView = audience === 'user';
   const [copied, setCopied] = useState(false);
 
   async function copyArticleLink() {
@@ -157,30 +160,34 @@ export function ArticlePage({ articleId, onBack }: Props) {
           </div>
         </div>
 
-        <section>
-          <h2>Problema</h2>
-          <MarkdownContent content={article.problem} />
-        </section>
+        {!isUserView && (
+          <>
+            <section>
+              <h2>Problema</h2>
+              <MarkdownContent content={article.problem} />
+            </section>
 
-        {article.diagnosis && (
-          <section>
-            <h2>Diagnóstico</h2>
-            <MarkdownContent content={article.diagnosis} />
-          </section>
-        )}
+            {article.diagnosis && (
+              <section>
+                <h2>Diagnóstico</h2>
+                <MarkdownContent content={article.diagnosis} />
+              </section>
+            )}
 
-        {article.cause && (
-          <section>
-            <h2>Causa provável</h2>
-            <MarkdownContent content={article.cause} />
-          </section>
-        )}
+            {article.cause && (
+              <section>
+                <h2>Causa provável</h2>
+                <MarkdownContent content={article.cause} />
+              </section>
+            )}
 
-        {article.solution && (
-          <section>
-            <h2>Solução</h2>
-            <MarkdownContent content={article.solution} />
-          </section>
+            {article.solution && (
+              <section>
+                <h2>Solução</h2>
+                <MarkdownContent content={article.solution} />
+              </section>
+            )}
+          </>
         )}
 
         {article.procedure && (
@@ -190,7 +197,7 @@ export function ArticlePage({ articleId, onBack }: Props) {
           </section>
         )}
 
-        {article.validation && (
+        {!isUserView && article.validation && (
           <section>
             <h2>Validação final</h2>
             <MarkdownContent content={article.validation} />
