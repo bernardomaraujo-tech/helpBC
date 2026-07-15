@@ -7662,44 +7662,6 @@ Utilizar o processo de Envio Direto para associar a encomenda de venda à encome
 * Fonte: Comunicação TIC i9 de 04/06/2024.
 
 
-## BC-KB-229 — Enviar para aprovação documentos de Demonstrações e Ofertas a Clientes
-**Categoria:** Aprovações / Vendas  
-**Disponível para Utilizador:** Sim  
-**Disponível para Agente:** Sim
-
-**Problema**  
-Documentos de demonstrações e ofertas a clientes necessitam de aprovação antes de avançarem no processo.
-
-**Diagnóstico**  
-Foram disponibilizados workflows de aprovação para documentos de Demonstrações e Ofertas a Clientes.
-
-**Causa provável**  
-Necessidade de controlo formal sobre documentos que originam movimentos sem venda direta ou com impacto comercial/logístico.
-
-**Solução**  
-No documento, utilizar a opção de pedido de aprovação para enviar o documento ao aprovador designado.
-
-**Como proceder**
-1. Abrir o documento de Demonstração ou Oferta a Cliente.
-2. Validar se as linhas, cliente, quantidades e demais informação estão corretas.
-3. No topo do documento, selecionar Base.
-4. Selecionar Request Approval.
-5. Clicar em Send Approval Request.
-6. Confirmar o envio do pedido, se o sistema apresentar mensagem de confirmação.
-7. Aguardar a decisão do aprovador designado.
-8. Após aprovação, prosseguir com o processo normal do documento.
-
-**Validação final**  
-1. O pedido de aprovação é criado no Business Central.
-2. O documento fica pendente de aprovação.
-3. O aprovador definido recebe a solicitação.
-4. Após aprovação, o documento pode avançar conforme o processo.
-
-**Notas**  
-* Na comunicação original, o aprovador designado era o Diretor de cada Área de Negócio.
-* Fonte: Comunicação TIC i9 de 04/06/2024.
-
-
 ## BC-KB-230 — Justificar ajustes de stock
 **Categoria:** Stock / Ajustes  
 **Disponível para Utilizador:** Sim  
