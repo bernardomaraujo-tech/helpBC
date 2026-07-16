@@ -1,4 +1,5 @@
 import { HelpCircle, Home, LogOut } from 'lucide-react';
+import apoioBcLogo from '../assets/apoio-bc.png';
 import type { Role } from '../types';
 
 interface Props {
@@ -11,7 +12,7 @@ export function AppHeader({ role, onNavigate }: Props) {
     <header className="app-header">
       <div className="brand">
         <button className="brand-mark" onClick={() => onNavigate('entry')} aria-label="Voltar ao início">
-          A
+          <img src={apoioBcLogo} alt="" />
         </button>
         <div>
           <strong>AUGMA Group</strong>
