@@ -2,11 +2,10 @@ import { useEffect, useState } from 'react';
 import { AppHeader } from './components/AppHeader';
 import { BrandShapes } from './components/BrandShapes';
 import { AgentPortal } from './pages/AgentPortal';
-import { initialTickets } from './data/tickets';
 import { ArticlePage } from './pages/ArticlePage';
 import { EntryPage } from './pages/EntryPage';
 import { UserPortal } from './pages/UserPortal';
-import type { Role, Ticket } from './types';
+import type { Role } from './types';
 
 type View =
   | { name: 'entry' }
@@ -66,7 +65,6 @@ function setUrlForView(view: View) {
 
 export default function App() {
   const [view, setView] = useState<View>(() => getViewFromUrl());
-  const [tickets, setTickets] = useState<Ticket[]>(initialTickets);
 
   useEffect(() => {
     function handleHashChange() {
@@ -100,48 +98,13 @@ export default function App() {
     }
   }
 
-  function addTicket(ticket: Ticket) {
-    setTickets((current) => [ticket, ...current]);
-  }
-
-  function addTicketMessage(ticketId: string, text: string) {
-    const createdAt = new Date().toLocaleTimeString('pt-PT', { hour: '2-digit', minute: '2-digit' });
-
-    setTickets((current) =>
-      current.map((ticket) =>
-        ticket.id === ticketId
-          ? {
-              ...ticket,
-              updatedAt: createdAt,
-              messages: [
-                ...(ticket.messages ?? []),
-                {
-                  id: `${ticketId}-M${(ticket.messages?.length ?? 0) + 1}`,
-                  author: 'user',
-                  text,
-                  createdAt
-                }
-              ]
-            }
-          : ticket
-      )
-    );
-  }
-
   return (
     <div className="app-shell">
       <BrandShapes />
       <AppHeader role={currentRole} onNavigate={navigateToRole} />
 
       {view.name === 'entry' && <EntryPage onSelectRole={navigateToRole} />}
-      {view.name === 'user' && (
-        <UserPortal
-          tickets={tickets}
-          onEscalate={addTicket}
-          onOpenArticle={openArticle}
-          onAddTicketMessage={addTicketMessage}
-        />
-      )}
+      {view.name === 'user' && <UserPortal onOpenArticle={openArticle} />}
       {view.name === 'agent' && <AgentPortal onOpenArticle={openArticle} />}
       {view.name === 'article' && (
         <ArticlePage

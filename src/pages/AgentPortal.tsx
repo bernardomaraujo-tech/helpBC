@@ -4,6 +4,7 @@ import { KnowledgeBaseIndex } from '../components/KnowledgeBaseIndex';
 import { KnowledgeSearch } from '../components/KnowledgeSearch';
 import { KpiCard } from '../components/KpiCard';
 import { Tabs } from '../components/Tabs';
+import { TrainingVideos } from '../components/TrainingVideos';
 import { articles } from '../data/articles';
 import { getArticleGroups, getArticleGroupName, sortArticlesByGroupAndTitle } from '../utils/articleGroups';
 import { KnowledgeBaseEditor } from './KnowledgeBaseEditor';
@@ -52,6 +53,7 @@ export function AgentPortal({ onOpenArticle }: Props) {
           tabs={[
             { key: 'search', label: 'Pesquisa' },
             { key: 'kb', label: 'Base de conhecimento' },
+            { key: 'videos', label: 'Vídeos formativos' },
             { key: 'management', label: 'Gestão da KB' }
           ]}
         />
@@ -98,6 +100,8 @@ export function AgentPortal({ onOpenArticle }: Props) {
               ))}
             </div>
           </>
+        ) : tab === 'videos' ? (
+          <TrainingVideos />
         ) : (
           <KnowledgeBaseEditor />
         )}
