@@ -130,7 +130,7 @@ export const trainingVideos: TrainingVideo[] = [
     id: 'te-continia-portal-aprovacoes',
     category: 'Temas Específicos',
     title: 'Continia - Portal aprovações',
-    url: 'https://quilaban-my.sharepoint.com/:v:/g/personal/baraujo_quilaban_pt/IQCwzsN--xgSSLXXMJ_GPlrMAdfnJFqJta8rrK4GxTAAjGI?e=1fQsyw&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D'
+    url: 'https://quilaban-my.sharepoint.com/personal/baraujo_quilaban_pt/_layouts/15/stream.aspx?id=%2Fpersonal%2Fbaraujo%5Fquilaban%5Fpt%2FDocuments%2FV%C3%ADdeos%2FClipchamp%2FApresenta%C3%A7%C3%A3o%20Aprova%C3%A7%C3%B5es%20Continia%2FExports%2FApresenta%C3%A7%C3%A3o%20Aprova%C3%A7%C3%B5es%20Continia%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E99cd5c20%2D7dca%2D4611%2D96b4%2De146cc54330a&ct=1784900757950&or=Teams%2DHL&ga=1&LOF=1'
   }
 ];
 
