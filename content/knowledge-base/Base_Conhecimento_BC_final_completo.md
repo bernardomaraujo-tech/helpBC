@@ -11034,7 +11034,7 @@ O apuramento está concluído quando:
 
 ---
 
-## BC-KB-305 — O sistema aplicou automaticamente portes e tenho aprovação para avançar sem portes. Como devo proceder?
+## BC-KB-305 — Como não cobrar portes com aprovação?
 **Categoria:** Vendas / Portes / Modelo Comercial  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim
