@@ -11031,3 +11031,78 @@ O apuramento está concluído quando:
 * Se forem corrigidos dados da encomenda, deve ser feita nova validação do modelo comercial.
 * Este artigo complementa o artigo **BC-KB-250 — Aplicação automática de portes no Modelo Comercial ePricing**.
 * Fonte: Comunicação TIC i9 de 08/08/2025.
+
+---
+
+## BC-KB-305 — O sistema aplicou automaticamente portes e tenho aprovação para avançar sem portes. Como devo proceder?
+**Categoria:** Vendas / Portes / Modelo Comercial  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O sistema aplicou automaticamente portes numa encomenda de venda, mas existe aprovação interna para avançar sem cobrar esses portes ao cliente.
+
+**Diagnóstico**  
+A linha de portes foi criada pelo automatismo do Modelo Comercial/ePricing. A situação não deve ser tratada apagando a linha, nem alterando a configuração do automatismo. Deve ser tratada como uma exceção aprovada sobre uma encomenda específica.
+
+**Causa provável**  
+Os portes foram aplicados corretamente de acordo com as regras configuradas, mas foi tomada uma decisão comercial ou operacional excecional para avançar sem cobrança de portes.
+
+**Solução**  
+Quando existe aprovação para avançar sem portes, deve manter-se a linha de portes na encomenda e introduzir um desconto em valor nessa linha.
+
+O desconto deve ser inserido em valor e não em percentagem. Se a aprovação for para não cobrar portes, o valor do desconto deve corresponder ao valor total dos portes aplicados.
+
+Desta forma, a encomenda mantém o registo de que os portes foram aplicados pelo automatismo e que houve uma intervenção manual aprovada para não os cobrar.
+
+**Como proceder**
+
+### 1. Confirmar a aprovação
+1. Confirmar que existe aprovação para avançar sem cobrança de portes.
+2. Confirmar o motivo da exceção.
+3. Confirmar que a aprovação se aplica à encomenda em causa.
+4. Não efetuar a alteração se não existir aprovação ou validação interna.
+
+### 2. Abrir a encomenda de venda
+1. Aceder à encomenda de venda onde os portes foram aplicados automaticamente.
+2. Identificar a linha de portes.
+3. Confirmar o valor dos portes aplicados.
+
+### 3. Aplicar desconto em valor na linha de portes
+1. Selecionar a linha de portes.
+2. Preencher o campo de desconto em valor da linha. (Se este campo não estiver disponível utilize a personalização)
+3. Não utilizar desconto em percentagem.
+4. Para avançar sem cobrar portes, inserir como desconto o mesmo valor dos portes.
+5. Confirmar que a linha de portes continua visível na encomenda.
+
+### 4. Validar o total da encomenda
+1. Confirmar que o valor líquido dos portes ficou a zero, ou com o valor aprovado, conforme a exceção.
+2. Confirmar que o total da encomenda reflete corretamente o desconto aplicado.
+3. Confirmar que a linha de portes não foi eliminada.
+4. Confirmar que a configuração do Modelo Comercial/ePricing não foi alterada.
+
+### 5. Registar a justificação, quando aplicável
+1. Sempre que possível, adicionar uma nota ou comentário na encomenda.
+2. Indicar que existe aprovação para avançar sem cobrança de portes.
+3. Registar o motivo da exceção de forma simples e objetiva.
+
+**Validação final**  
+O processo está correto quando:
+
+1. A linha de portes continua presente na encomenda.
+2. O desconto foi introduzido em valor e não em percentagem.
+3. O valor líquido dos portes ficou conforme a aprovação.
+4. O total da encomenda está correto.
+5. A configuração automática de portes não foi alterada.
+6. A alteração fica registada para efeitos de auditoria.
+
+**Notas**
+
+* Este procedimento só deve ser utilizado em casos devidamente aprovados.
+* A utilização desta exceção subverte a lógica normal do negócio, porque o sistema aplicou os portes com base nas regras configuradas.
+* A linha de portes não deve ser apagada.
+* A configuração do Modelo Comercial/ePricing não deve ser alterada para resolver uma exceção pontual.
+* O desconto deve ser sempre inserido em valor na linha de portes, nunca em percentagem.
+* O registo da alteração fica retido para auditoria, permitindo validar quem efetuou a alteração ao automatismo e quando essa alteração foi feita.
+* Sempre que possível, deve existir uma justificação escrita associada à encomenda ou ao pedido que originou a aprovação.
+
