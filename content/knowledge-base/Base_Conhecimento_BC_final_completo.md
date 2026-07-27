@@ -10907,3 +10907,127 @@ O bloqueio fica resolvido, a fatura é emitida pela Mobilidade ou pelo Business 
 
 **Notas**  
 Nos envios parciais, a ausência de motivo de não satisfação impede a emissão da fatura. Não contornar este passo, porque o motivo documenta a razão da não satisfação total.
+
+---
+
+## BC-KB-304 — Porque foram aplicados portes numa encomenda de venda?
+**Categoria:** Pricing / Portes / Modelo Comercial  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim
+
+**Problema**  
+O utilizador identifica que foram aplicados portes numa encomenda de venda e precisa de perceber qual foi a causa da aplicação automática.
+
+**Diagnóstico**  
+A aplicação de portes é controlada pelo Modelo Comercial ePricing. O sistema pode aplicar ou recalcular portes quando o modelo comercial é validado ou quando a encomenda de venda é submetida para aprovação.
+
+Para apurar a causa, deve ser validada a sequência de regras que pode justificar a linha de portes, nomeadamente: regra global ativa, exclusões por segmento de cliente, exclusões por procedimento concursal, código postal, valor mínimo da encomenda, dados de envio e alterações posteriores à encomenda.
+
+**Causa provável**  
+Os portes foram aplicados porque, no momento da validação do modelo comercial ou da submissão da encomenda, o sistema encontrou condições que justificam a aplicação da linha de portes.
+
+As causas mais prováveis são:
+
+1. A aplicação global de portes está ativa no Modelo Comercial ePricing.
+2. O cliente ou segmento do cliente não está excluído da aplicação de portes.
+3. A encomenda não foi identificada como procedimento concursal excluído.
+4. O código postal ou zona de entrega enquadra-se numa regra de portes.
+5. O valor da encomenda não cumpre a condição configurada para isenção de portes.
+6. A encomenda foi alterada depois de uma validação anterior, provocando novo cálculo dos portes.
+7. A linha de portes corresponde ao produto/encargo de serviço configurado para esse efeito, por exemplo **PORTES**.
+
+**Solução**  
+Analisar a encomenda de venda e a regra do Modelo Comercial ePricing para confirmar qual das condições provocou a aplicação dos portes. Se a regra aplicada estiver correta, a linha de portes deve ser mantida. Se existir uma exclusão aplicável que não foi considerada, a encomenda ou a configuração deve ser corrigida e o modelo comercial deve ser validado novamente.
+
+**Como proceder**
+
+### 1. Confirmar que os portes foram aplicados automaticamente
+
+1. Abrir a encomenda de venda.
+2. Rever as linhas da encomenda.
+3. Confirmar se existe uma linha de portes, encargos ou produto de serviço associado a portes.
+4. Validar se o produto de portes aplicado corresponde à nomenclatura esperada, por exemplo **PORTES** ou equivalente configurado.
+5. Confirmar se a linha surgiu após validar o modelo comercial ou após submeter a encomenda para aprovação.
+
+### 2. Validar se a regra global de portes está ativa
+
+1. Aceder ao Modelo Comercial ePricing ou às regras comerciais aplicáveis.
+2. Confirmar se a aplicação automática de portes está ativa.
+3. Se a aplicação global estiver ativa, os portes podem ser aplicados sempre que não exista uma exclusão ou uma condição de isenção.
+4. Se a aplicação global estiver inativa, a linha de portes não deveria ser criada automaticamente e deve ser analisada a origem da linha.
+
+### 3. Confirmar se o cliente ou segmento tem exclusão de portes
+
+1. Validar o cliente da encomenda.
+2. Confirmar o segmento do cliente.
+3. Verificar se esse segmento está excluído da aplicação automática de portes.
+4. Se o cliente ou segmento estiver excluído e os portes tiverem sido aplicados, a causa pode estar numa classificação incorreta do cliente, do segmento ou da regra de exclusão.
+5. Se não existir exclusão aplicável, a aplicação de portes pode estar correta.
+
+### 4. Confirmar se a encomenda está associada a procedimento concursal
+
+1. Verificar se a encomenda tem origem numa oportunidade, proposta ou procedimento concursal.
+2. Confirmar se as encomendas provenientes de procedimentos concursais estão excluídas da aplicação de portes.
+3. Se a encomenda for concursal e estiver excluída, mas os portes tiverem sido aplicados, validar se a ligação ao procedimento está corretamente preenchida.
+4. Se a encomenda não estiver identificada como concursal, o sistema poderá tratá-la como uma encomenda normal e aplicar portes.
+
+### 5. Validar código postal e zona de entrega
+
+1. Confirmar os dados de envio da encomenda, nomeadamente:
+   - Envio a Endereço;
+   - Envio a Nome;
+   - Envio a Cód. País;
+   - Envio a Cód. Postal;
+   - Envio a Cidade.
+2. Confirmar que o código postal corresponde ao destino real da mercadoria.
+3. Validar se existem regras de portes associadas ao código postal ou zona de entrega.
+4. Se o código postal foi alterado, confirmar se os portes foram recalculados com base no novo destino.
+
+### 6. Validar o valor da encomenda
+
+1. Confirmar o valor total da encomenda.
+2. Comparar o valor da encomenda com o valor mínimo configurado para aplicação ou isenção de portes.
+3. Confirmar se o valor da encomenda foi alterado depois da primeira validação do modelo comercial.
+4. Se o valor ficou abaixo da condição de isenção, os portes podem ter sido aplicados automaticamente.
+5. Se o valor cumpre a condição de isenção e os portes continuam aplicados, voltar a validar o modelo comercial e analisar a regra aplicada.
+
+### 7. Rever alterações posteriores à encomenda
+
+1. Confirmar se, depois da primeira validação, foram alterados:
+   - produtos;
+   - quantidades;
+   - valor total;
+   - morada de envio;
+   - código postal;
+   - cliente;
+   - segmento;
+   - ligação a oportunidade ou procedimento concursal.
+2. Se houve alterações relevantes, validar novamente o modelo comercial.
+3. Confirmar se a linha de portes foi mantida, removida ou recalculada.
+
+### 8. Concluir a causa provável
+
+1. Se não existir exclusão e a regra de valor/código postal se aplicar, concluir que os portes foram aplicados corretamente.
+2. Se existir exclusão por cliente, segmento ou procedimento concursal, validar porque essa exclusão não foi considerada.
+3. Se o valor da encomenda deveria isentar portes, confirmar se o valor considerado pelo sistema é o correto.
+4. Se os dados de envio estavam incompletos ou incorretos, corrigir os dados e validar novamente.
+5. Se a causa não for identificada, encaminhar o caso para análise do Modelo Comercial ePricing, indicando número da encomenda, cliente, código postal, valor da encomenda e linha de portes aplicada.
+
+**Validação final**  
+O apuramento está concluído quando:
+
+1. Foi identificada a linha de portes aplicada na encomenda.
+2. Foi confirmado se a aplicação global de portes estava ativa.
+3. Foi validado se existiam exclusões por cliente, segmento ou procedimento concursal.
+4. Foi confirmado se o código postal ou zona de entrega justificava a aplicação de portes.
+5. Foi comparado o valor da encomenda com a regra de valor mínimo/isenção.
+6. Foi verificado se houve alterações posteriores que tenham provocado recálculo.
+7. Foi possível concluir se os portes foram aplicados corretamente ou se existe uma configuração/dado da encomenda a corrigir.
+
+**Notas**  
+* Este artigo deve ser usado quando a dúvida principal é: “porque foram aplicados portes nesta encomenda?”.
+* A aplicação de portes depende da avaliação sequencial das regras do Modelo Comercial ePricing.
+* Antes de remover manualmente uma linha de portes, deve ser apurada a causa da aplicação.
+* Se forem corrigidos dados da encomenda, deve ser feita nova validação do modelo comercial.
+* Este artigo complementa o artigo **BC-KB-250 — Aplicação automática de portes no Modelo Comercial ePricing**.
+* Fonte: Comunicação TIC i9 de 08/08/2025.
