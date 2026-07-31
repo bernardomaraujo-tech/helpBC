@@ -8766,7 +8766,7 @@ Nestes casos, o cliente não deverá tentar criar novo acesso sem validação pr
 ## BC-KB-258 — Como configurar o acesso de um cliente ao Portal Cliente no Business Central?
 
 **Categoria:** Portal Cliente / Configuração
-**Disponível para Utilizador:** Sim
+**Disponível para Utilizador:** Não
 **Disponível para Agente:** Sim
 
 **Problema**
@@ -8920,7 +8920,7 @@ A personalização está correta quando:
 - Evitar ocultar campos importantes para validação, controlo ou processos obrigatórios.
 - Antes de personalizar páginas críticas, recomenda-se confirmar com a equipa responsável quais os campos essenciais para o processo.
 
-## BC-KB-259 — Como aceder ao Portal de Aprovações do Continia?
+## BC-KB-306 — Como aceder ao Portal de Aprovações do Continia?
 **Categoria:** Continia / Portal de Aprovações  
 **Disponível para Utilizador:** Sim  
 **Disponível para Agente:** Sim
@@ -11108,10 +11108,10 @@ O processo está correto quando:
 
 ----
 
-## BC-KB-274 — Erro de dimensões de qualificação em documentos após atualização da ficha do cliente ou fornecedor
+## BC-KB-307 — Erro de dimensões de qualificação em documentos após atualização da ficha do cliente ou fornecedor
 
 **Categoria:** Dimensões / Qualificação / Compras / Vendas
-**Disponível para Utilizador:** Sim
+**Disponível para Utilizador:** Não
 **Disponível para Agente:** Sim
 
 **Problema**
