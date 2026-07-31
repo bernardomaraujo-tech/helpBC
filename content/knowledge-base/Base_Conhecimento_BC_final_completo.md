@@ -11111,7 +11111,7 @@ O processo está correto quando:
 ## BC-KB-274 — Erro de dimensões de qualificação em documentos após atualização da ficha do cliente ou fornecedor
 
 **Categoria:** Dimensões / Qualificação / Compras / Vendas
-**Disponível para Utilizador:** Não
+**Disponível para Utilizador:** Sim
 **Disponível para Agente:** Sim
 
 **Problema**
