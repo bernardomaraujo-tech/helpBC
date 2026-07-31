@@ -11106,3 +11106,155 @@ O processo está correto quando:
 * O registo da alteração fica retido para auditoria, permitindo validar quem efetuou a alteração ao automatismo e quando essa alteração foi feita.
 * Sempre que possível, deve existir uma justificação escrita associada à encomenda ou ao pedido que originou a aprovação.
 
+----
+
+## BC-KB-274 — Erro de dimensões de qualificação em documentos após atualização da ficha do cliente ou fornecedor
+
+**Categoria:** Dimensões / Qualificação / Compras / Vendas
+**Disponível para Utilizador:** Não
+**Disponível para Agente:** Sim
+
+**Problema**
+Ao tentar avançar com um documento, como uma encomenda de compra ou uma encomenda de venda, pode surgir um erro relacionado com dimensões de qualificação do cliente ou do fornecedor.
+
+Este erro pode ocorrer mesmo depois de a ficha do cliente ou fornecedor já ter sido corrigida ou atualizada.
+
+Exemplo de situação:
+
+* o fornecedor foi qualificado na respetiva ficha;
+* a ficha do fornecedor aparenta estar correta;
+* a encomenda de compra continua a apresentar erro;
+* o documento mantém a dimensão antiga;
+* é necessário atualizar manualmente as dimensões no próprio documento.
+
+**Diagnóstico**
+A atualização da ficha do cliente ou fornecedor não atualiza automaticamente os documentos já criados.
+
+Ou seja, se uma encomenda foi criada antes da atualização da qualificação, essa encomenda pode continuar com a dimensão antiga gravada no documento.
+
+Por isso, mesmo que a ficha do cliente ou fornecedor esteja correta, o documento pode continuar a apresentar erro até que as dimensões do próprio documento sejam revistas e atualizadas.
+
+**Causa provável**
+Existe uma divergência entre:
+
+* a dimensão de qualificação atual na ficha do cliente ou fornecedor;
+* e a dimensão de qualificação gravada no documento já existente.
+
+Exemplos de dimensões afetadas:
+
+* **QUALIF_FORN** — qualificação do fornecedor;
+* **QUALIF_CLI** — qualificação do cliente, quando aplicável.
+
+No exemplo analisado, a encomenda de compra mantinha o valor antigo na dimensão **QUALIF_FORN**, apesar de a ficha do fornecedor já estar atualizada.
+
+**Solução**
+Validar a dimensão correta na ficha do cliente ou fornecedor e atualizar manualmente as dimensões no documento afetado.
+
+No caso de uma encomenda de compra ou encomenda de venda, a atualização deve ser feita através da opção:
+
+**Encomenda → Dimensões**
+
+Depois de aberta a janela de dimensões do documento, deve ser corrigido o valor da dimensão antiga para o novo valor correto.
+
+**Como proceder**
+
+### 1. Identificar o documento com erro
+
+1. Confirmar a mensagem de erro apresentada.
+2. Identificar o documento afetado.
+3. Confirmar se se trata de:
+
+   * encomenda de compra;
+   * encomenda de venda;
+   * outro documento com dimensões de qualificação.
+4. Identificar o cliente ou fornecedor associado ao documento.
+
+Exemplo:
+
+* Documento: **ENCC26070220**
+* Fornecedor: **F1365 — WERFEN PORTUGAL, LDA**
+
+### 2. Confirmar a dimensão correta na ficha do cliente ou fornecedor
+
+1. Abrir a ficha do cliente ou fornecedor indicado no erro.
+2. Validar se a qualificação já foi atualizada.
+3. Confirmar qual é o valor correto da dimensão de qualificação.
+4. Guardar essa informação para comparar com o documento.
+
+### 3. Abrir o documento afetado
+
+1. Aceder à encomenda ou documento indicado no erro.
+2. Confirmar que o documento corresponde ao cliente ou fornecedor analisado.
+3. Validar que o erro ocorre nesse documento.
+
+### 4. Aceder às dimensões do documento
+
+No documento, aceder a:
+
+**Encomenda → Dimensões**
+
+No caso de encomendas de compra, esta opção abre a janela de edição das combinações de dimensões do documento.
+
+### 5. Validar a dimensão de qualificação
+
+1. Na janela de dimensões, procurar a dimensão relacionada com a qualificação.
+2. Confirmar o valor existente no campo **Cód. Valor Dimensão**.
+3. Comparar esse valor com o valor correto existente na ficha do cliente ou fornecedor.
+
+Exemplo:
+
+| Código Dimensão | Valor no documento | Nome Valor Dimensão                  |
+| --------------- | ------------------ | ------------------------------------ |
+| QUALIF_FORN     | D-DM               | DISTRIBUIDOR DE DISPOSITIVOS MÉDICOS |
+
+Se o valor no documento estiver desatualizado, deve ser corrigido para o valor atualmente correto na ficha do cliente ou fornecedor.
+
+### 6. Corrigir o valor da dimensão no documento
+
+1. Clicar em **Editar Lista**, se necessário.
+2. Alterar o campo **Cód. Valor Dimensão** para o valor correto.
+3. Confirmar que o campo **Nome Valor Dimensão** corresponde à qualificação correta.
+4. Fechar a janela de dimensões.
+5. Confirmar que o documento ficou guardado.
+
+### 7. Repetir a operação que estava a dar erro
+
+1. Voltar ao documento.
+2. Repetir a ação que estava a ser executada, por exemplo:
+
+   * libertar;
+   * aprovar;
+   * receber;
+   * faturar;
+   * registar.
+3. Confirmar se o erro deixou de aparecer.
+
+### 8. Validar dimensões das linhas, se necessário
+
+Se o erro persistir após corrigir as dimensões do cabeçalho do documento:
+
+1. Validar se existem dimensões diferentes nas linhas do documento.
+2. Confirmar se a dimensão de qualificação também está desatualizada nas linhas.
+3. Corrigir as dimensões das linhas, se aplicável.
+4. Repetir novamente a ação que estava a dar erro.
+
+**Validação final**
+O processo está correto quando:
+
+1. A ficha do cliente ou fornecedor apresenta a qualificação correta.
+2. O documento afetado tem a dimensão de qualificação atualizada.
+3. O valor da dimensão no documento corresponde ao valor correto da ficha.
+4. A ação que estava bloqueada passa a ser executada sem erro.
+5. O documento deixa de apresentar erro relacionado com dimensões de qualificação.
+
+**Notas**
+
+* A atualização da ficha do cliente ou fornecedor não atualiza automaticamente documentos já criados.
+* Documentos antigos podem manter valores de dimensão desatualizados.
+* Antes de corrigir o documento, deve ser confirmado qual é o valor correto na ficha do cliente ou fornecedor.
+* A correção deve ser feita no documento afetado, através de **Encomenda → Dimensões**.
+* No caso de documentos de compra, validar especialmente a dimensão **QUALIF_FORN**.
+* No caso de documentos de venda, validar a dimensão de qualificação associada ao cliente, quando aplicável.
+* Se existirem vários documentos criados antes da atualização da ficha, pode ser necessário corrigir mais do que um documento.
+* Esta correção deve ser feita com cuidado, porque as dimensões podem ter impacto em validações, registos e controlos internos.
+* Se existir dúvida sobre o valor correto da qualificação, confirmar com a área responsável antes de alterar o documento.
