@@ -11327,3 +11327,97 @@ O processo está correto quando:
 - O documento apresenta a informação necessária para apoio ao transporte, incluindo quantidades, pesos e dimensões, desde que essa informação esteja registada no documento.
 - Se os pesos ou dimensões não aparecerem, deve ser validado se esses dados estão preenchidos no documento ou nas linhas associadas.
 - O PDF pode ser enviado ao transportador como suporte à preparação do envio.
+
+
+## BC-KB-309 — Impressão de faturas e etiquetas em duplicado no Business Central ou na Mobilidade
+**Categoria:** Impressão / Mobilidade / Faturação / Etiquetas  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Ao imprimir **faturas** ou **etiquetas**, seja diretamente no **Business Central** ou através da **Mobilidade/PDA**, a impressão pode sair duplicada.
+
+Apesar de o pedido de impressão poder ser efetuado através da Mobilidade, a impressão é processada pelo **Business Central**. Por isso, deve ser validada a configuração de impressão guardada no BC para o utilizador afetado.
+
+**Diagnóstico**  
+A duplicação pode estar relacionada com o campo **N.º Cópias** nas opções de impressão do documento.
+
+Este campo representa o número de cópias adicionais a imprimir. Assim, se estiver configurado com o valor **1**, o sistema pode imprimir:
+
+- original;
+- mais 1 cópia adicional.
+
+Na prática, isto pode originar uma impressão duplicada.
+
+**Causa provável**  
+O utilizador afetado pode ter o campo **N.º Cópias** configurado com o valor **1** nas opções de impressão.
+
+Como estas opções podem ficar guardadas por utilizador, a validação deve ser feita com o utilizador que apresenta o problema.
+
+**Solução**  
+Validar no Business Central o campo **N.º Cópias** nas opções de impressão do documento afetado.
+
+O valor correto deverá estar configurado como **0**.
+
+**Como proceder**
+
+### 1. Abrir o documento afetado
+
+1. No Business Central, abrir o documento que está a sair duplicado.
+2. Exemplos:
+   - **Fatura de Venda Registada**;
+   - documento associado à impressão de etiqueta;
+   - outro documento enviado para impressão.
+3. Confirmar que está no documento correto para teste.
+
+### 2. Aceder à opção de impressão
+
+1. No documento, aceder a **Imprimir/Enviar**.
+2. Selecionar **Imprimir**.
+3. Aguardar a abertura da janela de impressão do documento.
+
+### 3. Validar o campo N.º Cópias
+
+1. Na janela de impressão, localizar o campo **N.º Cópias**.
+2. Confirmar o valor apresentado.
+3. Se estiver com o valor **1**, alterar para **0**.
+4. Se já estiver com o valor **0**, não é necessário alterar.
+
+### 4. Efetuar uma impressão de teste
+
+1. Depois de confirmar o valor **0** no campo **N.º Cópias**, efetuar uma impressão.
+2. Esta impressão permite garantir que a configuração fica assumida para o utilizador.
+3. Confirmar se o documento é impresso apenas uma vez.
+
+### 5. Testar novamente pela Mobilidade, se aplicável
+
+1. Voltar à **Mobilidade/PDA**.
+2. Repetir a impressão da fatura ou etiqueta.
+3. Confirmar se a duplicação deixou de ocorrer.
+
+### 6. Validar com o utilizador afetado
+
+1. A validação deve ser feita com o utilizador que apresenta o problema.
+2. Se o problema ocorrer com vários utilizadores, repetir a validação em cada utilizador afetado.
+3. Confirmar em todos os casos se o campo **N.º Cópias** está configurado como **0**.
+
+**Validação final**  
+O processo está correto quando:
+
+1. O documento afetado foi aberto no Business Central.
+2. A opção **Imprimir/Enviar → Imprimir** foi executada.
+3. O campo **N.º Cópias** foi validado.
+4. O valor ficou configurado como **0**.
+5. Foi efetuada uma impressão de teste no BC.
+6. A impressão deixou de sair duplicada no Business Central ou na Mobilidade/PDA.
+
+**Notas**
+
+- A impressão pedida pela Mobilidade/PDA é processada pelo **Business Central**.
+- O campo **N.º Cópias** representa cópias adicionais.
+- O valor **1** pode resultar na impressão do original + 1 cópia adicional.
+- Para evitar duplicação, o campo **N.º Cópias** deve estar configurado como **0**.
+- Esta configuração pode depender das opções de impressão guardadas por utilizador.
+- A validação deve ser feita com o utilizador que apresenta o problema.
+- Se todos os utilizadores afetados já tiverem **N.º Cópias = 0** e a duplicação continuar, esta causa fica excluída.
+- Nesse caso, o problema deverá ser analisado no processo de impressão associado à Mobilidade ou à configuração de impressão do documento.
