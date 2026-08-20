@@ -11421,3 +11421,127 @@ O processo está correto quando:
 - A validação deve ser feita com o utilizador que apresenta o problema.
 - Se todos os utilizadores afetados já tiverem **N.º Cópias = 0** e a duplicação continuar, esta causa fica excluída.
 - Nesse caso, o problema deverá ser analisado no processo de impressão associado à Mobilidade ou à configuração de impressão do documento.
+
+## BC-KB-310 — Validar combinações de qualificação entre clientes, fornecedores e produtos
+**Categoria:** Dimensões / Qualificações / Clientes / Fornecedores / Produtos  
+**Disponível para Utilizador:** Sim  
+**Disponível para Agente:** Sim  
+
+**Problema**  
+Durante processos de compra ou venda, o Business Central pode impedir a utilização de determinado produto devido à combinação das qualificações atribuídas ao cliente, fornecedor e/ou produto.
+
+Exemplo de mensagem:
+
+> O Cliente não se encontra qualificado para a compra do produto.
+
+Nestes casos, é necessário verificar se a combinação entre as respetivas dimensões de qualificação está permitida ou se foi bloqueada pela Área Regulamentar.
+
+O mesmo princípio aplica-se às combinações relevantes entre clientes, fornecedores e produtos.
+
+**Diagnóstico**  
+O erro pode estar relacionado com uma restrição configurada nas **Combinações de Dimensão**.
+
+As dimensões de qualificação permitem controlar se determinadas combinações são permitidas nos processos de compra ou venda.
+
+Exemplos de validações possíveis:
+
+- cliente ↔ produto;
+- fornecedor ↔ produto;
+- outras combinações de dimensões de qualificação aplicáveis ao processo.
+
+Quando a combinação aparece como **Limitada**, significa que existem restrições específicas entre os valores dessas dimensões.
+
+**Causa provável**  
+A combinação entre os valores de qualificação envolvidos no documento pode estar bloqueada.
+
+Exemplos de dimensões que podem estar envolvidas:
+
+- **QUALIF_CL** — Qualificação do Cliente;
+- **QUALIF_FORN** — Qualificação do Fornecedor;
+- **QUALIF_PROD** — Qualificação do Produto.
+
+Se a matriz de valores indicar **Bloqueado** na interseção entre os valores concretos, o Business Central impede a continuação do processo.
+
+**Solução**  
+Consultar a configuração de **Combinações de Dimensão** e validar a matriz existente entre as dimensões de qualificação envolvidas.
+
+A matriz permite identificar se determinada combinação está:
+
+- **“-”** — combinação liberta/permitida;
+- **“Bloqueado”** — combinação bloqueada, não podendo ser utilizada no processo.
+
+**Como proceder**
+
+### 1. Aceder às Combinações de Dimensão
+
+1. No Business Central, utilizar a **Pesquisa**.
+2. Procurar por **Combinações de Dimensão**.
+3. Abrir a página **Combinações Dimensão**.
+
+### 2. Identificar as dimensões a cruzar
+
+1. Na página **Combinações Dimensão**, identificar as dimensões que se pretende validar.
+2. Para uma validação de venda, por exemplo, podem estar envolvidas:
+   - **QUALIF_CL** — Qualificação do Cliente;
+   - **QUALIF_PROD** — Qualificação do Produto.
+3. Para uma validação de compra, podem estar envolvidas:
+   - **QUALIF_FORN** — Qualificação do Fornecedor;
+   - **QUALIF_PROD** — Qualificação do Produto.
+
+### 3. Verificar se a combinação está limitada
+
+1. Localizar a interseção entre as duas dimensões que se pretende analisar.
+2. Confirmar a configuração apresentada.
+3. Se aparecer **Limitada**, significa que existem restrições específicas configuradas para os respetivos valores de dimensão.
+4. Clicar sobre **Limitada** na combinação que se pretende analisar.
+
+### 4. Consultar os valores da combinação
+
+1. Confirmar que pretende consultar os **valores da combinação**.
+2. Será apresentada a matriz com os diferentes valores de dimensão das duas qualificações.
+3. A matriz permite cruzar os valores concretos que originaram o erro.
+
+### 5. Localizar os valores envolvidos no erro
+
+1. Procurar na tabela os dois valores concretos indicados ou associados ao documento.
+2. Exemplo:
+   - Qualificação Produto: `EE.DIV.OUTROS`;
+   - Qualificação Cliente: `DG-ADGM_DM_SC`.
+3. Localizar a interseção entre esses dois valores.
+
+### 6. Interpretar o resultado da matriz
+
+Na interseção entre os valores, validar o resultado apresentado:
+
+| Resultado | Significado | Impacto |
+|---|---|---|
+| **“-”** | Liberto | A combinação é permitida |
+| **Bloqueado** | Bloqueado | A combinação foi restringida pela Área Regulamentar |
+
+Se estiver **Bloqueado**, o sistema está a impedir corretamente a utilização dessa combinação.
+
+### 7. Encaminhar para validação regulamentar, se necessário
+
+1. Se a combinação estiver marcada como **Bloqueado**, não desbloquear apenas para ultrapassar o erro.
+2. Confirmar com a **Área Regulamentar** se aquela combinação de qualificações deve efetivamente ser permitida.
+3. Apenas depois de validação regulamentar deverá ser avaliada qualquer alteração à matriz de combinações.
+
+**Validação final**  
+O diagnóstico está correto quando:
+
+1. Foram identificadas as dimensões de qualificação envolvidas.
+2. A combinação entre as dimensões foi localizada em **Combinações de Dimensão**.
+3. A opção **Limitada** foi aberta.
+4. Os valores concretos do cliente, fornecedor ou produto foram localizados na matriz.
+5. Foi confirmado se a combinação está **liberta** ou **bloqueada**.
+6. Se estiver bloqueada, o caso foi encaminhado para validação da Área Regulamentar.
+
+**Notas**
+
+- Este procedimento permite diagnosticar se um erro de qualificação resulta das regras configuradas entre cliente, fornecedor e produto.
+- A existência de **Limitada** indica que há restrições específicas entre valores de dimensão.
+- O valor **“-”** indica que a combinação está liberta/permitida.
+- O valor **Bloqueado** indica que a combinação está restringida.
+- Não se deve desbloquear uma combinação apenas para ultrapassar o erro apresentado pelo sistema.
+- Quando a combinação estiver bloqueada, deve ser validado com a **Área Regulamentar** se a utilização deve ser permitida.
+- O procedimento aplica-se a erros de qualificação em processos de venda e de compra.
